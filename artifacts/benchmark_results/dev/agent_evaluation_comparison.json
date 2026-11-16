@@ -1,0 +1,191 @@
+[
+  {
+    "split": "dev",
+    "config_name": "Agent_Baseline_TFIDF_b800",
+    "cases": 22,
+    "provider_errors": 0,
+    "tool_use": {
+      "n": 22,
+      "N": 22
+    },
+    "grounded_answer": {
+      "0": 14,
+      "1": 0,
+      "2": 5,
+      "N": 19,
+      "mean": 0.5263157894736842
+    },
+    "citation_validity": {
+      "n": 5,
+      "N": 5
+    },
+    "answer_citation_coverage": {
+      "n": 5,
+      "N": 5
+    },
+    "abstention": {
+      "n": 3,
+      "N": 3
+    },
+    "false_abstention": {
+      "n": 14,
+      "N": 19
+    },
+    "context_completeness": {
+      "0": 13,
+      "1": 1,
+      "2": 5,
+      "N": 19,
+      "mean": 0.5789
+    },
+    "telemetry": {
+      "config_name": "Agent_Baseline_TFIDF_b800",
+      "description": "Baseline Agent: TF-IDF retriever, top_k=3, FIFO pack_context, budget=800 chars, max_searches=2",
+      "split": "dev",
+      "model": "openai/gpt-oss-120b",
+      "provider": "groq",
+      "total_cases": 22,
+      "provider_errors": 0,
+      "answered_count": 5,
+      "abstain_count": 17,
+      "search_calls_distribution": {
+        "1": 8,
+        "2": 14
+      },
+      "avg_search_calls": 1.64,
+      "avg_llm_calls": 1.09,
+      "avg_context_chars": 593.4,
+      "total_tokens": 34625,
+      "avg_tokens_per_case": 1573.9,
+      "total_cost_usd": 0.008661,
+      "median_latency_ms": 3073.3,
+      "mean_latency_ms": 5387.8
+    }
+  },
+  {
+    "split": "dev",
+    "config_name": "Agent_Exp1_Hybrid_Budget1800",
+    "cases": 22,
+    "provider_errors": 0,
+    "tool_use": {
+      "n": 22,
+      "N": 22
+    },
+    "grounded_answer": {
+      "0": 0,
+      "1": 1,
+      "2": 18,
+      "N": 19,
+      "mean": 1.9473684210526316
+    },
+    "citation_validity": {
+      "n": 23,
+      "N": 29
+    },
+    "answer_citation_coverage": {
+      "n": 19,
+      "N": 19
+    },
+    "abstention": {
+      "n": 3,
+      "N": 3
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 19
+    },
+    "context_completeness": {
+      "0": 1,
+      "1": 0,
+      "2": 18,
+      "N": 19,
+      "mean": 1.8947
+    },
+    "telemetry": {
+      "config_name": "Agent_Exp1_Hybrid_Budget1800",
+      "description": "Experiment 1 Agent: Hybrid RRF + Safe Filter + Interleaved Context Packer, budget=1800 chars, max_searches=2",
+      "split": "dev",
+      "model": "openai/gpt-oss-120b",
+      "provider": "groq",
+      "total_cases": 22,
+      "provider_errors": 0,
+      "answered_count": 19,
+      "abstain_count": 3,
+      "search_calls_distribution": {
+        "1": 19,
+        "2": 3
+      },
+      "avg_search_calls": 1.14,
+      "avg_llm_calls": 1.14,
+      "avg_context_chars": 1488.0,
+      "total_tokens": 46454,
+      "avg_tokens_per_case": 2111.5,
+      "total_cost_usd": 0.012473,
+      "median_latency_ms": 5457.4,
+      "mean_latency_ms": 10036.1
+    }
+  },
+  {
+    "split": "dev",
+    "config_name": "Agent_Exp2_Hybrid_Neighbor_Budget2400",
+    "cases": 22,
+    "provider_errors": 0,
+    "tool_use": {
+      "n": 22,
+      "N": 22
+    },
+    "grounded_answer": {
+      "0": 0,
+      "1": 0,
+      "2": 19,
+      "N": 19,
+      "mean": 2.0
+    },
+    "citation_validity": {
+      "n": 24,
+      "N": 28
+    },
+    "answer_citation_coverage": {
+      "n": 19,
+      "N": 19
+    },
+    "abstention": {
+      "n": 3,
+      "N": 3
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 19
+    },
+    "context_completeness": {
+      "0": 0,
+      "1": 0,
+      "2": 19,
+      "N": 19,
+      "mean": 2.0
+    },
+    "telemetry": {
+      "config_name": "Agent_Exp2_Hybrid_Neighbor_Budget2400",
+      "description": "Experiment 2 Agent (Selected): Hybrid RRF + Safe Filter + Two-Tier Neighbor Expansion + Interleaved Packer, budget=2400 chars, max_searches=2",
+      "split": "dev",
+      "model": "openai/gpt-oss-120b",
+      "provider": "groq",
+      "total_cases": 22,
+      "provider_errors": 0,
+      "answered_count": 19,
+      "abstain_count": 3,
+      "search_calls_distribution": {
+        "1": 19,
+        "2": 3
+      },
+      "avg_search_calls": 1.14,
+      "avg_llm_calls": 1.14,
+      "avg_context_chars": 2144.0,
+      "total_tokens": 50722,
+      "avg_tokens_per_case": 2305.5,
+      "total_cost_usd": 0.012787,
+      "median_latency_ms": 3695.5,
+      "mean_latency_ms": 6535.7
+    }
+  }
+]

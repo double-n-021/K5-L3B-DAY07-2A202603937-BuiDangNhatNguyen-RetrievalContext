@@ -30,7 +30,9 @@ class Retriever(Protocol):
 
 def run_agent(question: str, controller: Controller, retriever: Retriever, *,
               filters: dict[str, Any] | None = None, max_searches: int = 4,
-              top_k: int = 3, budget: int = 800) -> dict[str, Any]:
+              top_k: int = 3, budget: int = 800,
+              context_packer: Any = None,
+              all_chunks_by_id: dict[str, dict[str, Any]] | None = None) -> dict[str, Any]:
     """Return answer, citation IDs and trace; no benchmark gold enters this loop.
 
     A final answer without valid citations, an empty context, and a search limit
@@ -55,10 +57,25 @@ def run_agent(question: str, controller: Controller, retriever: Retriever, *,
             if len(results) > top_k or len({r['id'] for r in results}) != len(results):
                 raise ValueError('retriever phải trả tối đa top_k chunk ID duy nhất')
             candidates.extend(results)
-            context, ids = pack_context(candidates, budget=budget)
-            chunks = {c['id']: c for c in candidates if c['id'] in ids}
-            events.append({'event': 'search', 'query': query, 'filter': filters, 'results': results,
-                           'context': context, 'context_ids': ids})
+            if context_packer is not None:
+                context, ids = context_packer(candidates, budget=budget, latest_results=results, events=events)
+            else:
+                context, ids = pack_context(candidates, budget=budget)
+            cand_map = {c['id']: c for c in candidates}
+            if all_chunks_by_id:
+                cand_map = {**all_chunks_by_id, **cand_map}
+            chunks = {cid: cand_map[cid] for cid in ids if cid in cand_map}
+            search_event: dict[str, Any] = {
+                'event': 'search', 'query': query, 'filter': filters,
+                'results': results, 'context': context, 'context_ids': ids,
+            }
+            if 'tool' in action:
+                search_event['tool'] = action['tool']
+            if 'rewritten_query' in action:
+                search_event['rewritten_query'] = action['rewritten_query']
+            if 'thought' in action:
+                search_event['thought'] = action['thought']
+            events.append(search_event)
             # Send only the latest cumulative context; avoid multiplying the budget.
             history = [{'tool': 'search', 'queries': [e['query'] for e in events if e['event'] == 'search'],
                         'context': context, 'context_ids': ids}]
@@ -68,8 +85,14 @@ def run_agent(question: str, controller: Controller, retriever: Retriever, *,
                 raise ValueError('answer/citations không hợp lệ')
             valid = bool(answer.strip() and citations and all(i in chunks and f'[{i}]' in answer for i in citations))
             if valid:
-                return {'status': 'answered', 'answer': answer, 'citations': citations, 'events': events + [{'event': 'answer'}]}
-            return {'status': 'abstain', 'answer': 'Không đủ bằng chứng để trả lời.', 'citations': [], 'events': events + [{'event': 'invalid_or_missing_citations'}]}
+                ans_event: dict[str, Any] = {'event': 'answer'}
+                if 'thought' in action:
+                    ans_event['thought'] = action['thought']
+                return {'status': 'answered', 'answer': answer, 'citations': citations, 'events': events + [ans_event]}
+            abstain_event: dict[str, Any] = {'event': 'invalid_or_missing_citations'}
+            if action.get('abstain_reason'):
+                abstain_event['abstain_reason'] = action['abstain_reason']
+            return {'status': 'abstain', 'answer': 'Không đủ bằng chứng để trả lời.', 'citations': [], 'events': events + [abstain_event]}
         else:
             raise ValueError('action phải là search hoặc answer')
     return {'status': 'abstain', 'answer': 'Không đủ bằng chứng để trả lời.', 'citations': [], 'events': events}

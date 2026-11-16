@@ -1,0 +1,63 @@
+{
+  "split": "dev",
+  "config_name": "Agent_Baseline_TFIDF_b800",
+  "cases": 22,
+  "provider_errors": 0,
+  "tool_use": {
+    "n": 22,
+    "N": 22
+  },
+  "grounded_answer": {
+    "0": 14,
+    "1": 0,
+    "2": 5,
+    "N": 19,
+    "mean": 0.5263157894736842
+  },
+  "citation_validity": {
+    "n": 5,
+    "N": 5
+  },
+  "answer_citation_coverage": {
+    "n": 5,
+    "N": 5
+  },
+  "abstention": {
+    "n": 3,
+    "N": 3
+  },
+  "false_abstention": {
+    "n": 14,
+    "N": 19
+  },
+  "context_completeness": {
+    "0": 13,
+    "1": 1,
+    "2": 5,
+    "N": 19,
+    "mean": 0.5789
+  },
+  "telemetry": {
+    "config_name": "Agent_Baseline_TFIDF_b800",
+    "description": "Baseline Agent: TF-IDF retriever, top_k=3, FIFO pack_context, budget=800 chars, max_searches=2",
+    "split": "dev",
+    "model": "openai/gpt-oss-120b",
+    "provider": "groq",
+    "total_cases": 22,
+    "provider_errors": 0,
+    "answered_count": 5,
+    "abstain_count": 17,
+    "search_calls_distribution": {
+      "1": 8,
+      "2": 14
+    },
+    "avg_search_calls": 1.64,
+    "avg_llm_calls": 1.09,
+    "avg_context_chars": 593.4,
+    "total_tokens": 34625,
+    "avg_tokens_per_case": 1573.9,
+    "total_cost_usd": 0.008661,
+    "median_latency_ms": 3073.3,
+    "mean_latency_ms": 5387.8
+  }
+}

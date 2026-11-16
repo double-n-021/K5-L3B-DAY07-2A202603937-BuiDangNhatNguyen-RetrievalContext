@@ -1,0 +1,23 @@
+{
+  "config_name": "Agent_Exp2_Hybrid_Neighbor_Budget2400",
+  "description": "Experiment 2 Agent (Selected): Hybrid RRF + Safe Filter + Two-Tier Neighbor Expansion + Interleaved Packer, budget=2400 chars, max_searches=2",
+  "split": "dev",
+  "model": "openai/gpt-oss-120b",
+  "provider": "groq",
+  "total_cases": 22,
+  "provider_errors": 0,
+  "answered_count": 19,
+  "abstain_count": 3,
+  "search_calls_distribution": {
+    "1": 19,
+    "2": 3
+  },
+  "avg_search_calls": 1.14,
+  "avg_llm_calls": 1.14,
+  "avg_context_chars": 2144.0,
+  "total_tokens": 50722,
+  "avg_tokens_per_case": 2305.5,
+  "total_cost_usd": 0.012787,
+  "median_latency_ms": 3695.5,
+  "mean_latency_ms": 6535.7
+}
