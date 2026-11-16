@@ -1,0 +1,291 @@
+{
+  "id": "adv_test_16",
+  "split": "test",
+  "primary_group": "chart",
+  "question": "In Figure 9 (Page 14), what two prompt categories and three models are compared on incorrect behavior rate, and by what percentage does GPT-4 reduce responses to disallowed content compared to GPT-3.5?",
+  "answerable": true,
+  "expected_answer": "Figure 9 (Page 14) compares incorrect behavior rate on Sensitive Prompts and Disallowed Prompts across three models: text-davinci-003, gpt-3.5-turbo, and gpt-4. Compared to GPT-3.5, GPT-4 reduces responses to requests for disallowed content by 82%.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p014_chart_01",
+      "page": 14,
+      "modality": "chart",
+      "figure_or_table_id": "Figure 9",
+      "bbox": [
+        95,
+        55,
+        515,
+        330
+      ],
+      "evidence": "X-axis groups: Sensitive Prompts vs Disallowed Prompts... Models compared: text-davinci-003 (blue), gpt-3.5-turbo (orange), gpt-4 (green)... GPT-4 responds to requests for disallowed content 82% less often than GPT-3.5.",
+      "unit_and_condition": "Incorrect behavior rate (%) and 82% reduction on disallowed content."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "Figure 9 compares the incorrect behavior rate for two prompt categories—**Sensitive Prompts** and **Disallowed Prompts**—across three models: **text‑davinci‑003** (blue), **gpt‑3.5‑turbo** (orange), and **gpt‑4** (green).  The text notes that GPT‑4 responds to requests for disallowed content **82 % less often** than GPT‑3.5. [gpt4-2023-techreport_p014_chart_01] [gpt4-2023-techreport_p013_text_05]",
+  "turns": 1,
+  "latency_ms": 1992.45,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p014_chart_01",
+    "gpt4-2023-techreport_p014_text_01",
+    "gpt4-2023-techreport_p013_text_05",
+    "gpt4-2023-techreport_p010_chart_01",
+    "gpt4-2023-techreport_p063_chart_01",
+    "gpt4-2023-techreport_p098_chart_01",
+    "gpt4-2023-techreport_p063_text_04",
+    "gpt4-2023-techreport_p032_table_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p014_chart_01",
+    "gpt4-2023-techreport_p014_text_01",
+    "gpt4-2023-techreport_p013_text_05",
+    "gpt4-2023-techreport_p014_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Figure 9 (Page 14), what two prompt categories and three models are compared on incorrect behavior rate, and by what percentage does GPT-4 reduce responses to disallowed content compared to GPT-3.5?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p014_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 14,
+          "text": "[CHART: Figure 9 | Page 14 | BBox (95, 55, 515, 330)]\n- Figure 9 Title: Incorrect behavior rate on disallowed and sensitive content (Lower values are better).\n- X-axis groups: Sensitive Prompts vs Disallowed Prompts. Y-axis: Incorrect behavior rate (0% to 50%).\n- Models compared: text-davinci-003 (blue), gpt-3.5-turbo (orange), gpt-4 (green).\n- Values: On Sensitive Prompts, incorrect behavior drops from ~43% (text-davinci-003) and ~30% (gpt-3.5-turbo) to ~22% (gpt-4). On Disallowed Prompts, incorrect behavior drops from ~29% (text-davinci-003) and ~5% (gpt-3.5-turbo) to <1% (~0.7%, gpt-4). Text states GPT-4 responds to requests for disallowed content 82% less often than GPT-3.5.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 9",
+            "bbox": [
+              95,
+              55,
+              515,
+              330
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p014_chart_01.png",
+            "section": "6 Risks & mitigations",
+            "char_length": 687
+          },
+          "score": 0.242581
+        },
+        {
+          "id": "gpt4-2023-techreport_p014_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 14,
+          "text": "Incorrect behavior rate Incorrect behavior rate on disallowed and sensitive content\nSensitive Prompts Disallowed Prompts 0%\nFigure 9. Rate of incorrect behavior on sensitive and disallowed prompts. Lower values are better. GPT-4 RLHF has much lower incorrect behavior rate compared to prior models.\nOverall, our model-level interventions increase the difficulty of eliciting bad behavior but doing so is still possible. For example, there still exist “jailbreaks” (e.g., adversarial system messages, see Figure 10 in the System Card for more details) to generate content which violate our usage guidelines. So long as these limitations exist, it’s important to complement them with deployment-time safety techniques like monitoring for abuse as well as a pipeline for fast iterative model improvement.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              76.1,
+              505.7,
+              388.8
+            ],
+            "section": "Page 14",
+            "char_length": 801
+          },
+          "score": 0.139129
+        },
+        {
+          "id": "gpt4-2023-techreport_p013_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 13,
+          "text": "Improvements on Safety Metrics: Our mitigations have significantly improved many of GPT-4’s safety properties. We’ve decreased the model’s tendency to respond to requests for disallowed content (Table 6) by 82% compared to GPT-3.5, and GPT-4 responds to sensitive requests (e.g., medical advice and self-harm, Table 7) in accordance with our policies 29% more often (Figure 9). On the RealToxicityPrompts dataset [73], GPT-4 produces toxic generations only 0.73% of the time, while GPT-3.5 generates toxic content 6.48% of time.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              657.8,
+              504.0,
+              722.4
+            ],
+            "section": "Page 13",
+            "char_length": 528
+          },
+          "score": 0.0875
+        },
+        {
+          "id": "gpt4-2023-techreport_p010_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 10,
+          "text": "[CHART: Figure 6 | Page 10 | BBox (60, 310, 550, 610)]\n- Figure 6 Title: Internal factual eval by category — Performance of GPT-4 on nine internal adversarially-designed factuality evaluations.\n- X-axis (9 categories): learning, technology, writing, history, math, science, recommendation, code, business.\n- Y-axis: Accuracy (0% to 80%, where 1.0/100% means agreement with human ideal responses for all questions).\n- Legend / Series compared: chatgpt-v2, chatgpt-v3, chatgpt-v4 (all based on GPT-3.5) vs gpt-4 (green).\n- Key quantitative result: GPT-4 scores 19 percentage points higher overall than the latest GPT-3.5 model, achieving ~75-80% across categories.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 6",
+            "bbox": [
+              60,
+              310,
+              550,
+              610
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p010_chart_01.png",
+            "section": "5 Limitations",
+            "char_length": 662
+          },
+          "score": 0.080336
+        },
+        {
+          "id": "gpt4-2023-techreport_p063_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 63,
+          "text": "[CHART & DIAGRAM: System Card Figure 6 & Figure 7 | Page 63 | BBox (55, 55, 555, 720)]\n- Figure 6 (Rule-Based Reward Model RBRM Classifier Rubric): Shows the 3-question rubric used by RBRM to classify model responses: (1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No), mapping into classes (A) through (Q).\n- Figure 7 (Safety metrics on challenging prompts): Compares GPT-3.5 vs GPT-4-early vs GPT-4-launch on RealToxicityPrompts (toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch) and preference win rates (GPT-4-launch responses preferred over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts, page 64).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 6 & Figure 7",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p063_chart_01.png",
+            "section": "System Card 3.2 Rule-Based Reward Models (RBRMs)",
+            "char_length": 768
+          },
+          "score": 0.077741
+        },
+        {
+          "id": "gpt4-2023-techreport_p098_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 98,
+          "text": "[CHART: System Card Figure 11 | Page 98 | BBox (55, 90, 555, 520)]\n- Figure 11 Caption: 'Results on IF (Instruction Following) evaluations across GPT3.5, GPT3.5-Turbo, GPT-4-launch'.\n- Indexing note: Embedded raster image (imgs=1) on page 98 with 82 characters of vector caption text; shows GPT-4-launch achieving the highest instruction-following score across all evaluated categories compared to GPT-3.5 and GPT-3.5-Turbo.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 11",
+            "bbox": [
+              55,
+              90,
+              555,
+              520
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p098_chart_01.png",
+            "section": "System Card Appendix",
+            "char_length": 424
+          },
+          "score": 0.0751
+        },
+        {
+          "id": "gpt4-2023-techreport_p063_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 63,
+          "text": "Figure 7: Safety metrics on a challenging set of prompts that attempt to elicit unsafe or sensitive (e.g., regulated medical advice) outputs. Left: Rate of incorrect behavior on sensitive and disallowed prompts. Lower values are better. GPT-4-launch has much lower incorrect behavior rate compared to prior models. Right: Moderation API trigger rates on the disallowed categories, which is the number of times a completion of a prompt is ﬂagged by the Moderation API. Lower values are better. GPT-4-launch has much lower trigger rates compared to prior models.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              69.5,
+              635.3,
+              543.5,
+              718.6
+            ],
+            "section": "Page 63",
+            "char_length": 560
+          },
+          "score": 0.069366
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "[TABLE: Table 11 & Table 12 | Page 32 | BBox (50, 55, 560, 700)]\nTable 11: Contamination between GPT-4 pre-training data and academic benchmarks:\n- MMLU: GPT-4 = 86.4%, GPT-3.5 = 70.0%, Contamination = ~0.6%.\n- GSM-8K: GPT-4 = 92.0%, GPT-3.5 = 57.1%, Contamination = ~1% (note in Appendix E: part of GSM-8K training set was included in pre-training mix, 0% test contamination).\n- HellaSwag: GPT-4 = 95.3%, GPT-3.5 = 85.5% (evaluated on private secret holdout; validation set score = 95.6%).\n- AI2 ARC: GPT-4 = 96.3%, GPT-3.5 = 85.2%, Contamination = ~3.4%.\n- WinoGrande: GPT-4 = 87.5%, GPT-3.5 = 81.6%, Contamination = ~0.9%.\n- HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.\n- DROP (F1): GPT-4 = 80.9, GPT-3.5 = 64.1, Contamination = ~21%, GPT-4 (non-contaminated subsample) = 82.8 (entire subsample = 82.5), Degradation = 0.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 11 & Table 12",
+            "bbox": [
+              50,
+              55,
+              560,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p032_table_01.png",
+            "section": "Appendix D Contamination on academic benchmarks",
+            "char_length": 899
+          },
+          "score": 0.066587
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p014_chart_01 | page=14 | modality=chart | ref=Figure 9 | bbox=[95, 55, 515, 330]]\n[CHART: Figure 9 | Page 14 | BBox (95, 55, 515, 330)]\n- Figure 9 Title: Incorrect behavior rate on disallowed and sensitive content (Lower values are better).\n- X-axis groups: Sensitive Prompts vs Disallowed Prompts. Y-axis: Incorrect behavior rate (0% to 50%).\n- Models compared: text-davinci-003 (blue), gpt-3.5-turbo (orange), gpt-4 (green).\n- Values: On Sensitive Prompts, incorrect behavior drops from ~43% (text-davinci-003) and ~30% (gpt-3.5-turbo) to ~22% (gpt-4). On Disallowed Prompts, incorrect behavior drops from ~29% (text-davinci-003) and ~5% (gpt-3.5-turbo) to <1% (~0.7%, gpt-4). Text states GPT-4 responds to requests for disallowed content 82% less often than GPT-3.5.\n\n[gpt4-2023-techreport_p014_text_01 | page=14 | modality=text | ref=Page 14 | bbox=[108.0, 76.1, 505.7, 388.8]]\nIncorrect behavior rate Incorrect behavior rate on disallowed and sensitive content\nSensitive Prompts Disallowed Prompts 0%\nFigure 9. Rate of incorrect behavior on sensitive and disallowed prompts. Lower values are better. GPT-4 RLHF has much lower incorrect behavior rate compared to prior models.\nOverall, our model-level interventions increase the difficulty of eliciting bad behavior but doing so is still possible. For example, there still exist “jailbreaks” (e.g., adversarial system messages, see Figure 10 in the System Card for more details) to generate content which violate our usage guidelines. So long as these limitations exist, it’s important to complement them with deployment-time safety techniques like monitoring for abuse as well as a pipeline for fast iterative model improvement.\n\n[gpt4-2023-techreport_p013_text_05 | page=13 | modality=text | ref=Page 13 | bbox=[107.7, 657.8, 504.0, 722.4]]\nImprovements on Safety Metrics: Our mitigations have significantly improved many of GPT-4’s safety properties. We’ve decreased the model’s tendency to respond to requests for disallowed content (Table 6) by 82% compared to GPT-3.5, and GPT-4 responds to sensitive requests (e.g., medical advice and self-harm, Table 7) in accordance with our policies 29% more often (Figure 9). On the RealToxicityPrompts dataset [73], GPT-4 produces toxic generations only 0.73% of the time, while GPT-3.5 generates toxic content 6.48% of time.\n\n[gpt4-2023-techreport_p014_text_02 | page=14 | modality=text | ref=Page 14 | bbox=[108.0, 395.2, 504.0, 448.8]]\nGPT-4 and successor models have the potential to significantly influence society in both beneficial and harmful ways. We are collaborating with external researchers to improve how we understand and assess potential impacts, as well as to build evaluations for dangerous capabilities that may emerge in future systems. We will soon publish recommendations on steps society can take to prepare for AI’s effects and initial ideas for projecting AI’s possible economic impacts.",
+      "context_ids": [
+        "gpt4-2023-techreport_p014_chart_01",
+        "gpt4-2023-techreport_p014_text_01",
+        "gpt4-2023-techreport_p013_text_05",
+        "gpt4-2023-techreport_p014_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Figure 9 (Page 14), what two prompt categories and three models are compared on incorrect behavior rate, and by what percentage does GPT-4 reduce responses to disallowed content compared to GPT-3.5?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The figure lists two prompt categories and three models, and the text states an 82% reduction."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_16",
+    "split": "test",
+    "primary_group": "chart",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p014_chart_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p014_chart_01",
+      "gpt4-2023-techreport_p014_text_01",
+      "gpt4-2023-techreport_p013_text_05",
+      "gpt4-2023-techreport_p010_chart_01",
+      "gpt4-2023-techreport_p063_chart_01",
+      "gpt4-2023-techreport_p098_chart_01",
+      "gpt4-2023-techreport_p063_text_04",
+      "gpt4-2023-techreport_p032_table_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p014_chart_01",
+      "gpt4-2023-techreport_p014_text_01",
+      "gpt4-2023-techreport_p013_text_05",
+      "gpt4-2023-techreport_p014_text_02"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p014_chart_01",
+      "gpt4-2023-techreport_p013_text_05"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1112,
+  "completion_tokens": 150,
+  "total_tokens": 1262,
+  "estimated_cost_usd": 0.000257
+}

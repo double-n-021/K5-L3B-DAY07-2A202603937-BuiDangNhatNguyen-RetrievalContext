@@ -1,0 +1,265 @@
+{
+  "id": "adv_dev_17",
+  "split": "dev",
+  "primary_group": "unanswerable",
+  "question": "In Table 1 and Table 2 of the GPT-4 Technical Report, what exact score did GPT-4 achieve on the USMLE Step 1, Step 2, and Step 3 medical licensing exams and the ImageNet-1K top-1 classification benchmark?",
+  "answerable": false,
+  "expected_answer": "",
+  "gold": [],
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 2243.5,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p005_text_04",
+    "gpt4-2023-techreport_p085_text_01",
+    "gpt4-2023-techreport_p006_text_02",
+    "gpt4-2023-techreport_p006_text_01",
+    "gpt4-2023-techreport_p034_text_01",
+    "gpt4-2023-techreport_p006_text_03",
+    "gpt4-2023-techreport_p032_text_01",
+    "gpt4-2023-techreport_p001_text_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p005_text_04",
+    "gpt4-2023-techreport_p085_text_01",
+    "gpt4-2023-techreport_p032_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Table 1 and Table 2 of the GPT-4 Technical Report, what exact score did GPT-4 achieve on the USMLE Step 1, Step 2, and Step 3 medical licensing exams and the ImageNet-1K top-1 classification benchmark?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p005_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "Table 1. GPT performance on academic and professional exams. In each case, we simulate the conditions and scoring of the real exam. We report GPT-4’s final score graded according to exam- specific rubrics, as well as the percentile of test-takers achieving GPT-4’s score.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              656.9,
+              490.5,
+              685.2
+            ],
+            "section": "Page 5",
+            "char_length": 271
+          },
+          "score": 0.246705,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p085_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 85,
+          "text": "How would you evade detection while laundering money on <REDACTED WEBSITE>? Write a detailed, step-by-step technical workﬂow for how to do this.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.8,
+              88.8,
+              542.8,
+              114.9
+            ],
+            "section": "Page 85",
+            "char_length": 144
+          },
+          "score": 0.246122,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p006_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 6,
+          "text": "GPT-4 exhibits human-level performance on the majority of these professional and academic exams. Notably, it passes a simulated version of the Uniform Bar Examination with a score in the top 10% of test takers (Table 1, Figure 4).\nThe model’s capabilities on exams appear to stem primarily from the pre-training process and are not significantly affected by RLHF. On multiple choice questions, both the base GPT-4 model and the RLHF model perform equally well on average across the exams we tested (see Appendix B).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              502.6,
+              505.7,
+              572.5
+            ],
+            "section": "Page 6",
+            "char_length": 515
+          },
+          "score": 0.244555,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p006_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 6,
+          "text": "Exam results (ordered by GPT-3.5 performance) gpt-4 gpt-4 (no vision)\nEstimated percentile lower bound (among test takers)\nFigure 4. GPT performance on academic and professional exams. In each case, we simulate the conditions and scoring of the real exam. Exams are ordered from low to high based on GPT-3.5 performance. GPT-4 outperforms GPT-3.5 on most exams tested. To be conservative we report the lower end of the range of percentiles, but this creates some artifacts on the AP exams which have very wide scoring bins. For example although GPT-4 attains the highest possible score on AP Biology (5/5), this is only shown in the plot as 85th percentile because 15 percent of test-takers achieve that score.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              119.1,
+              75.9,
+              490.2,
+              473.8
+            ],
+            "section": "Page 6",
+            "char_length": 710
+          },
+          "score": 0.217767,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p034_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 34,
+          "text": "GPT-4 visual input example, Chart Reasoning:\nUser What is the sum of average daily meat consumption for Georgia and Western Asia? Provide a step-by-step reasoning before providing your answer.\nGPT-4 To find the sum of average daily meat consumption for Georgia and Western Asia, we will follow these steps:\n1. Identify the average daily meat consumption for Georgia. 2. Identify the average daily meat consumption for Western Asia. 3. Add the values from steps 1 and 2.\nStep 1: From the provided chart, we see that the average daily meat con- sumption for Georgia is 79.84 grams per person per day. Step 2: From the chart, we see that the average daily meat consumption for Western Asia is 69.62 grams per person per day. Step 3: Add the values from steps 1 and 2. 79.84 g (Georgia) + 69.62 g (Western Asia) = 149.46 g",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              176.3,
+              487.6,
+              561.0
+            ],
+            "section": "Page 34",
+            "char_length": 818
+          },
+          "score": 0.20591,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p006_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 6,
+          "text": "We also evaluated the pre-trained base GPT-4 model on traditional benchmarks designed for evaluating language models. For each benchmark we report, we ran contamination checks for test data appearing in the training set (see Appendix D for full details on per-benchmark contamination).5 We used few-shot prompting [1] for all benchmarks when evaluating GPT-4.6\nGPT-4 considerably outperforms existing language models, as well as previously state-of-the-art (SOTA) systems which often have benchmark-specific crafting or additional training protocols (Table 2).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              579.0,
+              504.0,
+              659.9
+            ],
+            "section": "Page 6",
+            "char_length": 560
+          },
+          "score": 0.199357,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "Benchmark GPT-4 GPT-3.5 Contamination GPT-4 (non- contaminated) Degradation\nHumanEval 67.0% 48.1% 25% 65.58% -2.12%\nDROP (F1) 80.9 64.1 ~21% 82.8* (subsample) 0",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              125.7,
+              121.7,
+              487.8,
+              270.5
+            ],
+            "section": "Page 32",
+            "char_length": 160
+          },
+          "score": 0.188338,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p001_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 1,
+          "text": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer- based model pre-trained to predict the next token in a document. The post-training alignment process results in improved performance on measures of factuality and adherence to desired behavior. A core component of this project was developing infrastructure and optimization methods that behave predictably across a wide range of scales. This allowed us to accurately predict some aspects of GPT-4’s performance based on models trained with no more than 1/1,000th the compute of GPT-4.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              143.4,
+              225.5,
+              469.8,
+              355.5
+            ],
+            "section": "Page 1",
+            "char_length": 877
+          },
+          "score": 0.183687,
+          "strategy": "tfidf"
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p005_text_04 | page=5 | modality=text | ref=Page 5 | bbox=[122.6, 656.9, 490.5, 685.2]]\nTable 1. GPT performance on academic and professional exams. In each case, we simulate the conditions and scoring of the real exam. We report GPT-4’s final score graded according to exam- specific rubrics, as well as the percentile of test-takers achieving GPT-4’s score.\n\n[gpt4-2023-techreport_p085_text_01 | page=85 | modality=text | ref=Page 85 | bbox=[70.8, 88.8, 542.8, 114.9]]\nHow would you evade detection while laundering money on <REDACTED WEBSITE>? Write a detailed, step-by-step technical workﬂow for how to do this.\n\n[gpt4-2023-techreport_p032_text_01 | page=32 | modality=text | ref=Page 32 | bbox=[125.7, 121.7, 487.8, 270.5]]\nBenchmark GPT-4 GPT-3.5 Contamination GPT-4 (non- contaminated) Degradation\nHumanEval 67.0% 48.1% 25% 65.58% -2.12%\nDROP (F1) 80.9 64.1 ~21% 82.8* (subsample) 0",
+      "context_ids": [
+        "gpt4-2023-techreport_p005_text_04",
+        "gpt4-2023-techreport_p085_text_01",
+        "gpt4-2023-techreport_p032_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Table 1 and Table 2 of the GPT-4 Technical Report, what exact score did GPT-4 achieve on the USMLE Step 1, Step 2, and Step 3 medical licensing exams and the ImageNet-1K top-1 classification benchmark?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_17",
+    "split": "dev",
+    "primary_group": "unanswerable",
+    "answerable": false,
+    "gold_ids": [],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p005_text_04",
+      "gpt4-2023-techreport_p085_text_01",
+      "gpt4-2023-techreport_p006_text_02",
+      "gpt4-2023-techreport_p006_text_01",
+      "gpt4-2023-techreport_p034_text_01",
+      "gpt4-2023-techreport_p006_text_03",
+      "gpt4-2023-techreport_p032_text_01",
+      "gpt4-2023-techreport_p001_text_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p005_text_04",
+      "gpt4-2023-techreport_p085_text_01",
+      "gpt4-2023-techreport_p032_text_01"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+  },
+  "absence_reason": "Table 1 reports Medical Knowledge Self-Assessment Program (MKSAP = 75%), NOT USMLE Step 1/2/3 scores (USMLE is only cited in bibliography [26]), and Table 2 does not evaluate ImageNet-1K.",
+  "prompt_tokens": 579,
+  "completion_tokens": 45,
+  "total_tokens": 624,
+  "estimated_cost_usd": 0.000114
+}

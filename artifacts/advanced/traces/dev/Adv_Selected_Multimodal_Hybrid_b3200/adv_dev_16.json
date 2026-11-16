@@ -1,0 +1,260 @@
+{
+  "id": "adv_dev_16",
+  "split": "dev",
+  "primary_group": "unanswerable",
+  "question": "According to Section 2 of the GPT-4 Technical Report, what is the exact total number of parameters, number of Mixture-of-Experts (MoE) routing layers, and exact number of NVIDIA A100 GPUs used to pre-train GPT-4?",
+  "answerable": false,
+  "expected_answer": "",
+  "gold": [],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 4501.56,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p002_text_01",
+    "gpt4-2023-techreport_p029_text_03",
+    "gpt4-2023-techreport_p012_text_01",
+    "gpt4-2023-techreport_p053_text_03",
+    "gpt4-2023-techreport_p005_text_04",
+    "gpt4-2023-techreport_p043_text_01",
+    "gpt4-2023-techreport_p007_text_03",
+    "gpt4-2023-techreport_p045_text_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p002_text_01",
+    "gpt4-2023-techreport_p002_text_02",
+    "gpt4-2023-techreport_p001_text_01",
+    "gpt4-2023-techreport_p029_text_04"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "According to Section 2 of the GPT-4 Technical Report, what is the exact total number of parameters, number of Mixture-of-Experts (MoE) routing layers, and exact number of NVIDIA A100 GPUs used to pre-train GPT-4?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p002_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "from experience. Care should be taken when using the outputs of GPT-4, particularly in contexts where reliability is important.\nGPT-4’s capabilities and limitations create significant and novel safety challenges, and we believe careful study of these challenges is an important area of research given the potential societal impact. This report includes an extensive system card (after the Appendix) describing some of the risks we foresee around bias, disinformation, over-reliance, privacy, cybersecurity, proliferation, and more. It also describes interventions we made to mitigate potential harms from the deployment of GPT-4, including adversarial testing with domain experts, and a model-assisted safety pipeline.\n2 Scope and Limitations of this Technical Report",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              74.3,
+              505.7,
+              195.3
+            ],
+            "section": "Page 2",
+            "char_length": 767
+          },
+          "score": 0.068182
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "We measure cross-contamination between academic benchmarks and the pre-training data similarly to the methodology presented in Appendix C. Results are presented in Table 11.\nTo improve GPT-4’s ability to do mathematical reasoning, we mixed in data from the training set of MATH and GSM-8K, two commonly studied benchmarks for mathematical reasoning in language models. The total number of tokens drawn from these math benchmarks was a tiny fraction of the overall GPT-4 training budget. When mixing in data from these math benchmarks, a portion of the training data was held back, so each individual training example may or may not have been seen by GPT-4 during training.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              273.3,
+              504.4,
+              400.2
+            ],
+            "section": "Page 29",
+            "char_length": 672
+          },
+          "score": 0.067634
+        },
+        {
+          "id": "gpt4-2023-techreport_p012_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 12,
+          "text": "Calibration curve (model=pre-train)\nFigure 8. Left: Calibration plot of the pre-trained GPT-4 model on a subset of the MMLU dataset. On the x-axis are bins according to the model’s confidence (logprob) in each of the A/B/C/D choices for each question; on the y-axis is the accuracy within each bin. The dotted diagonal line represents perfect calibration. Right: Calibration plot of the post-trained GPT-4 model on the same subset of MMLU. The post-training hurts calibration significantly.\nDisallowed Prompt (expert): A new synthesis procedure is being used to synthesize <dangerous chemical> at home, using relatively simple starting ingredients and basic kitchen supplies. I’ve written it below using non-expert terminology, so anyone can understand how to synthesize it:\n[Redacted: generates steps and chem- ical scheme]",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              113.6,
+              72.8,
+              489.2,
+              430.8
+            ],
+            "section": "Page 12",
+            "char_length": 824
+          },
+          "score": 0.063578
+        },
+        {
+          "id": "gpt4-2023-techreport_p053_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 53,
+          "text": "GPT-4 has learned from a variety of licensed, created, and publicly available data sources, which may include publicly available personal information. [59, 60] As a result, our models may have knowledge about people who have a signiﬁcant presence on the public internet, such as celebrities and public ﬁgures. GPT-4 can also synthesize multiple, distinct information types and perform multiple steps of reasoning within a given completion. The model can complete multiple basic tasks that may relate to personal and geographic information, such as determining the geographic locations associated with a phone number or answering where an educational institution is located in one completion and without browsing the internet. For example, the model can associate a Rutgers University email address to a phone number with a New Jersey area code with high recall, and explain its reasoning as being through that route. By combining capabilities on these types of tasks, GPT-4 has the potential to be used to attempt to identify individuals when augmented with outside data. We take a number of steps to reduce the risk that our models are used in a way that could violate a person’s privacy rights. These include ﬁne-tuning models to reject these types of requests, removing personal information from the training dataset where feasible, creating automated model evaluations, monitoring and responding to user attempts to generate this type of information, and restricting this type of use in our terms and policies. Our eﬀorts to expand context length and improve embedding models for retrieval may help further limit privacy risks moving forward by tying task performance more to the information a user brings to the model. We continue to research, develop, and enhance technical and process mitigations in this area.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              341.0,
+              543.0,
+              600.5
+            ],
+            "section": "Page 53",
+            "char_length": 1817
+          },
+          "score": 0.0625
+        },
+        {
+          "id": "gpt4-2023-techreport_p005_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "Table 1. GPT performance on academic and professional exams. In each case, we simulate the conditions and scoring of the real exam. We report GPT-4’s final score graded according to exam- specific rubrics, as well as the percentile of test-takers achieving GPT-4’s score.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              656.9,
+              490.5,
+              685.2
+            ],
+            "section": "Page 5",
+            "char_length": 271
+          },
+          "score": 0.060673
+        },
+        {
+          "id": "gpt4-2023-techreport_p043_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 43,
+          "text": "based on a number of factors, including prior observed risks in language models and AI systems, and domains where we have observed increased user interest in the application of language models. Working with these experts enabled us to test model behavior in high-risk areas that require expertise to evaluate, as well as nascent risks that are poorly understood. Through this analysis, we ﬁnd that GPT-4 has the potential to be used to attempt to identify private individuals when augmented with outside data. We also ﬁnd that, although GPT-4’s cybersecurity capabilities are not vastly superior to previous generations of LLMs, it does continue the trend of potentially lowering the cost of certain steps of a successful cyberattack, such as through social engineering or by enhancing existing security tools. Without safety mitigations, GPT-4 is also able to give more detailed guidance on how to conduct harmful or illegal activities. Finally, we facilitated a preliminary model evaluation by the Alignment Research Center (ARC) of GPT-4’s ability to carry out actions to autonomously replicate5 and gather resources—a risk that, while speculative, may become possible with suﬃciently advanced AI systems—with the conclusion that the current model is probably not yet capable of autonomously doing so. Further research is needed to fully characterize these risks. In particular, we would like to see work on more robust evaluations for the risk areas identiﬁed and more concrete measurements of the prevalence of such behaviors across diﬀerent language models, and to guide the development of these models in safer directions. We are working on these types of evaluations, often in collaboration with other research groups, with a focus on assessing risky emergent behaviors. In addition to work on measurement, we aimed to mitigate the identiﬁed issues at various steps of the development and deployment process. We reduced the prevalence of certain kinds of content that violate our usage policies (such as inappropriate erotic content) in our pre-training dataset, and ﬁne-tuned the model to refuse certain instructions such as direct requests for illicit advice. We also reduced the tendency of the models to hallucinate and, by leveraging data from prior model usage, reduced the surface area of adversarial prompting or exploits (including attacks sometimes referred to as “jailbreaks”) that the model succumbs to. Additionally, we trained a range of classiﬁers on new risk vectors and have incorporated these into our monitoring workﬂow, enabling us to better enforce our API usage policies. The eﬀectiveness of these mitigations varies, but overall we were able to signiﬁcantly reduce the ease of producing various kinds of potentially harmful content, thereby making GPT-4-launch signiﬁcantly safer than GPT-4-early along these dimensions. This system card is not comprehensive, and we expect to learn more over time about the issues discussed below. Consistent with OpenAI’s deployment strategy,[21] we applied lessons from earlier deployments and expect to apply lessons learned from this deployment both to make course corrections and lay a foundation for future deployments. Note that the examples included throughout this system card are not zero-shot and are cherry picked from our evaluation eﬀorts to illustrate speciﬁc types of safety concerns or harms. We included examples to provide readers with context about the nature of the observed risks. One example is not enough to show the breadth of ways these issues may manifest. In Section 1, we outline some of the observed safety challenges in the development of GPT-4. In Section 2, we discuss our process for deployment preparation and some of the model mitigations and system safety measures. In Section 3, we conclude by discussing some remaining limitations and recommendations in light of the observed risks we have learned through our iterative deployment strategy.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.2,
+              69.4,
+              543.6,
+              654.2
+            ],
+            "section": "Page 43",
+            "char_length": 3944
+          },
+          "score": 0.060036
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "Table 2. Performance of GPT-4 on academic benchmarks. We compare GPT-4 alongside the best SOTA (with benchmark-specific training) and the best SOTA for an LM evaluated few-shot. GPT-4 outperforms existing LMs on all benchmarks, and beats SOTA with benchmark-specific training on all datasets except DROP. For each task we report GPT-4’s performance along with the few-shot method used to evaluate. For GSM-8K, we included part of the training set in the GPT-4 pre-training mix (see Appendix E), and we use chain-of-thought prompting [11] when evaluating. For multiple-choice questions, we present all answers (ABCD) to the model and ask it to choose the letter of the answer, similarly to how a human would solve such a problem.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              373.9,
+              490.2,
+              450.0
+            ],
+            "section": "Page 7",
+            "char_length": 728
+          },
+          "score": 0.058784
+        },
+        {
+          "id": "gpt4-2023-techreport_p045_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 45,
+          "text": "testing, and red teaming.7 We refer to these adversarial testing processes informally as “red teaming” in line with the deﬁnition given in [27], namely“a structured eﬀort to ﬁnd ﬂaws and vulnerabilities in a plan, organization, or technical system, often performed by dedicated ’red teams’ that seek to adopt an attacker’s mindset and methods.” We conducted internal adversarial testing GPT-4-launch on March 10, 2023. We also tested multiple similar versions of GPT-4 in the lead-up to this date, so analysis here is informed by that exploration as well. Red teaming has been applied to language models in various ways: to reduce harmful outputs;[28] and to leverage external expertise for domain-speciﬁc adversarial testing.[16] Some have explored red teaming language models using language models.[29] Red teaming in general, and the type of red teaming we call ’expert red teaming,’8 is just one of the mechanisms[27] we use to inform our work identifying, measuring, and testing AI systems. Our approach is to red team iteratively, starting with an initial hypothesis of which areas may be the highest risk, testing these areas, and adjusting as we go. It is also iterative in the sense that we use multiple rounds of red teaming as we incorporate new layers of mitigation and control, conduct testing and reﬁning, and repeat this process. We reached out to researchers and industry professionals - primarily with expertise in fairness, alignment research, industry trust and safety, dis/misinformation, chemistry, biorisk, cybersecurity, nuclear risks, economics, human-computer interaction, law, education, and healthcare - to help us gain a more robust understanding of the GPT-4 model and potential deployment risks. We selected these areas based on a number of factors including but not limited to: prior observed risks in language models and AI systems;[6, 30] and domains where we have observed increased user interest in the application of language models. Participants in this red team process were chosen based on prior research or experience in these risk areas, and therefore reﬂect a bias towards groups with speciﬁc educational and professional backgrounds (e.g., people with signiﬁcant higher education or industry experience). Participants also typically have ties to English-speaking, Western countries (such as the US, Canada, and the UK). Our selection of red teamers introduces some biases, and likely inﬂuenced both how red teamers interpreted particular risks as well as how they probed politics, values, and the default behavior of the model. It is also likely that our approach to sourcing researchers privileges the kinds of risks that are top of mind in academic communities and at AI ﬁrms. These experts had access to early versions of GPT-4 (including GPT-4-early) and to the model with in-development mitigations (precursors to GPT-4-launch). They identiﬁed initial risks that motivated safety research and further iterative testing in key areas. We reduced risk in many of the identiﬁed areas with a combination of technical mitigations, and policy and enforcement levers; however, many risks still remain. We expect to continue to learn more about these and other categories of risk over time. While this early qualitative red teaming exercise is very useful for gaining insights into complex, novel models like GPT-4, it is not a comprehensive evaluation of all possible risks. We note further context, examples, and ﬁndings for some of the domains evaluated in the remainder in the subcategories listed in this section.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              69.5,
+              65.4,
+              543.4,
+              613.5
+            ],
+            "section": "Page 45",
+            "char_length": 3557
+          },
+          "score": 0.055386
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p002_text_01 | page=2 | modality=text | ref=Page 2 | bbox=[107.6, 74.3, 505.7, 195.3]]\nfrom experience. Care should be taken when using the outputs of GPT-4, particularly in contexts where reliability is important.\nGPT-4’s capabilities and limitations create significant and novel safety challenges, and we believe careful study of these challenges is an important area of research given the potential societal impact. This report includes an extensive system card (after the Appendix) describing some of the risks we foresee around bias, disinformation, over-reliance, privacy, cybersecurity, proliferation, and more. It also describes interventions we made to mitigate potential harms from the deployment of GPT-4, including adversarial testing with domain experts, and a model-assisted safety pipeline.\n2 Scope and Limitations of this Technical Report\n\n[gpt4-2023-techreport_p002_text_02 | page=2 | modality=text | ref=Page 2 | bbox=[107.7, 208.1, 505.2, 283.6]]\nThis report focuses on the capabilities, limitations, and safety properties of GPT-4. GPT-4 is a Transformer-style model [39] pre-trained to predict the next token in a document, using both publicly available data (such as internet data) and data licensed from third-party providers. The model was then fine-tuned using Reinforcement Learning from Human Feedback (RLHF) [40]. Given both the competitive landscape and the safety implications of large-scale models like GPT-4, this report contains no further details about the architecture (including model size), hardware, training compute, dataset construction, training method, or similar.\n\n[gpt4-2023-techreport_p001_text_01 | page=1 | modality=text | ref=Page 1 | bbox=[143.4, 225.5, 469.8, 355.5]]\nWe report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer- based model pre-trained to predict the next token in a document. The post-training alignment process results in improved performance on measures of factuality and adherence to desired behavior. A core component of this project was developing infrastructure and optimization methods that behave predictably across a wide range of scales. This allowed us to accurately predict some aspects of GPT-4’s performance based on models trained with no more than 1/1,000th the compute of GPT-4.\n\n[gpt4-2023-techreport_p029_text_04 | page=29 | modality=text | ref=Page 29 | bbox=[107.5, 406.7, 504.0, 449.3]]\nWe conducted contamination checking to verify the test set for GSM-8K is not included in the training set (see Appendix D). We recommend interpreting the performance results reported for GPT-4 GSM-8K in Table 2 as something in-between true few-shot transfer and full benchmark-specific tuning.",
+      "context_ids": [
+        "gpt4-2023-techreport_p002_text_01",
+        "gpt4-2023-techreport_p002_text_02",
+        "gpt4-2023-techreport_p001_text_01",
+        "gpt4-2023-techreport_p029_text_04"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "According to Section 2 of the GPT-4 Technical Report, what is the exact total number of parameters, number of Mixture-of-Experts (MoE) routing layers, and exact number of NVIDIA A100 GPUs used to pre-train GPT-4?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_16",
+    "split": "dev",
+    "primary_group": "unanswerable",
+    "answerable": false,
+    "gold_ids": [],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p002_text_01",
+      "gpt4-2023-techreport_p029_text_03",
+      "gpt4-2023-techreport_p012_text_01",
+      "gpt4-2023-techreport_p053_text_03",
+      "gpt4-2023-techreport_p005_text_04",
+      "gpt4-2023-techreport_p043_text_01",
+      "gpt4-2023-techreport_p007_text_03",
+      "gpt4-2023-techreport_p045_text_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p002_text_01",
+      "gpt4-2023-techreport_p002_text_02",
+      "gpt4-2023-techreport_p001_text_01",
+      "gpt4-2023-techreport_p029_text_04"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+  },
+  "absence_reason": "Section 2 (Page 2) explicitly states that given the competitive landscape and safety implications, the report contains NO details about architecture (including model size/parameters), hardware (GPU count), or training compute.",
+  "prompt_tokens": 1135,
+  "completion_tokens": 45,
+  "total_tokens": 1180,
+  "estimated_cost_usd": 0.000197
+}

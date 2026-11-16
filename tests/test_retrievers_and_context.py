@@ -195,6 +195,33 @@ class RetrievalAndContextTests(unittest.TestCase):
         self.assertIn("yao-2022-react_p05_para_04", ids_2400)
         self.assertLessEqual(len(ctx_2400), 2400)
 
+    def test_13_advanced_multimodal_benchmark_and_evaluation(self) -> None:
+        """Kiểm tra Thử thách Nâng cao (15 điểm): tài liệu >= 100 trang, 48 ca dev/test và tỷ lệ đạt Test >= 90%."""
+        manifest_path = ROOT / "data" / "advanced_benchmark" / "index_manifest.json"
+        cases_path = ROOT / "data" / "advanced_benchmark" / "cases.json"
+        test_summary_path = (
+            ROOT / "artifacts" / "advanced" / "test_Adv_Selected_Multimodal_Hybrid_b3200_summary.json"
+        )
+        self.assertTrue(manifest_path.exists())
+        self.assertTrue(cases_path.exists())
+        self.assertTrue(test_summary_path.exists())
+
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        self.assertGreaterEqual(manifest["total_physical_pages"], 100)
+        self.assertGreaterEqual(manifest["total_indexed_units"], 300)
+
+        adv_cases = json.loads(cases_path.read_text(encoding="utf-8"))
+        dev_cases = [c for c in adv_cases if c["split"] == "dev"]
+        test_cases = [c for c in adv_cases if c["split"] == "test"]
+        self.assertEqual(len(dev_cases), 18)
+        self.assertEqual(len(test_cases), 30)
+
+        test_summary = json.loads(test_summary_path.read_text(encoding="utf-8"))
+        self.assertEqual(test_summary["total_cases"], 30)
+        self.assertEqual(test_summary["provider_errors"], 0)
+        self.assertGreaterEqual(test_summary["overall_pass_rate"], 0.90)
+        self.assertTrue(test_summary["meets_90_percent_bar"])
+
 
 if __name__ == "__main__":
     unittest.main()

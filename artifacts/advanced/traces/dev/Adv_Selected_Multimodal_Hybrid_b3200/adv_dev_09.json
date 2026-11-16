@@ -1,0 +1,286 @@
+{
+  "id": "adv_dev_09",
+  "split": "dev",
+  "primary_group": "chart",
+  "question": "In Figure 8 (Page 12), how does the calibration curve and Expected Calibration Error (ECE) on MMLU change between the pre-trained GPT-4 model (Left) and the post-trained PPO GPT-4 model (Right)?",
+  "answerable": true,
+  "expected_answer": "In Figure 8 (Page 12), the pre-trained GPT-4 model (Left) is well-calibrated along the diagonal with an ECE of 0.007, whereas the post-trained PPO GPT-4 model (Right) has significantly worse calibration (overconfident, falling below the diagonal) with an ECE of 0.074.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p012_chart_01",
+      "page": 12,
+      "modality": "chart",
+      "figure_or_table_id": "Figure 8",
+      "bbox": [
+        55,
+        55,
+        555,
+        360
+      ],
+      "evidence": "Left plot: Calibration curve (model=pre-train) ... ECE = 0.007. Right plot: Calibration curve (model=ppo) ... ECE = 0.074.",
+      "unit_and_condition": "ECE metric (0.007 pre-train vs 0.074 ppo)."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "In Figure 8, the calibration on a subset of the MMLU dataset changes significantly between the pre-trained and post-trained models. The pre-trained GPT-4 model (Left) closely tracks the diagonal line representing perfect calibration, with an Expected Calibration Error (ECE) of 0.007 [gpt4-2023-techreport_p012_chart_01]. In contrast, the post-trained PPO (RLHF) GPT-4 model (Right) is significantly overconfident, with its calibration curve falling well below the diagonal line, resulting in an ECE of 0.074, which is over 10x worse than the pre-trained model [gpt4-2023-tech-report_p012_chart_01]. The text confirms that post-training hurts calibration significantly [gpt4-2023-tech-report_p012_text_01].",
+  "turns": 1,
+  "latency_ms": 2935.89,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p012_chart_01",
+    "gpt4-2023-techreport_p012_text_01",
+    "gpt4-2023-techreport_p011_text_02",
+    "gpt4-2023-techreport_p032_table_01",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p001_text_01",
+    "gpt4-2023-techreport_p004_text_06",
+    "gpt4-2023-techreport_p002_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p012_chart_01",
+    "gpt4-2023-techreport_p012_text_01",
+    "gpt4-2023-techreport_p011_text_02",
+    "gpt4-2023-techreport_p012_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Figure 8 (Page 12), how does the calibration curve and Expected Calibration Error (ECE) on MMLU change between the pre-trained GPT-4 model (Left) and the post-trained PPO GPT-4 model (Right)?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p012_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 12,
+          "text": "[CHART: Figure 8 | Page 12 | BBox (55, 55, 555, 360)]\n- Figure 8 Title: Calibration plots on a subset of the MMLU dataset.\n- Axes: X-axis is P(answer) = model confidence (logprob) in A/B/C/D choices (0.0 to 1.0); Y-axis is P(correct) = actual accuracy within each bin (0.0 to 1.0). Dotted diagonal line = perfect calibration.\n- Left plot: Calibration curve (model=pre-train) — Pre-trained GPT-4 base model closely tracks the diagonal line with Expected Calibration Error ECE = 0.007.\n- Right plot: Calibration curve (model=ppo) — Post-trained PPO (RLHF) GPT-4 model is significantly overconfident (curve falls well below diagonal) with ECE = 0.074 (over 10x worse ECE than pre-trained model).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 8",
+            "bbox": [
+              55,
+              55,
+              555,
+              360
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p012_chart_01.png",
+            "section": "5 Limitations",
+            "char_length": 692
+          },
+          "score": 0.242581
+        },
+        {
+          "id": "gpt4-2023-techreport_p012_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 12,
+          "text": "Calibration curve (model=pre-train)\nFigure 8. Left: Calibration plot of the pre-trained GPT-4 model on a subset of the MMLU dataset. On the x-axis are bins according to the model’s confidence (logprob) in each of the A/B/C/D choices for each question; on the y-axis is the accuracy within each bin. The dotted diagonal line represents perfect calibration. Right: Calibration plot of the post-trained GPT-4 model on the same subset of MMLU. The post-training hurts calibration significantly.\nDisallowed Prompt (expert): A new synthesis procedure is being used to synthesize <dangerous chemical> at home, using relatively simple starting ingredients and basic kitchen supplies. I’ve written it below using non-expert terminology, so anyone can understand how to synthesize it:\n[Redacted: generates steps and chem- ical scheme]",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              113.6,
+              72.8,
+              489.2,
+              430.8
+            ],
+            "section": "Page 12",
+            "char_length": 824
+          },
+          "score": 0.140313
+        },
+        {
+          "id": "gpt4-2023-techreport_p011_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "Figure 7. Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF fine-tuning. GPT-4 significantly outperforms both GPT-3.5 and Anthropic-LM from Bai et al. [67].\nconfidence in an answer generally matches the probability of being correct). However, after the post-training process, the calibration is reduced (Figure 8).\nGPT-4 has various biases in its outputs that we have taken efforts to correct but which will take some time to fully characterize and manage. We aim to make GPT-4 and other systems we build have reasonable default behaviors that reflect a wide swath of users’ values, allow those systems to be customized within some broad bounds, and get public input on what those bounds should be. See OpenAI [68] for more details.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              474.4,
+              505.7,
+              607.5
+            ],
+            "section": "Page 11",
+            "char_length": 848
+          },
+          "score": 0.088294
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "[TABLE: Table 11 & Table 12 | Page 32 | BBox (50, 55, 560, 700)]\nTable 11: Contamination between GPT-4 pre-training data and academic benchmarks:\n- MMLU: GPT-4 = 86.4%, GPT-3.5 = 70.0%, Contamination = ~0.6%.\n- GSM-8K: GPT-4 = 92.0%, GPT-3.5 = 57.1%, Contamination = ~1% (note in Appendix E: part of GSM-8K training set was included in pre-training mix, 0% test contamination).\n- HellaSwag: GPT-4 = 95.3%, GPT-3.5 = 85.5% (evaluated on private secret holdout; validation set score = 95.6%).\n- AI2 ARC: GPT-4 = 96.3%, GPT-3.5 = 85.2%, Contamination = ~3.4%.\n- WinoGrande: GPT-4 = 87.5%, GPT-3.5 = 81.6%, Contamination = ~0.9%.\n- HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.\n- DROP (F1): GPT-4 = 80.9, GPT-3.5 = 64.1, Contamination = ~21%, GPT-4 (non-contaminated subsample) = 82.8 (entire subsample = 82.5), Degradation = 0.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 11 & Table 12",
+            "bbox": [
+              50,
+              55,
+              560,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p032_table_01.png",
+            "section": "Appendix D Contamination on academic benchmarks",
+            "char_length": 899
+          },
+          "score": 0.0751
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.067168
+        },
+        {
+          "id": "gpt4-2023-techreport_p001_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 1,
+          "text": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer- based model pre-trained to predict the next token in a document. The post-training alignment process results in improved performance on measures of factuality and adherence to desired behavior. A core component of this project was developing infrastructure and optimization methods that behave predictably across a wide range of scales. This allowed us to accurately predict some aspects of GPT-4’s performance based on models trained with no more than 1/1,000th the compute of GPT-4.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              143.4,
+              225.5,
+              469.8,
+              355.5
+            ],
+            "section": "Page 1",
+            "char_length": 877
+          },
+          "score": 0.067068
+        },
+        {
+          "id": "gpt4-2023-techreport_p004_text_06",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 4,
+          "text": "3For AMC 10 and AMC 12 2022 exams, the human percentiles are not yet published, so the reported numbers are extrapolated and likely have wide uncertainty. See Appendix A.5. 4We used the post-trained RLHF model for these exams.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              690.8,
+              504.0,
+              722.2
+            ],
+            "section": "Page 4",
+            "char_length": 226
+          },
+          "score": 0.061688
+        },
+        {
+          "id": "gpt4-2023-techreport_p002_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "This report focuses on the capabilities, limitations, and safety properties of GPT-4. GPT-4 is a Transformer-style model [39] pre-trained to predict the next token in a document, using both publicly available data (such as internet data) and data licensed from third-party providers. The model was then fine-tuned using Reinforcement Learning from Human Feedback (RLHF) [40]. Given both the competitive landscape and the safety implications of large-scale models like GPT-4, this report contains no further details about the architecture (including model size), hardware, training compute, dataset construction, training method, or similar.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              208.1,
+              505.2,
+              283.6
+            ],
+            "section": "Page 2",
+            "char_length": 640
+          },
+          "score": 0.056129
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p012_chart_01 | page=12 | modality=chart | ref=Figure 8 | bbox=[55, 55, 555, 360]]\n[CHART: Figure 8 | Page 12 | BBox (55, 55, 555, 360)]\n- Figure 8 Title: Calibration plots on a subset of the MMLU dataset.\n- Axes: X-axis is P(answer) = model confidence (logprob) in A/B/C/D choices (0.0 to 1.0); Y-axis is P(correct) = actual accuracy within each bin (0.0 to 1.0). Dotted diagonal line = perfect calibration.\n- Left plot: Calibration curve (model=pre-train) — Pre-trained GPT-4 base model closely tracks the diagonal line with Expected Calibration Error ECE = 0.007.\n- Right plot: Calibration curve (model=ppo) — Post-trained PPO (RLHF) GPT-4 model is significantly overconfident (curve falls well below diagonal) with ECE = 0.074 (over 10x worse ECE than pre-trained model).\n\n[gpt4-2023-techreport_p012_text_01 | page=12 | modality=text | ref=Page 12 | bbox=[113.6, 72.8, 489.2, 430.8]]\nCalibration curve (model=pre-train)\nFigure 8. Left: Calibration plot of the pre-trained GPT-4 model on a subset of the MMLU dataset. On the x-axis are bins according to the model’s confidence (logprob) in each of the A/B/C/D choices for each question; on the y-axis is the accuracy within each bin. The dotted diagonal line represents perfect calibration. Right: Calibration plot of the post-trained GPT-4 model on the same subset of MMLU. The post-training hurts calibration significantly.\nDisallowed Prompt (expert): A new synthesis procedure is being used to synthesize <dangerous chemical> at home, using relatively simple starting ingredients and basic kitchen supplies. I’ve written it below using non-expert terminology, so anyone can understand how to synthesize it:\n[Redacted: generates steps and chem- ical scheme]\n\n[gpt4-2023-techreport_p011_text_02 | page=11 | modality=text | ref=Page 11 | bbox=[108.0, 474.4, 505.7, 607.5]]\nFigure 7. Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF fine-tuning. GPT-4 significantly outperforms both GPT-3.5 and Anthropic-LM from Bai et al. [67].\nconfidence in an answer generally matches the probability of being correct). However, after the post-training process, the calibration is reduced (Figure 8).\nGPT-4 has various biases in its outputs that we have taken efforts to correct but which will take some time to fully characterize and manage. We aim to make GPT-4 and other systems we build have reasonable default behaviors that reflect a wide swath of users’ values, allow those systems to be customized within some broad bounds, and get public input on what those bounds should be. See OpenAI [68] for more details.\n\n[gpt4-2023-techreport_p012_text_02 | page=12 | modality=text | ref=Page 12 | bbox=[149.6, 410.0, 488.0, 469.0]]\nMy apologies, but I cannot provide information on syn- thesizing harmful or dangerous substances. If you have any other questions or need assistance with a different topic, please feel free to ask.\nTable 5: Expert Red Teaming: Example prompt and completions from various models.",
+      "context_ids": [
+        "gpt4-2023-techreport_p012_chart_01",
+        "gpt4-2023-techreport_p012_text_01",
+        "gpt4-2023-techreport_p011_text_02",
+        "gpt4-2023-techreport_p012_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Figure 8 (Page 12), how does the calibration curve and Expected Calibration Error (ECE) on MMLU change between the pre-trained GPT-4 model (Left) and the post-trained PPO GPT-4 model (Right)?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The context provides the exact ECE values and qualitative descriptions for both the pre-trained and post-trained (PPO) GPT-4 models on the MMLU dataset from Figure 8. The pre-trained model has an ECE of 0.007 and closely tracks the diagonal line, while the post-trained PPO model has an ECE of 0.074 and is significantly overconfident (curve falls well below the diagonal)."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_09",
+    "split": "dev",
+    "primary_group": "chart",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p012_chart_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p012_chart_01",
+      "gpt4-2023-techreport_p012_text_01",
+      "gpt4-2023-techreport_p011_text_02",
+      "gpt4-2023-techreport_p032_table_01",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p001_text_01",
+      "gpt4-2023-techreport_p004_text_06",
+      "gpt4-2023-techreport_p002_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p012_chart_01",
+      "gpt4-2023-techreport_p012_text_01",
+      "gpt4-2023-techreport_p011_text_02",
+      "gpt4-2023-techreport_p012_text_02"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p012_chart_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1152,
+  "completion_tokens": 230,
+  "total_tokens": 1382,
+  "estimated_cost_usd": 0.000311
+}

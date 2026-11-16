@@ -1,0 +1,44 @@
+{
+  "document_id": "gpt4-2023-techreport",
+  "title": "GPT-4 Technical Report (including GPT-4 System Card & Appendices)",
+  "authors": "OpenAI (2023)",
+  "version": "arXiv:2303.08774v6",
+  "source_url": "https://arxiv.org/pdf/2303.08774.pdf",
+  "local_pdf_path": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+  "license_and_usage": "arXiv Open Access — permitted for academic research and reproducible evaluation.",
+  "total_physical_pages": 100,
+  "indexed_content_pages": 81,
+  "skipped_pages_count": 19,
+  "skipped_pages_detail": {
+    "15": "Danh sách tác giả và phân công đóng góp (Authorship & Credit Attribution) — không chứa dữ liệu kỹ thuật.",
+    "16": "Danh sách tác giả và phân công đóng góp (tiếp theo) — không chứa dữ liệu kỹ thuật.",
+    "17": "Danh sách tác giả và lời cảm ơn (Acknowledgements) — không chứa dữ liệu kỹ thuật.",
+    "18": "Danh sách chuyên gia Red Teaming & cảm ơn — không chứa dữ liệu kỹ thuật.",
+    "19": "Danh mục tài liệu tham khảo (References [1]-[29]) — chỉ chứa trích dẫn thư mục.",
+    "20": "Danh mục tài liệu tham khảo (References [30]-[46]) — chỉ chứa trích dẫn thư mục.",
+    "21": "Danh mục tài liệu tham khảo (References [47]-[61]) — chỉ chứa trích dẫn thư mục.",
+    "22": "Danh mục tài liệu tham khảo (References [62]-[79]) — chỉ chứa trích dẫn thư mục.",
+    "23": "Danh mục tài liệu tham khảo (References [80]-[92]) — chỉ chứa trích dẫn thư mục.",
+    "70": "Lời cảm ơn của GPT-4 System Card (Acknowledgements) — không chứa kết quả thực nghiệm.",
+    "71": "Tài liệu tham khảo của System Card (References [1]-[12]) — chỉ chứa trích dẫn thư mục.",
+    "72": "Tài liệu tham khảo của System Card (References [13]-[24]) — chỉ chứa trích dẫn thư mục.",
+    "73": "Tài liệu tham khảo của System Card (References [25]-[37]) — chỉ chứa trích dẫn thư mục.",
+    "74": "Tài liệu tham khảo của System Card (References [38]-[48]) — chỉ chứa trích dẫn thư mục.",
+    "75": "Tài liệu tham khảo của System Card (References [49]-[64]) — chỉ chứa trích dẫn thư mục.",
+    "76": "Tài liệu tham khảo của System Card (References [65]-[81]) — chỉ chứa trích dẫn thư mục.",
+    "77": "Tài liệu tham khảo của System Card (References [82]-[99]) — chỉ chứa trích dẫn thư mục.",
+    "78": "Tài liệu tham khảo của System Card (References [100]-[108]) — chỉ chứa trích dẫn thư mục.",
+    "79": "Trang bìa ngăn cách phụ lục (chỉ có 12 ký tự 'Appendix 79')."
+  },
+  "partially_processed_notes": {
+    "page_98": "Figure 11 is an embedded raster bitmap image with only 82 chars of vector caption text; indexed via caption + visual summary crop, cannot extract fine-grained per-bar decimals without external OCR."
+  },
+  "total_indexed_units": 303,
+  "modality_distribution": {
+    "chart": 10,
+    "table": 8,
+    "image_diagram": 9,
+    "text": 276
+  },
+  "crops_directory": "artifacts/advanced/crops/"
+}

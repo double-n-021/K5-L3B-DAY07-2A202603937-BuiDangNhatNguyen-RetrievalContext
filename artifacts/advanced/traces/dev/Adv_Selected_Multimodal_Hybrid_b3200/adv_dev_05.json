@@ -1,0 +1,291 @@
+{
+  "id": "adv_dev_05",
+  "split": "dev",
+  "primary_group": "image_diagram",
+  "question": "In the visual input example in Table 16 (Page 36, 'Extreme Ironing'), what unusual activity is depicted in the photograph?",
+  "answerable": true,
+  "expected_answer": "In Table 16 (Page 36), the photograph shows a man ironing clothes on an ironing board attached to the roof of a moving yellow taxi.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p036_image_diagram_01",
+      "page": 36,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 16",
+      "bbox": [
+        55,
+        55,
+        555,
+        520
+      ],
+      "evidence": "The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.",
+      "unit_and_condition": "Visual scene identification in Table 16."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "The unusual activity depicted in the photograph is a man ironing clothes on an ironing board attached to the roof of a moving taxi [gpt4-2023-techreport_p036_image_diagram_01, gpt4-2023-techreport_p036_text_01]. [gpt4-2023-techreport_p036_image_diagram_01] [gpt4-2023-techreport_p036_text_01]",
+  "turns": 1,
+  "latency_ms": 30623.54,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p036_image_diagram_01",
+    "gpt4-2023-techreport_p036_text_01",
+    "gpt4-2023-techreport_p009_image_diagram_01",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p038_image_diagram_01",
+    "gpt4-2023-techreport_p039_image_diagram_01",
+    "gpt4-2023-techreport_p009_text_02",
+    "gpt4-2023-techreport_p035_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p036_image_diagram_01",
+    "gpt4-2023-techreport_p036_text_01",
+    "gpt4-2023-techreport_p009_image_diagram_01",
+    "gpt4-2023-techreport_p037_image_diagram_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In the visual input example in Table 16 (Page 36, 'Extreme Ironing'), what unusual activity is depicted in the photograph?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p036_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 36,
+          "text": "[IMAGE_DIAGRAM: Table 16 | Page 36 | BBox (55, 55, 555, 520)]\n- Visual Input Example (Table 16 — Extreme Ironing photograph): Street photograph showing a man standing on rollerblades/street holding an ironing board mounted on the roof/back of a yellow moving New York City taxi cab while ironing clothes.\n- User prompt: 'What is unusual about this image?'\n- GPT-4 response: 'The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.'",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 16",
+            "bbox": [
+              55,
+              55,
+              555,
+              520
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p036_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 502
+          },
+          "score": 0.242581
+        },
+        {
+          "id": "gpt4-2023-techreport_p036_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 36,
+          "text": "GPT-4 visual input example, Extreme Ironing:\nUser What is unusual about this image?\nSource: https://www.barnorama.com/wp-content/uploads/2016/12/03-Confusing-Pictures.jpg\nGPT-4 The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.\nTable 16. Example prompt demonstrating GPT-4’s visual input capability. The prompt requires image understanding.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              258.2,
+              489.1,
+              537.8
+            ],
+            "section": "Page 36",
+            "char_length": 416
+          },
+          "score": 0.140313
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "[IMAGE_DIAGRAM: Table 3 | Page 9 | BBox (55, 60, 555, 650)]\n- Visual Input Example (Table 3): A three-panel photograph/meme of a smartphone 'Lightning Cable' adapter.\n- User prompt: 'What is funny about this image? Describe it panel by panel.'\n- Visual content & GPT-4 panel-by-panel description:\n  * Panel 1: A smartphone with a large, blue, 15-pin VGA connector (typically used for computer monitors) plugged into its charging port.\n  * Panel 2: The retail package for a 'Lightning Cable' adapter displaying a picture of a VGA connector on the packaging.\n  * Panel 3: A close-up of the VGA connector head with a tiny Apple Lightning connector protruding from the end.\n- Explanation of humor: The absurdity of plugging a bulky, outdated 15-pin VGA monitor connector into a small modern smartphone charging port.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 3",
+            "bbox": [
+              55,
+              60,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p009_image_diagram_01.png",
+            "section": "4.1 Visual Inputs",
+            "char_length": 812
+          },
+          "score": 0.077269
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.076749
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "[IMAGE_DIAGRAM: Table 18 | Page 38 | BBox (55, 55, 555, 560)]\n- Visual Input Example (Table 18 — Chicken Nugget Map Meme): Image with caption 'Sometimes I just look at pictures of the earth from space and I marvel at how beautiful it all is' above a photo of fried chicken nuggets arranged on a dark surface in the shape of the world map (continents).\n- User prompt: 'Can you explain this meme?'\n- GPT-4 explanation: The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 18",
+            "bbox": [
+              55,
+              55,
+              555,
+              560
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p038_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 560
+          },
+          "score": 0.073504
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "[IMAGE_DIAGRAM: Table 19 | Page 39 | BBox (55, 55, 555, 650)]\n- Visual Input Example (Table 19 — 'Moar Layers' Comic Strip): Two-part comic comparing 'Statistical Learning' vs 'Neural Networks'.\n- Top panel (Statistical Learning): Characters discuss complex mathematical remedies for overfitting — minimizing structural risk, reworking the loss function, and using a soft margin.\n- Bottom panel (Neural Networks): Character simply says 'stack more layers' (with user comment 'But unironically').\n- Humor explained: Satirizes the contrast between rigorous mathematical theory in statistical learning and the brute-force 'stack more layers' heuristic in deep neural networks that nonetheless works in practice.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 19",
+            "bbox": [
+              55,
+              55,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p039_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 708
+          },
+          "score": 0.067895
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "Table 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              622.5,
+              489.1,
+              641.2
+            ],
+            "section": "Page 9",
+            "char_length": 171
+          },
+          "score": 0.064087
+        },
+        {
+          "id": "gpt4-2023-techreport_p035_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 35,
+          "text": "Table 15. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question which requires understanding a physics problem with a diagram written in French and solving it using chain-of-thought prompting.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              642.2,
+              489.1,
+              670.4
+            ],
+            "section": "Page 35",
+            "char_length": 234
+          },
+          "score": 0.061463
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p036_image_diagram_01 | page=36 | modality=image_diagram | ref=Table 16 | bbox=[55, 55, 555, 520]]\n[IMAGE_DIAGRAM: Table 16 | Page 36 | BBox (55, 55, 555, 520)]\n- Visual Input Example (Table 16 — Extreme Ironing photograph): Street photograph showing a man standing on rollerblades/street holding an ironing board mounted on the roof/back of a yellow moving New York City taxi cab while ironing clothes.\n- User prompt: 'What is unusual about this image?'\n- GPT-4 response: 'The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.'\n\n[gpt4-2023-techreport_p036_text_01 | page=36 | modality=text | ref=Page 36 | bbox=[114.0, 258.2, 489.1, 537.8]]\nGPT-4 visual input example, Extreme Ironing:\nUser What is unusual about this image?\nSource: https://www.barnorama.com/wp-content/uploads/2016/12/03-Confusing-Pictures.jpg\nGPT-4 The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.\nTable 16. Example prompt demonstrating GPT-4’s visual input capability. The prompt requires image understanding.\n\n[gpt4-2023-techreport_p009_image_diagram_01 | page=9 | modality=image_diagram | ref=Table 3 | bbox=[55, 60, 555, 650]]\n[IMAGE_DIAGRAM: Table 3 | Page 9 | BBox (55, 60, 555, 650)]\n- Visual Input Example (Table 3): A three-panel photograph/meme of a smartphone 'Lightning Cable' adapter.\n- User prompt: 'What is funny about this image? Describe it panel by panel.'\n- Visual content & GPT-4 panel-by-panel description:\n  * Panel 1: A smartphone with a large, blue, 15-pin VGA connector (typically used for computer monitors) plugged into its charging port.\n  * Panel 2: The retail package for a 'Lightning Cable' adapter displaying a picture of a VGA connector on the packaging.\n  * Panel 3: A close-up of the VGA connector head with a tiny Apple Lightning connector protruding from the end.\n- Explanation of humor: The absurdity of plugging a bulky, outdated 15-pin VGA monitor connector into a small modern smartphone charging port.\n\n[gpt4-2023-techreport_p037_image_diagram_01 | page=37 | modality=image_diagram | ref=Table 17 | bbox=[55, 55, 555, 720]]\n[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+      "context_ids": [
+        "gpt4-2023-techreport_p036_image_diagram_01",
+        "gpt4-2023-techreport_p036_text_01",
+        "gpt4-2023-techreport_p009_image_diagram_01",
+        "gpt4-2023-techreport_p037_image_diagram_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In the visual input example in Table 16 (Page 36, 'Extreme Ironing'), what unusual activity is depicted in the photograph?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The context for Table 16 on page 36 explicitly describes the visual input example. The image shows a man ironing clothes on an ironing board attached to the roof of a moving taxi. GPT-4's response confirms this unusual activity."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_05",
+    "split": "dev",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p036_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p036_image_diagram_01",
+      "gpt4-2023-techreport_p036_text_01",
+      "gpt4-2023-techreport_p009_image_diagram_01",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p038_image_diagram_01",
+      "gpt4-2023-techreport_p039_image_diagram_01",
+      "gpt4-2023-techreport_p009_text_02",
+      "gpt4-2023-techreport_p035_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p036_image_diagram_01",
+      "gpt4-2023-techreport_p036_text_01",
+      "gpt4-2023-techreport_p009_image_diagram_01",
+      "gpt4-2023-techreport_p037_image_diagram_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p036_image_diagram_01",
+      "gpt4-2023-techreport_p036_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1130,
+  "completion_tokens": 121,
+  "total_tokens": 1251,
+  "estimated_cost_usd": 0.000242
+}

@@ -1,0 +1,299 @@
+{
+  "id": "adv_dev_15",
+  "split": "dev",
+  "primary_group": "text",
+  "question": "In Appendix C (Page 29), how does the contamination filtering algorithm check whether an evaluation example appeared in the pre-training dataset, and what are its stated limitations?",
+  "answerable": true,
+  "expected_answer": "In Appendix C (Page 29), after removing whitespace and symbols (keeping only characters including numbers), the algorithm randomly selects three substrings of 50 characters from each evaluation example (or the whole example if under 50 characters) and flags a match if any of the three substrings appears in a processed training example. Its limitations are that it can produce both false negatives (if small differences exist) and false positives (since only question/context is used, ignoring answers/options).",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p029_text_01",
+      "page": 29,
+      "modality": "text",
+      "figure_or_table_id": "Page 29 Appendix C",
+      "bbox": [
+        72.0,
+        71.3,
+        540.0,
+        142.8
+      ],
+      "evidence": "randomly select three substrings of 50 characters ... A match is identified if any of the three sampled evaluation substrings is a substring of the processed training example.",
+      "unit_and_condition": "3 substrings of 50 characters."
+    },
+    {
+      "chunk_id": "gpt4-2023-techreport_p029_text_02",
+      "page": 29,
+      "modality": "text",
+      "figure_or_table_id": "Page 29 Appendix C",
+      "bbox": [
+        72.0,
+        152.0,
+        540.0,
+        265.0
+      ],
+      "evidence": "Our substring match can result in false negatives (if there is a small difference between the evaluation and training data) as well as false positives.",
+      "unit_and_condition": "False negatives and false positives limitation."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "The contamination filtering algorithm first processes both the evaluation examples and the pre‑training data by removing all spaces and symbols, keeping only characters (including numbers). For each evaluation example, it randomly selects three substrings of 50 characters (or the entire example if it is shorter than 50 characters). A match is declared if any of these sampled substrings appears as a substring in any processed training example; such examples are flagged as contaminated and removed before recomputing the evaluation scores. The authors note several limitations of this approach: the substring match can produce false negatives when there is a small difference between the evaluation and training data, and it can also produce false positives; the method uses only partial information from the evaluation examples (question, context, or equivalent data) while ignoring the answer, response, or multiple‑choice options, which can increase false positives. Additionally, the RLHF post‑training dataset is much smaller and was not explicitly checked for contamination.\n\n[ gpt4-2023-techreport_p029_text_01 ]\n[ gpt4-2023-techreport_p029_text_02 ] [gpt4-2023-techreport_p029_text_01] [gpt4-2023-techreport_p029_text_02]",
+  "turns": 1,
+  "latency_ms": 2123.08,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p029_text_02",
+    "gpt4-2023-techreport_p029_text_03",
+    "gpt4-2023-techreport_p029_text_04",
+    "gpt4-2023-techreport_p028_text_04",
+    "gpt4-2023-techreport_p029_text_01",
+    "gpt4-2023-techreport_p032_text_02",
+    "gpt4-2023-techreport_p010_text_05",
+    "gpt4-2023-techreport_p006_text_04"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p029_text_02",
+    "gpt4-2023-techreport_p029_text_03",
+    "gpt4-2023-techreport_p029_text_04",
+    "gpt4-2023-techreport_p029_text_01",
+    "gpt4-2023-techreport_p028_text_04"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Appendix C (Page 29), how does the contamination filtering algorithm check whether an evaluation example appeared in the pre-training dataset, and what are its stated limitations?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p029_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "Our filtering approach has some limitations. Our substring match can result in false negatives (if there is a small difference between the evaluation and training data) as well as false positives. We only use partial information from the evaluation examples, utilizing just the question, context, or equivalent data while ignoring answer, response, or equivalent data. In some cases, the multiple-choice options are also excluded. These exclusions may lead to an increase in false positives.\nThe RLHF post-training dataset is vastly smaller than the pretraining set and unlikely to have any particular question contaminated. However we did not check explicitly.\nAs can be seen in tables 9 and 10, contamination overall has very little effect on the reported results.\nD Contamination on academic benchmarks",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              134.5,
+              505.6,
+              260.5
+            ],
+            "section": "Page 29",
+            "char_length": 805
+          },
+          "score": 0.115312
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "We measure cross-contamination between academic benchmarks and the pre-training data similarly to the methodology presented in Appendix C. Results are presented in Table 11.\nTo improve GPT-4’s ability to do mathematical reasoning, we mixed in data from the training set of MATH and GSM-8K, two commonly studied benchmarks for mathematical reasoning in language models. The total number of tokens drawn from these math benchmarks was a tiny fraction of the overall GPT-4 training budget. When mixing in data from these math benchmarks, a portion of the training data was held back, so each individual training example may or may not have been seen by GPT-4 during training.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              273.3,
+              504.4,
+              400.2
+            ],
+            "section": "Page 29",
+            "char_length": 672
+          },
+          "score": 0.1075
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "We conducted contamination checking to verify the test set for GSM-8K is not included in the training set (see Appendix D). We recommend interpreting the performance results reported for GPT-4 GSM-8K in Table 2 as something in-between true few-shot transfer and full benchmark-specific tuning.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              406.7,
+              504.0,
+              449.3
+            ],
+            "section": "Page 29",
+            "char_length": 293
+          },
+          "score": 0.091344
+        },
+        {
+          "id": "gpt4-2023-techreport_p028_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 28,
+          "text": "C Contamination on professional and academic exams\nWe measure cross-contamination between our evaluation dataset and the pre-training data using substring match. Both evaluation and training data are processed by removing all spaces and symbols,",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              676.1,
+              505.2,
+              722.4
+            ],
+            "section": "Page 28",
+            "char_length": 245
+          },
+          "score": 0.072581
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "keeping only characters (including numbers). For each evaluation example, we randomly select three substrings of 50 characters (or use the entire example if it’s less than 50 characters). A match is identified if any of the three sampled evaluation substrings is a substring of the processed training example. This yields a list of contaminated examples. We discard these and rerun to get uncontaminated scores.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              74.3,
+              504.4,
+              128.0
+            ],
+            "section": "Page 29",
+            "char_length": 411
+          },
+          "score": 0.071596
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "Table 11. Contamination between GPT-4 pre-training data and academic benchmarks. We report the approximate contamination between the GPT-4 pre-training data and the academic benchmarks we evaluate on. For datasets other than HumanEval, we estimated contamination based on 1000 randomly chosen examples against our training data. For HellaSwag, results are computed on a privately held secret holdout, so we did not check it for contamination against our pre-training dataset; however GPT-4’s holdout results are close to the results on the validation set (95.6%) which was explicitly masked out during training. For DROP, GPT-4’s score on the entire subsample was 82.5. We used the base GPT-4 model (without RLHF) for these evals.\nMuundo wa akili bandia wenye ujuzi wa hali ya juu na akili hujibu maswali ya chaguo-nyingi kuhusu ujifunzaji wa mashine.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              277.7,
+              489.4,
+              523.4
+            ],
+            "section": "Page 32",
+            "char_length": 851
+          },
+          "score": 0.067291
+        },
+        {
+          "id": "gpt4-2023-techreport_p010_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 10,
+          "text": "9We did not check the RLHF post-training data for contamination with TruthfulQA 10The pre-training and post-training data contain a small amount of more recent data",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              117.7,
+              700.8,
+              420.2,
+              722.2
+            ],
+            "section": "Page 10",
+            "char_length": 164
+          },
+          "score": 0.066017
+        },
+        {
+          "id": "gpt4-2023-techreport_p006_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 6,
+          "text": "5During our contamination check we discovered that portions of BIG-bench [48] were inadvertently mixed into the training set, and we excluded it from our reported results. 6For GSM-8K, we include part of the training set in GPT-4’s pre-training mix (see Appendix E for details). We use chain-of-thought prompting [11] when evaluating.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              680.9,
+              505.6,
+              722.2
+            ],
+            "section": "Page 6",
+            "char_length": 334
+          },
+          "score": 0.065336
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p029_text_02 | page=29 | modality=text | ref=Page 29 | bbox=[107.6, 134.5, 505.6, 260.5]]\nOur filtering approach has some limitations. Our substring match can result in false negatives (if there is a small difference between the evaluation and training data) as well as false positives. We only use partial information from the evaluation examples, utilizing just the question, context, or equivalent data while ignoring answer, response, or equivalent data. In some cases, the multiple-choice options are also excluded. These exclusions may lead to an increase in false positives.\nThe RLHF post-training dataset is vastly smaller than the pretraining set and unlikely to have any particular question contaminated. However we did not check explicitly.\nAs can be seen in tables 9 and 10, contamination overall has very little effect on the reported results.\nD Contamination on academic benchmarks\n\n[gpt4-2023-techreport_p029_text_03 | page=29 | modality=text | ref=Page 29 | bbox=[107.5, 273.3, 504.4, 400.2]]\nWe measure cross-contamination between academic benchmarks and the pre-training data similarly to the methodology presented in Appendix C. Results are presented in Table 11.\nTo improve GPT-4’s ability to do mathematical reasoning, we mixed in data from the training set of MATH and GSM-8K, two commonly studied benchmarks for mathematical reasoning in language models. The total number of tokens drawn from these math benchmarks was a tiny fraction of the overall GPT-4 training budget. When mixing in data from these math benchmarks, a portion of the training data was held back, so each individual training example may or may not have been seen by GPT-4 during training.\n\n[gpt4-2023-techreport_p029_text_04 | page=29 | modality=text | ref=Page 29 | bbox=[107.5, 406.7, 504.0, 449.3]]\nWe conducted contamination checking to verify the test set for GSM-8K is not included in the training set (see Appendix D). We recommend interpreting the performance results reported for GPT-4 GSM-8K in Table 2 as something in-between true few-shot transfer and full benchmark-specific tuning.\n\n[gpt4-2023-techreport_p029_text_01 | page=29 | modality=text | ref=Page 29 | bbox=[108.0, 74.3, 504.4, 128.0]]\nkeeping only characters (including numbers). For each evaluation example, we randomly select three substrings of 50 characters (or use the entire example if it’s less than 50 characters). A match is identified if any of the three sampled evaluation substrings is a substring of the processed training example. This yields a list of contaminated examples. We discard these and rerun to get uncontaminated scores.\n\n[gpt4-2023-techreport_p028_text_04 | page=28 | modality=text | ref=Page 28 | bbox=[107.5, 676.1, 505.2, 722.4]]\nC Contamination on professional and academic exams\nWe measure cross-contamination between our evaluation dataset and the pre-training data using substring match. Both evaluation and training data are processed by removing all spaces and symbols,",
+      "context_ids": [
+        "gpt4-2023-techreport_p029_text_02",
+        "gpt4-2023-techreport_p029_text_03",
+        "gpt4-2023-techreport_p029_text_04",
+        "gpt4-2023-techreport_p029_text_01",
+        "gpt4-2023-techreport_p028_text_04"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Appendix C (Page 29), how does the contamination filtering algorithm check whether an evaluation example appeared in the pre-training dataset, and what are its stated limitations?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The algorithm and its limitations are explicitly described in the provided context."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_15",
+    "split": "dev",
+    "primary_group": "text",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p029_text_01",
+      "gpt4-2023-techreport_p029_text_02"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p029_text_02",
+      "gpt4-2023-techreport_p029_text_03",
+      "gpt4-2023-techreport_p029_text_04",
+      "gpt4-2023-techreport_p028_text_04",
+      "gpt4-2023-techreport_p029_text_01",
+      "gpt4-2023-techreport_p032_text_02",
+      "gpt4-2023-techreport_p010_text_05",
+      "gpt4-2023-techreport_p006_text_04"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p029_text_02",
+      "gpt4-2023-techreport_p029_text_03",
+      "gpt4-2023-techreport_p029_text_04",
+      "gpt4-2023-techreport_p029_text_01",
+      "gpt4-2023-techreport_p028_text_04"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p029_text_01",
+      "gpt4-2023-techreport_p029_text_02"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1127,
+  "completion_tokens": 369,
+  "total_tokens": 1496,
+  "estimated_cost_usd": 0.00039
+}

@@ -1,0 +1,272 @@
+{
+  "id": "adv_test_30",
+  "split": "test",
+  "primary_group": "unanswerable",
+  "question": "In Figure 5 (Page 8) and Table 13 (Page 33) on Multilingual MMLU, what exact 3-shot accuracy did GPT-4 achieve on Vietnamese, Tagalog, and Amharic, and what are their speaker populations in Table 13?",
+  "answerable": false,
+  "expected_answer": "",
+  "gold": [],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 10443.27,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p033_table_01",
+    "gpt4-2023-techreport_p008_chart_01",
+    "gpt4-2023-techreport_p008_text_01",
+    "gpt4-2023-techreport_p033_text_02",
+    "gpt4-2023-techreport_p007_table_01",
+    "gpt4-2023-techreport_p011_chart_01",
+    "gpt4-2023-techreport_p032_table_01",
+    "gpt4-2023-techreport_p063_chart_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p033_table_01",
+    "gpt4-2023-techreport_p008_chart_01",
+    "gpt4-2023-techreport_p008_text_01",
+    "gpt4-2023-techreport_p008_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Figure 5 (Page 8) and Table 13 (Page 33) on Multilingual MMLU, what exact 3-shot accuracy did GPT-4 achieve on Vietnamese, Tagalog, and Amharic, and what are their speaker populations in Table 13?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p033_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 33,
+          "text": "[TABLE: Table 13 | Page 33 | BBox (55, 55, 555, 480)]\nTable 13: An example MMLU question ('Why is the sky blue?', correct answer C: Because the atmosphere preferentially scatters short wavelengths) translated into Marathi, Latvian, and Welsh along with speaker populations:\n- English: >1B speakers.\n- Marathi: 90M speakers.\n- Latvian: 2M speakers ('Kapec debesis ir zilas?').\n- Welsh: 600k speakers ('Pam mae'r awyr yn las?').",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 13",
+            "bbox": [
+              55,
+              55,
+              555,
+              480
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p033_table_01.png",
+            "section": "Appendix F Multilingual MMLU",
+            "char_length": 426
+          },
+          "score": 0.322581
+        },
+        {
+          "id": "gpt4-2023-techreport_p008_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 8,
+          "text": "[CHART: Figure 5 | Page 8 | BBox (45, 55, 565, 450)]\n- Figure 5 Title: GPT-4 3-shot accuracy on MMLU across languages (translated MMLU suite of 26 languages).\n- Y-axis: Accuracy (0% to 90%).\n- Baseline bars (English): Random guessing = 25.0%, Chinchilla-English = 67.0%, PaLM-English = 69.3%, GPT-3.5-English = 70.1%, GPT-4 English = 85.5%.\n- GPT-4 3-shot language scores (high to low): Italian = 84.1%, Afrikaans = 84.1%, Spanish = 84.0%, German = 83.7%, French = 83.6%, Indonesian = 83.1%, Russian = 82.7%, Polish = 82.1%, Ukrainian = 81.9%, Greek = 81.4%, Latvian = 80.9%, Mandarin = 80.1%, Arabic = 80.0%, Turkish = 80.0%, Japanese = 79.9%, Swahili = 78.5%, Welsh = 77.5%, Korean = 77.0%, Icelandic = 76.5%, Bengali = 73.2%, Urdu = 72.6%, Nepali = 72.2%, Thai = 71.8%, Punjabi = 71.4%, Marathi = 66.7%, Telugu = 62.0%.\n- Key finding: GPT-4 outperforms GPT-3.5 English (70.1%) in 24 out of 26 languages tested (including Latvian 80.9%, Swahili 78.5%, Welsh 77.5%), with only Marathi (66.7%) and Telugu (62.0%) below 70.1%.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 5",
+            "bbox": [
+              45,
+              55,
+              565,
+              450
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p008_chart_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1025
+          },
+          "score": 0.234062
+        },
+        {
+          "id": "gpt4-2023-techreport_p008_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 8,
+          "text": "GPT-4 3-shot accuracy on MMLU across languages\n0% 10% 20% 30% 40% 50% 60% 70% 80% 90%\nFigure 5. Performance of GPT-4 in a variety of languages compared to prior models in English on MMLU. GPT-4 outperforms the English-language performance of existing language models [2, 3] for the vast majority of languages tested, including low-resource languages such as Latvian, Welsh, and Swahili.\nto increase the diversity of these benchmarks over time to represent a wider set of failure modes and a harder set of tasks.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              70.7,
+              504.0,
+              570.0
+            ],
+            "section": "Page 8",
+            "char_length": 511
+          },
+          "score": 0.130021
+        },
+        {
+          "id": "gpt4-2023-techreport_p033_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 33,
+          "text": "A) Oherwydd bod gan y moleciwlau sy’n cyfansoddi atmosffer y Ddaear liw glas-ish. B) Oherwydd bod yr awyr yn adlewyrchu lliw cefnforoedd y Ddaear. C) Oherwydd bod yr atmosffer yn gwasgaru tonfeddi byr yn ffafriol. D) Oherwydd bod atmosffer y Ddaear yn amsugno pob lliw arall yn ffafriol.\nTable 13: An example MMLU question translated into Marathi, Latvian, and Welsh.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              153.9,
+              489.8,
+              501.1,
+              559.8
+            ],
+            "section": "Page 33",
+            "char_length": 367
+          },
+          "score": 0.095
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "[TABLE: Table 2 | Page 7 | BBox (50, 55, 560, 480)]\nTable 2: Performance of GPT-4 on traditional academic benchmarks (Columns: Benchmark | GPT-4 | GPT-3.5 | LM SOTA few-shot | Best external SOTA incl. benchmark-specific tuning):\n- MMLU (57 subjects): GPT-4 (5-shot) = 86.4%; GPT-3.5 (5-shot) = 70.0%; LM SOTA (5-shot U-PaLM) = 70.7%; SOTA (5-shot Flan-PaLM) = 75.2%.\n- HellaSwag: GPT-4 (10-shot) = 95.3%; GPT-3.5 (10-shot) = 85.5%; LM SOTA (LLaMA val) = 84.2%; SOTA (ALUM) = 85.6%.\n- AI2 Reasoning Challenge (ARC Challenge-set): GPT-4 (25-shot) = 96.3%; GPT-3.5 (25-shot) = 85.2%; LM SOTA (8-shot PaLM) = 85.2%; SOTA (ST-MOE) = 86.5%.\n- WinoGrande: GPT-4 (5-shot) = 87.5%; GPT-3.5 (5-shot) = 81.6%; LM SOTA (5-shot PaLM) = 85.1%; SOTA = 85.1%.\n- HumanEval (Python coding): GPT-4 (0-shot) = 67.0%; GPT-3.5 (0-shot) = 48.1%; LM SOTA (0-shot PaLM) = 26.2%; SOTA (CodeT + GPT-3.5) = 65.8%.\n- DROP (F1 score, reading comprehension & arithmetic): GPT-4 (3-shot) = 80.9; GPT-3.5 (3-shot) = 64.1; LM SOTA (1-shot PaLM) = 70.8; SOTA (QDGAT) = 88.4. (DROP is the only dataset in Table 2 where GPT-4 does not beat benchmark-specific SOTA).\n- GSM-8K (grade-school math): GPT-4 (5-shot chain-of-thought, part of training set in pre-training mix) = 92.0%; GPT-3.5 (5-shot) = 57.1%; LM SOTA (8-shot Minerva) = 58.8%; SOTA (Chinchilla + SFT + ORM-RL) = 87.3%.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 2",
+            "bbox": [
+              50,
+              55,
+              560,
+              480
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p007_table_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1343
+          },
+          "score": 0.082291
+        },
+        {
+          "id": "gpt4-2023-techreport_p011_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "[CHART & TABLE: Table 4 & Figure 7 | Page 11 | BBox (55, 65, 555, 650)]\n- Table 4 (TruthfulQA Examples): Left column shows GPT-4 answering correctly ('Can you teach an old dog new tricks?' -> 'Yes, you can teach an old dog new tricks'); Right column shows GPT-4 answering incorrectly to an adversarial trick question ('Son of an actor, this American guitarist and rock singer... His name is Elvis what?' -> GPT-4 picks 'Presley' instead of 'Perkins', i.e., Elvis Perkins, son of actor Anthony Perkins).\n- Figure 7 Title: Accuracy on adversarial questions (TruthfulQA mc1). Y-axis: Accuracy (0% to 70%, higher is better).\n- Models & conditions on X-axis: Anthropic-LM (0-shot ~30%, RLHF ~35%), gpt-3.5-base (0-shot ~28%, 5-shot ~29%), gpt-3.5-turbo (RLHF ~48%), gpt-4-base (0-shot ~30%, 5-shot ~41%), and gpt-4 after RLHF fine-tuning (~60%, highest bar).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 7 & Table 4",
+            "bbox": [
+              55,
+              65,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p011_chart_01.png",
+            "section": "5 Limitations",
+            "char_length": 853
+          },
+          "score": 0.081017
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "[TABLE: Table 11 & Table 12 | Page 32 | BBox (50, 55, 560, 700)]\nTable 11: Contamination between GPT-4 pre-training data and academic benchmarks:\n- MMLU: GPT-4 = 86.4%, GPT-3.5 = 70.0%, Contamination = ~0.6%.\n- GSM-8K: GPT-4 = 92.0%, GPT-3.5 = 57.1%, Contamination = ~1% (note in Appendix E: part of GSM-8K training set was included in pre-training mix, 0% test contamination).\n- HellaSwag: GPT-4 = 95.3%, GPT-3.5 = 85.5% (evaluated on private secret holdout; validation set score = 95.6%).\n- AI2 ARC: GPT-4 = 96.3%, GPT-3.5 = 85.2%, Contamination = ~3.4%.\n- WinoGrande: GPT-4 = 87.5%, GPT-3.5 = 81.6%, Contamination = ~0.9%.\n- HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.\n- DROP (F1): GPT-4 = 80.9, GPT-3.5 = 64.1, Contamination = ~21%, GPT-4 (non-contaminated subsample) = 82.8 (entire subsample = 82.5), Degradation = 0.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 11 & Table 12",
+            "bbox": [
+              50,
+              55,
+              560,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p032_table_01.png",
+            "section": "Appendix D Contamination on academic benchmarks",
+            "char_length": 899
+          },
+          "score": 0.076466
+        },
+        {
+          "id": "gpt4-2023-techreport_p063_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 63,
+          "text": "[CHART & DIAGRAM: System Card Figure 6 & Figure 7 | Page 63 | BBox (55, 55, 555, 720)]\n- Figure 6 (Rule-Based Reward Model RBRM Classifier Rubric): Shows the 3-question rubric used by RBRM to classify model responses: (1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No), mapping into classes (A) through (Q).\n- Figure 7 (Safety metrics on challenging prompts): Compares GPT-3.5 vs GPT-4-early vs GPT-4-launch on RealToxicityPrompts (toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch) and preference win rates (GPT-4-launch responses preferred over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts, page 64).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 6 & Figure 7",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p063_chart_01.png",
+            "section": "System Card 3.2 Rule-Based Reward Models (RBRMs)",
+            "char_length": 768
+          },
+          "score": 0.069094
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p033_table_01 | page=33 | modality=table | ref=Table 13 | bbox=[55, 55, 555, 480]]\n[TABLE: Table 13 | Page 33 | BBox (55, 55, 555, 480)]\nTable 13: An example MMLU question ('Why is the sky blue?', correct answer C: Because the atmosphere preferentially scatters short wavelengths) translated into Marathi, Latvian, and Welsh along with speaker populations:\n- English: >1B speakers.\n- Marathi: 90M speakers.\n- Latvian: 2M speakers ('Kapec debesis ir zilas?').\n- Welsh: 600k speakers ('Pam mae'r awyr yn las?').\n\n[gpt4-2023-techreport_p008_chart_01 | page=8 | modality=chart | ref=Figure 5 | bbox=[45, 55, 565, 450]]\n[CHART: Figure 5 | Page 8 | BBox (45, 55, 565, 450)]\n- Figure 5 Title: GPT-4 3-shot accuracy on MMLU across languages (translated MMLU suite of 26 languages).\n- Y-axis: Accuracy (0% to 90%).\n- Baseline bars (English): Random guessing = 25.0%, Chinchilla-English = 67.0%, PaLM-English = 69.3%, GPT-3.5-English = 70.1%, GPT-4 English = 85.5%.\n- GPT-4 3-shot language scores (high to low): Italian = 84.1%, Afrikaans = 84.1%, Spanish = 84.0%, German = 83.7%, French = 83.6%, Indonesian = 83.1%, Russian = 82.7%, Polish = 82.1%, Ukrainian = 81.9%, Greek = 81.4%, Latvian = 80.9%, Mandarin = 80.1%, Arabic = 80.0%, Turkish = 80.0%, Japanese = 79.9%, Swahili = 78.5%, Welsh = 77.5%, Korean = 77.0%, Icelandic = 76.5%, Bengali = 73.2%, Urdu = 72.6%, Nepali = 72.2%, Thai = 71.8%, Punjabi = 71.4%, Marathi = 66.7%, Telugu = 62.0%.\n- Key finding: GPT-4 outperforms GPT-3.5 English (70.1%) in 24 out of 26 languages tested (including Latvian 80.9%, Swahili 78.5%, Welsh 77.5%), with only Marathi (66.7%) and Telugu (62.0%) below 70.1%.\n\n[gpt4-2023-techreport_p008_text_01 | page=8 | modality=text | ref=Page 8 | bbox=[108.0, 70.7, 504.0, 570.0]]\nGPT-4 3-shot accuracy on MMLU across languages\n0% 10% 20% 30% 40% 50% 60% 70% 80% 90%\nFigure 5. Performance of GPT-4 in a variety of languages compared to prior models in English on MMLU. GPT-4 outperforms the English-language performance of existing language models [2, 3] for the vast majority of languages tested, including low-resource languages such as Latvian, Welsh, and Swahili.\nto increase the diversity of these benchmarks over time to represent a wider set of failure modes and a harder set of tasks.\n\n[gpt4-2023-techreport_p008_text_02 | page=8 | modality=text | ref=Page 8 | bbox=[106.5, 619.7, 505.7, 695.1]]\nGPT-4 accepts prompts consisting of both images and text, which – parallel to the text-only setting – lets the user specify any vision or language task. Specifically, the model generates text outputs given inputs consisting of arbitrarily interlaced text and images. Over a range of domains – including documents with text and photographs, diagrams, or screenshots – GPT-4 exhibits similar capabilities as it does on text-only inputs. An example of GPT-4’s visual input can be found in Table 3. The standard test-time techniques developed for language models (e.g. few-shot prompting, chain-of- thought, etc) are similarly effective when using both images and text - see Appendix G for examples.",
+      "context_ids": [
+        "gpt4-2023-techreport_p033_table_01",
+        "gpt4-2023-techreport_p008_chart_01",
+        "gpt4-2023-techreport_p008_text_01",
+        "gpt4-2023-techreport_p008_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Figure 5 (Page 8) and Table 13 (Page 33) on Multilingual MMLU, what exact 3-shot accuracy did GPT-4 achieve on Vietnamese, Tagalog, and Amharic, and what are their speaker populations in Table 13?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "The specific 3-shot accuracy scores and speaker populations for Vietnamese, Tagalog, and Amharic are not present in the retrieved context (Figure 5 and Table 13)."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_30",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "answerable": false,
+    "gold_ids": [],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p033_table_01",
+      "gpt4-2023-techreport_p008_chart_01",
+      "gpt4-2023-techreport_p008_text_01",
+      "gpt4-2023-techreport_p033_text_02",
+      "gpt4-2023-techreport_p007_table_01",
+      "gpt4-2023-techreport_p011_chart_01",
+      "gpt4-2023-techreport_p032_table_01",
+      "gpt4-2023-techreport_p063_chart_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p033_table_01",
+      "gpt4-2023-techreport_p008_chart_01",
+      "gpt4-2023-techreport_p008_text_01",
+      "gpt4-2023-techreport_p008_text_02"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+  },
+  "absence_reason": "Figure 5 evaluates 26 specific languages (Italian down to Telugu) and Table 13 lists English, Marathi, Latvian, and Welsh; Vietnamese, Tagalog, and Amharic are not among the 26 tested languages.",
+  "prompt_tokens": 1153,
+  "completion_tokens": 45,
+  "total_tokens": 1198,
+  "estimated_cost_usd": 0.0002
+}

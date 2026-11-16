@@ -1,0 +1,295 @@
+{
+  "id": "adv_dev_08",
+  "split": "dev",
+  "primary_group": "chart",
+  "question": "In Figure 3 (Page 4) on the Hindsight Neglect task, what trend occurs across the smaller models (ada, babbage, curie, gpt-3.5) and how does GPT-4 change this trend?",
+  "answerable": true,
+  "expected_answer": "In Figure 3 (Page 4), accuracy on the Hindsight Neglect task exhibits inverse scaling across smaller models—decreasing from ada (~38%), babbage (~32%), and curie (~22%) down to gpt-3.5 (~12%)—before GPT-4 reverses the trend and jumps to ~100% accuracy.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p004_chart_01",
+      "page": 4,
+      "modality": "chart",
+      "figure_or_table_id": "Figure 3",
+      "bbox": [
+        110,
+        340,
+        500,
+        620
+      ],
+      "evidence": "Performance decreases with scale from ada (~38%), babbage (~32%), curie (~22%) down to gpt-3.5 (~12%, inverse scaling), but GPT-4 reverses the inverse scaling trend and jumps to ~100% accuracy.",
+      "unit_and_condition": "Accuracy (%) on y-axis across 5 models."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "In Figure 3 on the Hindsight Neglect task, performance decreases as model scale increases across the smaller models (ada, babbage, curie, gpt-3.5), demonstrating an inverse scaling trend. Specifically, accuracy drops from approximately 38% for ada, to 32% for babbage, 22% for curie, and 12% for gpt-3.5 [gpt4-2023-techreport_p004_chart_01]. GPT-4 reverses this inverse scaling trend, jumping to approximately 100% accuracy [gpt4-2023-techreport_p004_chart_01]. The text confirms that GPT-4 reverses the trend of decreasing performance with scale [gpt4-2023-techreport_p004_text_03].",
+  "turns": 1,
+  "latency_ms": 9111.37,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p004_chart_01",
+    "gpt4-2023-techreport_p004_text_03",
+    "gpt4-2023-techreport_p063_chart_01",
+    "gpt4-2023-techreport_p098_chart_01",
+    "gpt4-2023-techreport_p032_table_01",
+    "gpt4-2023-techreport_p005_table_01",
+    "gpt4-2023-techreport_p003_chart_01",
+    "gpt4-2023-techreport_p014_chart_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p004_chart_01",
+    "gpt4-2023-techreport_p004_text_03",
+    "gpt4-2023-techreport_p063_chart_01",
+    "gpt4-2023-techreport_p064_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Figure 3 (Page 4) on the Hindsight Neglect task, what trend occurs across the smaller models (ada, babbage, curie, gpt-3.5) and how does GPT-4 change this trend?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p004_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 4,
+          "text": "[CHART: Figure 3 | Page 4 | BBox (110, 340, 500, 620)]\n- Figure 3 Title: Inverse scaling prize, hindsight neglect — Performance of GPT-4 and smaller models on the Hindsight Neglect task.\n- X-axis (Model scale): ada -> babbage -> curie -> gpt-3.5 -> gpt-4.\n- Y-axis: Accuracy (%, range 0 to 100, higher is better).\n- Trend & Values: Performance decreases with scale from ada (~38%), babbage (~32%), curie (~22%) down to gpt-3.5 (~12%, inverse scaling), but GPT-4 reverses the inverse scaling trend and jumps to ~100% accuracy.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 3",
+            "bbox": [
+              110,
+              340,
+              500,
+              620
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p004_chart_01.png",
+            "section": "3 Predictable Scaling",
+            "char_length": 525
+          },
+          "score": 0.242581
+        },
+        {
+          "id": "gpt4-2023-techreport_p004_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 4,
+          "text": "Certain capabilities remain hard to predict. For example, the Inverse Scaling Prize [44] proposed several tasks for which model performance decreases as a function of scale. Similarly to a recent result by Wei et al. [45], we find that GPT-4 reverses this trend, as shown on one of the tasks called Hindsight Neglect [46] in Figure 3.\nInverse scaling prize, hindsight neglect\nada babbage curie gpt-3.5 gpt-4 Model\nFigure 3. Performance of GPT-4 and smaller models on the Hindsight Neglect task. Accuracy is shown on the y-axis, higher is better. ada, babbage, and curie refer to models available via the OpenAI API [47].",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              205.3,
+              504.0,
+              454.7
+            ],
+            "section": "Page 4",
+            "char_length": 620
+          },
+          "score": 0.140313
+        },
+        {
+          "id": "gpt4-2023-techreport_p063_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 63,
+          "text": "[CHART & DIAGRAM: System Card Figure 6 & Figure 7 | Page 63 | BBox (55, 55, 555, 720)]\n- Figure 6 (Rule-Based Reward Model RBRM Classifier Rubric): Shows the 3-question rubric used by RBRM to classify model responses: (1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No), mapping into classes (A) through (Q).\n- Figure 7 (Safety metrics on challenging prompts): Compares GPT-3.5 vs GPT-4-early vs GPT-4-launch on RealToxicityPrompts (toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch) and preference win rates (GPT-4-launch responses preferred over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts, page 64).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 6 & Figure 7",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p063_chart_01.png",
+            "section": "System Card 3.2 Rule-Based Reward Models (RBRMs)",
+            "char_length": 768
+          },
+          "score": 0.079542
+        },
+        {
+          "id": "gpt4-2023-techreport_p098_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 98,
+          "text": "[CHART: System Card Figure 11 | Page 98 | BBox (55, 90, 555, 520)]\n- Figure 11 Caption: 'Results on IF (Instruction Following) evaluations across GPT3.5, GPT3.5-Turbo, GPT-4-launch'.\n- Indexing note: Embedded raster image (imgs=1) on page 98 with 82 characters of vector caption text; shows GPT-4-launch achieving the highest instruction-following score across all evaluated categories compared to GPT-3.5 and GPT-3.5-Turbo.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 11",
+            "bbox": [
+              55,
+              90,
+              555,
+              520
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p098_chart_01.png",
+            "section": "System Card Appendix",
+            "char_length": 424
+          },
+          "score": 0.079195
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "[TABLE: Table 11 & Table 12 | Page 32 | BBox (50, 55, 560, 700)]\nTable 11: Contamination between GPT-4 pre-training data and academic benchmarks:\n- MMLU: GPT-4 = 86.4%, GPT-3.5 = 70.0%, Contamination = ~0.6%.\n- GSM-8K: GPT-4 = 92.0%, GPT-3.5 = 57.1%, Contamination = ~1% (note in Appendix E: part of GSM-8K training set was included in pre-training mix, 0% test contamination).\n- HellaSwag: GPT-4 = 95.3%, GPT-3.5 = 85.5% (evaluated on private secret holdout; validation set score = 95.6%).\n- AI2 ARC: GPT-4 = 96.3%, GPT-3.5 = 85.2%, Contamination = ~3.4%.\n- WinoGrande: GPT-4 = 87.5%, GPT-3.5 = 81.6%, Contamination = ~0.9%.\n- HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.\n- DROP (F1): GPT-4 = 80.9, GPT-3.5 = 64.1, Contamination = ~21%, GPT-4 (non-contaminated subsample) = 82.8 (entire subsample = 82.5), Degradation = 0.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 11 & Table 12",
+            "bbox": [
+              50,
+              55,
+              560,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p032_table_01.png",
+            "section": "Appendix D Contamination on academic benchmarks",
+            "char_length": 899
+          },
+          "score": 0.074174
+        },
+        {
+          "id": "gpt4-2023-techreport_p005_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "[TABLE: Table 1 | Page 5 | BBox (50, 60, 560, 720)]\nTable 1: GPT performance on academic and professional exams (Columns: Exam | GPT-4 | GPT-4 (no vision) | GPT-3.5):\n- Uniform Bar Exam (MBE+MEE+MPT): GPT-4 = 298 / 400 (~90th percentile); GPT-4 (no vision) = 298 / 400 (~90th); GPT-3.5 = 213 / 400 (~10th).\n- LSAT: GPT-4 = 163 (~88th percentile); GPT-4 (no vision) = 161 (~83rd); GPT-3.5 = 149 (~40th).\n- SAT Evidence-Based Reading & Writing: GPT-4 = 710 / 800 (~93rd); GPT-4 (no vision) = 710 / 800 (~93rd); GPT-3.5 = 670 / 800 (~87th).\n- SAT Math: GPT-4 = 700 / 800 (~89th); GPT-4 (no vision) = 690 / 800 (~89th); GPT-3.5 = 590 / 800 (~70th).\n- GRE Quantitative: GPT-4 = 163 / 170 (~80th); GPT-4 (no vision) = 157 / 170 (~62nd); GPT-3.5 = 147 / 170 (~25th).\n- GRE Verbal: GPT-4 = 169 / 170 (~99th); GPT-4 (no vision) = 165 / 170 (~96th); GPT-3.5 = 154 / 170 (~63rd).\n- GRE Writing: GPT-4 = 4 / 6 (~54th); GPT-4 (no vision) = 4 / 6 (~54th); GPT-3.5 = 4 / 6 (~54th).\n- USABO Semifinal Exam 2020: GPT-4 = 87 / 150 (99th - 100th); GPT-4 (no vision) = 87 / 150 (99th - 100th); GPT-3.5 = 43 / 150 (31st - 33rd).\n- USNCO Local Section Exam 2022: GPT-4 = 36 / 60; GPT-4 (no vision) = 38 / 60; GPT-3.5 = 24 / 60.\n- Medical Knowledge Self-Assessment Program (MKSAP): GPT-4 = 75%; GPT-4 (no vision) = 75%; GPT-3.5 = 53%.\n- Codeforces Rating: GPT-4 = 392 (below 5th); GPT-4 (no vision) = 392 (below 5th); GPT-3.5 = 260 (below 5th).\n- AP Calculus BC: GPT-4 = 4 (43rd-59th); GPT-3.5 = 1 (0th-7th). AP Biology: GPT-4 = 5 (85th-100th); GPT-3.5 = 4 (62nd-85th).\n- Introductory Sommelier (theory knowledge): GPT-4 = 92%; GPT-3.5 = 80%. Certified Sommelier: GPT-4 = 86%; GPT-3.5 = 58%. Advanced Sommelier: GPT-4 = 77%; GPT-3.5 = 46%.\n- LeetCode (Easy / Medium / Hard, out of 41/39/20): GPT-4 (k=1) = 31/41, 21/39, 3/20; GPT-3.5 (k=1) = 12/41, 8/39, 0/20.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 1",
+            "bbox": [
+              50,
+              60,
+              560,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p005_table_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1837
+          },
+          "score": 0.073712
+        },
+        {
+          "id": "gpt4-2023-techreport_p003_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "[CHART: Figure 1 & Figure 2 | Page 3 | BBox (45, 55, 565, 680)]\n- Figure 1 Title: OpenAI codebase next word prediction — Performance of GPT-4 and smaller models.\n  Metric (y-axis): Final loss in Bits per word (range 1.0 to 6.0, lower is better) on an internal codebase dataset not in training set.\n  X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 100p, 10n, 1u, 100u, 0.01, 1). Series: Observed (dots) vs Prediction (dotted power-law fit to smaller models excluding GPT-4). GPT-4 final loss (~1.8 bits per word at compute=1) matches the power-law prediction.\n- Figure 2 Title: Capability prediction on 23 coding problems — Performance of GPT-4 and smaller models on a subset of the HumanEval dataset (3rd easiest difficulty bucket).\n  Metric (y-axis): -Mean Log Pass Rate (range 0 to 5). X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 1u, 10u, 100u, 0.001, 0.01, 0.1, 1). Power-law fit to smaller models accurately predicts GPT-4 pass rate.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 1 & Figure 2",
+            "bbox": [
+              45,
+              55,
+              565,
+              680
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p003_chart_01.png",
+            "section": "3 Predictable Scaling",
+            "char_length": 970
+          },
+          "score": 0.073174
+        },
+        {
+          "id": "gpt4-2023-techreport_p014_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 14,
+          "text": "[CHART: Figure 9 | Page 14 | BBox (95, 55, 515, 330)]\n- Figure 9 Title: Incorrect behavior rate on disallowed and sensitive content (Lower values are better).\n- X-axis groups: Sensitive Prompts vs Disallowed Prompts. Y-axis: Incorrect behavior rate (0% to 50%).\n- Models compared: text-davinci-003 (blue), gpt-3.5-turbo (orange), gpt-4 (green).\n- Values: On Sensitive Prompts, incorrect behavior drops from ~43% (text-davinci-003) and ~30% (gpt-3.5-turbo) to ~22% (gpt-4). On Disallowed Prompts, incorrect behavior drops from ~29% (text-davinci-003) and ~5% (gpt-3.5-turbo) to <1% (~0.7%, gpt-4). Text states GPT-4 responds to requests for disallowed content 82% less often than GPT-3.5.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 9",
+            "bbox": [
+              95,
+              55,
+              515,
+              330
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p014_chart_01.png",
+            "section": "6 Risks & mitigations",
+            "char_length": 687
+          },
+          "score": 0.072449
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p004_chart_01 | page=4 | modality=chart | ref=Figure 3 | bbox=[110, 340, 500, 620]]\n[CHART: Figure 3 | Page 4 | BBox (110, 340, 500, 620)]\n- Figure 3 Title: Inverse scaling prize, hindsight neglect — Performance of GPT-4 and smaller models on the Hindsight Neglect task.\n- X-axis (Model scale): ada -> babbage -> curie -> gpt-3.5 -> gpt-4.\n- Y-axis: Accuracy (%, range 0 to 100, higher is better).\n- Trend & Values: Performance decreases with scale from ada (~38%), babbage (~32%), curie (~22%) down to gpt-3.5 (~12%, inverse scaling), but GPT-4 reverses the inverse scaling trend and jumps to ~100% accuracy.\n\n[gpt4-2023-techreport_p004_text_03 | page=4 | modality=text | ref=Page 4 | bbox=[108.0, 205.3, 504.0, 454.7]]\nCertain capabilities remain hard to predict. For example, the Inverse Scaling Prize [44] proposed several tasks for which model performance decreases as a function of scale. Similarly to a recent result by Wei et al. [45], we find that GPT-4 reverses this trend, as shown on one of the tasks called Hindsight Neglect [46] in Figure 3.\nInverse scaling prize, hindsight neglect\nada babbage curie gpt-3.5 gpt-4 Model\nFigure 3. Performance of GPT-4 and smaller models on the Hindsight Neglect task. Accuracy is shown on the y-axis, higher is better. ada, babbage, and curie refer to models available via the OpenAI API [47].\n\n[gpt4-2023-techreport_p063_chart_01 | page=63 | modality=chart | ref=System Card Figure 6 & Figure 7 | bbox=[55, 55, 555, 720]]\n[CHART & DIAGRAM: System Card Figure 6 & Figure 7 | Page 63 | BBox (55, 55, 555, 720)]\n- Figure 6 (Rule-Based Reward Model RBRM Classifier Rubric): Shows the 3-question rubric used by RBRM to classify model responses: (1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No), mapping into classes (A) through (Q).\n- Figure 7 (Safety metrics on challenging prompts): Compares GPT-3.5 vs GPT-4-early vs GPT-4-launch on RealToxicityPrompts (toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch) and preference win rates (GPT-4-launch responses preferred over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts, page 64).\n\n[gpt4-2023-techreport_p064_text_01 | page=64 | modality=text | ref=Page 64 | bbox=[70.8, 69.4, 542.8, 139.1]]\nproduces toxic generation 6.48% of the time. Additionally, GPT-4-launch substantially improves over previous models in the ability to follow user intent [12]. On a dataset of prompts submitted to ChatGPT [103] and the OpenAI API [104], the responses generated by GPT-4-launch were preferred over the responses generated by GPT-3.5 RLHF on 70.2% of prompts and GPT-3.5 Turbo RLHF on 61.1% of prompts.1130",
+      "context_ids": [
+        "gpt4-2023-techreport_p004_chart_01",
+        "gpt4-2023-techreport_p004_text_03",
+        "gpt4-2023-techreport_p063_chart_01",
+        "gpt4-2023-techreport_p064_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Figure 3 (Page 4) on the Hindsight Neglect task, what trend occurs across the smaller models (ada, babbage, curie, gpt-3.5) and how does GPT-4 change this trend?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The question asks about the trend in Figure 3 on the Hindsight Neglect task. The context provides a chart description (gpt4-2023-techreport_p004_chart_01) and supporting text (gpt4-2023-techreport_p004_text_03). The chart shows that performance decreases as model scale increases for the smaller models (ada ~38%, babbage ~32%, curie ~22%, gpt-3.5 ~12%), which is an inverse scaling trend. GPT-4 reverses this trend, jumping to ~100% accuracy. The text confirms that GPT-4 reverses the trend of decreasing performance with scale."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_08",
+    "split": "dev",
+    "primary_group": "chart",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p004_chart_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p004_chart_01",
+      "gpt4-2023-techreport_p004_text_03",
+      "gpt4-2023-techreport_p063_chart_01",
+      "gpt4-2023-techreport_p098_chart_01",
+      "gpt4-2023-techreport_p032_table_01",
+      "gpt4-2023-techreport_p005_table_01",
+      "gpt4-2023-techreport_p003_chart_01",
+      "gpt4-2023-techreport_p014_chart_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p004_chart_01",
+      "gpt4-2023-techreport_p004_text_03",
+      "gpt4-2023-techreport_p063_chart_01",
+      "gpt4-2023-techreport_p064_text_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p004_chart_01",
+      "gpt4-2023-techreport_p004_text_03"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1070,
+  "completion_tokens": 198,
+  "total_tokens": 1268,
+  "estimated_cost_usd": 0.000279
+}

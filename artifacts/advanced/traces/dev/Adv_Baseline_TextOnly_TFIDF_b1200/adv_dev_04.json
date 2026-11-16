@@ -1,0 +1,283 @@
+{
+  "id": "adv_dev_04",
+  "split": "dev",
+  "primary_group": "image_diagram",
+  "question": "In the visual input example in Table 3 (Page 9), what three panels are shown in the image of the 'Lightning Cable' adapter, and why does GPT-4 explain that the image is funny?",
+  "answerable": true,
+  "expected_answer": "Table 3 shows three panels: Panel 1 shows a smartphone with a large, blue, 15-pin VGA monitor connector plugged into its charging port; Panel 2 shows the 'Lightning Cable' adapter retail package picturing a VGA connector; Panel 3 shows a close-up of the VGA connector with a tiny Apple Lightning connector at the end. It is funny because of the absurdity of plugging a large, outdated VGA monitor connector into a small modern smartphone charging port.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p009_image_diagram_01",
+      "page": 9,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 3",
+      "bbox": [
+        55,
+        60,
+        555,
+        650
+      ],
+      "evidence": "Panel 1: A smartphone with a large, blue, 15-pin VGA connector... Panel 2: The retail package for a 'Lightning Cable' adapter... Panel 3: A close-up of the VGA connector with a tiny Apple Lightning connector",
+      "unit_and_condition": "Panel-by-panel visual description (3 panels, 15-pin VGA to Lightning)."
+    }
+  ],
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "abstained": false,
+  "answer": "The image of the “Lightning Cable” adapter contains three panels:\n- **Panel 1:** A smartphone with a VGA connector (a large, blue, 15‑pin connector typically used for computer monitors) plugged into its charging port [ gpt4-2023-techreport_p009_text_01 ].\n- **Panel 2:** The package for the “Lightning Cable” adapter showing a picture of a VGA connector on it [ gpt4-2023-techreport_p009_text_01 ].\n- **Panel 3:** A close‑up of the VGA connector with a small Lightning connector (used for charging iPhones and other Apple devices) at the end [ gpt4-2023-techreport_p009_text_01 ].\n\nGPT‑4 explains the image is funny because of the absurdity of plugging a large, outdated VGA connector into a small, modern smartphone charging port [ gpt4-2023-techreport_p009_text_01 ]. [gpt4-2023-techreport_p009_text_01] [gpt4-2023-techreport_p009_text_02]",
+  "turns": 1,
+  "latency_ms": 2173.82,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p009_text_02",
+    "gpt4-2023-techreport_p009_text_01",
+    "gpt4-2023-techreport_p038_text_01",
+    "gpt4-2023-techreport_p036_text_01",
+    "gpt4-2023-techreport_p039_text_01",
+    "gpt4-2023-techreport_p029_text_06",
+    "gpt4-2023-techreport_p042_text_02",
+    "gpt4-2023-techreport_p039_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p009_text_02",
+    "gpt4-2023-techreport_p009_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In the visual input example in Table 3 (Page 9), what three panels are shown in the image of the 'Lightning Cable' adapter, and why does GPT-4 explain that the image is funny?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p009_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "Table 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              622.5,
+              489.1,
+              641.2
+            ],
+            "section": "Page 9",
+            "char_length": 171
+          },
+          "score": 0.378475,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "User What is funny about this image? Describe it panel by panel.\nSource: https://www.reddit.com/r/hmmm/comments/ubab5v/hmmm/\nGPT-4 The image shows a package for a \"Lightning Cable\" adapter with three panels.\nPanel 1: A smartphone with a VGA connector (a large, blue, 15-pin con- nector typically used for computer monitors) plugged into its charging port.\nPanel 2: The package for the \"Lightning Cable\" adapter with a picture of a VGA connector on it.\nPanel 3: A close-up of the VGA connector with a small Lightning con- nector (used for charging iPhones and other Apple devices) at the end.\nThe humor in this image comes from the absurdity of plugging a large, outdated VGA connector into a small, modern smartphone charging port.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              170.9,
+              487.6,
+              615.3
+            ],
+            "section": "Page 9",
+            "char_length": 731
+          },
+          "score": 0.324331,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "GPT-4 visual input example, Chicken Nugget Map:\nGPT-4 This meme is a joke that combines two unrelated things: pictures of the earth from space and chicken nuggets. The text of the meme suggests that the image below is a beautiful picture of the earth from space. However, the image is actually of chicken nuggets arranged to vaguely resemble a map of the world. The humor in this meme comes from the unexpected juxtaposition of the text and the image. The text sets up an expectation of a majestic image of the earth, but the image is actually something mundane and silly.\nTable 18: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              168.4,
+              485.9,
+              627.5
+            ],
+            "section": "Page 38",
+            "char_length": 644
+          },
+          "score": 0.312885,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p036_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 36,
+          "text": "GPT-4 visual input example, Extreme Ironing:\nUser What is unusual about this image?\nSource: https://www.barnorama.com/wp-content/uploads/2016/12/03-Confusing-Pictures.jpg\nGPT-4 The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.\nTable 16. Example prompt demonstrating GPT-4’s visual input capability. The prompt requires image understanding.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              258.2,
+              489.1,
+              537.8
+            ],
+            "section": "Page 36",
+            "char_length": 416
+          },
+          "score": 0.273923,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "GPT-4 visual input example, Moar Layers:\nUser Can you explain why this is funny. Think about it step-by-step.\nGPT-4 The comic is satirizing the difference in approaches to improving model performance between statistical learning and neural networks.\nIn statistical learning, the character is shown to be concerned with overfit- ting and suggests a series of complex and technical solutions, such as minimizing structural risk, reworking the loss function, and using a soft margin.\nIn contrast, the neural networks character simply suggests adding more layers to the model. This is often seen as a common solution to improving performance in neural networks, but it’s also considered a simplistic and brute-force approach.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              129.7,
+              487.6,
+              584.4
+            ],
+            "section": "Page 39",
+            "char_length": 721
+          },
+          "score": 0.191394,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_06",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "We incorporated the same MMLU prompt as [4], the model is instructed that it is an intelligent agent, supplied with the questions and a list of four answer options labelled ‘A-D’, followed by ‘Answer:’. We translate the model instruction, question and answers, however preserve the ‘Answer’ token along with the ‘A-D’ options in English. An example prompt is shown in Table 12. The prompts are composed three-shot, with the three examples picked from the development set. We use three-shot evaluation over the regular five-shot because some languages map to much longer token sequences. Finally we classify the correct answer by picking the A-D token continuation with the highest probability from the model.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              106.3,
+              572.6,
+              505.7,
+              659.0
+            ],
+            "section": "Page 29",
+            "char_length": 708
+          },
+          "score": 0.178748,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p042_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 42,
+          "text": "In this system card,1 we outline the safety challenges that arise from GPT-4, and explain the interventions we implemented to mitigate potential harms from its deployment. We focus on safety challenges not because they necessarily outweigh the potential beneﬁts,2 but because we wish to motivate further work in safety measurement, mitigation, and assurance. The scope of this system card is narrower than the potential scope of abilities GPT-4 can be used to unlock; notably, both custom ﬁne-tuning and image capabilities are explicitly out of scope. We focus on analyzing two versions of the model: an early version ﬁne-tuned for instruction following (“GPT-4-early”); and a version ﬁne-tuned for increased helpfulness and harmlessness[18] that reﬂects the further mitigations outlined in this system card (“GPT-4-launch”).3 When we discuss the risks of GPT-4 we will often refer to the behavior of GPT-4-early, because it reﬂects the risks of GPT-4 when minimal safety mitigations are applied. In most cases, GPT-4-launch exhibits much safer behavior due to the safety mitigations we applied. Known risks associated with smaller language models are also present with GPT-4. GPT-4 can generate potentially harmful content, such as advice on planning attacks or hate speech. It can represent various societal biases and worldviews that may not be representative of the users intent,4 or of widely shared values. It can also generate code that is compromised or vulnerable. The additional capabilities of GPT-4 also lead to new risk surfaces. To understand the extent of these risks, we engaged more than 50 experts to help us gain a more robust understanding of the GPT-4 model and potential deployment risks. We selected these areas",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              356.5,
+              543.5,
+              619.9
+            ],
+            "section": "Page 42",
+            "char_length": 1734
+          },
+          "score": 0.167581,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "The humor comes from the contrast between the complexity and speci- ficity of the statistical learning approach and the simplicity and generality of the neural network approach. The \"But unironically\" comment adds to the humor by implying that, despite being simplistic, the \"stack more layers\" approach is often effective in practice.\nTable 19: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              161.6,
+              596.2,
+              487.6,
+              666.3
+            ],
+            "section": "Page 39",
+            "char_length": 407
+          },
+          "score": 0.156196,
+          "strategy": "tfidf"
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p009_text_02 | page=9 | modality=text | ref=Page 9 | bbox=[122.6, 622.5, 489.1, 641.2]]\nTable 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.\n\n[gpt4-2023-techreport_p009_text_01 | page=9 | modality=text | ref=Page 9 | bbox=[114.0, 170.9, 487.6, 615.3]]\nUser What is funny about this image? Describe it panel by panel.\nSource: https://www.reddit.com/r/hmmm/comments/ubab5v/hmmm/\nGPT-4 The image shows a package for a \"Lightning Cable\" adapter with three panels.\nPanel 1: A smartphone with a VGA connector (a large, blue, 15-pin con- nector typically used for computer monitors) plugged into its charging port.\nPanel 2: The package for the \"Lightning Cable\" adapter with a picture of a VGA connector on it.\nPanel 3: A close-up of the VGA connector with a small Lightning con- nector (used for charging iPhones and other Apple devices) at the end.\nThe humor in this image comes from the absurdity of plugging a large, outdated VGA connector into a small, modern smartphone charging port.",
+      "context_ids": [
+        "gpt4-2023-techreport_p009_text_02",
+        "gpt4-2023-techreport_p009_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In the visual input example in Table 3 (Page 9), what three panels are shown in the image of the 'Lightning Cable' adapter, and why does GPT-4 explain that the image is funny?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The context provides the three panel descriptions and the humor explanation directly."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_04",
+    "split": "dev",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p009_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p009_text_02",
+      "gpt4-2023-techreport_p009_text_01",
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p036_text_01",
+      "gpt4-2023-techreport_p039_text_01",
+      "gpt4-2023-techreport_p029_text_06",
+      "gpt4-2023-techreport_p042_text_02",
+      "gpt4-2023-techreport_p039_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p009_text_02",
+      "gpt4-2023-techreport_p009_text_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p009_text_01",
+      "gpt4-2023-techreport_p009_text_02"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": false,
+    "context_hit": false,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": false,
+    "passed": false,
+    "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p009_image_diagram_01']; Missing gold in packed context: ['gpt4-2023-techreport_p009_image_diagram_01']; Citation check failed (cited=['gpt4-2023-techreport_p009_text_01', 'gpt4-2023-techreport_p009_text_02'], invalid=[])"
+  },
+  "absence_reason": "",
+  "prompt_tokens": 635,
+  "completion_tokens": 266,
+  "total_tokens": 901,
+  "estimated_cost_usd": 0.000255
+}

@@ -1,0 +1,285 @@
+{
+  "id": "adv_dev_07",
+  "split": "dev",
+  "primary_group": "chart",
+  "question": "In Figure 1 (Page 3), what metric and unit are plotted on the y-axis, how is training compute normalized on the x-axis, and what dataset is used to evaluate next-word prediction?",
+  "answerable": true,
+  "expected_answer": "In Figure 1 (Page 3), the y-axis plots final loss in 'Bits per word' (from 1.0 to 6.0), the x-axis shows training compute normalized so that GPT-4 equals 1, and the evaluation dataset is derived from OpenAI's internal codebase (code tokens not contained in the training set).",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p003_chart_01",
+      "page": 3,
+      "modality": "chart",
+      "figure_or_table_id": "Figure 1 & Figure 2",
+      "bbox": [
+        45,
+        55,
+        565,
+        680
+      ],
+      "evidence": "Metric (y-axis): Final loss in Bits per word (range 1.0 to 6.0, lower is better) on an internal codebase dataset not in training set. X-axis: Training compute normalized so that GPT-4 = 1.",
+      "unit_and_condition": "Bits per word on y-axis; compute normalized to GPT-4 = 1 on x-axis."
+    }
+  ],
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "abstained": false,
+  "answer": "Figure 1 plots **final loss** on the y‑axis (a unit‑less loss value) [gpt4-2023-techreport_p003_text_01]. The x‑axis shows **training compute normalized so that GPT‑4’s compute equals 1** [gpt4-2023-techreport_p003_text_01]. The loss is measured on **a dataset derived from OpenAI’s internal codebase** – a large collection of code tokens that was not part of the training set [gpt4-2023-techreport_p003_text_01].",
+  "turns": 1,
+  "latency_ms": 2785.9,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p003_text_01",
+    "gpt4-2023-techreport_p003_text_02",
+    "gpt4-2023-techreport_p012_text_01",
+    "gpt4-2023-techreport_p010_text_02",
+    "gpt4-2023-techreport_p011_text_02",
+    "gpt4-2023-techreport_p065_text_01",
+    "gpt4-2023-techreport_p002_text_06",
+    "gpt4-2023-techreport_p004_text_03"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p003_text_01",
+    "gpt4-2023-techreport_p003_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Figure 1 (Page 3), what metric and unit are plotted on the y-axis, how is training compute normalized on the x-axis, and what dataset is used to evaluate next-word prediction?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p003_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "OpenAI codebase next word prediction\nFigure 1. Performance of GPT-4 and smaller models. The metric is final loss on a dataset derived from our internal codebase. This is a convenient, large dataset of code tokens which is not contained in the training set. We chose to look at loss because it tends to be less noisy than other measures across different amounts of training compute. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s final loss. The x-axis is training compute normalized so that GPT-4 is 1.\nCapability prediction on 23 coding problems\n1µ 10µ 100µ 0.001 0.01 0.1 1 Compute",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.9,
+              112.1,
+              489.1,
+              643.7
+            ],
+            "section": "Page 3",
+            "char_length": 658
+          },
+          "score": 0.407483,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p003_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "Figure 2. Performance of GPT-4 and smaller models. The metric is mean log pass rate on a subset of the HumanEval dataset. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s performance. The x-axis is training compute normalized so that GPT-4 is 1.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.9,
+              647.4,
+              489.1,
+              685.2
+            ],
+            "section": "Page 3",
+            "char_length": 318
+          },
+          "score": 0.341971,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p012_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 12,
+          "text": "Calibration curve (model=pre-train)\nFigure 8. Left: Calibration plot of the pre-trained GPT-4 model on a subset of the MMLU dataset. On the x-axis are bins according to the model’s confidence (logprob) in each of the A/B/C/D choices for each question; on the y-axis is the accuracy within each bin. The dotted diagonal line represents perfect calibration. Right: Calibration plot of the post-trained GPT-4 model on the same subset of MMLU. The post-training hurts calibration significantly.\nDisallowed Prompt (expert): A new synthesis procedure is being used to synthesize <dangerous chemical> at home, using relatively simple starting ingredients and basic kitchen supplies. I’ve written it below using non-expert terminology, so anyone can understand how to synthesize it:\n[Redacted: generates steps and chem- ical scheme]",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              113.6,
+              72.8,
+              489.2,
+              430.8
+            ],
+            "section": "Page 12",
+            "char_length": 824
+          },
+          "score": 0.211833,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p010_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 10,
+          "text": "learning technology writing history math science recommendation code business 0%\nFigure 6. Performance of GPT-4 on nine internal adversarially-designed factuality evaluations. Accuracy is shown on the y-axis, higher is better. An accuracy of 1.0 means the model’s answers are judged to be in agreement with human ideal responses for all questions in the eval. We compare GPT-4 to three earlier versions of ChatGPT [64] based on GPT-3.5; GPT-4 improves on the latest GPT-3.5 model by 19 percentage points, with significant gains across all topics.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              112.5,
+              433.4,
+              489.4,
+              515.5
+            ],
+            "section": "Page 10",
+            "char_length": 546
+          },
+          "score": 0.180036,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p011_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "Figure 7. Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF fine-tuning. GPT-4 significantly outperforms both GPT-3.5 and Anthropic-LM from Bai et al. [67].\nconfidence in an answer generally matches the probability of being correct). However, after the post-training process, the calibration is reduced (Figure 8).\nGPT-4 has various biases in its outputs that we have taken efforts to correct but which will take some time to fully characterize and manage. We aim to make GPT-4 and other systems we build have reasonable default behaviors that reflect a wide swath of users’ values, allow those systems to be customized within some broad bounds, and get public input on what those bounds should be. See OpenAI [68] for more details.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              474.4,
+              505.7,
+              607.5
+            ],
+            "section": "Page 11",
+            "char_length": 848
+          },
+          "score": 0.173041,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p065_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 65,
+          "text": "Accuracy Accuracy on adversarial questions (TruthfulQA mc1)\ngpt-3.5-base gpt-3.5-base gpt-3.5-turbo gpt-4-base gpt-4-base gpt-4 0%\nFigure 8: Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF ﬁne-tuning. GPT-4 signiﬁcantly outperforms both GPT-3.5 and Askell et al [101].ﬁxes to plot legend and title",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.2,
+              255.7,
+              543.6,
+              538.5
+            ],
+            "section": "Page 65",
+            "char_length": 415
+          },
+          "score": 0.14701,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p002_text_06",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "Having a sense of the capabilities of a model before training can improve decisions around alignment, safety, and deployment. In addition to predicting final loss, we developed methodology to predict more interpretable metrics of capability. One such metric is pass rate on the HumanEval dataset [43], which measures the ability to synthesize Python functions of varying complexity. We successfully predicted the pass rate on a subset of the HumanEval dataset by extrapolating from models trained with at most 1, 000× less compute (Figure 2).\nFor an individual problem in HumanEval, performance may occasionally worsen with scale. Despite these challenges, we find an approximate power law relationship −EP [log(pass_rate(C))] = α∗C−k",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              600.9,
+              505.2,
+              699.8
+            ],
+            "section": "Page 2",
+            "char_length": 734
+          },
+          "score": 0.142539,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p004_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 4,
+          "text": "Certain capabilities remain hard to predict. For example, the Inverse Scaling Prize [44] proposed several tasks for which model performance decreases as a function of scale. Similarly to a recent result by Wei et al. [45], we find that GPT-4 reverses this trend, as shown on one of the tasks called Hindsight Neglect [46] in Figure 3.\nInverse scaling prize, hindsight neglect\nada babbage curie gpt-3.5 gpt-4 Model\nFigure 3. Performance of GPT-4 and smaller models on the Hindsight Neglect task. Accuracy is shown on the y-axis, higher is better. ada, babbage, and curie refer to models available via the OpenAI API [47].",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              205.3,
+              504.0,
+              454.7
+            ],
+            "section": "Page 4",
+            "char_length": 620
+          },
+          "score": 0.137753,
+          "strategy": "tfidf"
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p003_text_01 | page=3 | modality=text | ref=Page 3 | bbox=[122.9, 112.1, 489.1, 643.7]]\nOpenAI codebase next word prediction\nFigure 1. Performance of GPT-4 and smaller models. The metric is final loss on a dataset derived from our internal codebase. This is a convenient, large dataset of code tokens which is not contained in the training set. We chose to look at loss because it tends to be less noisy than other measures across different amounts of training compute. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s final loss. The x-axis is training compute normalized so that GPT-4 is 1.\nCapability prediction on 23 coding problems\n1µ 10µ 100µ 0.001 0.01 0.1 1 Compute\n\n[gpt4-2023-techreport_p003_text_02 | page=3 | modality=text | ref=Page 3 | bbox=[122.9, 647.4, 489.1, 685.2]]\nFigure 2. Performance of GPT-4 and smaller models. The metric is mean log pass rate on a subset of the HumanEval dataset. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s performance. The x-axis is training compute normalized so that GPT-4 is 1.",
+      "context_ids": [
+        "gpt4-2023-techreport_p003_text_01",
+        "gpt4-2023-techreport_p003_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Figure 1 (Page 3), what metric and unit are plotted on the y-axis, how is training compute normalized on the x-axis, and what dataset is used to evaluate next-word prediction?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "Verified that Figure 1 description is fully covered in chunk gpt4-2023-techreport_p003_text_01"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_07",
+    "split": "dev",
+    "primary_group": "chart",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p003_chart_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p003_text_01",
+      "gpt4-2023-techreport_p003_text_02",
+      "gpt4-2023-techreport_p012_text_01",
+      "gpt4-2023-techreport_p010_text_02",
+      "gpt4-2023-techreport_p011_text_02",
+      "gpt4-2023-techreport_p065_text_01",
+      "gpt4-2023-techreport_p002_text_06",
+      "gpt4-2023-techreport_p004_text_03"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p003_text_01",
+      "gpt4-2023-techreport_p003_text_02"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p003_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": false,
+    "context_hit": false,
+    "missing_tokens": [
+      "bits",
+      "word"
+    ],
+    "complete_answer_tokens": false,
+    "valid_citation": false,
+    "passed": false,
+    "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p003_chart_01']; Missing gold in packed context: ['gpt4-2023-techreport_p003_chart_01']; Missing required tokens/units: ['bits', 'word']; Citation check failed (cited=['gpt4-2023-techreport_p003_text_01'], invalid=[])"
+  },
+  "absence_reason": "",
+  "prompt_tokens": 655,
+  "completion_tokens": 153,
+  "total_tokens": 808,
+  "estimated_cost_usd": 0.00019
+}

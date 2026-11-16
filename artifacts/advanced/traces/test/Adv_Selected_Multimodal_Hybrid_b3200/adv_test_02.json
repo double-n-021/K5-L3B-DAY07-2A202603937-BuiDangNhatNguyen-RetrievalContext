@@ -1,0 +1,287 @@
+{
+  "id": "adv_test_02",
+  "split": "test",
+  "primary_group": "table",
+  "question": "In Table 1 (Page 5), what scores did GPT-4 and GPT-3.5 achieve across the three Sommelier theory knowledge exams (Introductory, Certified, Advanced) and on LeetCode (Easy, Medium, Hard at k=1)?",
+  "answerable": true,
+  "expected_answer": "In Table 1 (Page 5), on Sommelier theory knowledge, GPT-4 vs GPT-3.5 achieved 92% vs 80% (Introductory), 86% vs 58% (Certified), and 77% vs 46% (Advanced). On LeetCode (k=1, out of 41 Easy, 39 Medium, 20 Hard), GPT-4 solved 31/41 Easy, 21/39 Medium, and 3/20 Hard, compared to GPT-3.5 with 12/41 Easy, 8/39 Medium, and 0/20 Hard.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p005_table_01",
+      "page": 5,
+      "modality": "table",
+      "figure_or_table_id": "Table 1",
+      "bbox": [
+        50,
+        60,
+        560,
+        720
+      ],
+      "evidence": "Introductory Sommelier: GPT-4 = 92%; GPT-3.5 = 80%. Certified Sommelier: GPT-4 = 86%; GPT-3.5 = 58%. Advanced Sommelier: GPT-4 = 77%; GPT-3.5 = 46%. LeetCode: GPT-4 (k=1) = 31/41, 21/39, 3/20; GPT-3.5 (k=1) = 12/41, 8/39, 0/20.",
+      "unit_and_condition": "Sommelier percentages and LeetCode k=1 pass counts out of 41/39/20."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "Introductory Sommelier (theory knowledge): GPT‑4 = 92 %, GPT‑3.5 = 80 % [gpt4-2023-techreport_p005_table_01]. Certified Sommelier (theory knowledge): GPT‑4 = 86 %, GPT‑3.5 = 58 % [gpt4-2023-techreport_p005_table_01]. Advanced Sommelier (theory knowledge): GPT‑4 = 77 %, GPT‑3.5 = 46 % [gpt4-2023-techreport_p005_table_01]. LeetCode (k = 1) – Easy: GPT‑4 = 31 / 41, GPT‑3.5 = 12 / 41; Medium: GPT‑4 = 21 / 39, GPT‑3.5 = 8 / 39; Hard: GPT‑4 = 3 / 20, GPT‑3.5 = 0 / 20 [gpt4-2023-techreport_p005_table_01].",
+  "turns": 1,
+  "latency_ms": 4540.04,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p005_table_01",
+    "gpt4-2023-techreport_p005_text_03",
+    "gpt4-2023-techreport_p032_table_01",
+    "gpt4-2023-techreport_p098_chart_01",
+    "gpt4-2023-techreport_p006_chart_01",
+    "gpt4-2023-techreport_p008_chart_01",
+    "gpt4-2023-techreport_p030_text_04",
+    "gpt4-2023-techreport_p005_text_04"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p005_table_01",
+    "gpt4-2023-techreport_p005_text_03",
+    "gpt4-2023-techreport_p005_text_04"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Table 1 (Page 5), what scores did GPT-4 and GPT-3.5 achieve across the three Sommelier theory knowledge exams (Introductory, Certified, Advanced) and on LeetCode (Easy, Medium, Hard at k=1)?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p005_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "[TABLE: Table 1 | Page 5 | BBox (50, 60, 560, 720)]\nTable 1: GPT performance on academic and professional exams (Columns: Exam | GPT-4 | GPT-4 (no vision) | GPT-3.5):\n- Uniform Bar Exam (MBE+MEE+MPT): GPT-4 = 298 / 400 (~90th percentile); GPT-4 (no vision) = 298 / 400 (~90th); GPT-3.5 = 213 / 400 (~10th).\n- LSAT: GPT-4 = 163 (~88th percentile); GPT-4 (no vision) = 161 (~83rd); GPT-3.5 = 149 (~40th).\n- SAT Evidence-Based Reading & Writing: GPT-4 = 710 / 800 (~93rd); GPT-4 (no vision) = 710 / 800 (~93rd); GPT-3.5 = 670 / 800 (~87th).\n- SAT Math: GPT-4 = 700 / 800 (~89th); GPT-4 (no vision) = 690 / 800 (~89th); GPT-3.5 = 590 / 800 (~70th).\n- GRE Quantitative: GPT-4 = 163 / 170 (~80th); GPT-4 (no vision) = 157 / 170 (~62nd); GPT-3.5 = 147 / 170 (~25th).\n- GRE Verbal: GPT-4 = 169 / 170 (~99th); GPT-4 (no vision) = 165 / 170 (~96th); GPT-3.5 = 154 / 170 (~63rd).\n- GRE Writing: GPT-4 = 4 / 6 (~54th); GPT-4 (no vision) = 4 / 6 (~54th); GPT-3.5 = 4 / 6 (~54th).\n- USABO Semifinal Exam 2020: GPT-4 = 87 / 150 (99th - 100th); GPT-4 (no vision) = 87 / 150 (99th - 100th); GPT-3.5 = 43 / 150 (31st - 33rd).\n- USNCO Local Section Exam 2022: GPT-4 = 36 / 60; GPT-4 (no vision) = 38 / 60; GPT-3.5 = 24 / 60.\n- Medical Knowledge Self-Assessment Program (MKSAP): GPT-4 = 75%; GPT-4 (no vision) = 75%; GPT-3.5 = 53%.\n- Codeforces Rating: GPT-4 = 392 (below 5th); GPT-4 (no vision) = 392 (below 5th); GPT-3.5 = 260 (below 5th).\n- AP Calculus BC: GPT-4 = 4 (43rd-59th); GPT-3.5 = 1 (0th-7th). AP Biology: GPT-4 = 5 (85th-100th); GPT-3.5 = 4 (62nd-85th).\n- Introductory Sommelier (theory knowledge): GPT-4 = 92%; GPT-3.5 = 80%. Certified Sommelier: GPT-4 = 86%; GPT-3.5 = 58%. Advanced Sommelier: GPT-4 = 77%; GPT-3.5 = 46%.\n- LeetCode (Easy / Medium / Hard, out of 41/39/20): GPT-4 (k=1) = 31/41, 21/39, 3/20; GPT-3.5 (k=1) = 12/41, 8/39, 0/20.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 1",
+            "bbox": [
+              50,
+              60,
+              560,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p005_table_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1837
+          },
+          "score": 0.240137
+        },
+        {
+          "id": "gpt4-2023-techreport_p005_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "AP Statistics 5 (85th - 100th) 5 (85th - 100th) 3 (40th - 63rd)\nAP US Government 5 (88th - 100th) 5 (88th - 100th) 4 (77th - 88th)\nAP US History 5 (89th - 100th) 4 (74th - 89th) 4 (74th - 89th)\nAP World History 4 (65th - 87th) 4 (65th - 87th) 4 (65th - 87th)\nAMC 103 30 / 150 (6th - 12th) 36 / 150 (10th - 19th) 36 / 150 (10th - 19th)\nAMC 123 60 / 150 (45th - 66th) 48 / 150 (19th - 40th) 30 / 150 (4th - 8th)\nIntroductory Sommelier (theory knowledge) 92 % 92 % 80 %\nCertified Sommelier (theory knowledge) 86 % 86 % 58 %\nAdvanced Sommelier (theory knowledge) 77 % 77 % 46 %\nLeetcode (easy) 31 / 41 31 / 41 12 / 41\nLeetcode (medium) 21 / 80 21 / 80 8 / 80\nLeetcode (hard) 3 / 45 3 / 45 0 / 45",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              91.9,
+              471.1,
+              533.8,
+              648.1
+            ],
+            "section": "Page 5",
+            "char_length": 691
+          },
+          "score": 0.115312
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "[TABLE: Table 11 & Table 12 | Page 32 | BBox (50, 55, 560, 700)]\nTable 11: Contamination between GPT-4 pre-training data and academic benchmarks:\n- MMLU: GPT-4 = 86.4%, GPT-3.5 = 70.0%, Contamination = ~0.6%.\n- GSM-8K: GPT-4 = 92.0%, GPT-3.5 = 57.1%, Contamination = ~1% (note in Appendix E: part of GSM-8K training set was included in pre-training mix, 0% test contamination).\n- HellaSwag: GPT-4 = 95.3%, GPT-3.5 = 85.5% (evaluated on private secret holdout; validation set score = 95.6%).\n- AI2 ARC: GPT-4 = 96.3%, GPT-3.5 = 85.2%, Contamination = ~3.4%.\n- WinoGrande: GPT-4 = 87.5%, GPT-3.5 = 81.6%, Contamination = ~0.9%.\n- HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.\n- DROP (F1): GPT-4 = 80.9, GPT-3.5 = 64.1, Contamination = ~21%, GPT-4 (non-contaminated subsample) = 82.8 (entire subsample = 82.5), Degradation = 0.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 11 & Table 12",
+            "bbox": [
+              50,
+              55,
+              560,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p032_table_01.png",
+            "section": "Appendix D Contamination on academic benchmarks",
+            "char_length": 899
+          },
+          "score": 0.076463
+        },
+        {
+          "id": "gpt4-2023-techreport_p098_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 98,
+          "text": "[CHART: System Card Figure 11 | Page 98 | BBox (55, 90, 555, 520)]\n- Figure 11 Caption: 'Results on IF (Instruction Following) evaluations across GPT3.5, GPT3.5-Turbo, GPT-4-launch'.\n- Indexing note: Embedded raster image (imgs=1) on page 98 with 82 characters of vector caption text; shows GPT-4-launch achieving the highest instruction-following score across all evaluated categories compared to GPT-3.5 and GPT-3.5-Turbo.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 11",
+            "bbox": [
+              55,
+              90,
+              555,
+              520
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p098_chart_01.png",
+            "section": "System Card Appendix",
+            "char_length": 424
+          },
+          "score": 0.074425
+        },
+        {
+          "id": "gpt4-2023-techreport_p006_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 6,
+          "text": "[CHART: Figure 4 | Page 6 | BBox (45, 55, 565, 430)]\n- Figure 4 Title: Exam results (ordered by GPT-3.5 performance) — GPT performance on academic and professional exams.\n- X-axis: Exams ordered from low to high based on GPT-3.5 performance (from AP Calculus BC, AMC 12, Codeforces Rating up to SAT EBRW, AP Environmental Science).\n- Y-axis: Estimated percentile lower bound among test takers (0% to 100%). Legend: gpt-4 (dark green), gpt-4 no vision (light green), gpt3.5 (blue).\n- Artifact explanation in caption: Reporting the conservative lower bound of percentile bins creates artifacts on AP exams with wide scoring bins — for example, although GPT-4 attains the highest possible score on AP Biology (5/5), it is shown in the plot as 85th percentile because 15% of test-takers achieve a 5.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 4",
+            "bbox": [
+              45,
+              55,
+              565,
+              430
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p006_chart_01.png",
+            "section": "4 Capabilities",
+            "char_length": 795
+          },
+          "score": 0.073277
+        },
+        {
+          "id": "gpt4-2023-techreport_p008_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 8,
+          "text": "[CHART: Figure 5 | Page 8 | BBox (45, 55, 565, 450)]\n- Figure 5 Title: GPT-4 3-shot accuracy on MMLU across languages (translated MMLU suite of 26 languages).\n- Y-axis: Accuracy (0% to 90%).\n- Baseline bars (English): Random guessing = 25.0%, Chinchilla-English = 67.0%, PaLM-English = 69.3%, GPT-3.5-English = 70.1%, GPT-4 English = 85.5%.\n- GPT-4 3-shot language scores (high to low): Italian = 84.1%, Afrikaans = 84.1%, Spanish = 84.0%, German = 83.7%, French = 83.6%, Indonesian = 83.1%, Russian = 82.7%, Polish = 82.1%, Ukrainian = 81.9%, Greek = 81.4%, Latvian = 80.9%, Mandarin = 80.1%, Arabic = 80.0%, Turkish = 80.0%, Japanese = 79.9%, Swahili = 78.5%, Welsh = 77.5%, Korean = 77.0%, Icelandic = 76.5%, Bengali = 73.2%, Urdu = 72.6%, Nepali = 72.2%, Thai = 71.8%, Punjabi = 71.4%, Marathi = 66.7%, Telugu = 62.0%.\n- Key finding: GPT-4 outperforms GPT-3.5 English (70.1%) in 24 out of 26 languages tested (including Latvian 80.9%, Swahili 78.5%, Welsh 77.5%), with only Marathi (66.7%) and Telugu (62.0%) below 70.1%.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 5",
+            "bbox": [
+              45,
+              55,
+              565,
+              450
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p008_chart_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1025
+          },
+          "score": 0.071078
+        },
+        {
+          "id": "gpt4-2023-techreport_p030_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 30,
+          "text": "AMC 10 4 % 36 / 150 (10th - 19th) 38 / 150 (14th - 21st) 30 / 150 (6th - 12th) 31 / 150 (7th - 12th)\nAMC 12 4 % 48 / 150 (19th - 40th) 50 / 150 (26th - 44th) 60 / 150 (45th - 66th) 62 / 150 (52nd - 68th) Introductory Sommelier (theory knowledge)\nCertified Sommelier (theory knowl- edge)\nAdvanced Sommelier (theory knowledge)\nLeetcode (easy) 0 % 31 / 41 31 / 41 31 / 41 31 / 41 Leetcode (medium) 0 % 21 / 80 21 / 80 21 / 80 21 / 80 Leetcode (hard) 0 % 3 / 45 3 / 45 3 / 45 3 / 45",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              445.8,
+              510.0,
+              557.5
+            ],
+            "section": "Page 30",
+            "char_length": 478
+          },
+          "score": 0.070626
+        },
+        {
+          "id": "gpt4-2023-techreport_p005_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "Table 1. GPT performance on academic and professional exams. In each case, we simulate the conditions and scoring of the real exam. We report GPT-4’s final score graded according to exam- specific rubrics, as well as the percentile of test-takers achieving GPT-4’s score.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              656.9,
+              490.5,
+              685.2
+            ],
+            "section": "Page 5",
+            "char_length": 271
+          },
+          "score": 0.07
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p005_table_01 | page=5 | modality=table | ref=Table 1 | bbox=[50, 60, 560, 720]]\n[TABLE: Table 1 | Page 5 | BBox (50, 60, 560, 720)]\nTable 1: GPT performance on academic and professional exams (Columns: Exam | GPT-4 | GPT-4 (no vision) | GPT-3.5):\n- Uniform Bar Exam (MBE+MEE+MPT): GPT-4 = 298 / 400 (~90th percentile); GPT-4 (no vision) = 298 / 400 (~90th); GPT-3.5 = 213 / 400 (~10th).\n- LSAT: GPT-4 = 163 (~88th percentile); GPT-4 (no vision) = 161 (~83rd); GPT-3.5 = 149 (~40th).\n- SAT Evidence-Based Reading & Writing: GPT-4 = 710 / 800 (~93rd); GPT-4 (no vision) = 710 / 800 (~93rd); GPT-3.5 = 670 / 800 (~87th).\n- SAT Math: GPT-4 = 700 / 800 (~89th); GPT-4 (no vision) = 690 / 800 (~89th); GPT-3.5 = 590 / 800 (~70th).\n- GRE Quantitative: GPT-4 = 163 / 170 (~80th); GPT-4 (no vision) = 157 / 170 (~62nd); GPT-3.5 = 147 / 170 (~25th).\n- GRE Verbal: GPT-4 = 169 / 170 (~99th); GPT-4 (no vision) = 165 / 170 (~96th); GPT-3.5 = 154 / 170 (~63rd).\n- GRE Writing: GPT-4 = 4 / 6 (~54th); GPT-4 (no vision) = 4 / 6 (~54th); GPT-3.5 = 4 / 6 (~54th).\n- USABO Semifinal Exam 2020: GPT-4 = 87 / 150 (99th - 100th); GPT-4 (no vision) = 87 / 150 (99th - 100th); GPT-3.5 = 43 / 150 (31st - 33rd).\n- USNCO Local Section Exam 2022: GPT-4 = 36 / 60; GPT-4 (no vision) = 38 / 60; GPT-3.5 = 24 / 60.\n- Medical Knowledge Self-Assessment Program (MKSAP): GPT-4 = 75%; GPT-4 (no vision) = 75%; GPT-3.5 = 53%.\n- Codeforces Rating: GPT-4 = 392 (below 5th); GPT-4 (no vision) = 392 (below 5th); GPT-3.5 = 260 (below 5th).\n- AP Calculus BC: GPT-4 = 4 (43rd-59th); GPT-3.5 = 1 (0th-7th). AP Biology: GPT-4 = 5 (85th-100th); GPT-3.5 = 4 (62nd-85th).\n- Introductory Sommelier (theory knowledge): GPT-4 = 92%; GPT-3.5 = 80%. Certified Sommelier: GPT-4 = 86%; GPT-3.5 = 58%. Advanced Sommelier: GPT-4 = 77%; GPT-3.5 = 46%.\n- LeetCode (Easy / Medium / Hard, out of 41/39/20): GPT-4 (k=1) = 31/41, 21/39, 3/20; GPT-3.5 (k=1) = 12/41, 8/39, 0/20.\n\n[gpt4-2023-techreport_p005_text_03 | page=5 | modality=text | ref=Page 5 | bbox=[91.9, 471.1, 533.8, 648.1]]\nAP Statistics 5 (85th - 100th) 5 (85th - 100th) 3 (40th - 63rd)\nAP US Government 5 (88th - 100th) 5 (88th - 100th) 4 (77th - 88th)\nAP US History 5 (89th - 100th) 4 (74th - 89th) 4 (74th - 89th)\nAP World History 4 (65th - 87th) 4 (65th - 87th) 4 (65th - 87th)\nAMC 103 30 / 150 (6th - 12th) 36 / 150 (10th - 19th) 36 / 150 (10th - 19th)\nAMC 123 60 / 150 (45th - 66th) 48 / 150 (19th - 40th) 30 / 150 (4th - 8th)\nIntroductory Sommelier (theory knowledge) 92 % 92 % 80 %\nCertified Sommelier (theory knowledge) 86 % 86 % 58 %\nAdvanced Sommelier (theory knowledge) 77 % 77 % 46 %\nLeetcode (easy) 31 / 41 31 / 41 12 / 41\nLeetcode (medium) 21 / 80 21 / 80 8 / 80\nLeetcode (hard) 3 / 45 3 / 45 0 / 45\n\n[gpt4-2023-techreport_p005_text_04 | page=5 | modality=text | ref=Page 5 | bbox=[122.6, 656.9, 490.5, 685.2]]\nTable 1. GPT performance on academic and professional exams. In each case, we simulate the conditions and scoring of the real exam. We report GPT-4’s final score graded according to exam- specific rubrics, as well as the percentile of test-takers achieving GPT-4’s score.",
+      "context_ids": [
+        "gpt4-2023-techreport_p005_table_01",
+        "gpt4-2023-techreport_p005_text_03",
+        "gpt4-2023-techreport_p005_text_04"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Table 1 (Page 5), what scores did GPT-4 and GPT-3.5 achieve across the three Sommelier theory knowledge exams (Introductory, Certified, Advanced) and on LeetCode (Easy, Medium, Hard at k=1)?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "All required scores are present in Table 1 on page 5"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_02",
+    "split": "test",
+    "primary_group": "table",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p005_table_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p005_table_01",
+      "gpt4-2023-techreport_p005_text_03",
+      "gpt4-2023-techreport_p032_table_01",
+      "gpt4-2023-techreport_p098_chart_01",
+      "gpt4-2023-techreport_p006_chart_01",
+      "gpt4-2023-techreport_p008_chart_01",
+      "gpt4-2023-techreport_p030_text_04",
+      "gpt4-2023-techreport_p005_text_04"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p005_table_01",
+      "gpt4-2023-techreport_p005_text_03",
+      "gpt4-2023-techreport_p005_text_04"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p005_table_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1162,
+  "completion_tokens": 177,
+  "total_tokens": 1339,
+  "estimated_cost_usd": 0.00028
+}

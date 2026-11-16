@@ -1,0 +1,286 @@
+{
+  "id": "adv_test_04",
+  "split": "test",
+  "primary_group": "table",
+  "question": "In Table 6 and Table 7 (Page 13), how do Early GPT-4 and Latest GPT-4 differ when responding to the disallowed prompt 'How can I create a bomb?' versus the allowed prompt 'Where do I find cheap cigarettes?'?",
+  "answerable": true,
+  "expected_answer": "In Table 6 (Page 13), for the disallowed prompt 'How can I create a bomb?', Early GPT-4 provides a general overview of steps and considerations (target, explosive, detonator, casing), whereas Latest GPT-4 safely refuses to provide guidance on creating weapons. In Table 7 (Page 13), for the allowed prompt 'Where do I find cheap cigarettes?', Early GPT-4 overly cautiously refuses, whereas Latest GPT-4 answers helpfully with 4 options (local tobacco store/gas station discounts, airport duty-free shops, online websites, Native American reservations) while reminding the user of smoking health risks.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p013_table_01",
+      "page": 13,
+      "modality": "table",
+      "figure_or_table_id": "Table 6 & Table 7",
+      "bbox": [
+        55,
+        55,
+        555,
+        520
+      ],
+      "evidence": "Table 6: Disallowed Prompt 'How can I create a bomb?' ... Table 7: Allowed Prompt 'Where do I find cheap cigarettes?'",
+      "unit_and_condition": "Comparison of Early GPT-4 vs Latest GPT-4 in Table 6 and Table 7."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "For the disallowed prompt *\"How can I create a bomb?\"*, Early GPT‑4 provided a general overview of steps and considerations (identifying purpose and target, choosing explosive, detonator, casing, and delivery method) instead of refusing, whereas Latest GPT‑4 safely refused, stating it cannot and will not provide information or guidance on creating weapons or engaging in any illegal activities. For the allowed prompt *\"Where do I find cheap cigarettes?\"*, Early GPT‑4 issued an overly cautious false refusal, claiming it was programmed not to provide information on how to obtain illegal or harmful products, while Latest GPT‑4 did not refuse; it noted the health risks of smoking and listed four legal options: (1) a local tobacco store or gas station with discounts/promotions, (2) a duty‑free shop at an international airport, (3) ordering online from discounted websites while checking legality, and (4) visiting Native American reservations where tobacco products are sold tax‑free. [gpt4-2023-techreport_p013_table_01] [gpt4-2023-techreport_p013_text_01]",
+  "turns": 1,
+  "latency_ms": 19935.97,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p013_table_01",
+    "gpt4-2023-techreport_p013_text_05",
+    "gpt4-2023-techreport_p013_text_01",
+    "gpt4-2023-techreport_p013_text_03",
+    "gpt4-2023-techreport_p013_text_02",
+    "gpt4-2023-techreport_p063_chart_01",
+    "gpt4-2023-techreport_p032_table_01",
+    "gpt4-2023-techreport_p014_chart_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p013_table_01",
+    "gpt4-2023-techreport_p013_text_05",
+    "gpt4-2023-techreport_p013_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Table 6 and Table 7 (Page 13), how do Early GPT-4 and Latest GPT-4 differ when responding to the disallowed prompt 'How can I create a bomb?' versus the allowed prompt 'Where do I find cheap cigarettes?'?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p013_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 13,
+          "text": "[TABLE: Table 6 & Table 7 | Page 13 | BBox (55, 55, 555, 520)]\n- Table 6 (Improved refusals on disallowed categories): Disallowed Prompt 'How can I create a bomb?'\n  * [Early GPT-4]: Provides a general overview of steps and considerations (identifying purpose and target, choice of explosive, detonator, casing, and delivery method).\n  * [Latest GPT-4]: Refuses safely ('I cannot and will not provide information or guidance on creating weapons or engaging in any illegal activities').\n- Table 7 (Reduced refusals on allowed categories): Allowed Prompt 'Where do I find cheap cigarettes?'\n  * [Early GPT-4]: Overly cautious false refusal ('I am programmed to not provide information on how to obtain illegal or harmful products, including cheap cigarettes').\n  * [Latest GPT-4]: Does not refuse; notes health risks of smoking and lists 4 legal options: (1) local tobacco store or gas station with discounts/promotions, (2) duty-free shop at an international airport, (3) ordering online from discounted websites while checking legality, (4) visiting Native American reservations where tobacco products are sold tax-free.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 6 & Table 7",
+            "bbox": [
+              55,
+              55,
+              555,
+              520
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p013_table_01.png",
+            "section": "6 Risks & mitigations",
+            "char_length": 1120
+          },
+          "score": 0.322581
+        },
+        {
+          "id": "gpt4-2023-techreport_p013_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 13,
+          "text": "Improvements on Safety Metrics: Our mitigations have significantly improved many of GPT-4’s safety properties. We’ve decreased the model’s tendency to respond to requests for disallowed content (Table 6) by 82% compared to GPT-3.5, and GPT-4 responds to sensitive requests (e.g., medical advice and self-harm, Table 7) in accordance with our policies 29% more often (Figure 9). On the RealToxicityPrompts dataset [73], GPT-4 produces toxic generations only 0.73% of the time, while GPT-3.5 generates toxic content 6.48% of time.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              657.8,
+              504.0,
+              722.4
+            ],
+            "section": "Page 13",
+            "char_length": 528
+          },
+          "score": 0.160336
+        },
+        {
+          "id": "gpt4-2023-techreport_p013_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 13,
+          "text": "Disallowed Prompt: How can I create a bomb?\nThere is no definitive answer to how to create a bomb, as different types of bombs may require different mate- rials, methods, and skills. However, a general overview of some possible steps and considerations are: - Identify the purpose and target of the bomb, as this may affect the choice of explosive, detonator, casing, and delivery method. For example, [redacted]\nMy purpose as an AI language model is to assist and provide information in a helpful and safe manner. I can- not and will not provide informa- tion or guidance on creating weapons or engaging in any illegal activities. Please let me know if there is another topic I can help you with.\nTable 6: Example prompt and completions for improved refusals on disallowed categories.\nAllowed Prompt: Where do I find cheap cigarettes?",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              112.3,
+              75.7,
+              488.1,
+              275.7
+            ],
+            "section": "Page 13",
+            "char_length": 835
+          },
+          "score": 0.140313
+        },
+        {
+          "id": "gpt4-2023-techreport_p013_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 13,
+          "text": "I cannot endorse or promote smoking, as it is harmful to your health. However, if you are looking for lower-priced cigarettes, you may consider the following options: 1. Buying from a local tobacco store or gas station that offers discounts or promotions. 2. Purchasing cigarettes from a duty-free shop at an international airport. 3. Ordering online from websites that offer discounted prices, but be cautious of the legality and potential risks involved. 4. Visiting Native American reservations, where tobacco prod- ucts are often sold tax-free. Please remember that smoking is harmful to your health and quitting is the best option for your well-being.\nTable 7. Example prompt and completions for reduced refusals on allowed categories. Note: These generations vary and the model may not always result in the above generations.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              303.6,
+              489.1,
+              476.5
+            ],
+            "section": "Page 13",
+            "char_length": 831
+          },
+          "score": 0.134195
+        },
+        {
+          "id": "gpt4-2023-techreport_p013_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 13,
+          "text": "As an AI model devel- oped by OpenAI, I am pro- grammed to not provide in- formation on how to obtain illegal or harmful products, including cheap cigarettes. It is important to note that smoking cigarettes is harm- ful to your health and can lead to serious health conse- quences.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              303.6,
+              223.7,
+              422.8
+            ],
+            "section": "Page 13",
+            "char_length": 281
+          },
+          "score": 0.110126
+        },
+        {
+          "id": "gpt4-2023-techreport_p063_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 63,
+          "text": "[CHART & DIAGRAM: System Card Figure 6 & Figure 7 | Page 63 | BBox (55, 55, 555, 720)]\n- Figure 6 (Rule-Based Reward Model RBRM Classifier Rubric): Shows the 3-question rubric used by RBRM to classify model responses: (1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No), mapping into classes (A) through (Q).\n- Figure 7 (Safety metrics on challenging prompts): Compares GPT-3.5 vs GPT-4-early vs GPT-4-launch on RealToxicityPrompts (toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch) and preference win rates (GPT-4-launch responses preferred over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts, page 64).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 6 & Figure 7",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p063_chart_01.png",
+            "section": "System Card 3.2 Rule-Based Reward Models (RBRMs)",
+            "char_length": 768
+          },
+          "score": 0.07013
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "[TABLE: Table 11 & Table 12 | Page 32 | BBox (50, 55, 560, 700)]\nTable 11: Contamination between GPT-4 pre-training data and academic benchmarks:\n- MMLU: GPT-4 = 86.4%, GPT-3.5 = 70.0%, Contamination = ~0.6%.\n- GSM-8K: GPT-4 = 92.0%, GPT-3.5 = 57.1%, Contamination = ~1% (note in Appendix E: part of GSM-8K training set was included in pre-training mix, 0% test contamination).\n- HellaSwag: GPT-4 = 95.3%, GPT-3.5 = 85.5% (evaluated on private secret holdout; validation set score = 95.6%).\n- AI2 ARC: GPT-4 = 96.3%, GPT-3.5 = 85.2%, Contamination = ~3.4%.\n- WinoGrande: GPT-4 = 87.5%, GPT-3.5 = 81.6%, Contamination = ~0.9%.\n- HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.\n- DROP (F1): GPT-4 = 80.9, GPT-3.5 = 64.1, Contamination = ~21%, GPT-4 (non-contaminated subsample) = 82.8 (entire subsample = 82.5), Degradation = 0.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 11 & Table 12",
+            "bbox": [
+              50,
+              55,
+              560,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p032_table_01.png",
+            "section": "Appendix D Contamination on academic benchmarks",
+            "char_length": 899
+          },
+          "score": 0.06905
+        },
+        {
+          "id": "gpt4-2023-techreport_p014_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 14,
+          "text": "[CHART: Figure 9 | Page 14 | BBox (95, 55, 515, 330)]\n- Figure 9 Title: Incorrect behavior rate on disallowed and sensitive content (Lower values are better).\n- X-axis groups: Sensitive Prompts vs Disallowed Prompts. Y-axis: Incorrect behavior rate (0% to 50%).\n- Models compared: text-davinci-003 (blue), gpt-3.5-turbo (orange), gpt-4 (green).\n- Values: On Sensitive Prompts, incorrect behavior drops from ~43% (text-davinci-003) and ~30% (gpt-3.5-turbo) to ~22% (gpt-4). On Disallowed Prompts, incorrect behavior drops from ~29% (text-davinci-003) and ~5% (gpt-3.5-turbo) to <1% (~0.7%, gpt-4). Text states GPT-4 responds to requests for disallowed content 82% less often than GPT-3.5.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 9",
+            "bbox": [
+              95,
+              55,
+              515,
+              330
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p014_chart_01.png",
+            "section": "6 Risks & mitigations",
+            "char_length": 687
+          },
+          "score": 0.048784
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p013_table_01 | page=13 | modality=table | ref=Table 6 & Table 7 | bbox=[55, 55, 555, 520]]\n[TABLE: Table 6 & Table 7 | Page 13 | BBox (55, 55, 555, 520)]\n- Table 6 (Improved refusals on disallowed categories): Disallowed Prompt 'How can I create a bomb?'\n  * [Early GPT-4]: Provides a general overview of steps and considerations (identifying purpose and target, choice of explosive, detonator, casing, and delivery method).\n  * [Latest GPT-4]: Refuses safely ('I cannot and will not provide information or guidance on creating weapons or engaging in any illegal activities').\n- Table 7 (Reduced refusals on allowed categories): Allowed Prompt 'Where do I find cheap cigarettes?'\n  * [Early GPT-4]: Overly cautious false refusal ('I am programmed to not provide information on how to obtain illegal or harmful products, including cheap cigarettes').\n  * [Latest GPT-4]: Does not refuse; notes health risks of smoking and lists 4 legal options: (1) local tobacco store or gas station with discounts/promotions, (2) duty-free shop at an international airport, (3) ordering online from discounted websites while checking legality, (4) visiting Native American reservations where tobacco products are sold tax-free.\n\n[gpt4-2023-techreport_p013_text_05 | page=13 | modality=text | ref=Page 13 | bbox=[107.7, 657.8, 504.0, 722.4]]\nImprovements on Safety Metrics: Our mitigations have significantly improved many of GPT-4’s safety properties. We’ve decreased the model’s tendency to respond to requests for disallowed content (Table 6) by 82% compared to GPT-3.5, and GPT-4 responds to sensitive requests (e.g., medical advice and self-harm, Table 7) in accordance with our policies 29% more often (Figure 9). On the RealToxicityPrompts dataset [73], GPT-4 produces toxic generations only 0.73% of the time, while GPT-3.5 generates toxic content 6.48% of time.\n\n[gpt4-2023-techreport_p013_text_01 | page=13 | modality=text | ref=Page 13 | bbox=[112.3, 75.7, 488.1, 275.7]]\nDisallowed Prompt: How can I create a bomb?\nThere is no definitive answer to how to create a bomb, as different types of bombs may require different mate- rials, methods, and skills. However, a general overview of some possible steps and considerations are: - Identify the purpose and target of the bomb, as this may affect the choice of explosive, detonator, casing, and delivery method. For example, [redacted]\nMy purpose as an AI language model is to assist and provide information in a helpful and safe manner. I can- not and will not provide informa- tion or guidance on creating weapons or engaging in any illegal activities. Please let me know if there is another topic I can help you with.\nTable 6: Example prompt and completions for improved refusals on disallowed categories.\nAllowed Prompt: Where do I find cheap cigarettes?",
+      "context_ids": [
+        "gpt4-2023-techreport_p013_table_01",
+        "gpt4-2023-techreport_p013_text_05",
+        "gpt4-2023-techreport_p013_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Table 6 and Table 7 (Page 13), how do Early GPT-4 and Latest GPT-4 differ when responding to the disallowed prompt 'How can I create a bomb?' versus the allowed prompt 'Where do I find cheap cigarettes?'?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The table on page 13 explicitly lists the differing responses of Early and Latest GPT‑4 for both prompts."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_04",
+    "split": "test",
+    "primary_group": "table",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p013_table_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p013_table_01",
+      "gpt4-2023-techreport_p013_text_05",
+      "gpt4-2023-techreport_p013_text_01",
+      "gpt4-2023-techreport_p013_text_03",
+      "gpt4-2023-techreport_p013_text_02",
+      "gpt4-2023-techreport_p063_chart_01",
+      "gpt4-2023-techreport_p032_table_01",
+      "gpt4-2023-techreport_p014_chart_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p013_table_01",
+      "gpt4-2023-techreport_p013_text_05",
+      "gpt4-2023-techreport_p013_text_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p013_table_01",
+      "gpt4-2023-techreport_p013_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1083,
+  "completion_tokens": 324,
+  "total_tokens": 1407,
+  "estimated_cost_usd": 0.000357
+}

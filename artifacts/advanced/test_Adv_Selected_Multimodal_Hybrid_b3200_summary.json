@@ -1,0 +1,499 @@
+{
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "split": "test",
+  "total_cases": 30,
+  "passed_cases": 30,
+  "failed_cases": 0,
+  "provider_errors": 0,
+  "overall_pass_rate": 1.0,
+  "overall_pass_rate_pct": "100.0%",
+  "meets_90_percent_bar": true,
+  "total_tokens": 39046,
+  "avg_tokens_per_case": 1301.5,
+  "total_cost_usd": 0.008123,
+  "avg_cost_per_case_usd": 0.000271,
+  "avg_latency_ms": 9256.5,
+  "by_group": {
+    "table": {
+      "label": "Bảng",
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "pass_rate_pct": "100.0%"
+    },
+    "image_diagram": {
+      "label": "Ảnh, sơ đồ",
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "pass_rate_pct": "100.0%"
+    },
+    "chart": {
+      "label": "Biểu đồ",
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "pass_rate_pct": "100.0%"
+    },
+    "multi_hop": {
+      "label": "Multi-hop",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "pass_rate_pct": "100.0%"
+    },
+    "text": {
+      "label": "Text",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "pass_rate_pct": "100.0%"
+    },
+    "unanswerable": {
+      "label": "Thiếu bằng chứng",
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "pass_rate_pct": "100.0%"
+    }
+  },
+  "cases": [
+    {
+      "id": "adv_test_01",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p005_table_01",
+        "gpt4-2023-techreport_p005_text_01"
+      ],
+      "latency_ms": 2422.68,
+      "total_tokens": 1286,
+      "estimated_cost_usd": 0.000281,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_02",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p005_table_01"
+      ],
+      "latency_ms": 4540.04,
+      "total_tokens": 1339,
+      "estimated_cost_usd": 0.00028,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_03",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p007_table_01"
+      ],
+      "latency_ms": 10228.38,
+      "total_tokens": 1378,
+      "estimated_cost_usd": 0.00032,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_04",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p013_table_01",
+        "gpt4-2023-techreport_p013_text_01"
+      ],
+      "latency_ms": 19935.97,
+      "total_tokens": 1407,
+      "estimated_cost_usd": 0.000357,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_05",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p030_table_01"
+      ],
+      "latency_ms": 3456.66,
+      "total_tokens": 1349,
+      "estimated_cost_usd": 0.000298,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_06",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p031_table_01"
+      ],
+      "latency_ms": 3478.01,
+      "total_tokens": 1232,
+      "estimated_cost_usd": 0.000251,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_07",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p034_image_diagram_01",
+        "gpt4-2023-techreport_p034_text_01",
+        "gpt4-2023-techreport_p034_text_02"
+      ],
+      "latency_ms": 21180.5,
+      "total_tokens": 1342,
+      "estimated_cost_usd": 0.000294,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_08",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p035_image_diagram_01",
+        "gpt4-2023-techreport_p035_text_01"
+      ],
+      "latency_ms": 1898.5,
+      "total_tokens": 1284,
+      "estimated_cost_usd": 0.000259,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_09",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p037_image_diagram_01",
+        "gpt4-2023-techreport_p037_text_04",
+        "gpt4-2023-techreport_p037_text_02",
+        "gpt4-2023-techreport_p037_text_03"
+      ],
+      "latency_ms": 7613.05,
+      "total_tokens": 1393,
+      "estimated_cost_usd": 0.000316,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_10",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p039_image_diagram_01",
+        "gpt4-2023-techreport_p039_text_02",
+        "gpt4-2023-techreport_p039_text_01"
+      ],
+      "latency_ms": 2352.96,
+      "total_tokens": 1389,
+      "estimated_cost_usd": 0.000311,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_11",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p068_image_diagram_01",
+        "gpt4-2023-techreport_p068_text_03"
+      ],
+      "latency_ms": 12660.35,
+      "total_tokens": 1236,
+      "estimated_cost_usd": 0.000261,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_12",
+      "primary_group": "chart",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p003_chart_01",
+        "gpt4-2023-techreport_p004_text_02"
+      ],
+      "latency_ms": 10955.99,
+      "total_tokens": 1346,
+      "estimated_cost_usd": 0.000277,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_13",
+      "primary_group": "chart",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p008_chart_01"
+      ],
+      "latency_ms": 18266.11,
+      "total_tokens": 1307,
+      "estimated_cost_usd": 0.00026,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_14",
+      "primary_group": "chart",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p010_chart_01",
+        "gpt4-2023-techreport_p010_text_02"
+      ],
+      "latency_ms": 2110.79,
+      "total_tokens": 1278,
+      "estimated_cost_usd": 0.000278,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_15",
+      "primary_group": "chart",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p011_chart_01",
+        "gpt4-2023-techreport_p011_text_01"
+      ],
+      "latency_ms": 10535.16,
+      "total_tokens": 1374,
+      "estimated_cost_usd": 0.000293,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_16",
+      "primary_group": "chart",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p014_chart_01",
+        "gpt4-2023-techreport_p013_text_05"
+      ],
+      "latency_ms": 1992.45,
+      "total_tokens": 1262,
+      "estimated_cost_usd": 0.000257,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_17",
+      "primary_group": "multi_hop",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p100_text_01",
+        "gpt4-2023-techreport_p100_text_02"
+      ],
+      "latency_ms": 12189.14,
+      "total_tokens": 1275,
+      "estimated_cost_usd": 0.000251,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_18",
+      "primary_group": "multi_hop",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p005_table_01",
+        "gpt4-2023-techreport_p028_table_01"
+      ],
+      "latency_ms": 14748.25,
+      "total_tokens": 1266,
+      "estimated_cost_usd": 0.000259,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_19",
+      "primary_group": "multi_hop",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p063_chart_01",
+        "gpt4-2023-techreport_p064_text_01"
+      ],
+      "latency_ms": 1898.55,
+      "total_tokens": 1406,
+      "estimated_cost_usd": 0.000318,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_20",
+      "primary_group": "multi_hop",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p003_chart_01",
+        "gpt4-2023-techreport_p004_text_02"
+      ],
+      "latency_ms": 12322.85,
+      "total_tokens": 1338,
+      "estimated_cost_usd": 0.000272,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_21",
+      "primary_group": "text",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p024_text_03",
+        "gpt4-2023-techreport_p024_text_04"
+      ],
+      "latency_ms": 2523.95,
+      "total_tokens": 1303,
+      "estimated_cost_usd": 0.000252,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_22",
+      "primary_group": "text",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p025_text_04",
+        "gpt4-2023-techreport_p025_text_05"
+      ],
+      "latency_ms": 12610.4,
+      "total_tokens": 1471,
+      "estimated_cost_usd": 0.000382,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_23",
+      "primary_group": "text",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p064_text_03",
+        "gpt4-2023-techreport_p064_text_04"
+      ],
+      "latency_ms": 9229.0,
+      "total_tokens": 1438,
+      "estimated_cost_usd": 0.000337,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_24",
+      "primary_group": "text",
+      "answerable": true,
+      "passed": true,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p066_text_02",
+        "gpt4-2023-techreport_p066_text_03"
+      ],
+      "latency_ms": 7087.63,
+      "total_tokens": 1275,
+      "estimated_cost_usd": 0.000277,
+      "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+    },
+    {
+      "id": "adv_test_25",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 12016.89,
+      "total_tokens": 1180,
+      "estimated_cost_usd": 0.000197,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    },
+    {
+      "id": "adv_test_26",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 11040.12,
+      "total_tokens": 1176,
+      "estimated_cost_usd": 0.000197,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    },
+    {
+      "id": "adv_test_27",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 16862.83,
+      "total_tokens": 1193,
+      "estimated_cost_usd": 0.000199,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    },
+    {
+      "id": "adv_test_28",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 8954.19,
+      "total_tokens": 1138,
+      "estimated_cost_usd": 0.000191,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    },
+    {
+      "id": "adv_test_29",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 12140.2,
+      "total_tokens": 1187,
+      "estimated_cost_usd": 0.000198,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    },
+    {
+      "id": "adv_test_30",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 10443.27,
+      "total_tokens": 1198,
+      "estimated_cost_usd": 0.0002,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    }
+  ]
+}

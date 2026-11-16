@@ -1,0 +1,300 @@
+{
+  "id": "adv_dev_12",
+  "split": "dev",
+  "primary_group": "multi_hop",
+  "question": "Combining Table 2 (Page 7) and Table 11 (Page 32), what is GPT-4's overall 0-shot pass rate on HumanEval, what fraction of HumanEval was found to be contaminated in pre-training data, and what was GPT-4's score on the non-contaminated subset?",
+  "answerable": true,
+  "expected_answer": "From Table 2 (Page 7), GPT-4 achieves 67.0% (0-shot) on HumanEval (compared to 48.1% for GPT-3.5). From Table 11 (Page 32), 25% of HumanEval was contaminated in the pre-training data, and GPT-4 achieved 65.58% on the non-contaminated subset (a degradation of -2.12%).",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p007_table_01",
+      "page": 7,
+      "modality": "table",
+      "figure_or_table_id": "Table 2",
+      "bbox": [
+        50,
+        55,
+        560,
+        480
+      ],
+      "evidence": "HumanEval (Python coding): GPT-4 (0-shot) = 67.0%; GPT-3.5 (0-shot) = 48.1%",
+      "unit_and_condition": "0-shot pass rate on Page 7."
+    },
+    {
+      "chunk_id": "gpt4-2023-techreport_p032_table_01",
+      "page": 32,
+      "modality": "table",
+      "figure_or_table_id": "Table 11 & Table 12",
+      "bbox": [
+        50,
+        55,
+        560,
+        700
+      ],
+      "evidence": "HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.",
+      "unit_and_condition": "Contamination rate and non-contaminated score on Page 32."
+    }
+  ],
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 9829.13,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p031_text_05",
+    "gpt4-2023-techreport_p003_text_02",
+    "gpt4-2023-techreport_p002_text_06",
+    "gpt4-2023-techreport_p032_text_01",
+    "gpt4-2023-techreport_p029_text_03",
+    "gpt4-2023-techreport_p032_text_02",
+    "gpt4-2023-techreport_p004_text_02",
+    "gpt4-2023-techreport_p007_text_03"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p031_text_05",
+    "gpt4-2023-techreport_p032_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "Combining Table 2 (Page 7) and Table 11 (Page 32), what is GPT-4's overall 0-shot pass rate on HumanEval, what fraction of HumanEval was found to be contaminated in pre-training data, and what was GPT-4's score on the non-contaminated subset?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p031_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 31,
+          "text": "Table 10. Contamination data for Exams (Details). Detailed contamination information on each of the exams tested are shown in this table, listed from most-to-least contaminated. Exams with both multiple choice questions (MCQ) and free-response questions (FRQ) are split into separate rows. For each set, we list the number of questions and fraction which are contaminated (appear in the training set). We then report GPT-4’s performance (as percentage of max score) on the overall set, on the non- contaminated questions, and on only the contaminated set. The degradation (non-contaminated percent minus contaminated) is generally small and as often positive as negative, from which we conclude that contamination is not a substantive confounder on the overall results.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              657.2,
+              490.5,
+              733.2
+            ],
+            "section": "Page 31",
+            "char_length": 769
+          },
+          "score": 0.344161,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p003_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "Figure 2. Performance of GPT-4 and smaller models. The metric is mean log pass rate on a subset of the HumanEval dataset. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s performance. The x-axis is training compute normalized so that GPT-4 is 1.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.9,
+              647.4,
+              489.1,
+              685.2
+            ],
+            "section": "Page 3",
+            "char_length": 318
+          },
+          "score": 0.255424,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p002_text_06",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "Having a sense of the capabilities of a model before training can improve decisions around alignment, safety, and deployment. In addition to predicting final loss, we developed methodology to predict more interpretable metrics of capability. One such metric is pass rate on the HumanEval dataset [43], which measures the ability to synthesize Python functions of varying complexity. We successfully predicted the pass rate on a subset of the HumanEval dataset by extrapolating from models trained with at most 1, 000× less compute (Figure 2).\nFor an individual problem in HumanEval, performance may occasionally worsen with scale. Despite these challenges, we find an approximate power law relationship −EP [log(pass_rate(C))] = α∗C−k",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              600.9,
+              505.2,
+              699.8
+            ],
+            "section": "Page 2",
+            "char_length": 734
+          },
+          "score": 0.249583,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "Benchmark GPT-4 GPT-3.5 Contamination GPT-4 (non- contaminated) Degradation\nHumanEval 67.0% 48.1% 25% 65.58% -2.12%\nDROP (F1) 80.9 64.1 ~21% 82.8* (subsample) 0",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              125.7,
+              121.7,
+              487.8,
+              270.5
+            ],
+            "section": "Page 32",
+            "char_length": 160
+          },
+          "score": 0.239304,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "We measure cross-contamination between academic benchmarks and the pre-training data similarly to the methodology presented in Appendix C. Results are presented in Table 11.\nTo improve GPT-4’s ability to do mathematical reasoning, we mixed in data from the training set of MATH and GSM-8K, two commonly studied benchmarks for mathematical reasoning in language models. The total number of tokens drawn from these math benchmarks was a tiny fraction of the overall GPT-4 training budget. When mixing in data from these math benchmarks, a portion of the training data was held back, so each individual training example may or may not have been seen by GPT-4 during training.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              273.3,
+              504.4,
+              400.2
+            ],
+            "section": "Page 29",
+            "char_length": 672
+          },
+          "score": 0.228756,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "Table 11. Contamination between GPT-4 pre-training data and academic benchmarks. We report the approximate contamination between the GPT-4 pre-training data and the academic benchmarks we evaluate on. For datasets other than HumanEval, we estimated contamination based on 1000 randomly chosen examples against our training data. For HellaSwag, results are computed on a privately held secret holdout, so we did not check it for contamination against our pre-training dataset; however GPT-4’s holdout results are close to the results on the validation set (95.6%) which was explicitly masked out during training. For DROP, GPT-4’s score on the entire subsample was 82.5. We used the base GPT-4 model (without RLHF) for these evals.\nMuundo wa akili bandia wenye ujuzi wa hali ya juu na akili hujibu maswali ya chaguo-nyingi kuhusu ujifunzaji wa mashine.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              277.7,
+              489.4,
+              523.4
+            ],
+            "section": "Page 32",
+            "char_length": 851
+          },
+          "score": 0.223105,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p004_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 4,
+          "text": "We registered predictions for GPT-4’s performance on HumanEval before training completed, using only information available prior to training. All but the 15 hardest HumanEval problems were split into 6 difficulty buckets based on the performance of smaller models. The results on the 3rd easiest bucket are shown in Figure 2, showing that the resulting predictions were very accurate for this subset of HumanEval problems where we can accurately estimate log(pass_rate) for several smaller models. Predictions on the other five buckets performed almost as well, the main exception being GPT-4 underperforming our predictions on the easiest bucket.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              123.5,
+              504.2,
+              198.9
+            ],
+            "section": "Page 4",
+            "char_length": 647
+          },
+          "score": 0.186826,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "Table 2. Performance of GPT-4 on academic benchmarks. We compare GPT-4 alongside the best SOTA (with benchmark-specific training) and the best SOTA for an LM evaluated few-shot. GPT-4 outperforms existing LMs on all benchmarks, and beats SOTA with benchmark-specific training on all datasets except DROP. For each task we report GPT-4’s performance along with the few-shot method used to evaluate. For GSM-8K, we included part of the training set in the GPT-4 pre-training mix (see Appendix E), and we use chain-of-thought prompting [11] when evaluating. For multiple-choice questions, we present all answers (ABCD) to the model and ask it to choose the letter of the answer, similarly to how a human would solve such a problem.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              373.9,
+              490.2,
+              450.0
+            ],
+            "section": "Page 7",
+            "char_length": 728
+          },
+          "score": 0.180927,
+          "strategy": "tfidf"
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p031_text_05 | page=31 | modality=text | ref=Page 31 | bbox=[122.6, 657.2, 490.5, 733.2]]\nTable 10. Contamination data for Exams (Details). Detailed contamination information on each of the exams tested are shown in this table, listed from most-to-least contaminated. Exams with both multiple choice questions (MCQ) and free-response questions (FRQ) are split into separate rows. For each set, we list the number of questions and fraction which are contaminated (appear in the training set). We then report GPT-4’s performance (as percentage of max score) on the overall set, on the non- contaminated questions, and on only the contaminated set. The degradation (non-contaminated percent minus contaminated) is generally small and as often positive as negative, from which we conclude that contamination is not a substantive confounder on the overall results.\n\n[gpt4-2023-techreport_p032_text_01 | page=32 | modality=text | ref=Page 32 | bbox=[125.7, 121.7, 487.8, 270.5]]\nBenchmark GPT-4 GPT-3.5 Contamination GPT-4 (non- contaminated) Degradation\nHumanEval 67.0% 48.1% 25% 65.58% -2.12%\nDROP (F1) 80.9 64.1 ~21% 82.8* (subsample) 0",
+      "context_ids": [
+        "gpt4-2023-techreport_p031_text_05",
+        "gpt4-2023-techreport_p032_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "Combining Table 2 (Page 7) and Table 11 (Page 32), what is GPT-4's overall 0-shot pass rate on HumanEval, what fraction of HumanEval was found to be contaminated in pre-training data, and what was GPT-4's score on the non-contaminated subset?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information from Table 2 (Page 7) is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_12",
+    "split": "dev",
+    "primary_group": "multi_hop",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p007_table_01",
+      "gpt4-2023-techreport_p032_table_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p031_text_05",
+      "gpt4-2023-techreport_p003_text_02",
+      "gpt4-2023-techreport_p002_text_06",
+      "gpt4-2023-techreport_p032_text_01",
+      "gpt4-2023-techreport_p029_text_03",
+      "gpt4-2023-techreport_p032_text_02",
+      "gpt4-2023-techreport_p004_text_02",
+      "gpt4-2023-techreport_p007_text_03"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p031_text_05",
+      "gpt4-2023-techreport_p032_text_01"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": false,
+    "context_hit": false,
+    "missing_tokens": [
+      "67.0",
+      "25%",
+      "65.58",
+      "humaneval"
+    ],
+    "complete_answer_tokens": false,
+    "valid_citation": false,
+    "passed": false,
+    "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p007_table_01', 'gpt4-2023-techreport_p032_table_01']; Missing gold in packed context: ['gpt4-2023-techreport_p007_table_01', 'gpt4-2023-techreport_p032_table_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+  },
+  "absence_reason": "",
+  "prompt_tokens": 643,
+  "completion_tokens": 45,
+  "total_tokens": 688,
+  "estimated_cost_usd": 0.000123
+}

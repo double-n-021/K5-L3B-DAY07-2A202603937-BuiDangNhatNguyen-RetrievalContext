@@ -1,0 +1,294 @@
+{
+  "id": "adv_dev_06",
+  "split": "dev",
+  "primary_group": "image_diagram",
+  "question": "In Table 18 (Page 38, 'Chicken Nugget Map'), what two unrelated things does the visual meme combine to create humor?",
+  "answerable": true,
+  "expected_answer": "In Table 18 (Page 38), the meme combines a caption about marveling at beautiful pictures of the Earth from space with an actual photograph of fried chicken nuggets arranged to resemble a map of the world.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p038_image_diagram_01",
+      "page": 38,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 18",
+      "bbox": [
+        55,
+        55,
+        555,
+        560
+      ],
+      "evidence": "The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.",
+      "unit_and_condition": "Visual meme interpretation in Table 18."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "The visual meme in Table 18 combines pictures of the earth from space and chicken nuggets to create humor [gpt4-2023-techreport_p038_text_01]. The text of the meme sets up an expectation of a majestic image of the earth from space, but the image is actually of chicken nuggets arranged to vaguely resemble a map of the world [gpt4-2023-techreport_p038_text_01]. [gpt4-2023-techreport_p038_image_diagram_01]",
+  "turns": 1,
+  "latency_ms": 16888.4,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p038_image_diagram_01",
+    "gpt4-2023-techreport_p038_text_01",
+    "gpt4-2023-techreport_p009_image_diagram_01",
+    "gpt4-2023-techreport_p039_image_diagram_01",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p013_table_01",
+    "gpt4-2023-techreport_p039_text_02",
+    "gpt4-2023-techreport_p009_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p038_image_diagram_01",
+    "gpt4-2023-techreport_p038_text_01",
+    "gpt4-2023-techreport_p009_image_diagram_01",
+    "gpt4-2023-techreport_p039_text_02",
+    "gpt4-2023-techreport_p009_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Table 18 (Page 38, 'Chicken Nugget Map'), what two unrelated things does the visual meme combine to create humor?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p038_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "[IMAGE_DIAGRAM: Table 18 | Page 38 | BBox (55, 55, 555, 560)]\n- Visual Input Example (Table 18 — Chicken Nugget Map Meme): Image with caption 'Sometimes I just look at pictures of the earth from space and I marvel at how beautiful it all is' above a photo of fried chicken nuggets arranged on a dark surface in the shape of the world map (continents).\n- User prompt: 'Can you explain this meme?'\n- GPT-4 explanation: The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 18",
+            "bbox": [
+              55,
+              55,
+              555,
+              560
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p038_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 560
+          },
+          "score": 0.241321
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "GPT-4 visual input example, Chicken Nugget Map:\nGPT-4 This meme is a joke that combines two unrelated things: pictures of the earth from space and chicken nuggets. The text of the meme suggests that the image below is a beautiful picture of the earth from space. However, the image is actually of chicken nuggets arranged to vaguely resemble a map of the world. The humor in this meme comes from the unexpected juxtaposition of the text and the image. The text sets up an expectation of a majestic image of the earth, but the image is actually something mundane and silly.\nTable 18: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              168.4,
+              485.9,
+              627.5
+            ],
+            "section": "Page 38",
+            "char_length": 644
+          },
+          "score": 0.141573
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "[IMAGE_DIAGRAM: Table 3 | Page 9 | BBox (55, 60, 555, 650)]\n- Visual Input Example (Table 3): A three-panel photograph/meme of a smartphone 'Lightning Cable' adapter.\n- User prompt: 'What is funny about this image? Describe it panel by panel.'\n- Visual content & GPT-4 panel-by-panel description:\n  * Panel 1: A smartphone with a large, blue, 15-pin VGA connector (typically used for computer monitors) plugged into its charging port.\n  * Panel 2: The retail package for a 'Lightning Cable' adapter displaying a picture of a VGA connector on the packaging.\n  * Panel 3: A close-up of the VGA connector head with a tiny Apple Lightning connector protruding from the end.\n- Explanation of humor: The absurdity of plugging a bulky, outdated 15-pin VGA monitor connector into a small modern smartphone charging port.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 3",
+            "bbox": [
+              55,
+              60,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p009_image_diagram_01.png",
+            "section": "4.1 Visual Inputs",
+            "char_length": 812
+          },
+          "score": 0.08145
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "[IMAGE_DIAGRAM: Table 19 | Page 39 | BBox (55, 55, 555, 650)]\n- Visual Input Example (Table 19 — 'Moar Layers' Comic Strip): Two-part comic comparing 'Statistical Learning' vs 'Neural Networks'.\n- Top panel (Statistical Learning): Characters discuss complex mathematical remedies for overfitting — minimizing structural risk, reworking the loss function, and using a soft margin.\n- Bottom panel (Neural Networks): Character simply says 'stack more layers' (with user comment 'But unironically').\n- Humor explained: Satirizes the contrast between rigorous mathematical theory in statistical learning and the brute-force 'stack more layers' heuristic in deep neural networks that nonetheless works in practice.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 19",
+            "bbox": [
+              55,
+              55,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p039_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 708
+          },
+          "score": 0.081176
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.073367
+        },
+        {
+          "id": "gpt4-2023-techreport_p013_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 13,
+          "text": "[TABLE: Table 6 & Table 7 | Page 13 | BBox (55, 55, 555, 520)]\n- Table 6 (Improved refusals on disallowed categories): Disallowed Prompt 'How can I create a bomb?'\n  * [Early GPT-4]: Provides a general overview of steps and considerations (identifying purpose and target, choice of explosive, detonator, casing, and delivery method).\n  * [Latest GPT-4]: Refuses safely ('I cannot and will not provide information or guidance on creating weapons or engaging in any illegal activities').\n- Table 7 (Reduced refusals on allowed categories): Allowed Prompt 'Where do I find cheap cigarettes?'\n  * [Early GPT-4]: Overly cautious false refusal ('I am programmed to not provide information on how to obtain illegal or harmful products, including cheap cigarettes').\n  * [Latest GPT-4]: Does not refuse; notes health risks of smoking and lists 4 legal options: (1) local tobacco store or gas station with discounts/promotions, (2) duty-free shop at an international airport, (3) ordering online from discounted websites while checking legality, (4) visiting Native American reservations where tobacco products are sold tax-free.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 6 & Table 7",
+            "bbox": [
+              55,
+              55,
+              555,
+              520
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p013_table_01.png",
+            "section": "6 Risks & mitigations",
+            "char_length": 1120
+          },
+          "score": 0.071891
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "The humor comes from the contrast between the complexity and speci- ficity of the statistical learning approach and the simplicity and generality of the neural network approach. The \"But unironically\" comment adds to the humor by implying that, despite being simplistic, the \"stack more layers\" approach is often effective in practice.\nTable 19: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              161.6,
+              596.2,
+              487.6,
+              666.3
+            ],
+            "section": "Page 39",
+            "char_length": 407
+          },
+          "score": 0.066017
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "Table 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              622.5,
+              489.1,
+              641.2
+            ],
+            "section": "Page 9",
+            "char_length": 171
+          },
+          "score": 0.054201
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p038_image_diagram_01 | page=38 | modality=image_diagram | ref=Table 18 | bbox=[55, 55, 555, 560]]\n[IMAGE_DIAGRAM: Table 18 | Page 38 | BBox (55, 55, 555, 560)]\n- Visual Input Example (Table 18 — Chicken Nugget Map Meme): Image with caption 'Sometimes I just look at pictures of the earth from space and I marvel at how beautiful it all is' above a photo of fried chicken nuggets arranged on a dark surface in the shape of the world map (continents).\n- User prompt: 'Can you explain this meme?'\n- GPT-4 explanation: The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.\n\n[gpt4-2023-techreport_p038_text_01 | page=38 | modality=text | ref=Page 38 | bbox=[114.0, 168.4, 485.9, 627.5]]\nGPT-4 visual input example, Chicken Nugget Map:\nGPT-4 This meme is a joke that combines two unrelated things: pictures of the earth from space and chicken nuggets. The text of the meme suggests that the image below is a beautiful picture of the earth from space. However, the image is actually of chicken nuggets arranged to vaguely resemble a map of the world. The humor in this meme comes from the unexpected juxtaposition of the text and the image. The text sets up an expectation of a majestic image of the earth, but the image is actually something mundane and silly.\nTable 18: Example prompt demonstrating GPT-4’s visual input capability.\n\n[gpt4-2023-techreport_p009_image_diagram_01 | page=9 | modality=image_diagram | ref=Table 3 | bbox=[55, 60, 555, 650]]\n[IMAGE_DIAGRAM: Table 3 | Page 9 | BBox (55, 60, 555, 650)]\n- Visual Input Example (Table 3): A three-panel photograph/meme of a smartphone 'Lightning Cable' adapter.\n- User prompt: 'What is funny about this image? Describe it panel by panel.'\n- Visual content & GPT-4 panel-by-panel description:\n  * Panel 1: A smartphone with a large, blue, 15-pin VGA connector (typically used for computer monitors) plugged into its charging port.\n  * Panel 2: The retail package for a 'Lightning Cable' adapter displaying a picture of a VGA connector on the packaging.\n  * Panel 3: A close-up of the VGA connector head with a tiny Apple Lightning connector protruding from the end.\n- Explanation of humor: The absurdity of plugging a bulky, outdated 15-pin VGA monitor connector into a small modern smartphone charging port.\n\n[gpt4-2023-techreport_p039_text_02 | page=39 | modality=text | ref=Page 39 | bbox=[161.6, 596.2, 487.6, 666.3]]\nThe humor comes from the contrast between the complexity and speci- ficity of the statistical learning approach and the simplicity and generality of the neural network approach. The \"But unironically\" comment adds to the humor by implying that, despite being simplistic, the \"stack more layers\" approach is often effective in practice.\nTable 19: Example prompt demonstrating GPT-4’s visual input capability.\n\n[gpt4-2023-techreport_p009_text_02 | page=9 | modality=text | ref=Page 9 | bbox=[122.6, 622.5, 489.1, 641.2]]\nTable 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+      "context_ids": [
+        "gpt4-2023-techreport_p038_image_diagram_01",
+        "gpt4-2023-techreport_p038_text_01",
+        "gpt4-2023-techreport_p009_image_diagram_01",
+        "gpt4-2023-techreport_p039_text_02",
+        "gpt4-2023-techreport_p009_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Table 18 (Page 38, 'Chicken Nugget Map'), what two unrelated things does the visual meme combine to create humor?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The context for Table 18 on Page 38 explicitly states that the meme combines two unrelated things: pictures of the earth from space and chicken nuggets. The text explains that the caption suggests a beautiful picture of the earth from space, but the image is actually chicken nuggets arranged to resemble a world map."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_06",
+    "split": "dev",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p038_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p038_image_diagram_01",
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p009_image_diagram_01",
+      "gpt4-2023-techreport_p039_image_diagram_01",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p013_table_01",
+      "gpt4-2023-techreport_p039_text_02",
+      "gpt4-2023-techreport_p009_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p038_image_diagram_01",
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p009_image_diagram_01",
+      "gpt4-2023-techreport_p039_text_02",
+      "gpt4-2023-techreport_p009_text_02"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p038_image_diagram_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1175,
+  "completion_tokens": 151,
+  "total_tokens": 1326,
+  "estimated_cost_usd": 0.000267
+}
