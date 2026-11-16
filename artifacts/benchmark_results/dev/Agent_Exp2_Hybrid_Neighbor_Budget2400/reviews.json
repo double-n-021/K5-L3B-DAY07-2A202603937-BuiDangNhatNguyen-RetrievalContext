@@ -1,0 +1,203 @@
+[
+  {
+    "query_id": "q01",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 76% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['vaswani-2017-transformer_p03_para_01']."
+  },
+  {
+    "query_id": "q02",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      false
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 68% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['vaswani-2017-transformer_p04_para_03', 'vaswani-2017-transformer_p04_para_02']."
+  },
+  {
+    "query_id": "q03",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 71% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['vaswani-2017-transformer_p05_para_00', 'vaswani-2017-transformer_p05_para_03']."
+  },
+  {
+    "query_id": "q04",
+    "answer_grade": 2,
+    "citation_support": [
+      false,
+      false,
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 79% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['vaswani-2017-transformer_p06_para_06', 'vaswani-2017-transformer_p06_para_00', 'vaswani-2017-transformer_p07_para_00']."
+  },
+  {
+    "query_id": "q05",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 79% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['vaswani-2017-transformer_p07_para_05']."
+  },
+  {
+    "query_id": "q06",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 61% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p03_para_00', 'lewis-2020-rag_p03_para_01', 'lewis-2020-rag_p03_para_02']."
+  },
+  {
+    "query_id": "q07",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 90% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p04_para_00']."
+  },
+  {
+    "query_id": "q08",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 94% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p04_para_04']."
+  },
+  {
+    "query_id": "q09",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 50% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p07_para_05']."
+  },
+  {
+    "query_id": "q10",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      false
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 50% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p18_para_07', 'lewis-2020-rag_p19_para_01']."
+  },
+  {
+    "query_id": "q11",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 83% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['yao-2022-react_p04_para_05']."
+  },
+  {
+    "query_id": "q12",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 76% từ khóa đáp án chuẩn, khớp đủ 2/2 bằng chứng đích, trích dẫn ['yao-2022-react_p05_para_03', 'yao-2022-react_p05_para_04']."
+  },
+  {
+    "query_id": "q13",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 97% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p18_para_04']."
+  },
+  {
+    "query_id": "q14",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 58% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p17_para_00']."
+  },
+  {
+    "query_id": "q15",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 88% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['yao-2022-react_p15_para_02']."
+  },
+  {
+    "query_id": "q21",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 69% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['vaswani-2017-transformer_p08_para_02']."
+  },
+  {
+    "query_id": "q22",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 90% từ khóa đáp án chuẩn, khớp đủ 2/2 bằng chứng đích, trích dẫn ['vaswani-2017-transformer_p08_para_05', 'vaswani-2017-transformer_p08_para_06']."
+  },
+  {
+    "query_id": "q23",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 52% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p06_para_01']."
+  },
+  {
+    "query_id": "q24",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 70% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['yao-2022-react_p08_para_05']."
+  },
+  {
+    "query_id": "u01",
+    "abstention_correct": true,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "True abstention: Từ chối trả lời chính xác trước câu hỏi thiếu bằng chứng/bẫy tiền đề (unanswerable_missing_metric)."
+  },
+  {
+    "query_id": "u02",
+    "abstention_correct": true,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "True abstention: Từ chối trả lời chính xác trước câu hỏi thiếu bằng chứng/bẫy tiền đề (unanswerable_missing_hyperparam)."
+  },
+  {
+    "query_id": "u03",
+    "abstention_correct": true,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "True abstention: Từ chối trả lời chính xác trước câu hỏi thiếu bằng chứng/bẫy tiền đề (unanswerable_premise_trap)."
+  }
+]

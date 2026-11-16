@@ -1,0 +1,76 @@
+[
+  {
+    "query_id": "q16",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 77% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['vaswani-2017-transformer_p08_para_02']."
+  },
+  {
+    "query_id": "q17",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "context_completeness_grade": 2,
+    "audit_notes": "Đầy đủ và có căn cứ (Grade 2): Bao phủ 70% từ khóa đáp án chuẩn, khớp đủ 1/1 bằng chứng đích, trích dẫn ['lewis-2020-rag_p08_para_02']."
+  },
+  {
+    "query_id": "q18",
+    "answer_grade": 0,
+    "citation_support": [],
+    "context_completeness_grade": 1,
+    "audit_notes": "False abstention: Câu hỏi có đáp án (['yao-2022-react_p06_para_02', 'yao-2022-react_p06_para_03']), nhưng Agent trả về status=abstain. Context khớp 1/2 gold items."
+  },
+  {
+    "query_id": "q19",
+    "answer_grade": 0,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "False abstention: Câu hỏi có đáp án (['yao-2022-react_p05_para_00']), nhưng Agent trả về status=abstain. Context khớp 0/1 gold items."
+  },
+  {
+    "query_id": "q20",
+    "answer_grade": 0,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "False abstention: Câu hỏi có đáp án (['vaswani-2017-transformer_p08_para_04']), nhưng Agent trả về status=abstain. Context khớp 0/1 gold items."
+  },
+  {
+    "query_id": "q25",
+    "answer_grade": 0,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "False abstention: Câu hỏi có đáp án (['vaswani-2017-transformer_p08_para_04']), nhưng Agent trả về status=abstain. Context khớp 0/1 gold items."
+  },
+  {
+    "query_id": "q26",
+    "answer_grade": 0,
+    "citation_support": [],
+    "context_completeness_grade": 1,
+    "audit_notes": "False abstention: Câu hỏi có đáp án (['lewis-2020-rag_p06_para_04', 'lewis-2020-rag_p06_para_05']), nhưng Agent trả về status=abstain. Context khớp 1/2 gold items."
+  },
+  {
+    "query_id": "u04",
+    "abstention_correct": true,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "True abstention: Từ chối trả lời chính xác trước câu hỏi thiếu bằng chứng/bẫy tiền đề (unanswerable_missing_metric)."
+  },
+  {
+    "query_id": "u05",
+    "abstention_correct": true,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "True abstention: Từ chối trả lời chính xác trước câu hỏi thiếu bằng chứng/bẫy tiền đề (unanswerable_missing_benchmark)."
+  },
+  {
+    "query_id": "u06",
+    "abstention_correct": true,
+    "citation_support": [],
+    "context_completeness_grade": 0,
+    "audit_notes": "True abstention: Từ chối trả lời chính xác trước câu hỏi thiếu bằng chứng/bẫy tiền đề (unanswerable_premise_trap)."
+  }
+]

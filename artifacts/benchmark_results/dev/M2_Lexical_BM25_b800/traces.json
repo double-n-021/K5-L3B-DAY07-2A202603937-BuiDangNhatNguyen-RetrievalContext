@@ -1,0 +1,1990 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "How many identical layers make up the Encoder stack in the Transformer architecture, and what is the output dimension dmodel produced by all sub-layers and embedding layers?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 3,
+        "evidence": "Encoder: The encoder is composed of a stack of N = 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, positionwise fully connected feed-forward network. We employ a residual connection [11] around each of the two sub-layers, followed by layer normalization [ 1]. That is, the output of each sub-layer is LayerNorm(x + Sublayer(x)), where Sublayer(x) is the function implemented by the sub-layer itself. To facilitate these residual connections, all sub-layers in the model, as well as the embedding layers, produce outputs of dimension dmodel = 512."
+      }
+    ],
+    "required_evidence_parts": [
+      "Encoder: The encoder is composed of a stack of N = 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, positionwise fully connected feed-forward network. We employ a residual connection [11] around each of the two sub-layers, followed by layer normalization [ 1]. That is, the output of each sub-layer is LayerNorm(x + Sublayer(x)), where Sublayer(x) is the function implemented by the sub-layer itself. To facilitate these residual connections, all sub-layers in the model, as well as the embedding layers, produce outputs of dimension dmodel = 512."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p03_para_01",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 3,
+        "text": "3.1 Encoder and Decoder Stacks\n\nEncoder: The encoder is composed of a stack of N = 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, positionwise fully connected feed-forward network. We employ a residual connection [11] around each of the two sub-layers, followed by layer normalization [ 1]. That is, the output of each sub-layer is LayerNorm(x + Sublayer(x)), where Sublayer(x) is the function implemented by the sub-layer itself. To facilitate these residual connections, all sub-layers in the model, as well as the embedding layers, produce outputs of dimension dmodel = 512.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p03",
+          "section": "3.1 Encoder and Decoder Stacks",
+          "raw_chars": 1827,
+          "normalized_chars": 1829,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 661
+        },
+        "score": 43.167178,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "vaswani-2017-transformer_p03_para_02",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 3,
+        "text": "Decoder: The decoder is also composed of a stack of N = 6 identical layers. In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack. Similar to the encoder, we employ residual connections around each of the sub-layers, followed by layer normalization. We also modify the self-attention sub-layer in the decoder stack to prevent positions from attending to subsequent positions. This masking, combined with fact that the output embeddings are offset by one position, ensures that the predictions for position i can depend only on the known outputs at positions less than i.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p03",
+          "section": "3.1 Encoder and Decoder Stacks",
+          "raw_chars": 1827,
+          "normalized_chars": 1829,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 685
+        },
+        "score": 33.996414,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p05_para_04",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 5,
+        "text": "3.4 Embeddings and Softmax\n\nSimilarly to other sequence transduction models, we use learned embeddings to convert the input tokens and output tokens to vectors of dimension dmodel. We also use the usual learned linear transformation and softmax function to convert the decoder output to predicted next-token probabilities. In our model, we share the same weight matrix between the two embedding layers and the pre-softmax linear transformation, similar to [30]. In the embedding layers, we multiply those weights by √dmodel.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p05",
+          "section": "3.4 Embeddings and Softmax",
+          "raw_chars": 3199,
+          "normalized_chars": 3206,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 524
+        },
+        "score": 22.530607,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p03_para_01 | data/raw/vaswani_2017_transformer.pdf | page 3]\n3.1 Encoder and Decoder Stacks\n\nEncoder: The encoder is composed of a stack of N = 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, positionwise fully connected feed-forward network. We employ a residual connection [11] around each of the two sub-layers, followed by layer normalization [ 1]. That is, the output of each sub-layer is LayerNorm(x + Sublayer(x)), where Sublayer(x) is the function implemented by the sub-layer itself. To facilitate these residual connections, all sub-layers in the model, as well as the embedding layers, produce outputs of dimension dmodel = 512.",
+    "context_ids": [
+      "vaswani-2017-transformer_p03_para_01"
+    ],
+    "context_chars": 749,
+    "context_tokens_est": 187,
+    "elapsed_ms": 0.596,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": true
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "When comparing dot-product attention and additive attention, under what condition on dk does additive attention outperform unscaled dot-product attention, and why does this happen?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 4,
+        "evidence": "While for small values of dk the two mechanisms perform similarly, additive attention outperforms dot product attention without scaling for larger values of dk [3]. We suspect that for large values of dk, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients 4. To counteract this effect, we scale the dot products by 1√dk ."
+      }
+    ],
+    "required_evidence_parts": [
+      "While for small values of dk the two mechanisms perform similarly, additive attention outperforms dot product attention without scaling for larger values of dk [3]. We suspect that for large values of dk, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients 4. To counteract this effect, we scale the dot products by 1√dk ."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p04_para_02",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 4,
+        "text": "Attention(Q, K, V ) = softmax( QK T √dk )V (1) The two most commonly used attention functions are additive attention [2], and dot-product (multiplicative) attention. Dot-product attention is identical to our algorithm, except for the scaling factor of 1√dk . Additive attention computes the compatibility function using a feed-forward network with a single hidden layer. While the two are similar in theoretical complexity, dot-product attention is much faster and more space-efficient in practice, since it can be implemented using highly optimized matrix multiplication code.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p04",
+          "section": "3.2.1 Scaled Dot-Product Attention",
+          "raw_chars": 2508,
+          "normalized_chars": 2512,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 577
+        },
+        "score": 35.069149,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p04_para_03",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 4,
+        "text": "While for small values of dk the two mechanisms perform similarly, additive attention outperforms dot product attention without scaling for larger values of dk [3]. We suspect that for large values of dk, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients 4. To counteract this effect, we scale the dot products by 1√dk .",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p04",
+          "section": "3.2.1 Scaled Dot-Product Attention",
+          "raw_chars": 2508,
+          "normalized_chars": 2512,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 3,
+          "char_length": 393
+        },
+        "score": 27.316323,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "vaswani-2017-transformer_p04_para_01",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 4,
+        "text": "3.2.1 Scaled Dot-Product Attention\n\nWe call our particular attention \"Scaled Dot-Product Attention\" (Figure 2). The input consists of queries and keys of dimension dk, and values of dimension dv. We compute the dot products of the query with all keys, divide each by √dk, and apply a softmax function to obtain the weights on the values.\n\nIn practice, we compute the attention function on a set of queries simultaneously, packed together into a matrix Q. The keys and values are also packed together into matrices K and V . We compute the matrix of outputs as:",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p04",
+          "section": "3.2.1 Scaled Dot-Product Attention",
+          "raw_chars": 2508,
+          "normalized_chars": 2512,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 560
+        },
+        "score": 26.601314,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p04_para_02 | data/raw/vaswani_2017_transformer.pdf | page 4]\nAttention(Q, K, V ) = softmax( QK T √dk )V (1) The two most commonly used attention functions are additive attention [2], and dot-product (multiplicative) attention. Dot-product attention is identical to our algorithm, except for the scaling factor of 1√dk . Additive attention computes the compatibility function using a feed-forward network with a single hidden layer. While the two are similar in theoretical complexity, dot-product attention is much faster and more space-efficient in practice, since it can be implemented using highly optimized matrix multiplication code.",
+    "context_ids": [
+      "vaswani-2017-transformer_p04_para_02"
+    ],
+    "context_chars": 665,
+    "context_tokens_est": 166,
+    "elapsed_ms": 0.292,
+    "hit1": false,
+    "hit3": true,
+    "rr3": 0.5,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "In Multi-Head Attention and Position-wise Feed-Forward Networks of the base Transformer, how many parallel attention heads h are used, what are dk and dv, and what is the inner-layer dimensionality dff?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 5,
+        "evidence": "In this work we employ h = 8 parallel attention layers, or heads. For each of these we use dk = dv = dmodel/h = 64."
+      }
+    ],
+    "required_evidence_parts": [
+      "In this work we employ h = 8 parallel attention layers, or heads. For each of these we use dk = dv = dmodel/h = 64."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p05_para_03",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 5,
+        "text": "3.3 Position-wise Feed-Forward Networks\n\nIn addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between. FFN(x) = max(0 , xW1 + b1)W2 + b2 (2) While the linear transformations are the same across different positions, they use different parameters from layer to layer. Another way of describing this is as two convolutions with kernel size 1. The dimensionality of input and output is dmodel = 512 , and the inner-layer has dimensionality df f = 2048.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p05",
+          "section": "3.3 Position-wise Feed-Forward Networks",
+          "raw_chars": 3199,
+          "normalized_chars": 3206,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 3,
+          "char_length": 659
+        },
+        "score": 51.681374,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p05_para_00",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 5,
+        "text": "output values. These are concatenated and once again projected, resulting in the final values, as depicted in Figure 2.\n\nMulti-head attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this. MultiHead(Q, K, V ) = Concat(head 1, ..., headh)W O where headi = Attention(QW Q i , KW K i , V W V i ) Where the projections are parameter matricesW Q i ∈ Rdmodel×dk, W K i ∈ Rdmodel×dk, W V i ∈ Rdmodel×dv and W O ∈ Rhdv×dmodel.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use dk = dv = dmodel/h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p05",
+          "section": "3.2.3 Applications of Attention in our Model",
+          "raw_chars": 3199,
+          "normalized_chars": 3206,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 799
+        },
+        "score": 39.406324,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "vaswani-2017-transformer_p04_para_04",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 4,
+        "text": "3.2.2 Multi-Head Attention\n\nInstead of performing a single attention function with dmodel-dimensional keys, values and queries, we found it beneficial to linearly project the queries, keys and values h times with different, learned linear projections to dk, dk and dv dimensions, respectively. On each of these projected versions of queries, keys and values we then perform the attention function in parallel, yielding dv-dimensional 4To illustrate why the dot products get large, assume that the components of q and k are independent random variables with mean 0 and variance 1. Then their dot product, q · k = Pdk i=1 qiki, has mean 0 and variance dk.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p04",
+          "section": "3.2.2 Multi-Head Attention",
+          "raw_chars": 2508,
+          "normalized_chars": 2512,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 653
+        },
+        "score": 30.310244,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p05_para_03 | data/raw/vaswani_2017_transformer.pdf | page 5]\n3.3 Position-wise Feed-Forward Networks\n\nIn addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between. FFN(x) = max(0 , xW1 + b1)W2 + b2 (2) While the linear transformations are the same across different positions, they use different parameters from layer to layer. Another way of describing this is as two convolutions with kernel size 1. The dimensionality of input and output is dmodel = 512 , and the inner-layer has dimensionality df f = 2048.",
+    "context_ids": [
+      "vaswani-2017-transformer_p05_para_03"
+    ],
+    "context_chars": 747,
+    "context_tokens_est": 187,
+    "elapsed_ms": 0.516,
+    "hit1": false,
+    "hit3": true,
+    "rr3": 0.5,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "In terms of computational complexity per layer, under what condition is a self-attention layer faster than a recurrent layer, and how can self-attention be modified when sequences are very long?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 7,
+        "evidence": "length n is smaller than the representation dimensionality d, which is most often the case with sentence representations used by state-of-the-art models in machine translations, such as word-piece [38] and byte-pair [31] representations. To improve computational performance for tasks involving very long sequences, self-attention could be restricted to considering only a neighborhood of size r in the input sequence centered around the respective output position. This would increase the maximum path length to O(n/r)."
+      }
+    ],
+    "required_evidence_parts": [
+      "length n is smaller than the representation dimensionality d, which is most often the case with sentence representations used by state-of-the-art models in machine translations, such as word-piece [38] and byte-pair [31] representations. To improve computational performance for tasks involving very long sequences, self-attention could be restricted to considering only a neighborhood of size r in the input sequence centered around the respective output position. This would increase the maximum path length to O(n/r)."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p06_para_06",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 6,
+        "text": "As noted in Table 1, a self-attention layer connects all positions with a constant number of sequentially executed operations, whereas a recurrent layer requires O(n) sequential operations. In terms of computational complexity, self-attention layers are faster than recurrent layers when the sequence",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p06",
+          "section": "4 Why Self-Attention",
+          "raw_chars": 3477,
+          "normalized_chars": 3481,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 6,
+          "char_length": 300
+        },
+        "score": 45.210578,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p06_para_00",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 6,
+        "text": "Table 1: Maximum path lengths, per-layer complexity and minimum number of sequential operations for different layer types. n is the sequence length, d is the representation dimension, k is the kernel size of convolutions and r the size of the neighborhood in restricted self-attention. Layer Type Complexity per Layer Sequential Maximum Path Length Operations Self-Attention O(n2 · d) O(1) O(1) Recurrent O(n · d2) O(n) O(n) Convolutional O(k · n · d2) O(1) O(logk(n)) Self-Attention (restricted) O(r · n · d) O(1) O(n/r)",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p06",
+          "section": "3.5 Positional Encoding",
+          "raw_chars": 3477,
+          "normalized_chars": 3481,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 521
+        },
+        "score": 30.606602,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p07_para_00",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 7,
+        "text": "length n is smaller than the representation dimensionality d, which is most often the case with sentence representations used by state-of-the-art models in machine translations, such as word-piece [38] and byte-pair [31] representations. To improve computational performance for tasks involving very long sequences, self-attention could be restricted to considering only a neighborhood of size r in the input sequence centered around the respective output position. This would increase the maximum path length to O(n/r). We plan to investigate this approach further in future work. A single convolutional layer with kernel width k < n does not connect all pairs of input and output positions.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p07",
+          "section": "5 Training",
+          "raw_chars": 3324,
+          "normalized_chars": 3332,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 692
+        },
+        "score": 24.120298,
+        "strategy": "bm25",
+        "hit": true
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p06_para_06 | data/raw/vaswani_2017_transformer.pdf | page 6]\nAs noted in Table 1, a self-attention layer connects all positions with a constant number of sequentially executed operations, whereas a recurrent layer requires O(n) sequential operations. In terms of computational complexity, self-attention layers are faster than recurrent layers when the sequence",
+    "context_ids": [
+      "vaswani-2017-transformer_p06_para_06"
+    ],
+    "context_chars": 388,
+    "context_tokens_est": 97,
+    "elapsed_ms": 0.326,
+    "hit1": false,
+    "hit3": true,
+    "rr3": 0.3333,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "How did the authors configure the learning rate schedule, Adam hyperparameters, and warmup steps when training the Transformer?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 7,
+        "evidence": "We used the Adam optimizer [20] with β1 = 0.9, β2 = 0.98 and ε = 10 −9. We varied the learning rate over the course of training, according to the formula:\n\nlrate = d−0.5 model · min(step_num−0.5, step_num · warmup_steps−1.5) (3) This corresponds to increasing the learning rate linearly for the first warmup_steps training steps, and decreasing it thereafter proportionally to the inverse square root of the step number. We used warmup_steps = 4000."
+      }
+    ],
+    "required_evidence_parts": [
+      "We used the Adam optimizer [20] with β1 = 0.9, β2 = 0.98 and ε = 10 −9. We varied the learning rate over the course of training, according to the formula:\n\nlrate = d−0.5 model · min(step_num−0.5, step_num · warmup_steps−1.5) (3) This corresponds to increasing the learning rate linearly for the first warmup_steps training steps, and decreasing it thereafter proportionally to the inverse square root of the step number. We used warmup_steps = 4000."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p07_para_05",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 7,
+        "text": "5.3 Optimizer\n\nWe used the Adam optimizer [20] with β1 = 0.9, β2 = 0.98 and ε = 10 −9. We varied the learning rate over the course of training, according to the formula:\n\nlrate = d−0.5 model · min(step_num−0.5, step_num · warmup_steps−1.5) (3) This corresponds to increasing the learning rate linearly for the first warmup_steps training steps, and decreasing it thereafter proportionally to the inverse square root of the step number. We used warmup_steps = 4000.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p07",
+          "section": "5.3 Optimizer",
+          "raw_chars": 3324,
+          "normalized_chars": 3332,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 464
+        },
+        "score": 17.698344,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "vaswani-2017-transformer_p07_para_04",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 7,
+        "text": "5.2 Hardware and Schedule\n\nWe trained our models on one machine with 8 NVIDIA P100 GPUs. For our base models using the hyperparameters described throughout the paper, each training step took about 0.4 seconds. We trained the base models for a total of 100,000 steps or 12 hours. For our big models,(described on the bottom line of table 3), step time was 1.0 seconds. The big models were trained for 300,000 steps (3.5 days).",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p07",
+          "section": "5.2 Hardware and Schedule",
+          "raw_chars": 3324,
+          "normalized_chars": 3332,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 425
+        },
+        "score": 17.081681,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p08_para_04",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at less than 1/4 the training cost of the previous state-of-the-art model. The Transformer (big) model trained for English-to-French used dropout rate Pdrop = 0.1, instead of 0.3.\n\nFor the base models, we used a single model obtained by averaging the last 5 checkpoints, which were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints. We used beam search with a beam size of 4 and length penalty α = 0 .6 [38]. These hyperparameters were chosen after experimentation on the development set. We set the maximum output length during inference to input length + 50, but terminate early when possible [38].",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6.1 Machine Translation",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 796
+        },
+        "score": 9.982111,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p07_para_05 | data/raw/vaswani_2017_transformer.pdf | page 7]\n5.3 Optimizer\n\nWe used the Adam optimizer [20] with β1 = 0.9, β2 = 0.98 and ε = 10 −9. We varied the learning rate over the course of training, according to the formula:\n\nlrate = d−0.5 model · min(step_num−0.5, step_num · warmup_steps−1.5) (3) This corresponds to increasing the learning rate linearly for the first warmup_steps training steps, and decreasing it thereafter proportionally to the inverse square root of the step number. We used warmup_steps = 4000.",
+    "context_ids": [
+      "vaswani-2017-transformer_p07_para_05"
+    ],
+    "context_chars": 552,
+    "context_tokens_est": 138,
+    "elapsed_ms": 0.282,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": true
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "How do the RAG-Sequence and RAG-Token architectures differ in how they condition on retrieved latent passages during text generation, and when do the two formulations become identical?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 3,
+        "evidence": "RAG-Sequence Model The RAG-Sequence model uses the same retrieved document to generate the complete sequence. Technically, it treats the retrieved document as a single latent variable that is marginalized to get the seq2seq probability p(y|x) via a top-K approximation."
+      }
+    ],
+    "required_evidence_parts": [
+      "RAG-Sequence Model The RAG-Sequence model uses the same retrieved document to generate the complete sequence. Technically, it treats the retrieved document as a single latent variable that is marginalized to get the seq2seq probability p(y|x) via a top-K approximation."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p03_para_00",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 3,
+        "text": "byθ that generates a current token based on a context of the previousi− 1 tokensy1:i−1, the original inputx and a retrieved passagez.\n\nTo train the retriever and generator end-to-end, we treat the retrieved document as a latent variable. We propose two models that marginalize over the latent documents in different ways to produce a distribution over generated text. In one approach, RAG-Sequence, the model uses the same document to predict each target token. The second approach, RAG-Token, can predict each target token based on a different document. In the following, we formally introduce both models and then describe the pη andpθ components, as well as the training and decoding procedure.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p03",
+          "section": "2.1 Models",
+          "raw_chars": 3655,
+          "normalized_chars": 3665,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 697
+        },
+        "score": 27.45518,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p03_para_01",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 3,
+        "text": "2.1 Models\n\nRAG-Sequence Model The RAG-Sequence model uses the same retrieved document to generate the complete sequence. Technically, it treats the retrieved document as a single latent variable that is marginalized to get the seq2seq probability p(y|x) via a top-K approximation. Concretely, the top K documents are retrieved using the retriever, and the generator produces the output sequence probability for each document, which are then marginalized, pRAG-Sequence(y|x) ≈ ∑ z∈top-k(p(·|x)) pη(z|x)pθ(y|x,z ) = ∑ z∈top-k(p(·|x)) pη(z|x) N∏ i pθ(yi|x,z,y 1:i−1) RAG-Token Model In the RAG-Token model we can draw a different latent document for each target token and marginalize accordingly. This allows the generator to choose content from several documents when producing an answer.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p03",
+          "section": "2.1 Models",
+          "raw_chars": 3655,
+          "normalized_chars": 3665,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 787
+        },
+        "score": 24.354682,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p01_para_02",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 1,
+        "text": "We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, and another which can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledgeintensive NLP tasks and set the state of the art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p01",
+          "section": "Abstract",
+          "raw_chars": 2899,
+          "normalized_chars": 2853,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 799
+        },
+        "score": 23.628215,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p03_para_00 | data/raw/lewis_2020_rag.pdf | page 3]\nbyθ that generates a current token based on a context of the previousi− 1 tokensy1:i−1, the original inputx and a retrieved passagez.\n\nTo train the retriever and generator end-to-end, we treat the retrieved document as a latent variable. We propose two models that marginalize over the latent documents in different ways to produce a distribution over generated text. In one approach, RAG-Sequence, the model uses the same document to predict each target token. The second approach, RAG-Token, can predict each target token based on a different document. In the following, we formally introduce both models and then describe the pη andpθ components, as well as the training and decoding procedure.",
+    "context_ids": [
+      "lewis-2020-rag_p03_para_00"
+    ],
+    "context_chars": 765,
+    "context_tokens_est": 191,
+    "elapsed_ms": 0.429,
+    "hit1": false,
+    "hit3": true,
+    "rr3": 0.5,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "Why does RAG keep the document encoder BERTd and the document index fixed during fine-tuning instead of updating them like REALM?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 4,
+        "evidence": "Updating the document encoder BERTd during training is costly as it requires the document index to be periodically updated as REALM does during pre-training [20]. We do not find this step necessary for strong performance, and keep the document encoder (and index) fixed, only fine-tuning the query encoder BERTq and the BART generator."
+      }
+    ],
+    "required_evidence_parts": [
+      "Updating the document encoder BERTd during training is costly as it requires the document index to be periodically updated as REALM does during pre-training [20]. We do not find this step necessary for strong performance, and keep the document encoder (and index) fixed, only fine-tuning the query encoder BERTq and the BART generator."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p04_para_00",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 4,
+        "text": "minimize the negative marginal log-likelihood of each target,∑ j− logp(yj|xj) using stochastic gradient descent with Adam [28]. Updating the document encoder BERTd during training is costly as it requires the document index to be periodically updated as REALM does during pre-training [20]. We do not find this step necessary for strong performance, and keep the document encoder (and index) fixed, only fine-tuning the query encoder BERTq and the BART generator.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p04",
+          "section": "2.5 Decoding",
+          "raw_chars": 4205,
+          "normalized_chars": 4212,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 463
+        },
+        "score": 46.425956,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p03_para_05",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 3,
+        "text": "2.4 Training\n\nWe jointly train the retriever and generator components without any direct supervision on what document should be retrieved. Given a fine-tuning training corpus of input/output pairs(xj,yj), we",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p03",
+          "section": "2.4 Training",
+          "raw_chars": 3655,
+          "normalized_chars": 3665,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 207
+        },
+        "score": 16.78767,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p02_para_01",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 2,
+        "text": "Figure 1: Overview of our approach. We combine a pre-trained retriever (Query Encoder + Document Index) with a pre-trained seq2seq model (Generator) and fine-tune end-to-end. For queryx, we use Maximum Inner Product Search (MIPS) to find the top-K documentszi. For final predictiony, we treatz as a latent variable and marginalize over seq2seq predictions given different documents. but have only explored open-domain extractive question answering. Here, we bring hybrid parametric and non-parametric memory to the “workhorse of NLP,” i.e. sequence-to-sequence (seq2seq) models. We endow pre-trained, parametric-memory generation models with a non-parametric memory through a general-purpose fine-tuning approach which we refer to as retrieval-augmented generation (RAG).",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p02",
+          "section": "2 Methods",
+          "raw_chars": 4545,
+          "normalized_chars": 4547,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 771
+        },
+        "score": 16.514367,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p04_para_00 | data/raw/lewis_2020_rag.pdf | page 4]\nminimize the negative marginal log-likelihood of each target,∑ j− logp(yj|xj) using stochastic gradient descent with Adam [28]. Updating the document encoder BERTd during training is costly as it requires the document index to be periodically updated as REALM does during pre-training [20]. We do not find this step necessary for strong performance, and keep the document encoder (and index) fixed, only fine-tuning the query encoder BERTq and the BART generator.",
+    "context_ids": [
+      "lewis-2020-rag_p04_para_00"
+    ],
+    "context_chars": 531,
+    "context_tokens_est": 133,
+    "elapsed_ms": 0.36,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": true
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "How was the Wikipedia non-parametric knowledge source segmented and indexed in the RAG experiments?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 4,
+        "evidence": "Following Lee et al. [31] and Karpukhin et al. [26], we use the December 2018 dump. Each Wikipedia article is split into disjoint 100-word chunks, to make a total of 21M documents. We use the document encoder to compute an embedding for each document, and build a single MIPS index using FAISS [23] with a Hierarchical Navigable Small World approximation for fast retrieval [37]."
+      }
+    ],
+    "required_evidence_parts": [
+      "Following Lee et al. [31] and Karpukhin et al. [26], we use the December 2018 dump. Each Wikipedia article is split into disjoint 100-word chunks, to make a total of 21M documents. We use the document encoder to compute an embedding for each document, and build a single MIPS index using FAISS [23] with a Hierarchical Navigable Small World approximation for fast retrieval [37]."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p04_para_04",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 4,
+        "text": "3 Experiments\n\nWe experiment with RAG in a wide range of knowledge-intensive tasks. For all experiments, we use a single Wikipedia dump for our non-parametric knowledge source. Following Lee et al. [31] and Karpukhin et al. [26], we use the December 2018 dump. Each Wikipedia article is split into disjoint 100-word chunks, to make a total of 21M documents. We use the document encoder to compute an embedding for each document, and build a single MIPS index using FAISS [23] with a Hierarchical Navigable Small World approximation for fast retrieval [37]. During training, we retrieve the top k documents for each query. We considerk∈{ 5, 10} for training and setk for test time using dev data. We now discuss experimental details for each task.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p04",
+          "section": "3 Experiments",
+          "raw_chars": 4205,
+          "normalized_chars": 4212,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 746
+        },
+        "score": 19.79661,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p07_para_06",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 7,
+        "text": "Index hot-swapping An advantage of non-parametric memory models like RAG is that knowledge can be easily updated at test time. Parametric-only models like T5 or BART need further training to update their behavior as the world changes. To demonstrate, we build an index using the DrQA [5] Wikipedia dump from December 2016 and compare outputs from RAG using this index to the newer index from our main results (December 2018). We prepare a list of 82 world leaders who had changed",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p07",
+          "section": "4.5 Additional Results",
+          "raw_chars": 4335,
+          "normalized_chars": 4351,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 6,
+          "char_length": 479
+        },
+        "score": 15.157464,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p02_para_04",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 2,
+        "text": "Our results highlight the benefits of combining parametric and non-parametric memory with generation for knowledge-intensive tasks—tasks that humans could not reasonably be expected to perform without access to an external knowledge source. Our RAG models achieve state-of-the-art results on open Natural Questions [29], WebQuestions [3] and CuratedTrec [2] and strongly outperform recent approaches that use specialised pre-training objectives on TriviaQA [24]. Despite these being extractive tasks, we find that unconstrained generation outperforms previous extractive approaches. For knowledge-intensive generation, we experiment with MS-MARCO [1] and Jeopardy question generation, and we find that our models generate responses that are more factual, specific, and diverse than a BART baseline.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p02",
+          "section": "2 Methods",
+          "raw_chars": 4545,
+          "normalized_chars": 4547,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 798
+        },
+        "score": 15.114887,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p07_para_06 | data/raw/lewis_2020_rag.pdf | page 7]\nIndex hot-swapping An advantage of non-parametric memory models like RAG is that knowledge can be easily updated at test time. Parametric-only models like T5 or BART need further training to update their behavior as the world changes. To demonstrate, we build an index using the DrQA [5] Wikipedia dump from December 2016 and compare outputs from RAG using this index to the newer index from our main results (December 2018). We prepare a list of 82 world leaders who had changed",
+    "context_ids": [
+      "lewis-2020-rag_p07_para_06"
+    ],
+    "context_chars": 547,
+    "context_tokens_est": 137,
+    "elapsed_ms": 0.308,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "In the RAG retrieval ablations comparing dense differentiable retrieval against a fixed BM25 retriever, on which task does BM25 perform best and why?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 7,
+        "evidence": "We compare RAG’s dense retriever to a word overlap-based BM25 retriever [53]. Here, we replace RAG’s retriever with a fixed BM25 system, and use BM25 retrieval scores as logits when calculating p(z|x). Table 6 shows the results. For FEVER, BM25 performs best, perhaps since FEVER claims are heavily entity-centric and thus well-suited for word overlap-based retrieval. Differentiable retrieval improves results on all other tasks, especially for Open-Domain QA, where it is crucial."
+      }
+    ],
+    "required_evidence_parts": [
+      "We compare RAG’s dense retriever to a word overlap-based BM25 retriever [53]. Here, we replace RAG’s retriever with a fixed BM25 system, and use BM25 retrieval scores as logits when calculating p(z|x). Table 6 shows the results. For FEVER, BM25 performs best, perhaps since FEVER claims are heavily entity-centric and thus well-suited for word overlap-based retrieval. Differentiable retrieval improves results on all other tasks, especially for Open-Domain QA, where it is crucial."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p07_para_05",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 7,
+        "text": "Retrieval Ablations A key feature of RAG is learning to retrieve relevant information for the task. To assess the effectiveness of the retrieval mechanism, we run ablations where we freeze the retriever during training. As shown in Table 6, learned retrieval improves results for all tasks. We compare RAG’s dense retriever to a word overlap-based BM25 retriever [53]. Here, we replace RAG’s retriever with a fixed BM25 system, and use BM25 retrieval scores as logits when calculating p(z|x). Table 6 shows the results. For FEVER, BM25 performs best, perhaps since FEVER claims are heavily entity-centric and thus well-suited for word overlap-based retrieval. Differentiable retrieval improves results on all other tasks, especially for Open-Domain QA, where it is crucial.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p07",
+          "section": "4.5 Additional Results",
+          "raw_chars": 4335,
+          "normalized_chars": 4351,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 773
+        },
+        "score": 37.16292,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p19_para_02",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 19,
+        "text": "H Retrieval Collapse\n\nIn preliminary experiments, we observed that for some tasks such as story generation [ 11], the retrieval component would “collapse” and learn to retrieve the same documents regardless of the input. In these cases, once retrieval had collapsed, the generator would learn to ignore the documents, and the RAG model would perform equivalently to BART. The collapse could be due to a less-explicit requirement for factual knowledge in some tasks, or the longer target sequences, which could result in less informative gradients for the retriever. Perez et al.[46] also found spurious retrieval results when optimizing a retrieval component in order to improve performance on downstream tasks.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p19",
+          "section": "H Retrieval Collapse",
+          "raw_chars": 1962,
+          "normalized_chars": 1962,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 711
+        },
+        "score": 11.315834,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p01_para_02",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 1,
+        "text": "We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, and another which can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledgeintensive NLP tasks and set the state of the art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p01",
+          "section": "Abstract",
+          "raw_chars": 2899,
+          "normalized_chars": 2853,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 799
+        },
+        "score": 10.74107,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p19_para_02 | data/raw/lewis_2020_rag.pdf | page 19]\nH Retrieval Collapse\n\nIn preliminary experiments, we observed that for some tasks such as story generation [ 11], the retrieval component would “collapse” and learn to retrieve the same documents regardless of the input. In these cases, once retrieval had collapsed, the generator would learn to ignore the documents, and the RAG model would perform equivalently to BART. The collapse could be due to a less-explicit requirement for factual knowledge in some tasks, or the longer target sequences, which could result in less informative gradients for the retriever. Perez et al.[46] also found spurious retrieval results when optimizing a retrieval component in order to improve performance on downstream tasks.",
+    "context_ids": [
+      "lewis-2020-rag_p19_para_02"
+    ],
+    "context_chars": 780,
+    "context_tokens_est": 195,
+    "elapsed_ms": 0.37,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "How many total trainable parameters does the RAG model have, and how many vectors and dimensions are in its non-parametric memory index?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 18,
+        "evidence": "Our RAG models contain the trainable parameters for the BERT-base query and document encoder of DPR, with 110M parameters each (although we do not train the document encoder ourselves) and 406M trainable parameters from BART-large, 406M parameters, making a total of 626M trainable"
+      }
+    ],
+    "required_evidence_parts": [
+      "Our RAG models contain the trainable parameters for the BERT-base query and document encoder of DPR, with 110M parameters each (although we do not train the document encoder ourselves) and 406M trainable parameters from BART-large, 406M parameters, making a total of 626M trainable"
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p19_para_01",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 19,
+        "text": "The T5 model with the closest number of parameters to our models is T5-large (770M parameters), which achieves a score of 28.9 EM on Natural Questions [52], substantially below the 44.5 that RAG-Sequence achieves, indicating that hybrid parametric/nonparametric models require far fewer trainable parameters for strong open-domain QA performance. The non-parametric memory index does not consist of trainable parameters, but does consists of 21M 728 dimensional vectors, consisting of 15.3B values. These can be easily be stored at 8-bit floating point precision to manage memory and disk footprints.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p19",
+          "section": "H Retrieval Collapse",
+          "raw_chars": 1962,
+          "normalized_chars": 1962,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 600
+        },
+        "score": 30.626401,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p18_para_07",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 18,
+        "text": "G Parameters\n\nOur RAG models contain the trainable parameters for the BERT-base query and document encoder of DPR, with 110M parameters each (although we do not train the document encoder ourselves) and 406M trainable parameters from BART-large, 406M parameters, making a total of 626M trainable",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p18",
+          "section": "G Parameters",
+          "raw_chars": 4246,
+          "normalized_chars": 4262,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 7,
+          "char_length": 295
+        },
+        "score": 20.950636,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p02_para_01",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 2,
+        "text": "Figure 1: Overview of our approach. We combine a pre-trained retriever (Query Encoder + Document Index) with a pre-trained seq2seq model (Generator) and fine-tune end-to-end. For queryx, we use Maximum Inner Product Search (MIPS) to find the top-K documentszi. For final predictiony, we treatz as a latent variable and marginalize over seq2seq predictions given different documents. but have only explored open-domain extractive question answering. Here, we bring hybrid parametric and non-parametric memory to the “workhorse of NLP,” i.e. sequence-to-sequence (seq2seq) models. We endow pre-trained, parametric-memory generation models with a non-parametric memory through a general-purpose fine-tuning approach which we refer to as retrieval-augmented generation (RAG).",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p02",
+          "section": "2 Methods",
+          "raw_chars": 4545,
+          "normalized_chars": 4547,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 771
+        },
+        "score": 18.377037,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p19_para_01 | data/raw/lewis_2020_rag.pdf | page 19]\nThe T5 model with the closest number of parameters to our models is T5-large (770M parameters), which achieves a score of 28.9 EM on Natural Questions [52], substantially below the 44.5 that RAG-Sequence achieves, indicating that hybrid parametric/nonparametric models require far fewer trainable parameters for strong open-domain QA performance. The non-parametric memory index does not consist of trainable parameters, but does consists of 21M 728 dimensional vectors, consisting of 15.3B values. These can be easily be stored at 8-bit floating point precision to manage memory and disk footprints.",
+    "context_ids": [
+      "lewis-2020-rag_p19_para_01"
+    ],
+    "context_chars": 669,
+    "context_tokens_est": 167,
+    "elapsed_ms": 0.342,
+    "hit1": false,
+    "hit3": true,
+    "rr3": 0.5,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "What three action types are defined in the Wikipedia web API used by ReAct for knowledge-intensive reasoning tasks, and what does each action return?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "yao-2022-react",
+        "page": 4,
+        "evidence": "Action Space We design a simple Wikipedia web API with three types of actions to support interactive information retrieval: (1) search[entity], which returns the first 5 sentences from the corresponding entity wiki page if it exists, or else suggests top-5 similar entities from the Wikipedia search engine, (2) lookup[string], which would return the next sentence in the page containing string, simulating Ctrl+F functionality on the browser. (3) finish[answer], which would finish the current task withanswer."
+      }
+    ],
+    "required_evidence_parts": [
+      "Action Space We design a simple Wikipedia web API with three types of actions to support interactive information retrieval: (1) search[entity], which returns the first 5 sentences from the corresponding entity wiki page if it exists, or else suggests top-5 similar entities from the Wikipedia search engine, (2) lookup[string], which would return the next sentence in the page containing string, simulating Ctrl+F functionality on the browser. (3) finish[answer], which would finish the current task withanswer."
+    ],
+    "results": [
+      {
+        "id": "yao-2022-react_p04_para_03",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 4,
+        "text": "3 Knowledge-Intensive Reasoning Tasks\n\nWe begin with knowledge-intensive reasoning tasks like multi-hop question answering and fact verification. As shown in Figure 1(1d), by interacting with a Wikipedia API, ReAct is able to retrieve information to support reasoning, while also use reasoning to target what to retrieve next, demonstrating a synergy of reasoning and acting.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p04",
+          "section": "3 Knowledge-Intensive Reasoning Tasks",
+          "raw_chars": 4287,
+          "normalized_chars": 4256,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 3,
+          "char_length": 375
+        },
+        "score": 27.035062,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "yao-2022-react_p04_para_05",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 4,
+        "text": "Action Space We design a simple Wikipedia web API with three types of actions to support interactive information retrieval: (1) search[entity], which returns the first 5 sentences from the corresponding entity wiki page if it exists, or else suggests top-5 similar entities from the Wikipedia search engine, (2) lookup[string], which would return the next sentence in the page containing string, simulating Ctrl+F functionality on the browser. (3) finish[answer], which would finish the current task withanswer. We note that this action space mostly can only retrieve a small part of a passage based on exact passage name, which is significantly weaker than state-of-theart lexical or neural retrievers.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p04",
+          "section": "3.1 Setup",
+          "raw_chars": 4287,
+          "normalized_chars": 4256,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 703
+        },
+        "score": 22.8964,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "yao-2022-react_p04_para_01",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 4,
+        "text": "Since decision making and reasoning capabilities are integrated into a large language model, ReAct enjoys several unique features: A) Intuitive and easy to design : Designing ReAct prompts is straightforward as human annotators just type down their thoughts in language on top of their actions taken. No ad-hoc format choice, thought design, or example selection is used in this paper. We detail prompt design for each task in Sections 3 and 4. B) General and flexible: Due to the flexible thought space and thought-action occurrence format, ReAct works for diverse tasks with distinct action spaces and reasoning needs, including but not limited to QA, fact verification, text game, and web navigation.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p04",
+          "section": "3 Knowledge-Intensive Reasoning Tasks",
+          "raw_chars": 4287,
+          "normalized_chars": 4256,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 703
+        },
+        "score": 14.122274,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[yao-2022-react_p04_para_03 | data/raw/yao_2022_react.pdf | page 4]\n3 Knowledge-Intensive Reasoning Tasks\n\nWe begin with knowledge-intensive reasoning tasks like multi-hop question answering and fact verification. As shown in Figure 1(1d), by interacting with a Wikipedia API, ReAct is able to retrieve information to support reasoning, while also use reasoning to target what to retrieve next, demonstrating a synergy of reasoning and acting.",
+    "context_ids": [
+      "yao-2022-react_p04_para_03"
+    ],
+    "context_chars": 443,
+    "context_tokens_est": 111,
+    "elapsed_ms": 0.427,
+    "hit1": false,
+    "hit3": true,
+    "rr3": 0.5,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "type": "split_evidence",
+    "question": "When combining ReAct and CoT-SC, under what specific heuristic conditions do ReAct -> CoT-SC and CoT-SC -> ReAct switch from one method to the other?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "yao-2022-react",
+        "page": 5,
+        "evidence": "A) ReAct→ CoT-SC: when ReAct fails to return an answer within given steps, back off to CoT-SC. We set 7 and 5 steps for HotpotQA and FEVER respectively"
+      },
+      {
+        "source_id": "yao-2022-react",
+        "page": 5,
+        "evidence": "B) CoT-SC→ ReAct: when the majority answer among n CoT-SC samples occurs less thann/2 times (i.e. internal knowledge might not support the task confidently), back off toReAct."
+      }
+    ],
+    "required_evidence_parts": [
+      "A) ReAct→ CoT-SC: when ReAct fails to return an answer within given steps, back off to CoT-SC. We set 7 and 5 steps for HotpotQA and FEVER respectively",
+      "B) CoT-SC→ ReAct: when the majority answer among n CoT-SC samples occurs less thann/2 times (i.e. internal knowledge might not support the task confidently), back off toReAct."
+    ],
+    "results": [
+      {
+        "id": "yao-2022-react_p05_para_03",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 5,
+        "text": "Combining Internal and External Knowledge As will be detail in Section 3.3, we observe that the problem solving process demonstrated by ReAct is more factual and grounded, whereas CoT is more accurate in formulating reasoning structure but can easily suffer from hallucinated facts or thoughts. We therefore propose to incorporate ReAct and CoT-SC, and let the model decide when to switch to the other method based on the following heuristics: A) ReAct→ CoT-SC: when ReAct fails to return an answer within given steps, back off to CoT-SC. We set 7 and 5 steps for HotpotQA and FEVER respectively as we find more steps will not improveReAct performance3.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p05",
+          "section": "3.3 Results and Observations",
+          "raw_chars": 3664,
+          "normalized_chars": 3622,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 3,
+          "char_length": 653
+        },
+        "score": 32.794474,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "yao-2022-react_p06_para_05",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 6,
+        "text": "Furthermore, Figure 2 shows how different methods perform with respect to the number of CoT-SC samples used. While two ReAct + CoT-SC methods are advantageous at one task each, they both significantly and consistently outperform CoT-SC across different number of samples, reaching CoT-SC performance with 21 samples using merely 3-5 samples. These results indicate the value of properly combining model internal knowledge and external knowledge for reasoning tasks. ReAct performs best for fine-tuning Figure 3 shows the scaling effect of prompting/finetuning four methods (Standard, CoT, Act, ReAct) on HotpotQA. With PaLM-8/62B, promptingReAct performs worst among four methods due to the difficulty to learn both reasoning and acting from in-context examples.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p06",
+          "section": "3.3 Results and Observations",
+          "raw_chars": 4618,
+          "normalized_chars": 4590,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 762
+        },
+        "score": 26.843828,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "yao-2022-react_p06_para_04",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 6,
+        "text": "C) For ReAct, successfully retrieving informative knowledge via search is critical. Noninformative search, which counts for 23% of the error cases, derails the model reasoning and gives it a hard time to recover and reformulate thoughts. This is perhaps an expected trade-off between factuality and flexibility, which motivates our proposed strategies of combining two methods. We provide examples for each success and failure modes in Appendix E.1. We also find some HotpotQA questions may contain outdated answer labels, see Figure 4 for example. ReAct + CoT-SC perform best for prompting LLMs Also shown in Table 1, the best prompting method on HotpotQA and Fever are ReAct→ CoT-SC and CoT-SC→ ReAct respectively.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p06",
+          "section": "3.3 Results and Observations",
+          "raw_chars": 4618,
+          "normalized_chars": 4590,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 716
+        },
+        "score": 26.681858,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[yao-2022-react_p05_para_03 | data/raw/yao_2022_react.pdf | page 5]\nCombining Internal and External Knowledge As will be detail in Section 3.3, we observe that the problem solving process demonstrated by ReAct is more factual and grounded, whereas CoT is more accurate in formulating reasoning structure but can easily suffer from hallucinated facts or thoughts. We therefore propose to incorporate ReAct and CoT-SC, and let the model decide when to switch to the other method based on the following heuristics: A) ReAct→ CoT-SC: when ReAct fails to return an answer within given steps, back off to CoT-SC. We set 7 and 5 steps for HotpotQA and FEVER respectively as we find more steps will not improveReAct performance3.",
+    "context_ids": [
+      "yao-2022-react_p05_para_03"
+    ],
+    "context_chars": 721,
+    "context_tokens_est": 180,
+    "elapsed_ms": 0.31,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "How is theFEVER classification claim processed and marginalized across retrieved documents in this model, and why is the evidence sentence extraction sub-task not directly tackled?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 18,
+        "evidence": "For FEVER classification, we follow the practice from [ 32], and first re-generate the claim, and then classify using the representation of the final hidden state, before finally marginalizing across documents to obtain the class probabilities. The FEVER task traditionally has two sub-tasks. The first is to classify the claim as either \"Supported\", \"Refuted\" or \"Not Enough Info\", which is the task we explore in the main paper. FEVER’s other sub-task involves extracting sentences from Wikipedia as evidence supporting the classification prediction. As FEVER uses a different Wikipedia dump to us, directly tackling this task is not straightforward."
+      }
+    ],
+    "required_evidence_parts": [
+      "For FEVER classification, we follow the practice from [ 32], and first re-generate the claim, and then classify using the representation of the final hidden state, before finally marginalizing across documents to obtain the class probabilities. The FEVER task traditionally has two sub-tasks. The first is to classify the claim as either \"Supported\", \"Refuted\" or \"Not Enough Info\", which is the task we explore in the main paper. FEVER’s other sub-task involves extracting sentences from Wikipedia as evidence supporting the classification prediction. As FEVER uses a different Wikipedia dump to us, directly tackling this task is not straightforward."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p18_para_04",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 18,
+        "text": "E Further Details on FEVER\n\nFor FEVER classification, we follow the practice from [ 32], and first re-generate the claim, and then classify using the representation of the final hidden state, before finally marginalizing across documents to obtain the class probabilities. The FEVER task traditionally has two sub-tasks. The first is to classify the claim as either \"Supported\", \"Refuted\" or \"Not Enough Info\", which is the task we explore in the main paper. FEVER’s other sub-task involves extracting sentences from Wikipedia as evidence supporting the classification prediction. As FEVER uses a different Wikipedia dump to us, directly tackling this task is not straightforward. We hope to address this in future work.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p18",
+          "section": "E Further Details on FEVER",
+          "raw_chars": 4246,
+          "normalized_chars": 4262,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 720
+        },
+        "score": 34.764131,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p05_para_04",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 5,
+        "text": "3.4 Fact Verification\n\nFEVER [ 56] requires classifying whether a natural language claim is supported or refuted by Wikipedia, or whether there is not enough information to decide. The task requires retrieving evidence from Wikipedia relating to the claim and then reasoning over this evidence to classify whether the claim is true, false, or unverifiable from Wikipedia alone. FEVER is a retrieval problem coupled with an challenging entailment reasoning task. It also provides an appropriate testbed for exploring the RAG models’ ability to handle classification rather than generation. We map FEVER class labels (supports, refutes, or not enough info) to single output tokens and directly train with claim-class pairs.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p05",
+          "section": "3.4 Fact Verification",
+          "raw_chars": 4556,
+          "normalized_chars": 4565,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 721
+        },
+        "score": 22.029112,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p07_para_02",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 7,
+        "text": "RAG-T It’s the only U.S. state named for a U.S. president RAG-S It’s the state where you’ll find Mount Rainier National Park The Divine Comedy BART *This epic poem by Dante is divided into 3 parts: the Inferno, the Purgatorio & the Purgatorio RAG-T Dante’s \"Inferno\" is the first part of this epic poem RAG-S This 14th century work is divided into 3 sections: \"Inferno\", \"Purgatorio\" & \"Paradiso\" For 2-way classification, we compare against Thorne and Vlachos [57], who train RoBERTa [35] to classify the claim as true or false given the gold evidence sentence. RAG achieves an accuracy within 2.7% of this model, despite being supplied with only the claim and retrieving its own evidence.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p07",
+          "section": "4.5 Additional Results",
+          "raw_chars": 4335,
+          "normalized_chars": 4351,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 690
+        },
+        "score": 14.892534,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p18_para_04 | data/raw/lewis_2020_rag.pdf | page 18]\nE Further Details on FEVER\n\nFor FEVER classification, we follow the practice from [ 32], and first re-generate the claim, and then classify using the representation of the final hidden state, before finally marginalizing across documents to obtain the class probabilities. The FEVER task traditionally has two sub-tasks. The first is to classify the claim as either \"Supported\", \"Refuted\" or \"Not Enough Info\", which is the task we explore in the main paper. FEVER’s other sub-task involves extracting sentences from Wikipedia as evidence supporting the classification prediction. As FEVER uses a different Wikipedia dump to us, directly tackling this task is not straightforward. We hope to address this in future work.",
+    "context_ids": [
+      "lewis-2020-rag_p18_para_04"
+    ],
+    "context_chars": 789,
+    "context_tokens_est": 197,
+    "elapsed_ms": 0.425,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": true
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "What beam size and decoding algorithm are used at test time for generation tasks and open-domain QA in this architecture?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 17,
+        "evidence": "For Open-domain QA we report test numbers using 15 retrieved documents for RAG-Token models. For RAG-Sequence models, we report test results using 50 retrieved documents, and we use the Thorough Decoding approach since answers are generally short. We use greedy decoding for QA as we did not find beam search improved results. For Open-MSMarco and Jeopardy question generation, we report test numbers using ten retrieved documents for both RAG-Token and RAG-Sequence, and we also train a BART-large model as a baseline. We use a beam size of four, and use the Fast Decoding approach for RAG-Sequence models, as Thorough Decoding did not improve performance."
+      }
+    ],
+    "required_evidence_parts": [
+      "For Open-domain QA we report test numbers using 15 retrieved documents for RAG-Token models. For RAG-Sequence models, we report test results using 50 retrieved documents, and we use the Thorough Decoding approach since answers are generally short. We use greedy decoding for QA as we did not find beam search improved results. For Open-MSMarco and Jeopardy question generation, we report test numbers using ten retrieved documents for both RAG-Token and RAG-Sequence, and we also train a BART-large model as a baseline. We use a beam size of four, and use the Fast Decoding approach for RAG-Sequence models, as Thorough Decoding did not improve performance."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p17_para_00",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 17,
+        "text": "Appendices for Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n\nA Implementation Details\n\nFor Open-domain QA we report test numbers using 15 retrieved documents for RAG-Token models. For RAG-Sequence models, we report test results using 50 retrieved documents, and we use the Thorough Decoding approach since answers are generally short. We use greedy decoding for QA as we did not find beam search improved results. For Open-MSMarco and Jeopardy question generation, we report test numbers using ten retrieved documents for both RAG-Token and RAG-Sequence, and we also train a BART-large model as a baseline. We use a beam size of four, and use the Fast Decoding approach for RAG-Sequence models, as Thorough Decoding did not improve performance.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p17",
+          "section": "A Implementation Details",
+          "raw_chars": 2560,
+          "normalized_chars": 2566,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 764
+        },
+        "score": 28.838841,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p18_para_02",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 18,
+        "text": "TriviaQA Evaluation setups The open-domain QA community customarily uses public development datasets as test datasets, as test data for QA datasets is often restricted and dedicated to reading compehension purposes. We report our results using the datasets splits used in DPR [26], which are consistent with common practice in Open-domain QA. For TriviaQA, this test dataset is the public TriviaQA Web Development split. Roberts et al.[52] used the TriviaQA official Wikipedia test set instead. Févry et al. [14] follow this convention in order to compare with Roberts et al. [52] (See appendix of [14]). We report results on both test sets to enable fair comparison to both approaches.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p18",
+          "section": "D Further Details on Open-Domain QA",
+          "raw_chars": 4246,
+          "normalized_chars": 4262,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 686
+        },
+        "score": 20.859919,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p05_para_01",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 5,
+        "text": "3.3 Jeopardy Question Generation\n\nTo evaluate RAG’s generation abilities in a non-QA setting, we study open-domain question generation. Rather than use questions from standard open-domain QA tasks, which typically consist of short, simple questions, we propose the more demanding task of generating Jeopardy questions. Jeopardy is an unusual format that consists of trying to guess an entity from a fact about that entity. For example, “The World Cup” is the answer to the question “In 1986 Mexico scored as the first country to host this international sports competition twice.” As Jeopardy questions are precise, factual statements, generating Jeopardy questions conditioned on their answer entities constitutes a challenging knowledge-intensive generation task.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p05",
+          "section": "3.3 Jeopardy Question Generation",
+          "raw_chars": 4556,
+          "normalized_chars": 4565,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 764
+        },
+        "score": 17.209523,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p18_para_02 | data/raw/lewis_2020_rag.pdf | page 18]\nTriviaQA Evaluation setups The open-domain QA community customarily uses public development datasets as test datasets, as test data for QA datasets is often restricted and dedicated to reading compehension purposes. We report our results using the datasets splits used in DPR [26], which are consistent with common practice in Open-domain QA. For TriviaQA, this test dataset is the public TriviaQA Web Development split. Roberts et al.[52] used the TriviaQA official Wikipedia test set instead. Févry et al. [14] follow this convention in order to compare with Roberts et al. [52] (See appendix of [14]). We report results on both test sets to enable fair comparison to both approaches.",
+    "context_ids": [
+      "lewis-2020-rag_p18_para_02"
+    ],
+    "context_chars": 755,
+    "context_tokens_est": 189,
+    "elapsed_ms": 0.392,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "What is the batch size and exact number of training steps used when fine-tuning the models on HotpotQA?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "yao-2022-react",
+        "page": 15,
+        "evidence": "For all finetuning we use a batch size of 64. On PaLM-8B, we finetuneReAct and Act methods for 4, 000 steps and Standard and CoT methods for 2, 000 steps. On PaLM-62B, we finetune ReAct and Act methods for 4, 000 steps and Standard and CoT methods for 1, 000 steps. We findReAct and Act methods generally benefit from more training steps (and more training data), while Standard and CoT methods degrade soon after finetuning."
+      }
+    ],
+    "required_evidence_parts": [
+      "For all finetuning we use a batch size of 64. On PaLM-8B, we finetuneReAct and Act methods for 4, 000 steps and Standard and CoT methods for 2, 000 steps. On PaLM-62B, we finetune ReAct and Act methods for 4, 000 steps and Standard and CoT methods for 1, 000 steps. We findReAct and Act methods generally benefit from more training steps (and more training data), while Standard and CoT methods degrade soon after finetuning."
+    ],
+    "results": [
+      {
+        "id": "yao-2022-react_p15_para_02",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 15,
+        "text": "B.1 HotpotQA Finetuning Details\n\nFor all finetuning we use a batch size of 64. On PaLM-8B, we finetuneReAct and Act methods for 4, 000 steps and Standard and CoT methods for 2, 000 steps. On PaLM-62B, we finetune ReAct and Act methods for 4, 000 steps and Standard and CoT methods for 1, 000 steps. We findReAct and Act methods generally benefit from more training steps (and more training data), while Standard and CoT methods degrade soon after finetuning.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p15",
+          "section": "B.1 HotpotQA Finetuning Details",
+          "raw_chars": 4269,
+          "normalized_chars": 1912,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 458
+        },
+        "score": 18.62883,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p03_para_05",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 3,
+        "text": "2.4 Training\n\nWe jointly train the retriever and generator components without any direct supervision on what document should be retrieved. Given a fine-tuning training corpus of input/output pairs(xj,yj), we",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p03",
+          "section": "2.4 Training",
+          "raw_chars": 3655,
+          "normalized_chars": 3665,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 207
+        },
+        "score": 16.405137,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "yao-2022-react_p05_para_05",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 5,
+        "text": "3.3 Results and Observations\n\nReAct outperforms Act consistently Table 1 shows HotpotQA and Fever results using PaLM- 540B as the base model with different prompting methods. We note that ReAct is better than Act on both tasks, demonstrating the value of reasoning to guide acting, especially for synthesizing the final answer, as shown in Figure 1 (1c-d). Fine-tuning results 3 also confirm the benefit of reasoning traces for more informed acting.\n\n3Of all trajectories with correct final answers, those with 7 steps on HotpotQA and 5 steps on FEVER only take up 0.84% and 1.33% respectively.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p05",
+          "section": "3.3 Results and Observations",
+          "raw_chars": 3664,
+          "normalized_chars": 3622,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 594
+        },
+        "score": 16.32372,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[yao-2022-react_p15_para_02 | data/raw/yao_2022_react.pdf | page 15]\nB.1 HotpotQA Finetuning Details\n\nFor all finetuning we use a batch size of 64. On PaLM-8B, we finetuneReAct and Act methods for 4, 000 steps and Standard and CoT methods for 2, 000 steps. On PaLM-62B, we finetune ReAct and Act methods for 4, 000 steps and Standard and CoT methods for 1, 000 steps. We findReAct and Act methods generally benefit from more training steps (and more training data), while Standard and CoT methods degrade soon after finetuning.",
+    "context_ids": [
+      "yao-2022-react_p15_para_02"
+    ],
+    "context_chars": 527,
+    "context_tokens_est": 132,
+    "elapsed_ms": 0.3,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": true
+  },
+  {
+    "query_id": "q21",
+    "split": "dev",
+    "type": "exact_lexical",
+    "question": "During Transformer training, what label smoothing value εls is applied, and what trade-off does it create between perplexity and BLEU score?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 8,
+        "evidence": "During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score."
+      }
+    ],
+    "required_evidence_parts": [
+      "During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p08_para_02",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "For the base model, we use a rate of Pdrop = 0.1.\n\nLabel Smoothing During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6 Results",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 237
+        },
+        "score": 43.026482,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "vaswani-2017-transformer_p08_para_03",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "6 Results\n\n6.1 Machine Translation\n\nOn the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big) in Table 2) outperforms the best previously reported models (including ensembles) by more than 2.0 BLEU, establishing a new state-of-the-art BLEU score of 28.4. The configuration of this model is listed in the bottom line of Table 3. Training took 3.5 days on 8 P100 GPUs. Even our base model surpasses all previously published models and ensembles, at a fraction of the training cost of any of the competitive models.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6.1 Machine Translation",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 3,
+          "char_length": 551
+        },
+        "score": 13.312217,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p01_para_02",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 1,
+        "text": "On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p01",
+          "section": "Abstract",
+          "raw_chars": 2860,
+          "normalized_chars": 2650,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 414
+        },
+        "score": 13.027965,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p08_para_02 | data/raw/vaswani_2017_transformer.pdf | page 8]\nFor the base model, we use a rate of Pdrop = 0.1.\n\nLabel Smoothing During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.",
+    "context_ids": [
+      "vaswani-2017-transformer_p08_para_02"
+    ],
+    "context_chars": 325,
+    "context_tokens_est": 81,
+    "elapsed_ms": 0.32,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": true
+  },
+  {
+    "query_id": "q22",
+    "split": "dev",
+    "type": "split_evidence",
+    "question": "How do the authors estimate the number of floating-point operations (FLOPs) used to train a translation model, and what exact sustained single-precision TFLOPS values did they assume for K80, K40, M40, and P100 GPUs?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 8,
+        "evidence": "We estimate the number of floating point operations used to train a model by multiplying the training time, the number of GPUs used, and an estimate of the sustained single-precision floating-point capacity of each GPU"
+      },
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 8,
+        "evidence": "We used values of 2.8, 3.7, 6.0 and 9.5 TFLOPS for K80, K40, M40 and P100, respectively."
+      }
+    ],
+    "required_evidence_parts": [
+      "We estimate the number of floating point operations used to train a model by multiplying the training time, the number of GPUs used, and an estimate of the sustained single-precision floating-point capacity of each GPU",
+      "We used values of 2.8, 3.7, 6.0 and 9.5 TFLOPS for K80, K40, M40 and P100, respectively."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p08_para_05",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "Table 2 summarizes our results and compares our translation quality and training costs to other model architectures from the literature. We estimate the number of floating point operations used to train a model by multiplying the training time, the number of GPUs used, and an estimate of the sustained single-precision floating-point capacity of each GPU 5.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6.1 Machine Translation",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 358
+        },
+        "score": 72.725514,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "vaswani-2017-transformer_p08_para_06",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "6.2 Model Variations\n\nTo evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the 5We used values of 2.8, 3.7, 6.0 and 9.5 TFLOPS for K80, K40, M40 and P100, respectively.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6.2 Model Variations",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 6,
+          "char_length": 302
+        },
+        "score": 40.411806,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p19_para_01",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 19,
+        "text": "The T5 model with the closest number of parameters to our models is T5-large (770M parameters), which achieves a score of 28.9 EM on Natural Questions [52], substantially below the 44.5 that RAG-Sequence achieves, indicating that hybrid parametric/nonparametric models require far fewer trainable parameters for strong open-domain QA performance. The non-parametric memory index does not consist of trainable parameters, but does consists of 21M 728 dimensional vectors, consisting of 15.3B values. These can be easily be stored at 8-bit floating point precision to manage memory and disk footprints.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p19",
+          "section": "H Retrieval Collapse",
+          "raw_chars": 1962,
+          "normalized_chars": 1962,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 1,
+          "char_length": 600
+        },
+        "score": 17.207181,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p08_para_05 | data/raw/vaswani_2017_transformer.pdf | page 8]\nTable 2 summarizes our results and compares our translation quality and training costs to other model architectures from the literature. We estimate the number of floating point operations used to train a model by multiplying the training time, the number of GPUs used, and an estimate of the sustained single-precision floating-point capacity of each GPU 5.",
+    "context_ids": [
+      "vaswani-2017-transformer_p08_para_05"
+    ],
+    "context_chars": 446,
+    "context_tokens_est": 112,
+    "elapsed_ms": 0.419,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q23",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "In the Natural Questions (NQ) benchmark, how well does RAG perform when none of the retrieved passages actually contain the ground-truth answer, compared to an extractive reader?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 6,
+        "evidence": "Furthermore, RAG can generate correct answers even when the correct answer is not in any retrieved document, achieving 11.8% accuracy in such cases for NQ, where an extractive model would score 0%."
+      }
+    ],
+    "required_evidence_parts": [
+      "Furthermore, RAG can generate correct answers even when the correct answer is not in any retrieved document, achieving 11.8% accuracy in such cases for NQ, where an extractive model would score 0%."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p04_para_08",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 4,
+        "text": "3.2 Abstractive Question Answering\n\nRAG models can go beyond simple extractive QA and answer questions with free-form, abstractive text generation. To test RAG’s natural language generation (NLG) in a knowledge-intensive setting, we use the MSMARCO NLG task v2.1 [ 43]. The task consists of questions, ten gold passages retrieved from a search engine for each question, and a full sentence answer annotated from the retrieved passages. We do not use the supplied passages, only the questions and answers, to treat",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p04",
+          "section": "3.2 Abstractive Question Answering",
+          "raw_chars": 4205,
+          "normalized_chars": 4212,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 8,
+          "char_length": 513
+        },
+        "score": 25.106043,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p05_para_08",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 5,
+        "text": "RAG demonstrates that neither a re-ranker nor extractive reader is necessary for state-of-the-art performance. There are several advantages to generating answers even when it is possible to extract them. Documents with clues about the answer but do not contain the answer verbatim can still contribute towards a correct answer being generated, which is not possible with standard extractive approaches, leading",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p05",
+          "section": "4.1 Open-domain Question Answering",
+          "raw_chars": 4556,
+          "normalized_chars": 4565,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 8,
+          "char_length": 410
+        },
+        "score": 19.942726,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p04_para_05",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 4,
+        "text": "3.1 Open-domain Question Answering\n\nOpen-domain question answering (QA) is an important real-world application and common testbed for knowledge-intensive tasks [20]. We treat questions and answers as input-output text pairs (x,y ) and train RAG by directly minimizing the negative log-likelihood of answers. We compare RAG to the popular extractive QA paradigm [5, 7, 31, 26], where answers are extracted spans from retrieved documents, relying primarily on non-parametric knowledge. We also compare to “Closed-Book QA” approaches [52], which, like RAG, generate answers, but which do not exploit retrieval, instead relying purely on parametric knowledge. We consider four popular open-domain QA datasets: Natural Questions (NQ) [29], TriviaQA (TQA) [24].",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p04",
+          "section": "3.1 Open-domain Question Answering",
+          "raw_chars": 4205,
+          "normalized_chars": 4212,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 755
+        },
+        "score": 14.900565,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p04_para_08 | data/raw/lewis_2020_rag.pdf | page 4]\n3.2 Abstractive Question Answering\n\nRAG models can go beyond simple extractive QA and answer questions with free-form, abstractive text generation. To test RAG’s natural language generation (NLG) in a knowledge-intensive setting, we use the MSMARCO NLG task v2.1 [ 43]. The task consists of questions, ten gold passages retrieved from a search engine for each question, and a full sentence answer annotated from the retrieved passages. We do not use the supplied passages, only the questions and answers, to treat",
+    "context_ids": [
+      "lewis-2020-rag_p04_para_08"
+    ],
+    "context_chars": 581,
+    "context_tokens_est": 145,
+    "elapsed_ms": 0.417,
+    "hit1": false,
+    "hit3": false,
+    "rr3": 0.0,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q24",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "In the 2022 agent paper, how does ReAct compare against Inner Monologue-style prompting (ReAct-IM) on ALFWorld in overall success rate, and what two qualitative shortcomings caused ReAct-IM to fail?",
+    "config_name": "M2_Lexical_BM25_b800",
+    "strategy": "BM25Retriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "yao-2022-react",
+        "page": 8,
+        "evidence": "As can be seen in Table 3,ReAct substantially outperforms IM-style prompting ( ReAct-IM) (71 vs. 53 overall success rate), with consistent advantages on five out of six tasks. Qualitatively, we observed thatReAct-IM often made mistakes in identifying when subgoals were finished, or what the next subgoal should be, due to a lack of highlevel goal decomposition. Additionally, many ReAct-IM trajectories struggled to determine where an item would likely be within the ALFWorld environment, due to a lack of commonsense reasoning."
+      }
+    ],
+    "required_evidence_parts": [
+      "As can be seen in Table 3,ReAct substantially outperforms IM-style prompting ( ReAct-IM) (71 vs. 53 overall success rate)"
+    ],
+    "results": [
+      {
+        "id": "yao-2022-react_p08_para_05",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 8,
+        "text": "To demonstrate the differences between ReAct and IM, and to highlight the importance of internal reasoning vs. simple reactions to external feedback, we ran an ablation experiment using a thought pattern composed of IM-like dense external feedback. As can be seen in Table 3,ReAct substantially outperforms IM-style prompting ( ReAct-IM) (71 vs. 53 overall success rate), with consistent advantages on five out of six tasks. Qualitatively, we observed thatReAct-IM often made mistakes in identifying when subgoals were finished, or what the next subgoal should be, due to a lack of highlevel goal decomposition. Additionally, many ReAct-IM trajectories struggled to determine where an item would likely be within the ALFWorld environment, due to a lack of commonsense reasoning.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p08",
+          "section": "4 Decision Making Tasks",
+          "raw_chars": 4111,
+          "normalized_chars": 4074,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 778
+        },
+        "score": 33.407446,
+        "strategy": "bm25",
+        "hit": true
+      },
+      {
+        "id": "yao-2022-react_p15_para_03",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 15,
+        "text": "B.2 ALFWorld IM-Style Details\n\nFor the IM-style ablation, the same expert trajectories used in ReAct are reannotated with dense external feedback thoughts within these trajectories, that limit ReAct-IM to only think about (1) decomposing the current goal and (2) the current subgoal that needs to be completed. In particular, ReAct-IM lacks thoughts that (1) determine when a subgoal is completed (2) determine what the next subgoal should be (3) inducing the LLM to refer to its internal pretraining knowledge to identify where items can be within the environment.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p15",
+          "section": "B.2 ALFWorld IM-Style Details",
+          "raw_chars": 4269,
+          "normalized_chars": 1912,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 3,
+          "char_length": 565
+        },
+        "score": 25.423864,
+        "strategy": "bm25",
+        "hit": false
+      },
+      {
+        "id": "yao-2022-react_p08_para_06",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 8,
+        "text": "Both shortcomings can be addressed in the ReAct paradigm. More details about ReAct-IM is in Appendix B.2. An example prompt for ReAct-IM can be found in Appendix C.4, and an example trajectory in Appendix D.2.3.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p08",
+          "section": "4 Decision Making Tasks",
+          "raw_chars": 4111,
+          "normalized_chars": 4074,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 6,
+          "char_length": 211
+        },
+        "score": 24.934372,
+        "strategy": "bm25",
+        "hit": false
+      }
+    ],
+    "context": "[yao-2022-react_p15_para_03 | data/raw/yao_2022_react.pdf | page 15]\nB.2 ALFWorld IM-Style Details\n\nFor the IM-style ablation, the same expert trajectories used in ReAct are reannotated with dense external feedback thoughts within these trajectories, that limit ReAct-IM to only think about (1) decomposing the current goal and (2) the current subgoal that needs to be completed. In particular, ReAct-IM lacks thoughts that (1) determine when a subgoal is completed (2) determine what the next subgoal should be (3) inducing the LLM to refer to its internal pretraining knowledge to identify where items can be within the environment.",
+    "context_ids": [
+      "yao-2022-react_p15_para_03"
+    ],
+    "context_chars": 634,
+    "context_tokens_est": 158,
+    "elapsed_ms": 0.437,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": false,
+    "complete_context_hit": false
+  }
+]

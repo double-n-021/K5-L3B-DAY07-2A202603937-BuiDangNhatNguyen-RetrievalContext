@@ -1,0 +1,745 @@
+[
+  {
+    "query_id": "q16",
+    "split": "test",
+    "type": "dieu_kien_ngoai_le",
+    "question": "What value of label smoothing is applied during Transformer training, and what trade-off does it cause between perplexity and BLEU/accuracy?",
+    "config_name": "M1_Baseline_TFIDF_b800",
+    "strategy": "TfidfRetriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 8,
+        "evidence": "Label Smoothing During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score."
+      }
+    ],
+    "required_evidence_parts": [
+      "Label Smoothing During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p08_para_02",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "For the base model, we use a rate of Pdrop = 0.1.\n\nLabel Smoothing During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6 Results",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 237
+        },
+        "score": 0.43178,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "yao-2022-react_p06_para_04",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 6,
+        "text": "C) For ReAct, successfully retrieving informative knowledge via search is critical. Noninformative search, which counts for 23% of the error cases, derails the model reasoning and gives it a hard time to recover and reformulate thoughts. This is perhaps an expected trade-off between factuality and flexibility, which motivates our proposed strategies of combining two methods. We provide examples for each success and failure modes in Appendix E.1. We also find some HotpotQA questions may contain outdated answer labels, see Figure 4 for example. ReAct + CoT-SC perform best for prompting LLMs Also shown in Table 1, the best prompting method on HotpotQA and Fever are ReAct→ CoT-SC and CoT-SC→ ReAct respectively.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p06",
+          "section": "3.3 Results and Observations",
+          "raw_chars": 4618,
+          "normalized_chars": 4590,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 716
+        },
+        "score": 0.122342,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p03_para_05",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 3,
+        "text": "2.4 Training\n\nWe jointly train the retriever and generator components without any direct supervision on what document should be retrieved. Given a fine-tuning training corpus of input/output pairs(xj,yj), we",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p03",
+          "section": "2.4 Training",
+          "raw_chars": 3655,
+          "normalized_chars": 3665,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 207
+        },
+        "score": 0.117137,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p08_para_02 | data/raw/vaswani_2017_transformer.pdf | page 8]\nFor the base model, we use a rate of Pdrop = 0.1.\n\nLabel Smoothing During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.\n\n[lewis-2020-rag_p03_para_05 | data/raw/lewis_2020_rag.pdf | page 3]\n2.4 Training\n\nWe jointly train the retriever and generator components without any direct supervision on what document should be retrieved. Given a fine-tuning training corpus of input/output pairs(xj,yj), we",
+    "context_ids": [
+      "vaswani-2017-transformer_p08_para_02",
+      "lewis-2020-rag_p03_para_05"
+    ],
+    "context_chars": 602,
+    "context_tokens_est": 150,
+    "elapsed_ms": 0.906,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": true
+  },
+  {
+    "query_id": "q17",
+    "split": "test",
+    "type": "dien_dat_lai",
+    "question": "How did the authors test updating RAG's world knowledge at test time without retraining, and what accuracy was obtained with matched versus mismatched Wikipedia indices?",
+    "config_name": "M1_Baseline_TFIDF_b800",
+    "strategy": "TfidfRetriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 8,
+        "evidence": "RAG answers 70% correctly using the 2016 index for 2016 world leaders and 68% using the 2018 index for 2018 world leaders. Accuracy with mismatched indices is low (12% with the 2018 index and 2016 leaders, 4% with the 2016 index and 2018 leaders). This shows we can update RAG’s world knowledge by simply replacing its non-parametric memory."
+      }
+    ],
+    "required_evidence_parts": [
+      "RAG answers 70% correctly using the 2016 index for 2016 world leaders and 68% using the 2018 index for 2018 world leaders. Accuracy with mismatched indices is low (12% with the 2018 index and 2016 leaders, 4% with the 2016 index and 2018 leaders). This shows we can update RAG’s world knowledge by simply replacing its non-parametric memory."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p08_para_02",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 8,
+        "text": "RAG answers 70% correctly using the 2016 index for 2016 world leaders and 68% using the 2018 index for 2018 world leaders. Accuracy with mismatched indices is low (12% with the 2018 index and 2016 leaders, 4% with the 2016 index and 2018 leaders). This shows we can update RAG’s world knowledge by simply replacing its non-parametric memory. Effect of Retrieving more documents Models are trained with either 5 or 10 retrieved latent documents, and we do not observe significant differences in performance between them. We have the flexibility to adjust the number of retrieved documents at test time, which can affect performance and runtime.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p08",
+          "section": "5 Related Work",
+          "raw_chars": 3186,
+          "normalized_chars": 3155,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 643
+        },
+        "score": 0.216028,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p18_para_03",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 18,
+        "text": "We find that our performance is much higher using the official Wiki test set, rather than the more conventional open-domain test set, which we attribute to the official Wiki test set questions being simpler to answer from Wikipedia.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p18",
+          "section": "D Further Details on Open-Domain QA",
+          "raw_chars": 4246,
+          "normalized_chars": 4262,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 3,
+          "char_length": 232
+        },
+        "score": 0.15882,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p17_para_00",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 17,
+        "text": "Appendices for Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\n\nA Implementation Details\n\nFor Open-domain QA we report test numbers using 15 retrieved documents for RAG-Token models. For RAG-Sequence models, we report test results using 50 retrieved documents, and we use the Thorough Decoding approach since answers are generally short. We use greedy decoding for QA as we did not find beam search improved results. For Open-MSMarco and Jeopardy question generation, we report test numbers using ten retrieved documents for both RAG-Token and RAG-Sequence, and we also train a BART-large model as a baseline. We use a beam size of four, and use the Fast Decoding approach for RAG-Sequence models, as Thorough Decoding did not improve performance.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p17",
+          "section": "A Implementation Details",
+          "raw_chars": 2560,
+          "normalized_chars": 2566,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 764
+        },
+        "score": 0.14646,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p08_para_02 | data/raw/lewis_2020_rag.pdf | page 8]\nRAG answers 70% correctly using the 2016 index for 2016 world leaders and 68% using the 2018 index for 2018 world leaders. Accuracy with mismatched indices is low (12% with the 2018 index and 2016 leaders, 4% with the 2016 index and 2018 leaders). This shows we can update RAG’s world knowledge by simply replacing its non-parametric memory. Effect of Retrieving more documents Models are trained with either 5 or 10 retrieved latent documents, and we do not observe significant differences in performance between them. We have the flexibility to adjust the number of retrieved documents at test time, which can affect performance and runtime.",
+    "context_ids": [
+      "lewis-2020-rag_p08_para_02"
+    ],
+    "context_chars": 711,
+    "context_tokens_est": 178,
+    "elapsed_ms": 0.821,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": true
+  },
+  {
+    "query_id": "q18",
+    "split": "test",
+    "type": "split_evidence",
+    "question": "In the human error analysis comparing ReAct and Chain-of-Thought (CoT) on HotpotQA, how do their hallucination and reasoning error rates differ, and what specific repetitive loop error occurs in ReAct?",
+    "config_name": "M1_Baseline_TFIDF_b800",
+    "strategy": "TfidfRetriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "yao-2022-react",
+        "page": 6,
+        "evidence": "A) Hallucination is a serious problem for CoT, resulting in much higher false positive rate than ReAct (14% vs. 6%) in success mode, and make up its major failure mode (56%)."
+      },
+      {
+        "source_id": "yao-2022-react",
+        "page": 6,
+        "evidence": "B) While interleaving reasoning, action and observation steps improves ReAct’s groundedness and trustworthiness, such a structural constraint also reduces its flexibility in formulating reasoning steps"
+      }
+    ],
+    "required_evidence_parts": [
+      "A) Hallucination is a serious problem for CoT, resulting in much higher false positive rate than ReAct (14% vs. 6%) in success mode, and make up its major failure mode (56%).",
+      "B) While interleaving reasoning, action and observation steps improves ReAct’s groundedness and trustworthiness, such a structural constraint also reduces its flexibility in formulating reasoning steps"
+    ],
+    "results": [
+      {
+        "id": "yao-2022-react_p06_para_03",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 6,
+        "text": "B) While interleaving reasoning, action and observation steps improves ReAct’s groundedness and trustworthiness, such a structural constraint also reduces its flexibility in formulating reasoning steps, leading to more reasoning error rate than CoT. we note that there is one frequent error pattern specific toReAct, in which the model repetitively generates the previous thoughts and actions, and we categorize it as part of “reasoning error” as the model fails to reason about what the proper next action to take and jump out of the loop4.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p06",
+          "section": "3.3 Results and Observations",
+          "raw_chars": 4618,
+          "normalized_chars": 4590,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 3,
+          "char_length": 541
+        },
+        "score": 0.298517,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "yao-2022-react_p01_para_02",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 1,
+        "text": "We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines in addition to improved human interpretability and trustworthiness. Concretely, on question answering (HotpotQA) and fact verification (Fever),ReAct overcomes prevalent issues of hallucination and error propagation in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p01",
+          "section": "ABSTRACT",
+          "raw_chars": 3600,
+          "normalized_chars": 3517,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 566
+        },
+        "score": 0.273276,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "yao-2022-react_p06_para_00",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 6,
+        "text": "Type Definition ReAct CoT Success True positive Correct reasoning trace and facts 94% 86% False positive Hallucinated reasoning trace or facts 6% 14% Failure Reasoning error Wrong reasoning trace (including failing to recover from repetitive steps) 47% 16% Search result error Search return empty or does not contain useful information 23% - Hallucination Hallucinated reasoning trace or facts 0% 56% Label ambiguity Right prediction but did not match the label precisely 29% 28%\n\nTable 2: Types of success and failure modes of ReAct and CoT on HotpotQA, as well as their percentages in randomly selected examples studied by human.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p06",
+          "section": "3.3 Results and Observations",
+          "raw_chars": 4618,
+          "normalized_chars": 4590,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 631
+        },
+        "score": 0.245057,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[yao-2022-react_p06_para_03 | data/raw/yao_2022_react.pdf | page 6]\nB) While interleaving reasoning, action and observation steps improves ReAct’s groundedness and trustworthiness, such a structural constraint also reduces its flexibility in formulating reasoning steps, leading to more reasoning error rate than CoT. we note that there is one frequent error pattern specific toReAct, in which the model repetitively generates the previous thoughts and actions, and we categorize it as part of “reasoning error” as the model fails to reason about what the proper next action to take and jump out of the loop4.",
+    "context_ids": [
+      "yao-2022-react_p06_para_03"
+    ],
+    "context_chars": 609,
+    "context_tokens_est": 152,
+    "elapsed_ms": 0.783,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q19",
+    "split": "test",
+    "type": "truc_tiep",
+    "question": "On the FEVER fact verification benchmark and question answering task, what accuracy scores are achieved by the different prompting methods and how do they compare to supervised state-of-the-art?",
+    "config_name": "M1_Baseline_TFIDF_b800",
+    "strategy": "TfidfRetriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "yao-2022-react",
+        "page": 5,
+        "evidence": "Prompt Methoda HotpotQA Fever (EM) (Acc) Standard 28.7 57.1 CoT(Wei et al., 2022) 29.4 56.3 CoT-SC(Wang et al., 2022a) 33.4 60.4 Act 25.7 58.9 ReAct 27.4 60.9 CoT-SC→ReAct 34.2 64.6 ReAct→CoT-SC 35.1 62.0 Supervised SoTAb 67.5 89.5"
+      }
+    ],
+    "required_evidence_parts": [
+      "Prompt Methoda HotpotQA Fever (EM) (Acc) Standard 28.7 57.1 CoT(Wei et al., 2022) 29.4 56.3 CoT-SC(Wang et al., 2022a) 33.4 60.4 Act 25.7 58.9 ReAct 27.4 60.9 CoT-SC→ReAct 34.2 64.6 ReAct→CoT-SC 35.1 62.0 Supervised SoTAb 67.5 89.5"
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p06_para_06",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 6,
+        "text": "4.4 Fact Verification\n\nTable 2 shows our results on FEVER. For 3-way classification, RAG scores are within 4.3% of state-of-the-art models, which are complex pipeline systems with domain-specific architectures and substantial engineering, trained using intermediate retrieval supervision, which RAG does not require.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p06",
+          "section": "4.4 Fact Verification",
+          "raw_chars": 4110,
+          "normalized_chars": 4134,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 6,
+          "char_length": 316
+        },
+        "score": 0.226976,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "yao-2022-react_p01_para_02",
+        "source_id": "yao-2022-react",
+        "source": "data/raw/yao_2022_react.pdf",
+        "page": 1,
+        "text": "We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines in addition to improved human interpretability and trustworthiness. Concretely, on question answering (HotpotQA) and fact verification (Fever),ReAct overcomes prevalent issues of hallucination and error propagation in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces.",
+        "metadata": {
+          "year": 2022,
+          "category": "agent",
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "page_id": "yao-2022-react_p01",
+          "section": "ABSTRACT",
+          "raw_chars": 3600,
+          "normalized_chars": 3517,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 566
+        },
+        "score": 0.210115,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "lewis-2020-rag_p02_para_05",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 2,
+        "text": "For FEVER [56] fact verification, we achieve results within 4.3% of state-of-the-art pipeline models which use strong retrieval supervision. Finally, we demonstrate that the non-parametric memory can be replaced to update the models’ knowledge as the world changes.1",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p02",
+          "section": "2 Methods",
+          "raw_chars": 4545,
+          "normalized_chars": 4547,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 266
+        },
+        "score": 0.197902,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p06_para_06 | data/raw/lewis_2020_rag.pdf | page 6]\n4.4 Fact Verification\n\nTable 2 shows our results on FEVER. For 3-way classification, RAG scores are within 4.3% of state-of-the-art models, which are complex pipeline systems with domain-specific architectures and substantial engineering, trained using intermediate retrieval supervision, which RAG does not require.\n\n[lewis-2020-rag_p02_para_05 | data/raw/lewis_2020_rag.pdf | page 2]\nFor FEVER [56] fact verification, we achieve results within 4.3% of state-of-the-art pipeline models which use strong retrieval supervision. Finally, we demonstrate that the non-parametric memory can be replaced to update the models’ knowledge as the world changes.1",
+    "context_ids": [
+      "lewis-2020-rag_p06_para_06",
+      "lewis-2020-rag_p02_para_05"
+    ],
+    "context_chars": 720,
+    "context_tokens_est": 180,
+    "elapsed_ms": 0.855,
+    "hit1": false,
+    "hit3": false,
+    "rr3": 0.0,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q20",
+    "split": "test",
+    "type": "truc_tiep",
+    "question": "During inference on the machine translation benchmark, how many checkpoints were averaged for the base and big models, and what beam size and length penalty alpha were used?",
+    "config_name": "M1_Baseline_TFIDF_b800",
+    "strategy": "TfidfRetriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 8,
+        "evidence": "For the base models, we used a single model obtained by averaging the last 5 checkpoints, which were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints. We used beam search with a beam size of 4 and length penalty α = 0 .6 [38]. These hyperparameters were chosen after experimentation on the development set. We set the maximum output length during inference to input length + 50, but terminate early when possible [38]."
+      }
+    ],
+    "required_evidence_parts": [
+      "For the base models, we used a single model obtained by averaging the last 5 checkpoints, which were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints. We used beam search with a beam size of 4 and length penalty α = 0 .6 [38]. These hyperparameters were chosen after experimentation on the development set. We set the maximum output length during inference to input length + 50, but terminate early when possible [38]."
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p08_para_04",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at less than 1/4 the training cost of the previous state-of-the-art model. The Transformer (big) model trained for English-to-French used dropout rate Pdrop = 0.1, instead of 0.3.\n\nFor the base models, we used a single model obtained by averaging the last 5 checkpoints, which were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints. We used beam search with a beam size of 4 and length penalty α = 0 .6 [38]. These hyperparameters were chosen after experimentation on the development set. We set the maximum output length during inference to input length + 50, but terminate early when possible [38].",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6.1 Machine Translation",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 796
+        },
+        "score": 0.465599,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "vaswani-2017-transformer_p07_para_04",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 7,
+        "text": "5.2 Hardware and Schedule\n\nWe trained our models on one machine with 8 NVIDIA P100 GPUs. For our base models using the hyperparameters described throughout the paper, each training step took about 0.4 seconds. We trained the base models for a total of 100,000 steps or 12 hours. For our big models,(described on the bottom line of table 3), step time was 1.0 seconds. The big models were trained for 300,000 steps (3.5 days).",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p07",
+          "section": "5.2 Hardware and Schedule",
+          "raw_chars": 3324,
+          "normalized_chars": 3332,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 425
+        },
+        "score": 0.21694,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p09_para_05",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 9,
+        "text": "We used a vocabulary of 16K tokens for the WSJ only setting and a vocabulary of 32K tokens for the semi-supervised setting.\n\nWe performed only a small number of experiments to select the dropout, both attention and residual (section 5.4), learning rates and beam size on the Section 22 development set, all other parameters remained unchanged from the English-to-German base translation model. During inference, we",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p09",
+          "section": "6.3 English Constituency Parsing",
+          "raw_chars": 2974,
+          "normalized_chars": 2977,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 414
+        },
+        "score": 0.198815,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p07_para_04 | data/raw/vaswani_2017_transformer.pdf | page 7]\n5.2 Hardware and Schedule\n\nWe trained our models on one machine with 8 NVIDIA P100 GPUs. For our base models using the hyperparameters described throughout the paper, each training step took about 0.4 seconds. We trained the base models for a total of 100,000 steps or 12 hours. For our big models,(described on the bottom line of table 3), step time was 1.0 seconds. The big models were trained for 300,000 steps (3.5 days).",
+    "context_ids": [
+      "vaswani-2017-transformer_p07_para_04"
+    ],
+    "context_chars": 513,
+    "context_tokens_est": 128,
+    "elapsed_ms": 0.81,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q25",
+    "split": "test",
+    "type": "exact_lexical",
+    "question": "For the English-to-French WMT 2014 translation task, what BLEU score did the Transformer (big) model achieve, what dropout rate Pdrop was used compared to English-to-German, and what beam size and length penalty α were used during inference?",
+    "config_name": "M1_Baseline_TFIDF_b800",
+    "strategy": "TfidfRetriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "vaswani-2017-transformer",
+        "page": 8,
+        "evidence": "On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at less than 1/4 the training cost of the previous state-of-the-art model. The Transformer (big) model trained for English-to-French used dropout rate Pdrop = 0.1, instead of 0.3."
+      }
+    ],
+    "required_evidence_parts": [
+      "On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0",
+      "We used beam search with a beam size of 4 and length penalty α = 0 .6"
+    ],
+    "results": [
+      {
+        "id": "vaswani-2017-transformer_p08_para_04",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at less than 1/4 the training cost of the previous state-of-the-art model. The Transformer (big) model trained for English-to-French used dropout rate Pdrop = 0.1, instead of 0.3.\n\nFor the base models, we used a single model obtained by averaging the last 5 checkpoints, which were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints. We used beam search with a beam size of 4 and length penalty α = 0 .6 [38]. These hyperparameters were chosen after experimentation on the development set. We set the maximum output length during inference to input length + 50, but terminate early when possible [38].",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6.1 Machine Translation",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 796
+        },
+        "score": 0.480608,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "vaswani-2017-transformer_p10_para_02",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 10,
+        "text": "7 Conclusion\n\nIn this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention.\n\nFor translation tasks, the Transformer can be trained significantly faster than architectures based on recurrent or convolutional layers. On both WMT 2014 English-to-German and WMT 2014 English-to-French translation tasks, we achieve a new state of the art. In the former task our best model outperforms even all previously reported ensembles.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p10",
+          "section": "7 Conclusion",
+          "raw_chars": 3112,
+          "normalized_chars": 3118,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 2,
+          "char_length": 586
+        },
+        "score": 0.310667,
+        "strategy": "tfidf",
+        "hit": false
+      },
+      {
+        "id": "vaswani-2017-transformer_p08_para_00",
+        "source_id": "vaswani-2017-transformer",
+        "source": "data/raw/vaswani_2017_transformer.pdf",
+        "page": 8,
+        "text": "Table 2: The Transformer achieves better BLEU scores than previous state-of-the-art models on the English-to-German and English-to-French newstest2014 tests at a fraction of the training cost.",
+        "metadata": {
+          "year": 2017,
+          "category": "architecture",
+          "title": "Attention Is All You Need",
+          "page_id": "vaswani-2017-transformer_p08",
+          "section": "6 Results",
+          "raw_chars": 3195,
+          "normalized_chars": 3202,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 192
+        },
+        "score": 0.275991,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[vaswani-2017-transformer_p10_para_02 | data/raw/vaswani_2017_transformer.pdf | page 10]\n7 Conclusion\n\nIn this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention.\n\nFor translation tasks, the Transformer can be trained significantly faster than architectures based on recurrent or convolutional layers. On both WMT 2014 English-to-German and WMT 2014 English-to-French translation tasks, we achieve a new state of the art. In the former task our best model outperforms even all previously reported ensembles.",
+    "context_ids": [
+      "vaswani-2017-transformer_p10_para_02"
+    ],
+    "context_chars": 675,
+    "context_tokens_est": 169,
+    "elapsed_ms": 0.855,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": false,
+    "complete_context_hit": false
+  },
+  {
+    "query_id": "q26",
+    "split": "test",
+    "type": "split_evidence",
+    "question": "In the Jeopardy question generation experiment on Hemingway's novels ('The Sun Also Rises' and 'A Farewell to Arms'), how does the document posterior behave after the first token of each book title is generated, and how did the authors use the BART-only baseline with partial decoding to show that parametric and non-parametric memories work together?",
+    "config_name": "M1_Baseline_TFIDF_b800",
+    "strategy": "TfidfRetriever",
+    "top_k": 3,
+    "budget_chars": 800,
+    "neighbor_expansion": false,
+    "user_filter": null,
+    "effective_filter": null,
+    "filter_reason": "no_filter",
+    "gold": [
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 6,
+        "evidence": "When generating “Sun”, the posterior is high for document 2 which mentions “The Sun Also Rises”. Similarly, document 1 dominates the posterior when “A Farewell to Arms” is generated. Intriguingly, after the first token of each book is generated, the document posterior flattens."
+      },
+      {
+        "source_id": "lewis-2020-rag",
+        "page": 6,
+        "evidence": "BART completes the generation \"The Sun Also Rises\" is a novel by this author of \"The Sun Also Rises\" indicating the title \"The Sun Also Rises\" is stored in BART’s parameters."
+      }
+    ],
+    "required_evidence_parts": [
+      "after the first token of each book is generated, the document posterior flattens.",
+      "This example shows how parametric and non-parametric memories work together—the non-parametric component helps to guide the generation, drawing out specific knowledge stored in the parametric memory."
+    ],
+    "results": [
+      {
+        "id": "lewis-2020-rag_p06_para_05",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 6,
+        "text": "BART completes the generation \"The Sun Also Rises\" is a novel by this author of \"The Sun Also Rises\" indicating the title \"The Sun Also Rises\" is stored in BART’s parameters. Similarly, BART will complete the partial decoding \"The Sun Also Rises\" is a novel by this author of \"A with \"The Sun Also Rises\" is a novel by this author of \"A Farewell to Arms\". This example shows how parametric and non-parametric memories work together—the non-parametric component helps to guide the generation, drawing out specific knowledge stored in the parametric memory.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p06",
+          "section": "4.3 Jeopardy Question Generation",
+          "raw_chars": 4110,
+          "normalized_chars": 4134,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 5,
+          "char_length": 555
+        },
+        "score": 0.491352,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p06_para_04",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 6,
+        "text": "Jeopardy questions often contain two separate pieces of information, and RAG-Token may perform best because it can generate responses that combine content from several documents. Figure 2 shows an example. When generating “Sun”, the posterior is high for document 2 which mentions “The Sun Also Rises”. Similarly, document 1 dominates the posterior when “A Farewell to Arms” is generated. Intriguingly, after the first token of each book is generated, the document posterior flattens. This observation suggests that the generator can complete the titles without depending on specific documents. In other words, the model’s parametric knowledge is sufficient to complete the titles. We find evidence for this hypothesis by feeding the BART-only baseline with the partial decoding\"The Sun.",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p06",
+          "section": "4.3 Jeopardy Question Generation",
+          "raw_chars": 4110,
+          "normalized_chars": 4134,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 4,
+          "char_length": 787
+        },
+        "score": 0.470353,
+        "strategy": "tfidf",
+        "hit": true
+      },
+      {
+        "id": "lewis-2020-rag_p07_para_00",
+        "source_id": "lewis-2020-rag",
+        "source": "data/raw/lewis_2020_rag.pdf",
+        "page": 7,
+        "text": "Document 1: his works are considered classics of American literature ... His wartime experiences formed the basis for his novel ”A Farewell to Arms” (1929) ...\n\nDocument 2: ... artists of the 1920s ”Lost Generation” expatriate community . His debut novel, ”The Sun Also Rises” , was published in 1926.\n\nBOS ” TheSunAlso R ises ” is a novel by this author of ” A Farewellto Arms ” Doc 1 Doc 2 Doc 3 Doc 4 Doc 5\n\nFigure 2: RAG-Token document posteriorp(zi|x,yi,y−i) for each generated token for input “Hemingway\" for Jeopardy generation with 5 retrieved documents. The posterior for document 1 is high when generating “A Farewell to Arms\" and for document 2 when generating “The Sun Also Rises\".",
+        "metadata": {
+          "year": 2020,
+          "category": "rag",
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "page_id": "lewis-2020-rag_p07",
+          "section": "4.5 Additional Results",
+          "raw_chars": 4335,
+          "normalized_chars": 4351,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index_on_page": 0,
+          "char_length": 693
+        },
+        "score": 0.286317,
+        "strategy": "tfidf",
+        "hit": false
+      }
+    ],
+    "context": "[lewis-2020-rag_p06_para_05 | data/raw/lewis_2020_rag.pdf | page 6]\nBART completes the generation \"The Sun Also Rises\" is a novel by this author of \"The Sun Also Rises\" indicating the title \"The Sun Also Rises\" is stored in BART’s parameters. Similarly, BART will complete the partial decoding \"The Sun Also Rises\" is a novel by this author of \"A with \"The Sun Also Rises\" is a novel by this author of \"A Farewell to Arms\". This example shows how parametric and non-parametric memories work together—the non-parametric component helps to guide the generation, drawing out specific knowledge stored in the parametric memory.",
+    "context_ids": [
+      "lewis-2020-rag_p06_para_05"
+    ],
+    "context_chars": 623,
+    "context_tokens_est": 156,
+    "elapsed_ms": 1.085,
+    "hit1": true,
+    "hit3": true,
+    "rr3": 1.0,
+    "context_hit": true,
+    "complete_context_hit": false
+  }
+]
