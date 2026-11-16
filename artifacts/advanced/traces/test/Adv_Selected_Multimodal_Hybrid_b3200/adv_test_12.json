@@ -1,0 +1,289 @@
+{
+  "id": "adv_test_12",
+  "split": "test",
+  "primary_group": "chart",
+  "question": "In Figure 2 (Page 3, Capability prediction on 23 coding problems), what metric is plotted on the y-axis, how is training compute normalized on the x-axis, and what subset of HumanEval do the 23 problems come from?",
+  "answerable": true,
+  "expected_answer": "In Figure 2 (Page 3), the y-axis plots -Mean Log Pass Rate (from 0 to 5), the x-axis plots training compute normalized so that GPT-4 equals 1, and the 23 coding problems come from the 3rd easiest difficulty bucket of the HumanEval dataset.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p003_chart_01",
+      "page": 3,
+      "modality": "chart",
+      "figure_or_table_id": "Figure 1 & Figure 2",
+      "bbox": [
+        45,
+        55,
+        565,
+        680
+      ],
+      "evidence": "Figure 2 Title: Capability prediction on 23 coding problems — Performance of GPT-4 and smaller models on a subset of the HumanEval dataset (3rd easiest difficulty bucket). Metric (y-axis): -Mean Log Pass Rate (range 0 to 5). X-axis: Training compute normalized so that GPT-4 = 1.",
+      "unit_and_condition": "-Mean Log Pass Rate on y-axis; compute normalized to GPT-4 = 1."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "The y‑axis shows the **mean log pass rate** (range 0 to 5). The x‑axis plots **training compute normalized so that GPT‑4 equals 1** (ticks: 1u, 10u, 100u, 0.001, 0.01, 0.1, 1) [gpt4-2023-techreport_p003_chart_01]. The 23 coding problems come from the **3rd easiest difficulty bucket of the HumanEval dataset** (i.e., all but the 15 hardest problems, bucket 3) [gpt4-2023-techreport_p004_text_02, gpt4-2023-techreport_p003_chart_01] [gpt4-2023-techreport_p004_text_02]",
+  "turns": 1,
+  "latency_ms": 10955.99,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p003_chart_01",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p003_text_02",
+    "gpt4-2023-techreport_p003_text_01",
+    "gpt4-2023-techreport_p002_text_06",
+    "gpt4-2023-techreport_p004_text_02",
+    "gpt4-2023-techreport_p004_chart_01",
+    "gpt4-2023-techreport_p010_chart_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p003_chart_01",
+    "gpt4-2023-techreport_p004_text_02",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p003_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Figure 2 (Page 3, Capability prediction on 23 coding problems), what metric is plotted on the y-axis, how is training compute normalized on the x-axis, and what subset of HumanEval do the 23 problems come from?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p003_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "[CHART: Figure 1 & Figure 2 | Page 3 | BBox (45, 55, 565, 680)]\n- Figure 1 Title: OpenAI codebase next word prediction — Performance of GPT-4 and smaller models.\n  Metric (y-axis): Final loss in Bits per word (range 1.0 to 6.0, lower is better) on an internal codebase dataset not in training set.\n  X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 100p, 10n, 1u, 100u, 0.01, 1). Series: Observed (dots) vs Prediction (dotted power-law fit to smaller models excluding GPT-4). GPT-4 final loss (~1.8 bits per word at compute=1) matches the power-law prediction.\n- Figure 2 Title: Capability prediction on 23 coding problems — Performance of GPT-4 and smaller models on a subset of the HumanEval dataset (3rd easiest difficulty bucket).\n  Metric (y-axis): -Mean Log Pass Rate (range 0 to 5). X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 1u, 10u, 100u, 0.001, 0.01, 0.1, 1). Power-law fit to smaller models accurately predicts GPT-4 pass rate.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 1 & Figure 2",
+            "bbox": [
+              45,
+              55,
+              565,
+              680
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p003_chart_01.png",
+            "section": "3 Predictable Scaling",
+            "char_length": 970
+          },
+          "score": 0.242581
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.141739
+        },
+        {
+          "id": "gpt4-2023-techreport_p003_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "Figure 2. Performance of GPT-4 and smaller models. The metric is mean log pass rate on a subset of the HumanEval dataset. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s performance. The x-axis is training compute normalized so that GPT-4 is 1.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.9,
+              647.4,
+              489.1,
+              685.2
+            ],
+            "section": "Page 3",
+            "char_length": 318
+          },
+          "score": 0.138182
+        },
+        {
+          "id": "gpt4-2023-techreport_p003_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "OpenAI codebase next word prediction\nFigure 1. Performance of GPT-4 and smaller models. The metric is final loss on a dataset derived from our internal codebase. This is a convenient, large dataset of code tokens which is not contained in the training set. We chose to look at loss because it tends to be less noisy than other measures across different amounts of training compute. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s final loss. The x-axis is training compute normalized so that GPT-4 is 1.\nCapability prediction on 23 coding problems\n1µ 10µ 100µ 0.001 0.01 0.1 1 Compute",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.9,
+              112.1,
+              489.1,
+              643.7
+            ],
+            "section": "Page 3",
+            "char_length": 658
+          },
+          "score": 0.115312
+        },
+        {
+          "id": "gpt4-2023-techreport_p002_text_06",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "Having a sense of the capabilities of a model before training can improve decisions around alignment, safety, and deployment. In addition to predicting final loss, we developed methodology to predict more interpretable metrics of capability. One such metric is pass rate on the HumanEval dataset [43], which measures the ability to synthesize Python functions of varying complexity. We successfully predicted the pass rate on a subset of the HumanEval dataset by extrapolating from models trained with at most 1, 000× less compute (Figure 2).\nFor an individual problem in HumanEval, performance may occasionally worsen with scale. Despite these challenges, we find an approximate power law relationship −EP [log(pass_rate(C))] = α∗C−k",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              600.9,
+              505.2,
+              699.8
+            ],
+            "section": "Page 2",
+            "char_length": 734
+          },
+          "score": 0.089286
+        },
+        {
+          "id": "gpt4-2023-techreport_p004_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 4,
+          "text": "We registered predictions for GPT-4’s performance on HumanEval before training completed, using only information available prior to training. All but the 15 hardest HumanEval problems were split into 6 difficulty buckets based on the performance of smaller models. The results on the 3rd easiest bucket are shown in Figure 2, showing that the resulting predictions were very accurate for this subset of HumanEval problems where we can accurately estimate log(pass_rate) for several smaller models. Predictions on the other five buckets performed almost as well, the main exception being GPT-4 underperforming our predictions on the easiest bucket.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              123.5,
+              504.2,
+              198.9
+            ],
+            "section": "Page 4",
+            "char_length": 647
+          },
+          "score": 0.085662
+        },
+        {
+          "id": "gpt4-2023-techreport_p004_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 4,
+          "text": "[CHART: Figure 3 | Page 4 | BBox (110, 340, 500, 620)]\n- Figure 3 Title: Inverse scaling prize, hindsight neglect — Performance of GPT-4 and smaller models on the Hindsight Neglect task.\n- X-axis (Model scale): ada -> babbage -> curie -> gpt-3.5 -> gpt-4.\n- Y-axis: Accuracy (%, range 0 to 100, higher is better).\n- Trend & Values: Performance decreases with scale from ada (~38%), babbage (~32%), curie (~22%) down to gpt-3.5 (~12%, inverse scaling), but GPT-4 reverses the inverse scaling trend and jumps to ~100% accuracy.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 3",
+            "bbox": [
+              110,
+              340,
+              500,
+              620
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p004_chart_01.png",
+            "section": "3 Predictable Scaling",
+            "char_length": 525
+          },
+          "score": 0.076765
+        },
+        {
+          "id": "gpt4-2023-techreport_p010_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 10,
+          "text": "[CHART: Figure 6 | Page 10 | BBox (60, 310, 550, 610)]\n- Figure 6 Title: Internal factual eval by category — Performance of GPT-4 on nine internal adversarially-designed factuality evaluations.\n- X-axis (9 categories): learning, technology, writing, history, math, science, recommendation, code, business.\n- Y-axis: Accuracy (0% to 80%, where 1.0/100% means agreement with human ideal responses for all questions).\n- Legend / Series compared: chatgpt-v2, chatgpt-v3, chatgpt-v4 (all based on GPT-3.5) vs gpt-4 (green).\n- Key quantitative result: GPT-4 scores 19 percentage points higher overall than the latest GPT-3.5 model, achieving ~75-80% across categories.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 6",
+            "bbox": [
+              60,
+              310,
+              550,
+              610
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p010_chart_01.png",
+            "section": "5 Limitations",
+            "char_length": 662
+          },
+          "score": 0.072285
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p003_chart_01 | page=3 | modality=chart | ref=Figure 1 & Figure 2 | bbox=[45, 55, 565, 680]]\n[CHART: Figure 1 & Figure 2 | Page 3 | BBox (45, 55, 565, 680)]\n- Figure 1 Title: OpenAI codebase next word prediction — Performance of GPT-4 and smaller models.\n  Metric (y-axis): Final loss in Bits per word (range 1.0 to 6.0, lower is better) on an internal codebase dataset not in training set.\n  X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 100p, 10n, 1u, 100u, 0.01, 1). Series: Observed (dots) vs Prediction (dotted power-law fit to smaller models excluding GPT-4). GPT-4 final loss (~1.8 bits per word at compute=1) matches the power-law prediction.\n- Figure 2 Title: Capability prediction on 23 coding problems — Performance of GPT-4 and smaller models on a subset of the HumanEval dataset (3rd easiest difficulty bucket).\n  Metric (y-axis): -Mean Log Pass Rate (range 0 to 5). X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 1u, 10u, 100u, 0.001, 0.01, 0.1, 1). Power-law fit to smaller models accurately predicts GPT-4 pass rate.\n\n[gpt4-2023-techreport_p004_text_02 | page=4 | modality=text | ref=Page 4 | bbox=[107.5, 123.5, 504.2, 198.9]]\nWe registered predictions for GPT-4’s performance on HumanEval before training completed, using only information available prior to training. All but the 15 hardest HumanEval problems were split into 6 difficulty buckets based on the performance of smaller models. The results on the 3rd easiest bucket are shown in Figure 2, showing that the resulting predictions were very accurate for this subset of HumanEval problems where we can accurately estimate log(pass_rate) for several smaller models. Predictions on the other five buckets performed almost as well, the main exception being GPT-4 underperforming our predictions on the easiest bucket.\n\n[gpt4-2023-techreport_p037_image_diagram_01 | page=37 | modality=image_diagram | ref=Table 17 | bbox=[55, 55, 555, 720]]\n[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.\n\n[gpt4-2023-techreport_p003_text_02 | page=3 | modality=text | ref=Page 3 | bbox=[122.9, 647.4, 489.1, 685.2]]\nFigure 2. Performance of GPT-4 and smaller models. The metric is mean log pass rate on a subset of the HumanEval dataset. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s performance. The x-axis is training compute normalized so that GPT-4 is 1.",
+      "context_ids": [
+        "gpt4-2023-techreport_p003_chart_01",
+        "gpt4-2023-techreport_p004_text_02",
+        "gpt4-2023-techreport_p037_image_diagram_01",
+        "gpt4-2023-techreport_p003_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Figure 2 (Page 3, Capability prediction on 23 coding problems), what metric is plotted on the y-axis, how is training compute normalized on the x-axis, and what subset of HumanEval do the 23 problems come from?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "All requested details are present in the provided context."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_12",
+    "split": "test",
+    "primary_group": "chart",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p003_chart_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p003_chart_01",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p003_text_02",
+      "gpt4-2023-techreport_p003_text_01",
+      "gpt4-2023-techreport_p002_text_06",
+      "gpt4-2023-techreport_p004_text_02",
+      "gpt4-2023-techreport_p004_chart_01",
+      "gpt4-2023-techreport_p010_chart_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p003_chart_01",
+      "gpt4-2023-techreport_p004_text_02",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p003_text_02"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p003_chart_01",
+      "gpt4-2023-techreport_p004_text_02"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1179,
+  "completion_tokens": 167,
+  "total_tokens": 1346,
+  "estimated_cost_usd": 0.000277
+}

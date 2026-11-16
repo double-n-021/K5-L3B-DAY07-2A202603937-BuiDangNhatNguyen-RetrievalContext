@@ -207,6 +207,7 @@ class GeminiAgentController:
         max_searches: int = 3,
         cache_path: Path | None = None,
         use_cache: bool = True,
+        system_prompt: str | None = None,
     ) -> None:
         load_dotenv(REPO_ROOT / ".env", override=True)
         self.provider = (provider or os.getenv("PROVIDER", "gemini")).strip().lower()
@@ -216,6 +217,7 @@ class GeminiAgentController:
         self.max_searches = max_searches
         self.cache_path = cache_path or (REPO_ROOT / "artifacts" / "llm_agent_cache.json")
         self.use_cache = use_cache
+        self.system_prompt = system_prompt or SYSTEM_PROMPT
 
         if self.provider not in PROVIDER_ENDPOINTS:
             raise ValueError(f"Unsupported provider: {self.provider}")
@@ -334,10 +336,11 @@ class GeminiAgentController:
                 retry_after = exc.headers.get("Retry-After") if exc.headers else None
                 if exc.code == 429 and attempt < len(candidate_models) - 1:
                     if retry_after and retry_after.replace(".", "", 1).isdigit():
-                        backoff = min(max(float(retry_after) + 1.0, 2.0), 15.0)
+                        backoff = min(max(float(retry_after) + 0.5, 1.5), 6.0)
                     else:
-                        backoff = 3.0 * (attempt + 1)
+                        backoff = 2.0
                     next_m = candidate_models[attempt + 1]
+                    self.model = next_m
                     print(
                         f"    [{self.provider.upper()} Rate Limit 429 trên {active_model}] Chờ {backoff:.0f}s và chuyển sang {next_m}...",
                         flush=True,
@@ -447,7 +450,7 @@ class GeminiAgentController:
         }
 
         messages = [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": self.system_prompt},
             {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False, indent=2)},
         ]
 

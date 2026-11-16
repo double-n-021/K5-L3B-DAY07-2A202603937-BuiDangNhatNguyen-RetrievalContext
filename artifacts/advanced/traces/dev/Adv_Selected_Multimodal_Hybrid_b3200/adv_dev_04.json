@@ -1,0 +1,288 @@
+{
+  "id": "adv_dev_04",
+  "split": "dev",
+  "primary_group": "image_diagram",
+  "question": "In the visual input example in Table 3 (Page 9), what three panels are shown in the image of the 'Lightning Cable' adapter, and why does GPT-4 explain that the image is funny?",
+  "answerable": true,
+  "expected_answer": "Table 3 shows three panels: Panel 1 shows a smartphone with a large, blue, 15-pin VGA monitor connector plugged into its charging port; Panel 2 shows the 'Lightning Cable' adapter retail package picturing a VGA connector; Panel 3 shows a close-up of the VGA connector with a tiny Apple Lightning connector at the end. It is funny because of the absurdity of plugging a large, outdated VGA monitor connector into a small modern smartphone charging port.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p009_image_diagram_01",
+      "page": 9,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 3",
+      "bbox": [
+        55,
+        60,
+        555,
+        650
+      ],
+      "evidence": "Panel 1: A smartphone with a large, blue, 15-pin VGA connector... Panel 2: The retail package for a 'Lightning Cable' adapter... Panel 3: A close-up of the VGA connector with a tiny Apple Lightning connector",
+      "unit_and_condition": "Panel-by-panel visual description (3 panels, 15-pin VGA to Lightning)."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "Panel 1: a smartphone with a large, blue 15‑pin VGA connector plugged into its charging port [gpt4-2023-techreport_p009_text_01]. Panel 2: the retail package for a “Lightning Cable” adapter showing a picture of a VGA connector on the packaging [gpt4-2023-techreport_p009_text_01]. Panel 3: a close‑up of the VGA connector head with a tiny Apple Lightning connector protruding from the end [gpt4-2023-techreport_p009_text_01]. GPT‑4 explains the image is funny because it is absurd to plug a bulky, outdated 15‑pin VGA monitor connector into a small, modern smartphone charging port [gpt4-2023-techreport_p009_text_01].",
+  "turns": 1,
+  "latency_ms": 1747.99,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p009_image_diagram_01",
+    "gpt4-2023-techreport_p009_text_02",
+    "gpt4-2023-techreport_p009_text_01",
+    "gpt4-2023-techreport_p038_image_diagram_01",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p036_image_diagram_01",
+    "gpt4-2023-techreport_p038_text_01",
+    "gpt4-2023-techreport_p039_text_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p009_image_diagram_01",
+    "gpt4-2023-techreport_p009_text_02",
+    "gpt4-2023-techreport_p009_text_01",
+    "gpt4-2023-techreport_p038_image_diagram_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In the visual input example in Table 3 (Page 9), what three panels are shown in the image of the 'Lightning Cable' adapter, and why does GPT-4 explain that the image is funny?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p009_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "[IMAGE_DIAGRAM: Table 3 | Page 9 | BBox (55, 60, 555, 650)]\n- Visual Input Example (Table 3): A three-panel photograph/meme of a smartphone 'Lightning Cable' adapter.\n- User prompt: 'What is funny about this image? Describe it panel by panel.'\n- Visual content & GPT-4 panel-by-panel description:\n  * Panel 1: A smartphone with a large, blue, 15-pin VGA connector (typically used for computer monitors) plugged into its charging port.\n  * Panel 2: The retail package for a 'Lightning Cable' adapter displaying a picture of a VGA connector on the packaging.\n  * Panel 3: A close-up of the VGA connector head with a tiny Apple Lightning connector protruding from the end.\n- Explanation of humor: The absurdity of plugging a bulky, outdated 15-pin VGA monitor connector into a small modern smartphone charging port.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 3",
+            "bbox": [
+              55,
+              60,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p009_image_diagram_01.png",
+            "section": "4.1 Visual Inputs",
+            "char_length": 812
+          },
+          "score": 0.239734
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "Table 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              622.5,
+              489.1,
+              641.2
+            ],
+            "section": "Page 9",
+            "char_length": 171
+          },
+          "score": 0.140137
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "User What is funny about this image? Describe it panel by panel.\nSource: https://www.reddit.com/r/hmmm/comments/ubab5v/hmmm/\nGPT-4 The image shows a package for a \"Lightning Cable\" adapter with three panels.\nPanel 1: A smartphone with a VGA connector (a large, blue, 15-pin con- nector typically used for computer monitors) plugged into its charging port.\nPanel 2: The package for the \"Lightning Cable\" adapter with a picture of a VGA connector on it.\nPanel 3: A close-up of the VGA connector with a small Lightning con- nector (used for charging iPhones and other Apple devices) at the end.\nThe humor in this image comes from the absurdity of plugging a large, outdated VGA connector into a small, modern smartphone charging port.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              170.9,
+              487.6,
+              615.3
+            ],
+            "section": "Page 9",
+            "char_length": 731
+          },
+          "score": 0.115312
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "[IMAGE_DIAGRAM: Table 18 | Page 38 | BBox (55, 55, 555, 560)]\n- Visual Input Example (Table 18 — Chicken Nugget Map Meme): Image with caption 'Sometimes I just look at pictures of the earth from space and I marvel at how beautiful it all is' above a photo of fried chicken nuggets arranged on a dark surface in the shape of the world map (continents).\n- User prompt: 'Can you explain this meme?'\n- GPT-4 explanation: The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 18",
+            "bbox": [
+              55,
+              55,
+              555,
+              560
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p038_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 560
+          },
+          "score": 0.07808
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.076355
+        },
+        {
+          "id": "gpt4-2023-techreport_p036_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 36,
+          "text": "[IMAGE_DIAGRAM: Table 16 | Page 36 | BBox (55, 55, 555, 520)]\n- Visual Input Example (Table 16 — Extreme Ironing photograph): Street photograph showing a man standing on rollerblades/street holding an ironing board mounted on the roof/back of a yellow moving New York City taxi cab while ironing clothes.\n- User prompt: 'What is unusual about this image?'\n- GPT-4 response: 'The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.'",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 16",
+            "bbox": [
+              55,
+              55,
+              555,
+              520
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p036_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 502
+          },
+          "score": 0.069274
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "GPT-4 visual input example, Chicken Nugget Map:\nGPT-4 This meme is a joke that combines two unrelated things: pictures of the earth from space and chicken nuggets. The text of the meme suggests that the image below is a beautiful picture of the earth from space. However, the image is actually of chicken nuggets arranged to vaguely resemble a map of the world. The humor in this meme comes from the unexpected juxtaposition of the text and the image. The text sets up an expectation of a majestic image of the earth, but the image is actually something mundane and silly.\nTable 18: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              168.4,
+              485.9,
+              627.5
+            ],
+            "section": "Page 38",
+            "char_length": 644
+          },
+          "score": 0.063198
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "GPT-4 visual input example, Moar Layers:\nUser Can you explain why this is funny. Think about it step-by-step.\nGPT-4 The comic is satirizing the difference in approaches to improving model performance between statistical learning and neural networks.\nIn statistical learning, the character is shown to be concerned with overfit- ting and suggests a series of complex and technical solutions, such as minimizing structural risk, reworking the loss function, and using a soft margin.\nIn contrast, the neural networks character simply suggests adding more layers to the model. This is often seen as a common solution to improving performance in neural networks, but it’s also considered a simplistic and brute-force approach.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              129.7,
+              487.6,
+              584.4
+            ],
+            "section": "Page 39",
+            "char_length": 721
+          },
+          "score": 0.0625
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p009_image_diagram_01 | page=9 | modality=image_diagram | ref=Table 3 | bbox=[55, 60, 555, 650]]\n[IMAGE_DIAGRAM: Table 3 | Page 9 | BBox (55, 60, 555, 650)]\n- Visual Input Example (Table 3): A three-panel photograph/meme of a smartphone 'Lightning Cable' adapter.\n- User prompt: 'What is funny about this image? Describe it panel by panel.'\n- Visual content & GPT-4 panel-by-panel description:\n  * Panel 1: A smartphone with a large, blue, 15-pin VGA connector (typically used for computer monitors) plugged into its charging port.\n  * Panel 2: The retail package for a 'Lightning Cable' adapter displaying a picture of a VGA connector on the packaging.\n  * Panel 3: A close-up of the VGA connector head with a tiny Apple Lightning connector protruding from the end.\n- Explanation of humor: The absurdity of plugging a bulky, outdated 15-pin VGA monitor connector into a small modern smartphone charging port.\n\n[gpt4-2023-techreport_p009_text_02 | page=9 | modality=text | ref=Page 9 | bbox=[122.6, 622.5, 489.1, 641.2]]\nTable 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.\n\n[gpt4-2023-techreport_p009_text_01 | page=9 | modality=text | ref=Page 9 | bbox=[114.0, 170.9, 487.6, 615.3]]\nUser What is funny about this image? Describe it panel by panel.\nSource: https://www.reddit.com/r/hmmm/comments/ubab5v/hmmm/\nGPT-4 The image shows a package for a \"Lightning Cable\" adapter with three panels.\nPanel 1: A smartphone with a VGA connector (a large, blue, 15-pin con- nector typically used for computer monitors) plugged into its charging port.\nPanel 2: The package for the \"Lightning Cable\" adapter with a picture of a VGA connector on it.\nPanel 3: A close-up of the VGA connector with a small Lightning con- nector (used for charging iPhones and other Apple devices) at the end.\nThe humor in this image comes from the absurdity of plugging a large, outdated VGA connector into a small, modern smartphone charging port.\n\n[gpt4-2023-techreport_p038_image_diagram_01 | page=38 | modality=image_diagram | ref=Table 18 | bbox=[55, 55, 555, 560]]\n[IMAGE_DIAGRAM: Table 18 | Page 38 | BBox (55, 55, 555, 560)]\n- Visual Input Example (Table 18 — Chicken Nugget Map Meme): Image with caption 'Sometimes I just look at pictures of the earth from space and I marvel at how beautiful it all is' above a photo of fried chicken nuggets arranged on a dark surface in the shape of the world map (continents).\n- User prompt: 'Can you explain this meme?'\n- GPT-4 explanation: The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.",
+      "context_ids": [
+        "gpt4-2023-techreport_p009_image_diagram_01",
+        "gpt4-2023-techreport_p009_text_02",
+        "gpt4-2023-techreport_p009_text_01",
+        "gpt4-2023-techreport_p038_image_diagram_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In the visual input example in Table 3 (Page 9), what three panels are shown in the image of the 'Lightning Cable' adapter, and why does GPT-4 explain that the image is funny?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "Verified that all required details are present in the provided context."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_04",
+    "split": "dev",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p009_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p009_image_diagram_01",
+      "gpt4-2023-techreport_p009_text_02",
+      "gpt4-2023-techreport_p009_text_01",
+      "gpt4-2023-techreport_p038_image_diagram_01",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p036_image_diagram_01",
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p039_text_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p009_image_diagram_01",
+      "gpt4-2023-techreport_p009_text_02",
+      "gpt4-2023-techreport_p009_text_01",
+      "gpt4-2023-techreport_p038_image_diagram_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p009_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": false,
+    "passed": false,
+    "audit_reason": "Citation check failed (cited=['gpt4-2023-techreport_p009_text_01'], invalid=[])"
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1061,
+  "completion_tokens": 207,
+  "total_tokens": 1268,
+  "estimated_cost_usd": 0.000283
+}

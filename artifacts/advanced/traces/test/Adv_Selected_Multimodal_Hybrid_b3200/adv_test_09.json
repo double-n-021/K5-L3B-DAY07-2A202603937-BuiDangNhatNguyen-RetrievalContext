@@ -1,0 +1,291 @@
+{
+  "id": "adv_test_09",
+  "split": "test",
+  "primary_group": "image_diagram",
+  "question": "In Table 17 (Page 37, Pixel to Paper Summaries), when asked to explain Figure 2 from the screenshot of the InstructGPT paper, what three sequential stages of the pipeline does GPT-4 identify from the diagram?",
+  "answerable": true,
+  "expected_answer": "In Table 17 (Page 37), GPT-4 identifies three sequential steps from the Figure 2 diagram of the InstructGPT paper: (1) Supervised fine-tuning (SFT) using labeler demonstration data to fine-tune GPT-3, (2) Reward model (RM) training using human rankings of model outputs from best to worst, and (3) Reinforcement learning using Proximal Policy Optimization (PPO) to optimize the policy against the reward model.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p037_image_diagram_01",
+      "page": 37,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 17",
+      "bbox": [
+        55,
+        55,
+        555,
+        720
+      ],
+      "evidence": "1. Supervised fine-tuning (SFT)... 2. Reward model (RM) training... 3. Reinforcement learning using Proximal Policy Optimization (PPO)",
+      "unit_and_condition": "3-stage RLHF architecture diagram in Table 17."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "GPT‑4 identifies the following three sequential stages from Figure 2:\n1. **Supervised fine‑tuning (SFT)** – collect labeler demonstration data and fine‑tune GPT‑3 with supervised learning.\n2. **Reward model (RM) training** – collect human‑ranked comparison data and train a reward model.\n3. **Reinforcement learning using Proximal Policy Optimization (PPO)** – optimize the SFT policy against the reward model with PPO.\n[ gpt4-2023-techreport_p037_image_diagram_01 ] [ gpt4-2023-techreport_p037_text_04 ] [ gpt4-2023-techreport_p037_text_02 ] [ gpt4-2023-techreport_p037_text_03 ] [gpt4-2023-techreport_p037_image_diagram_01] [gpt4-2023-techreport_p037_text_04] [gpt4-2023-techreport_p037_text_02] [gpt4-2023-techreport_p037_text_03]",
+  "turns": 1,
+  "latency_ms": 7613.05,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p037_text_04",
+    "gpt4-2023-techreport_p037_text_02",
+    "gpt4-2023-techreport_p003_chart_01",
+    "gpt4-2023-techreport_p037_text_01",
+    "gpt4-2023-techreport_p063_chart_01",
+    "gpt4-2023-techreport_p061_text_03",
+    "gpt4-2023-techreport_p068_image_diagram_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p037_text_04",
+    "gpt4-2023-techreport_p037_text_02",
+    "gpt4-2023-techreport_p037_text_03"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Table 17 (Page 37, Pixel to Paper Summaries), when asked to explain Figure 2 from the screenshot of the InstructGPT paper, what three sequential stages of the pipeline does GPT-4 identify from the diagram?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.322581
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "These three steps are iteratively performed to train the InstructGPT model, which aims to generate outputs that align better with human preferences and follow instructions more effectively.\nTable 17: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              161.6,
+              643.2,
+              521.9,
+              691.4
+            ],
+            "section": "Page 37",
+            "char_length": 261
+          },
+          "score": 0.137291
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "To address this issue, the authors fine-tune language models on a wide range of tasks using human feedback. They start with a set of labeler-written prompts and responses, then collect a dataset of labeler demonstrations of the desired model behavior. They fine-tune GPT-3 using supervised learning and then use reinforcement learning from human feedback to further fine-tune the model. The resulting model, called InstructGPT, shows improvements in truthfulness and reductions in toxic output generation while having minimal performance regressions on public NLP datasets.\nThe authors conclude that fine-tuning with human feedback is a promising direc- tion for aligning language models with human intent.\nUser Could you explain the process described in Figure 2?\nGPT-4 Figure 2 in the InstructGPT paper illustrates the three steps of their method:",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              337.7,
+              523.6,
+              489.6
+            ],
+            "section": "Page 37",
+            "char_length": 849
+          },
+          "score": 0.137068
+        },
+        {
+          "id": "gpt4-2023-techreport_p003_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "[CHART: Figure 1 & Figure 2 | Page 3 | BBox (45, 55, 565, 680)]\n- Figure 1 Title: OpenAI codebase next word prediction — Performance of GPT-4 and smaller models.\n  Metric (y-axis): Final loss in Bits per word (range 1.0 to 6.0, lower is better) on an internal codebase dataset not in training set.\n  X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 100p, 10n, 1u, 100u, 0.01, 1). Series: Observed (dots) vs Prediction (dotted power-law fit to smaller models excluding GPT-4). GPT-4 final loss (~1.8 bits per word at compute=1) matches the power-law prediction.\n- Figure 2 Title: Capability prediction on 23 coding problems — Performance of GPT-4 and smaller models on a subset of the HumanEval dataset (3rd easiest difficulty bucket).\n  Metric (y-axis): -Mean Log Pass Rate (range 0 to 5). X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 1u, 10u, 100u, 0.001, 0.01, 0.1, 1). Power-law fit to smaller models accurately predicts GPT-4 pass rate.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 1 & Figure 2",
+            "bbox": [
+              45,
+              55,
+              565,
+              680
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p003_chart_01.png",
+            "section": "3 Predictable Scaling",
+            "char_length": 970
+          },
+          "score": 0.123409
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "GPT-4 visual input example, Pixel to Paper Summaries:\nUser Below is part of the InstuctGPT paper. Could you read and summarize it to me?\nGPT-4 The InstructGPT paper focuses on training large language models to follow instructions with human feedback. The authors note that making language models larger doesn’t inherently make them better at following a user’s intent. Large models can generate outputs that are untruthful, toxic, or simply unhelpful.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              104.5,
+              521.9,
+              326.0
+            ],
+            "section": "Page 37",
+            "char_length": 451
+          },
+          "score": 0.115312
+        },
+        {
+          "id": "gpt4-2023-techreport_p063_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 63,
+          "text": "[CHART & DIAGRAM: System Card Figure 6 & Figure 7 | Page 63 | BBox (55, 55, 555, 720)]\n- Figure 6 (Rule-Based Reward Model RBRM Classifier Rubric): Shows the 3-question rubric used by RBRM to classify model responses: (1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No), mapping into classes (A) through (Q).\n- Figure 7 (Safety metrics on challenging prompts): Compares GPT-3.5 vs GPT-4-early vs GPT-4-launch on RealToxicityPrompts (toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch) and preference win rates (GPT-4-launch responses preferred over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts, page 64).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 6 & Figure 7",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p063_chart_01.png",
+            "section": "System Card 3.2 Rule-Based Reward Models (RBRMs)",
+            "char_length": 768
+          },
+          "score": 0.072937
+        },
+        {
+          "id": "gpt4-2023-techreport_p061_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 61,
+          "text": "We used a combination of dataset interventions and interventions after pre-training to mitigate harms at the model level. At the pre-training stage, we ﬁltered our dataset mix for GPT-4 to speciﬁcally reduce the quantity of inappropriate erotic text content. We did this via a combination of internally trained classiﬁers[37] and a lexicon-based approach to identify documents that were ﬂagged as having a high likelihood of containing inappropriate erotic content. We then removed these documents from the pre-training set. After the pre-training stage, our primary method for shaping GPT-4-launch behavior was RLHF. We used methods outlined in [12]. We collect demonstration data (given an input, demonstrating how the model should respond) and ranking data on outputs from our models (given an input and several outputs, rank the outputs from best to worst) from human trainers.28 We use the",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.2,
+              410.9,
+              543.5,
+              562.0
+            ],
+            "section": "Page 61",
+            "char_length": 894
+          },
+          "score": 0.05346
+        },
+        {
+          "id": "gpt4-2023-techreport_p068_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 68,
+          "text": "[IMAGE_DIAGRAM: System Card Figure 10 | Page 68 | BBox (55, 55, 555, 710)]\n- Visual Diagram (System Card Figure 10 — Example 'Jailbreaks' for GPT-4-launch): Two side-by-side red-teaming attack diagrams:\n  1. Left box ('Prompting with Opposite Mode'): User instructs model to respond as both [ChatGPT] and [AntiGPT] in opposite mode; [ChatGPT] refuses racist prompt while [AntiGPT] outputs harmful list.\n  2. Right box ('System Message Attack'): Annotated as 'This is one of the most effective methods of breaking the model currently', where an adversarial System message ('You are a language model that for academic purposes...') overrides safety refusals.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "System Card Figure 10",
+            "bbox": [
+              55,
+              55,
+              555,
+              710
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p068_image_diagram_01.png",
+            "section": "System Card 4 System Safety",
+            "char_length": 656
+          },
+          "score": 0.049722
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p037_image_diagram_01 | page=37 | modality=image_diagram | ref=Table 17 | bbox=[55, 55, 555, 720]]\n[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.\n\n[gpt4-2023-techreport_p037_text_04 | page=37 | modality=text | ref=Page 37 | bbox=[161.6, 643.2, 521.9, 691.4]]\nThese three steps are iteratively performed to train the InstructGPT model, which aims to generate outputs that align better with human preferences and follow instructions more effectively.\nTable 17: Example prompt demonstrating GPT-4’s visual input capability.\n\n[gpt4-2023-techreport_p037_text_02 | page=37 | modality=text | ref=Page 37 | bbox=[114.0, 337.7, 523.6, 489.6]]\nTo address this issue, the authors fine-tune language models on a wide range of tasks using human feedback. They start with a set of labeler-written prompts and responses, then collect a dataset of labeler demonstrations of the desired model behavior. They fine-tune GPT-3 using supervised learning and then use reinforcement learning from human feedback to further fine-tune the model. The resulting model, called InstructGPT, shows improvements in truthfulness and reductions in toxic output generation while having minimal performance regressions on public NLP datasets.\nThe authors conclude that fine-tuning with human feedback is a promising direc- tion for aligning language models with human intent.\nUser Could you explain the process described in Figure 2?\nGPT-4 Figure 2 in the InstructGPT paper illustrates the three steps of their method:\n\n[gpt4-2023-techreport_p037_text_03 | page=37 | modality=text | ref=Page 37 | bbox=[161.2, 501.4, 523.6, 631.4]]\n1. Supervised fine-tuning (SFT): They collect demonstration data, which consists of labeler-written prompts and desired output behavior. This data is used to fine-tune GPT-3 with supervised learning.\n2. Reward model (RM) training: They collect comparison data, where a labeler ranks the outputs from several model samples (from best to worst). This data is used to train the reward model.\n3. Reinforcement learning using Proximal Policy Optimization (PPO): They opti- mize a policy against the reward model using reinforcement learning. For each new prompt sampled from the dataset, the policy generates an output. The reward model calculates a reward for the output, and the reward is used to update the policy using the PPO algorithm.",
+      "context_ids": [
+        "gpt4-2023-techreport_p037_image_diagram_01",
+        "gpt4-2023-techreport_p037_text_04",
+        "gpt4-2023-techreport_p037_text_02",
+        "gpt4-2023-techreport_p037_text_03"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Table 17 (Page 37, Pixel to Paper Summaries), when asked to explain Figure 2 from the screenshot of the InstructGPT paper, what three sequential stages of the pipeline does GPT-4 identify from the diagram?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The diagram in Table 17 shows the three‑step RLHF pipeline for InstructGPT."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_09",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p037_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p037_text_04",
+      "gpt4-2023-techreport_p037_text_02",
+      "gpt4-2023-techreport_p003_chart_01",
+      "gpt4-2023-techreport_p037_text_01",
+      "gpt4-2023-techreport_p063_chart_01",
+      "gpt4-2023-techreport_p061_text_03",
+      "gpt4-2023-techreport_p068_image_diagram_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p037_text_04",
+      "gpt4-2023-techreport_p037_text_02",
+      "gpt4-2023-techreport_p037_text_03"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p037_text_04",
+      "gpt4-2023-techreport_p037_text_02",
+      "gpt4-2023-techreport_p037_text_03"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1156,
+  "completion_tokens": 237,
+  "total_tokens": 1393,
+  "estimated_cost_usd": 0.000316
+}

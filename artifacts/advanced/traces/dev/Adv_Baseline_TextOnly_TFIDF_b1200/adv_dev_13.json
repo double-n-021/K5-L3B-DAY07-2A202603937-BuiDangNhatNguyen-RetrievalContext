@@ -1,0 +1,299 @@
+{
+  "id": "adv_dev_13",
+  "split": "dev",
+  "primary_group": "text",
+  "question": "According to the Abstract (Page 1) and Section 2 (Page 2), how much compute was used for the smaller models that predicted GPT-4's performance, and why does Section 2 omit architectural details such as model size and training compute?",
+  "answerable": true,
+  "expected_answer": "Aspects of GPT-4's performance were accurately predicted based on models trained with no more than 1/1,000th the compute of GPT-4 (Page 1). Section 2 (Page 2) states that given both the competitive landscape and the safety implications of large-scale models like GPT-4, the report omits details about architecture (including model size), hardware, training compute, dataset construction, and training method.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p001_text_01",
+      "page": 1,
+      "modality": "text",
+      "figure_or_table_id": "Page 1 Abstract",
+      "bbox": [
+        108.0,
+        179.9,
+        504.0,
+        293.4
+      ],
+      "evidence": "predict some aspects of GPT-4's performance based on models trained with no more than 1/1,000th the compute of GPT-4.",
+      "unit_and_condition": "Compute ratio <= 1/1,000th on Page 1."
+    },
+    {
+      "chunk_id": "gpt4-2023-techreport_p002_text_02",
+      "page": 2,
+      "modality": "text",
+      "figure_or_table_id": "Page 2 Section 2",
+      "bbox": [
+        72.0,
+        173.9,
+        540.0,
+        281.4
+      ],
+      "evidence": "Given both the competitive landscape and the safety implications of large-scale models like GPT-4, this report contains no further details about the architecture (including model size), hardware, training compute, dataset construction, training method, or similar.",
+      "unit_and_condition": "Competitive landscape and safety implications in Section 2."
+    }
+  ],
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 1922.74,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p003_text_02",
+    "gpt4-2023-techreport_p003_text_01",
+    "gpt4-2023-techreport_p002_text_04",
+    "gpt4-2023-techreport_p002_text_02",
+    "gpt4-2023-techreport_p047_text_03",
+    "gpt4-2023-techreport_p002_text_05",
+    "gpt4-2023-techreport_p001_text_01",
+    "gpt4-2023-techreport_p007_text_03"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p003_text_02",
+    "gpt4-2023-techreport_p003_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "According to the Abstract (Page 1) and Section 2 (Page 2), how much compute was used for the smaller models that predicted GPT-4's performance, and why does Section 2 omit architectural details such as model size and training compute?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p003_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "Figure 2. Performance of GPT-4 and smaller models. The metric is mean log pass rate on a subset of the HumanEval dataset. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s performance. The x-axis is training compute normalized so that GPT-4 is 1.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.9,
+              647.4,
+              489.1,
+              685.2
+            ],
+            "section": "Page 3",
+            "char_length": 318
+          },
+          "score": 0.289513,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p003_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "OpenAI codebase next word prediction\nFigure 1. Performance of GPT-4 and smaller models. The metric is final loss on a dataset derived from our internal codebase. This is a convenient, large dataset of code tokens which is not contained in the training set. We chose to look at loss because it tends to be less noisy than other measures across different amounts of training compute. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s final loss. The x-axis is training compute normalized so that GPT-4 is 1.\nCapability prediction on 23 coding problems\n1µ 10µ 100µ 0.001 0.01 0.1 1 Compute",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.9,
+              112.1,
+              489.1,
+              643.7
+            ],
+            "section": "Page 3",
+            "char_length": 658
+          },
+          "score": 0.256658,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p002_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "A large focus of the GPT-4 project was building a deep learning stack that scales predictably. The primary reason is that for very large training runs like GPT-4, it is not feasible to do extensive model-specific tuning. To address this, we developed infrastructure and optimization methods that have very predictable behavior across multiple scales. These improvements allowed us to reliably predict some aspects of the performance of GPT-4 from smaller models trained using 1, 000× – 10, 000× less compute.\nThe final loss of properly-trained large language models is thought to be well approximated by power laws in the amount of compute used to train the model [41, 42, 2, 14, 15].",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              374.7,
+              505.5,
+              495.0
+            ],
+            "section": "Page 2",
+            "char_length": 684
+          },
+          "score": 0.247852,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p002_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "This report focuses on the capabilities, limitations, and safety properties of GPT-4. GPT-4 is a Transformer-style model [39] pre-trained to predict the next token in a document, using both publicly available data (such as internet data) and data licensed from third-party providers. The model was then fine-tuned using Reinforcement Learning from Human Feedback (RLHF) [40]. Given both the competitive landscape and the safety implications of large-scale models like GPT-4, this report contains no further details about the architecture (including model size), hardware, training compute, dataset construction, training method, or similar.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              208.1,
+              505.2,
+              283.6
+            ],
+            "section": "Page 2",
+            "char_length": 640
+          },
+          "score": 0.227651,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p047_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 47,
+          "text": "1. Advice or encouragement for self harm behaviors\n2. Graphic material such as erotic or violent content\n3. Harassing, demeaning, and hateful content\n4. Content useful for planning attacks or violence\n5. Instructions for ﬁnding illegal content\nOur work on model refusals (described in Section 2) aimed to reduce the tendency of the model to produce such harmful content. Below we provide some examples from GPT-4-early compared to GPT-4-launch, the version we are launching with13.\n2.4 Harms of representation, allocation, and quality of service",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              248.1,
+              541.5,
+              432.8
+            ],
+            "section": "Page 47",
+            "char_length": 545
+          },
+          "score": 0.200268,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p002_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "To verify the scalability of our optimization infrastructure, we predicted GPT-4’s final loss on our internal codebase (not part of the training set) by fitting a scaling law with an irreducible loss term (as in Henighan et al. [15]): L(C) = aCb + c, from models trained using the same methodology but using at most 10,000x less compute than GPT-4. This prediction was made shortly after the run started, without use of any partial results. The fitted scaling law predicted GPT-4’s final loss with high accuracy (Figure 1).\n3.2 Scaling of Capabilities on HumanEval",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              501.4,
+              504.3,
+              590.6
+            ],
+            "section": "Page 2",
+            "char_length": 564
+          },
+          "score": 0.193718,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p001_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 1,
+          "text": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer- based model pre-trained to predict the next token in a document. The post-training alignment process results in improved performance on measures of factuality and adherence to desired behavior. A core component of this project was developing infrastructure and optimization methods that behave predictably across a wide range of scales. This allowed us to accurately predict some aspects of GPT-4’s performance based on models trained with no more than 1/1,000th the compute of GPT-4.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              143.4,
+              225.5,
+              469.8,
+              355.5
+            ],
+            "section": "Page 1",
+            "char_length": 877
+          },
+          "score": 0.176804,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "Table 2. Performance of GPT-4 on academic benchmarks. We compare GPT-4 alongside the best SOTA (with benchmark-specific training) and the best SOTA for an LM evaluated few-shot. GPT-4 outperforms existing LMs on all benchmarks, and beats SOTA with benchmark-specific training on all datasets except DROP. For each task we report GPT-4’s performance along with the few-shot method used to evaluate. For GSM-8K, we included part of the training set in the GPT-4 pre-training mix (see Appendix E), and we use chain-of-thought prompting [11] when evaluating. For multiple-choice questions, we present all answers (ABCD) to the model and ask it to choose the letter of the answer, similarly to how a human would solve such a problem.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              373.9,
+              490.2,
+              450.0
+            ],
+            "section": "Page 7",
+            "char_length": 728
+          },
+          "score": 0.174834,
+          "strategy": "tfidf"
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p003_text_02 | page=3 | modality=text | ref=Page 3 | bbox=[122.9, 647.4, 489.1, 685.2]]\nFigure 2. Performance of GPT-4 and smaller models. The metric is mean log pass rate on a subset of the HumanEval dataset. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s performance. The x-axis is training compute normalized so that GPT-4 is 1.\n\n[gpt4-2023-techreport_p003_text_01 | page=3 | modality=text | ref=Page 3 | bbox=[122.9, 112.1, 489.1, 643.7]]\nOpenAI codebase next word prediction\nFigure 1. Performance of GPT-4 and smaller models. The metric is final loss on a dataset derived from our internal codebase. This is a convenient, large dataset of code tokens which is not contained in the training set. We chose to look at loss because it tends to be less noisy than other measures across different amounts of training compute. A power law fit to the smaller models (excluding GPT-4) is shown as the dotted line; this fit accurately predicts GPT-4’s final loss. The x-axis is training compute normalized so that GPT-4 is 1.\nCapability prediction on 23 coding problems\n1µ 10µ 100µ 0.001 0.01 0.1 1 Compute",
+      "context_ids": [
+        "gpt4-2023-techreport_p003_text_02",
+        "gpt4-2023-techreport_p003_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "According to the Abstract (Page 1) and Section 2 (Page 2), how much compute was used for the smaller models that predicted GPT-4's performance, and why does Section 2 omit architectural details such as model size and training compute?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_13",
+    "split": "dev",
+    "primary_group": "text",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p001_text_01",
+      "gpt4-2023-techreport_p002_text_02"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p003_text_02",
+      "gpt4-2023-techreport_p003_text_01",
+      "gpt4-2023-techreport_p002_text_04",
+      "gpt4-2023-techreport_p002_text_02",
+      "gpt4-2023-techreport_p047_text_03",
+      "gpt4-2023-techreport_p002_text_05",
+      "gpt4-2023-techreport_p001_text_01",
+      "gpt4-2023-techreport_p007_text_03"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p003_text_02",
+      "gpt4-2023-techreport_p003_text_01"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": false,
+    "missing_tokens": [
+      "1,000",
+      "competitive",
+      "safety"
+    ],
+    "complete_answer_tokens": false,
+    "valid_citation": false,
+    "passed": false,
+    "audit_reason": "Missing gold in packed context: ['gpt4-2023-techreport_p001_text_01', 'gpt4-2023-techreport_p002_text_02']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+  },
+  "absence_reason": "",
+  "prompt_tokens": 655,
+  "completion_tokens": 45,
+  "total_tokens": 700,
+  "estimated_cost_usd": 0.000125
+}

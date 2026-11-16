@@ -1,0 +1,257 @@
+{
+  "id": "adv_dev_18",
+  "split": "dev",
+  "primary_group": "unanswerable",
+  "question": "What was the exact hourly wage in US dollars paid to the 50+ domain red-teaming experts in Section 6 and the total dollar budget spent on RLHF human annotations?",
+  "answerable": false,
+  "expected_answer": "",
+  "gold": [],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 1484.8,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p011_text_03",
+    "gpt4-2023-techreport_p045_text_01",
+    "gpt4-2023-techreport_p045_text_02",
+    "gpt4-2023-techreport_p056_text_02",
+    "gpt4-2023-techreport_p029_text_03",
+    "gpt4-2023-techreport_p050_text_05",
+    "gpt4-2023-techreport_p012_text_03",
+    "gpt4-2023-techreport_p046_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p011_text_03",
+    "gpt4-2023-techreport_p045_text_02",
+    "gpt4-2023-techreport_p011_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "What was the exact hourly wage in US dollars paid to the 50+ domain red-teaming experts in Section 6 and the total dollar budget spent on RLHF human annotations?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p011_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "We invested significant effort towards improving the safety and alignment of GPT-4. Here we highlight our use of domain experts for adversarial testing and red-teaming, and our model-assisted safety pipeline [69] and the improvement in safety metrics over prior models.\nAdversarial Testing via Domain Experts: GPT-4 poses similar risks as smaller language models, such as generating harmful advice, buggy code, or inaccurate information. However, the additional capabilities of GPT-4 lead to new risk surfaces. To understand the extent of these risks, we engaged",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              652.3,
+              505.2,
+              722.4
+            ],
+            "section": "Page 11",
+            "char_length": 562
+          },
+          "score": 0.071573
+        },
+        {
+          "id": "gpt4-2023-techreport_p045_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 45,
+          "text": "testing, and red teaming.7 We refer to these adversarial testing processes informally as “red teaming” in line with the deﬁnition given in [27], namely“a structured eﬀort to ﬁnd ﬂaws and vulnerabilities in a plan, organization, or technical system, often performed by dedicated ’red teams’ that seek to adopt an attacker’s mindset and methods.” We conducted internal adversarial testing GPT-4-launch on March 10, 2023. We also tested multiple similar versions of GPT-4 in the lead-up to this date, so analysis here is informed by that exploration as well. Red teaming has been applied to language models in various ways: to reduce harmful outputs;[28] and to leverage external expertise for domain-speciﬁc adversarial testing.[16] Some have explored red teaming language models using language models.[29] Red teaming in general, and the type of red teaming we call ’expert red teaming,’8 is just one of the mechanisms[27] we use to inform our work identifying, measuring, and testing AI systems. Our approach is to red team iteratively, starting with an initial hypothesis of which areas may be the highest risk, testing these areas, and adjusting as we go. It is also iterative in the sense that we use multiple rounds of red teaming as we incorporate new layers of mitigation and control, conduct testing and reﬁning, and repeat this process. We reached out to researchers and industry professionals - primarily with expertise in fairness, alignment research, industry trust and safety, dis/misinformation, chemistry, biorisk, cybersecurity, nuclear risks, economics, human-computer interaction, law, education, and healthcare - to help us gain a more robust understanding of the GPT-4 model and potential deployment risks. We selected these areas based on a number of factors including but not limited to: prior observed risks in language models and AI systems;[6, 30] and domains where we have observed increased user interest in the application of language models. Participants in this red team process were chosen based on prior research or experience in these risk areas, and therefore reﬂect a bias towards groups with speciﬁc educational and professional backgrounds (e.g., people with signiﬁcant higher education or industry experience). Participants also typically have ties to English-speaking, Western countries (such as the US, Canada, and the UK). Our selection of red teamers introduces some biases, and likely inﬂuenced both how red teamers interpreted particular risks as well as how they probed politics, values, and the default behavior of the model. It is also likely that our approach to sourcing researchers privileges the kinds of risks that are top of mind in academic communities and at AI ﬁrms. These experts had access to early versions of GPT-4 (including GPT-4-early) and to the model with in-development mitigations (precursors to GPT-4-launch). They identiﬁed initial risks that motivated safety research and further iterative testing in key areas. We reduced risk in many of the identiﬁed areas with a combination of technical mitigations, and policy and enforcement levers; however, many risks still remain. We expect to continue to learn more about these and other categories of risk over time. While this early qualitative red teaming exercise is very useful for gaining insights into complex, novel models like GPT-4, it is not a comprehensive evaluation of all possible risks. We note further context, examples, and ﬁndings for some of the domains evaluated in the remainder in the subcategories listed in this section.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              69.5,
+              65.4,
+              543.4,
+              613.5
+            ],
+            "section": "Page 45",
+            "char_length": 3557
+          },
+          "score": 0.071321
+        },
+        {
+          "id": "gpt4-2023-techreport_p045_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 45,
+          "text": "7Note that, in addition to red teaming focused on probing our organization’s capabilities and resilience to attacks, we also make ample use of stress testing and boundary testing methods which focus on surfacing edge cases and other potential failure modes with potential to cause harm. In order to reduce confusion associated with the term ’red team’, help those reading about our methods to better contextualize and understand them, and especially to avoid false assurances, we are working to adopt clearer terminology, as advised in [26], however, for simplicity and in order to use language consistent with that we used with our collaborators, we use the term “red team” in this document. 8We use the term ’expert’ to refer to expertise informed by a range of domain knowledge and lived experiences.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              619.6,
+              542.6,
+              698.5
+            ],
+            "section": "Page 45",
+            "char_length": 803
+          },
+          "score": 0.063792
+        },
+        {
+          "id": "gpt4-2023-techreport_p056_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 56,
+          "text": "Understanding how GPT-4 interacts with other systems is critical for evaluating what risks might be posed by these models in various real-world contexts. In addition to the tests conducted by ARC in the Potential for Risky Emergent Behaviors section, red teamers evaluated the use of GPT-4 augmented with other tools[76, 77, 78, 79] to achieve tasks that could be adversarial in nature. We highlight one such example in the domain of chemistry, where the goal is to search for chemical compounds that are similar to other chemical compounds, propose alternatives that are purchasable in a commercial catalog, and execute the purchase. The red teamer augmented GPT-4 with a set of tools:",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              209.5,
+              543.0,
+              319.9
+            ],
+            "section": "Page 56",
+            "char_length": 686
+          },
+          "score": 0.063198
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "We measure cross-contamination between academic benchmarks and the pre-training data similarly to the methodology presented in Appendix C. Results are presented in Table 11.\nTo improve GPT-4’s ability to do mathematical reasoning, we mixed in data from the training set of MATH and GSM-8K, two commonly studied benchmarks for mathematical reasoning in language models. The total number of tokens drawn from these math benchmarks was a tiny fraction of the overall GPT-4 training budget. When mixing in data from these math benchmarks, a portion of the training data was held back, so each individual training example may or may not have been seen by GPT-4 during training.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              273.3,
+              504.4,
+              400.2
+            ],
+            "section": "Page 29",
+            "char_length": 672
+          },
+          "score": 0.062355
+        },
+        {
+          "id": "gpt4-2023-techreport_p050_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 50,
+          "text": "Based on our general capability evaluations, we expect GPT-4 to be better than GPT-3 at producing realistic, targeted content. As such, there is risk of GPT-4 being used for generating content that is intended to mislead.[50] Empirical evidence suggests that earlier language models could also be useful for generating content that is misleading, but persuasive.[51] For example, researchers found that GPT-3 was capable of tasks relevant to changing the narrative on a topic.[52] Persuasive appeals written by language models such as GPT-3 on politically charged issues were also found to be nearly as eﬀective as human-written appeals.[53, 54] Based on GPT-4’s performance at related language tasks, we expect it to be better than GPT-3 at these sorts of tasks, which increases the risk that bad actors could use GPT-4 to create misleading content and that society’s future epistemic views could be partially shaped by persuasive LLMs. Our red teaming results suggest that GPT-4 can rival human propagandists in many domains, especially if teamed with a human editor. Still, in areas where reliability is important, hallucinations can reduce GPT-4’s eﬀectiveness for propagandists. Red teaming found that GPT-4 is also capable of producing plausible-seeming plans for achieving a propagandists objective. For example, when asked",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.8,
+              466.6,
+              542.9,
+              671.9
+            ],
+            "section": "Page 50",
+            "char_length": 1330
+          },
+          "score": 0.059155
+        },
+        {
+          "id": "gpt4-2023-techreport_p012_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 12,
+          "text": "over 50 experts from domains such as long-term AI alignment risks, cybersecurity, biorisk, and international security to adversarially test the model. Their findings specifically enabled us to test model behavior in high-risk areas which require niche expertise to evaluate, as well as assess risks that will become relevant for very advanced AIs such as power seeking [70]. Recommendations and training data gathered from these experts fed into our mitigations and improvements for the model; for example, we’ve collected additional data to improve GPT-4’s ability to refuse requests on how to synthesize dangerous chemicals (Table 5).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              494.1,
+              504.8,
+              569.6
+            ],
+            "section": "Page 12",
+            "char_length": 636
+          },
+          "score": 0.057449
+        },
+        {
+          "id": "gpt4-2023-techreport_p046_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 46,
+          "text": "GPT-4 has the tendency to “hallucinate,”9 i.e. “produce content that is nonsensical or untruthful in relation to certain sources.”[31, 32] This tendency can be particularly harmful as models become increasingly convincing and believable, leading to overreliance on them by users. [See further discussion in Overreliance]. Counterintuitively, hallucinations can become more dangerous as models become more truthful, as users build trust in the model when it provides truthful information in areas where they have some familiarity. Additionally, as these models are integrated into society and used to help automate various systems, this tendency to hallucinate is one of the factors that can lead to the degradation of overall information quality and further reduce veracity of and trust in freely available information.[33] We have measured GPT-4’s hallucination potential in both closed domain and open domain contexts10 using a range of methods. We measured close domain hallucinations using automatic evaluations (using GPT-4 as a zero-shot classiﬁer) and human evaluations. For open domain hallucinations, we collected real-world data that had been ﬂagged as not being factual, reviewed it, and created a ’factual’ set for it where it was possible to do so.11 We used this to assess model generations in relation to the ’factual’ set, and facilitate human evaluations. GPT-4 was trained to reduce the model’s tendency to hallucinate by leveraging data from prior models such as ChatGPT. On internal evaluations, GPT-4-launch scores 19 percentage points higher than our latest GPT-3.5 model at avoiding open-domain hallucinations, and 29 percentage points higher at avoiding closed-domain hallucinations.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.8,
+              285.0,
+              541.8,
+              548.4
+            ],
+            "section": "Page 46",
+            "char_length": 1707
+          },
+          "score": 0.055556
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p011_text_03 | page=11 | modality=text | ref=Page 11 | bbox=[107.5, 652.3, 505.2, 722.4]]\nWe invested significant effort towards improving the safety and alignment of GPT-4. Here we highlight our use of domain experts for adversarial testing and red-teaming, and our model-assisted safety pipeline [69] and the improvement in safety metrics over prior models.\nAdversarial Testing via Domain Experts: GPT-4 poses similar risks as smaller language models, such as generating harmful advice, buggy code, or inaccurate information. However, the additional capabilities of GPT-4 lead to new risk surfaces. To understand the extent of these risks, we engaged\n\n[gpt4-2023-techreport_p045_text_02 | page=45 | modality=text | ref=Page 45 | bbox=[70.4, 619.6, 542.6, 698.5]]\n7Note that, in addition to red teaming focused on probing our organization’s capabilities and resilience to attacks, we also make ample use of stress testing and boundary testing methods which focus on surfacing edge cases and other potential failure modes with potential to cause harm. In order to reduce confusion associated with the term ’red team’, help those reading about our methods to better contextualize and understand them, and especially to avoid false assurances, we are working to adopt clearer terminology, as advised in [26], however, for simplicity and in order to use language consistent with that we used with our collaborators, we use the term “red team” in this document. 8We use the term ’expert’ to refer to expertise informed by a range of domain knowledge and lived experiences.\n\n[gpt4-2023-techreport_p011_text_02 | page=11 | modality=text | ref=Page 11 | bbox=[108.0, 474.4, 505.7, 607.5]]\nFigure 7. Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF fine-tuning. GPT-4 significantly outperforms both GPT-3.5 and Anthropic-LM from Bai et al. [67].\nconfidence in an answer generally matches the probability of being correct). However, after the post-training process, the calibration is reduced (Figure 8).\nGPT-4 has various biases in its outputs that we have taken efforts to correct but which will take some time to fully characterize and manage. We aim to make GPT-4 and other systems we build have reasonable default behaviors that reflect a wide swath of users’ values, allow those systems to be customized within some broad bounds, and get public input on what those bounds should be. See OpenAI [68] for more details.",
+      "context_ids": [
+        "gpt4-2023-techreport_p011_text_03",
+        "gpt4-2023-techreport_p045_text_02",
+        "gpt4-2023-techreport_p011_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "What was the exact hourly wage in US dollars paid to the 50+ domain red-teaming experts in Section 6 and the total dollar budget spent on RLHF human annotations?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "The exact hourly wage paid to domain red-teaming experts and the total dollar budget for RLHF human annotations are not present in the retrieved context."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_18",
+    "split": "dev",
+    "primary_group": "unanswerable",
+    "answerable": false,
+    "gold_ids": [],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p011_text_03",
+      "gpt4-2023-techreport_p045_text_01",
+      "gpt4-2023-techreport_p045_text_02",
+      "gpt4-2023-techreport_p056_text_02",
+      "gpt4-2023-techreport_p029_text_03",
+      "gpt4-2023-techreport_p050_text_05",
+      "gpt4-2023-techreport_p012_text_03",
+      "gpt4-2023-techreport_p046_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p011_text_03",
+      "gpt4-2023-techreport_p045_text_02",
+      "gpt4-2023-techreport_p011_text_02"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+  },
+  "absence_reason": "Section 6 and the System Card mention engaging over 50 domain experts for red teaming, but never report hourly wages or total annotation dollar budgets.",
+  "prompt_tokens": 1011,
+  "completion_tokens": 45,
+  "total_tokens": 1056,
+  "estimated_cost_usd": 0.000179
+}

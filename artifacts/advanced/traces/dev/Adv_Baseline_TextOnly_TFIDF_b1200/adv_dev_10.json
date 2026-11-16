@@ -1,0 +1,302 @@
+{
+  "id": "adv_dev_10",
+  "split": "dev",
+  "primary_group": "multi_hop",
+  "question": "Combining Figure 5 (Page 8) and Table 13 (Page 33), what 3-shot MMLU accuracy does GPT-4 achieve in Latvian and Welsh, and what are the approximate speaker populations listed for those two languages in Table 13?",
+  "answerable": true,
+  "expected_answer": "From Figure 5 (Page 8), GPT-4 achieves 80.9% 3-shot MMLU accuracy in Latvian and 77.5% in Welsh (both outperforming GPT-3.5 English at 70.1%). From Table 13 (Page 33), Latvian has approximately 2M speakers and Welsh has approximately 600k speakers.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p008_chart_01",
+      "page": 8,
+      "modality": "chart",
+      "figure_or_table_id": "Figure 5",
+      "bbox": [
+        45,
+        55,
+        565,
+        450
+      ],
+      "evidence": "Latvian = 80.9% ... Welsh = 77.5%",
+      "unit_and_condition": "3-shot MMLU accuracy (%) on Page 8."
+    },
+    {
+      "chunk_id": "gpt4-2023-techreport_p033_table_01",
+      "page": 33,
+      "modality": "table",
+      "figure_or_table_id": "Table 13",
+      "bbox": [
+        55,
+        55,
+        555,
+        480
+      ],
+      "evidence": "Latvian: 2M speakers ... Welsh: 600k speakers",
+      "unit_and_condition": "Speaker population counts in Table 13 on Page 33."
+    }
+  ],
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 23234.68,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p008_text_01",
+    "gpt4-2023-techreport_p007_text_04",
+    "gpt4-2023-techreport_p065_text_01",
+    "gpt4-2023-techreport_p029_text_05",
+    "gpt4-2023-techreport_p011_text_02",
+    "gpt4-2023-techreport_p007_text_01",
+    "gpt4-2023-techreport_p011_text_01",
+    "gpt4-2023-techreport_p007_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p008_text_01",
+    "gpt4-2023-techreport_p065_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "Combining Figure 5 (Page 8) and Table 13 (Page 33), what 3-shot MMLU accuracy does GPT-4 achieve in Latvian and Welsh, and what are the approximate speaker populations listed for those two languages in Table 13?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p008_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 8,
+          "text": "GPT-4 3-shot accuracy on MMLU across languages\n0% 10% 20% 30% 40% 50% 60% 70% 80% 90%\nFigure 5. Performance of GPT-4 in a variety of languages compared to prior models in English on MMLU. GPT-4 outperforms the English-language performance of existing language models [2, 3] for the vast majority of languages tested, including low-resource languages such as Latvian, Welsh, and Swahili.\nto increase the diversity of these benchmarks over time to represent a wider set of failure modes and a harder set of tasks.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              70.7,
+              504.0,
+              570.0
+            ],
+            "section": "Page 8",
+            "char_length": 511
+          },
+          "score": 0.2807,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "Many existing ML benchmarks are written in English. To gain an initial understanding of GPT-4’s capabilities in other languages, we translated the MMLU benchmark [35, 36] – a suite of multiple- choice problems spanning 57 subjects – into a variety of languages using Azure Translate (see Appendix F for example translations and prompts). We find that GPT-4 outperforms the English- language performance of GPT 3.5 and existing language models (Chinchilla [2] and PaLM [3]) for the majority of languages we tested, including low-resource languages such as Latvian, Welsh, and Swahili (Figure 5).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              475.1,
+              505.7,
+              550.5
+            ],
+            "section": "Page 7",
+            "char_length": 594
+          },
+          "score": 0.24629,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p065_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 65,
+          "text": "Accuracy Accuracy on adversarial questions (TruthfulQA mc1)\ngpt-3.5-base gpt-3.5-base gpt-3.5-turbo gpt-4-base gpt-4-base gpt-4 0%\nFigure 8: Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF ﬁne-tuning. GPT-4 signiﬁcantly outperforms both GPT-3.5 and Askell et al [101].ﬁxes to plot legend and title",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.2,
+              255.7,
+              543.6,
+              538.5
+            ],
+            "section": "Page 65",
+            "char_length": 415
+          },
+          "score": 0.209032,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "We translated all questions and answers from MMLU [49] using Azure Translate. We used an external model to perform the translation, instead of relying on GPT-4 itself, in case the model had unrepresentative performance for its own translations. We selected a range of languages that cover different geographic regions and scripts, we show an example question taken from the astronomy category translated into Marathi, Latvian and Welsh in Table 13. The translations are not perfect, in some cases losing subtle information which may hurt performance. Furthermore some translations preserve proper nouns in English, as per translation conventions, which may aid performance.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              490.8,
+              504.2,
+              566.3
+            ],
+            "section": "Page 29",
+            "char_length": 673
+          },
+          "score": 0.191145,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p011_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "Figure 7. Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF fine-tuning. GPT-4 significantly outperforms both GPT-3.5 and Anthropic-LM from Bai et al. [67].\nconfidence in an answer generally matches the probability of being correct). However, after the post-training process, the calibration is reduced (Figure 8).\nGPT-4 has various biases in its outputs that we have taken efforts to correct but which will take some time to fully characterize and manage. We aim to make GPT-4 and other systems we build have reasonable default behaviors that reflect a wide swath of users’ values, allow those systems to be customized within some broad bounds, and get public input on what those bounds should be. See OpenAI [68] for more details.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              474.4,
+              505.7,
+              607.5
+            ],
+            "section": "Page 11",
+            "char_length": 848
+          },
+          "score": 0.190566,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "Evaluated few-shot Evaluated few-shot Best external LM evaluated few-shot Best external model (incl. benchmark-specific tuning)\nMultiple-choice questions in 57 subjects (professional & academic)\n5-shot 5-shot 5-shot U-PaLM [50] 5-shot Flan-PaLM [51]\nHellaSwag [52] 95.3% 85.5% 84.2% 85.6\nCommonsense reasoning around everyday events\n10-shot 10-shot LLaMA (validation set) [28] ALUM [53]\nGrade-school multiple choice science questions. Challenge-set.\n25-shot 25-shot 8-shot PaLM [55] ST-MOE [18]\nWinoGrande [56] 87.5% 81.6% 85.1% 85.1%\nCommonsense reasoning around pronoun resolution\n5-shot 5-shot 5-shot PaLM [3] 5-shot PaLM [3]\nHumanEval [43] 67.0% 48.1% 26.2% 65.8%\nPython coding tasks 0-shot 0-shot 0-shot PaLM [3] CodeT + GPT-3.5 [57]\nDROP [58] (F1 score) 80.9 64.1 70.8 88.4\nReading comprehension & arithmetic.\n3-shot 3-shot 1-shot PaLM [3] QDGAT [59]",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.5,
+              89.0,
+              498.1,
+              324.8
+            ],
+            "section": "Page 7",
+            "char_length": 856
+          },
+          "score": 0.176823,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p011_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "[GPT-4 answers correctly] [GPT-4 answers incorrectly]\nCan you teach an old dog new tricks?\nSon of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?\nYes, you can teach an old dog new tricks ←choice You can’t teach an old dog new tricks\nNo, you can’t teach an old dog new tricks\nPerkins Presley ←choice Elvis Presley His name is Elvis Presley\nTable 4: Example of GPT-4 giving correct and incorrect responses on TruthfulQA\nAccuracy Accuracy on adversarial questions (TruthfulQA mc1)\nAnthropic-LM Anthropic-LM gpt-3.5-base gpt-3.5-base gpt-3.5-turbo gpt-4-base gpt-4-base gpt-4 0-shot RLHF 0-shot 5-shot RLHF 0-shot 5-shot RLHF",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              113.4,
+              75.7,
+              511.5,
+              442.2
+            ],
+            "section": "Page 11",
+            "char_length": 706
+          },
+          "score": 0.143367,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "GSM-8K [60] 92.0%∗ 57.1% 58.8% 87.3%\n5-shot chain-of-thought 5-shot 8-shot Minerva [61] Chinchilla + SFT+ORM-RL, ORM reranking [62]",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              135.5,
+              330.5,
+              500.4,
+              360.3
+            ],
+            "section": "Page 7",
+            "char_length": 131
+          },
+          "score": 0.135843,
+          "strategy": "tfidf"
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p008_text_01 | page=8 | modality=text | ref=Page 8 | bbox=[108.0, 70.7, 504.0, 570.0]]\nGPT-4 3-shot accuracy on MMLU across languages\n0% 10% 20% 30% 40% 50% 60% 70% 80% 90%\nFigure 5. Performance of GPT-4 in a variety of languages compared to prior models in English on MMLU. GPT-4 outperforms the English-language performance of existing language models [2, 3] for the vast majority of languages tested, including low-resource languages such as Latvian, Welsh, and Swahili.\nto increase the diversity of these benchmarks over time to represent a wider set of failure modes and a harder set of tasks.\n\n[gpt4-2023-techreport_p065_text_01 | page=65 | modality=text | ref=Page 65 | bbox=[70.2, 255.7, 543.6, 538.5]]\nAccuracy Accuracy on adversarial questions (TruthfulQA mc1)\ngpt-3.5-base gpt-3.5-base gpt-3.5-turbo gpt-4-base gpt-4-base gpt-4 0%\nFigure 8: Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF ﬁne-tuning. GPT-4 signiﬁcantly outperforms both GPT-3.5 and Askell et al [101].ﬁxes to plot legend and title",
+      "context_ids": [
+        "gpt4-2023-techreport_p008_text_01",
+        "gpt4-2023-techreport_p065_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "Combining Figure 5 (Page 8) and Table 13 (Page 33), what 3-shot MMLU accuracy does GPT-4 achieve in Latvian and Welsh, and what are the approximate speaker populations listed for those two languages in Table 13?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information (speaker populations from Table 13) is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_10",
+    "split": "dev",
+    "primary_group": "multi_hop",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p008_chart_01",
+      "gpt4-2023-techreport_p033_table_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p008_text_01",
+      "gpt4-2023-techreport_p007_text_04",
+      "gpt4-2023-techreport_p065_text_01",
+      "gpt4-2023-techreport_p029_text_05",
+      "gpt4-2023-techreport_p011_text_02",
+      "gpt4-2023-techreport_p007_text_01",
+      "gpt4-2023-techreport_p011_text_01",
+      "gpt4-2023-techreport_p007_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p008_text_01",
+      "gpt4-2023-techreport_p065_text_01"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": false,
+    "context_hit": false,
+    "missing_tokens": [
+      "80.9",
+      "77.5",
+      "2m",
+      "600k",
+      "latvian",
+      "welsh"
+    ],
+    "complete_answer_tokens": false,
+    "valid_citation": false,
+    "passed": false,
+    "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p008_chart_01', 'gpt4-2023-techreport_p033_table_01']; Missing gold in packed context: ['gpt4-2023-techreport_p008_chart_01', 'gpt4-2023-techreport_p033_table_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+  },
+  "absence_reason": "",
+  "prompt_tokens": 642,
+  "completion_tokens": 45,
+  "total_tokens": 687,
+  "estimated_cost_usd": 0.000123
+}

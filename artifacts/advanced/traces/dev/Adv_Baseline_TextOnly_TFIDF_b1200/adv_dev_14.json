@@ -1,0 +1,283 @@
+{
+  "id": "adv_dev_14",
+  "split": "dev",
+  "primary_group": "text",
+  "question": "In Appendix A.4 (Page 25) on handling images in exam benchmarks, how did the authors evaluate text-only models like GPT-3.5 on multiple-choice questions that contained images, and how did they handle images in free-response questions and the USABO 2020 Semifinal?",
+  "answerable": true,
+  "expected_answer": "According to Appendix A.4 (Page 25), for text-only models on multiple-choice questions with missing images, they inserted a text tag stating 'IMAGE:' with a non-meaningful filename to lower-bound performance. For all free-response questions plus the USABO 2020 Semifinal, they transcribed all images and diagrams into text as objectively as possible so the same prompt could be used for both vision and no-vision conditions.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p025_text_01",
+      "page": 25,
+      "modality": "text",
+      "figure_or_table_id": "Page 25 Appendix A.4",
+      "bbox": [
+        72.0,
+        71.3,
+        540.0,
+        232.5
+      ],
+      "evidence": "included a text tag stating IMAGE: with a non-meaningful filename ... For all free-response questions, plus the USABO 2020 Semifinal, we instead transcribed any images and diagrams as objectively as possible.",
+      "unit_and_condition": "Appendix A.4 image protocol on Page 25."
+    }
+  ],
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 1658.03,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p025_text_01",
+    "gpt4-2023-techreport_p008_text_02",
+    "gpt4-2023-techreport_p004_text_05",
+    "gpt4-2023-techreport_p025_text_05",
+    "gpt4-2023-techreport_p024_text_02",
+    "gpt4-2023-techreport_p030_text_05",
+    "gpt4-2023-techreport_p007_text_03",
+    "gpt4-2023-techreport_p031_text_05"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p008_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Appendix A.4 (Page 25) on handling images in exam benchmarks, how did the authors evaluate text-only models like GPT-3.5 on multiple-choice questions that contained images, and how did they handle images in free-response questions and the USABO 2020 Semifinal?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p025_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 25,
+          "text": "Oftentimes, an exam question may include an image. Models like GPT-3.5, which consume text (but not images) as input might not have access to all the information needed to correctly solve a problem. When evaluating text models on multiple-choice questions, we included a text tag stating IMAGE: with a non-meaningful filename wherever an image would be missing. This allows us to lower-bound the text-based models’ performance on multiple-choice exams.12 When evaluating multimodal models on multiple-choice questions, we embedded the images into the prompt. The SAT Reading and Writing, MKSAP, Sommelier, AP Psychology, AP English Language, and AP English Literature exams’ multiple-choice sections did not contain any images. For all free-response questions, plus the USABO 2020 Semifinal, we instead transcribed any images and diagrams as objectively as possible. This reduced the manual grading load required to evaluate free-response answers, because after this transcription process the free-response prompts include no images, so the scores for GPT-4 could be run once and used for both the vision and no-vision conditions.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              96.5,
+              504.0,
+              226.6
+            ],
+            "section": "Page 25",
+            "char_length": 1130
+          },
+          "score": 0.464347,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p008_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 8,
+          "text": "GPT-4 accepts prompts consisting of both images and text, which – parallel to the text-only setting – lets the user specify any vision or language task. Specifically, the model generates text outputs given inputs consisting of arbitrarily interlaced text and images. Over a range of domains – including documents with text and photographs, diagrams, or screenshots – GPT-4 exhibits similar capabilities as it does on text-only inputs. An example of GPT-4’s visual input can be found in Table 3. The standard test-time techniques developed for language models (e.g. few-shot prompting, chain-of- thought, etc) are similarly effective when using both images and text - see Appendix G for examples.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              106.5,
+              619.7,
+              505.7,
+              695.1
+            ],
+            "section": "Page 8",
+            "char_length": 695
+          },
+          "score": 0.286737,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p004_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 4,
+          "text": "Exams were sourced from publicly-available materials. Exam questions included both multiple- choice and free-response questions; we designed separate prompts for each format, and images were included in the input for questions which required it. The evaluation setup was designed based on performance on a validation set of exams, and we report final results on held-out test exams. Overall scores were determined by combining multiple-choice and free-response question scores using publicly available methodologies for each exam. We estimate and report the percentile each overall score corresponds to. See Appendix A for further details on the exam evaluation methodology.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              604.3,
+              505.7,
+              679.8
+            ],
+            "section": "Page 4",
+            "char_length": 674
+          },
+          "score": 0.247785,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p025_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 25,
+          "text": "We ran GPT-4 multiple-choice questions using a model snapshot from March 1, 2023, whereas the free-response questions were run and scored using a non-final model snapshot from February 23, 2023. GPT-3.5’s multiple-choice questions and free-response questions were all run using a standard ChatGPT snapshot. We ran the USABO semifinal exam using an earlier GPT-4 snapshot from December 16, 2022.\nOur evaluations suggest RLHF does not significantly affect the base GPT-4 model’s capability - see Appendix B for more discussion.\n12For example, on the AP Statistics exam, a common failure response was “Since there is no graph provided, we cannot determine the correct answer for this problem.\"",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              602.5,
+              505.1,
+              722.2
+            ],
+            "section": "Page 25",
+            "char_length": 690
+          },
+          "score": 0.221258,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p024_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 24,
+          "text": "We sourced each multiple-choice section as a pair of exams: one holdout and one nonholdout. We iterated on our methodology using the nonholdout exam, and then ran each holdout exam once for a final score. We did not source a nonholdout exam for the USABO and for the MKSAP questions and instead ran these once using our best-guess methodology as determined by iterating on the AP Biology exam.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              302.9,
+              504.0,
+              356.6
+            ],
+            "section": "Page 24",
+            "char_length": 393
+          },
+          "score": 0.163007,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p030_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 30,
+          "text": "Table 9. Contamination data for Exams (Summary). For each of the exams tested, we show the fraction of questions in the exam which are contaminated (i.e. present in the training dataset). We show the final scores and corresponding percentile of human test takers for GPT-4 (with and without vision) on the full test, and if we extrapolate performance from only the uncontaminated subset of the questions on the test. For the AP exams, a range is reported because many student receive the same final score (e.g. on AP Art History, 14% of students receive a 5/5, so the percentile range for that score is 86%-100%). Note that some exams (e.g. codeforces, Unified Bar Exam) contain no images nor contamination, so the score in all cases is identical. Overall across most exams, both contamination and vision have relatively little effect.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              565.2,
+              490.6,
+              650.7
+            ],
+            "section": "Page 30",
+            "char_length": 835
+          },
+          "score": 0.162049,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "Table 2. Performance of GPT-4 on academic benchmarks. We compare GPT-4 alongside the best SOTA (with benchmark-specific training) and the best SOTA for an LM evaluated few-shot. GPT-4 outperforms existing LMs on all benchmarks, and beats SOTA with benchmark-specific training on all datasets except DROP. For each task we report GPT-4’s performance along with the few-shot method used to evaluate. For GSM-8K, we included part of the training set in the GPT-4 pre-training mix (see Appendix E), and we use chain-of-thought prompting [11] when evaluating. For multiple-choice questions, we present all answers (ABCD) to the model and ask it to choose the letter of the answer, similarly to how a human would solve such a problem.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              373.9,
+              490.2,
+              450.0
+            ],
+            "section": "Page 7",
+            "char_length": 728
+          },
+          "score": 0.15895,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p031_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 31,
+          "text": "Table 10. Contamination data for Exams (Details). Detailed contamination information on each of the exams tested are shown in this table, listed from most-to-least contaminated. Exams with both multiple choice questions (MCQ) and free-response questions (FRQ) are split into separate rows. For each set, we list the number of questions and fraction which are contaminated (appear in the training set). We then report GPT-4’s performance (as percentage of max score) on the overall set, on the non- contaminated questions, and on only the contaminated set. The degradation (non-contaminated percent minus contaminated) is generally small and as often positive as negative, from which we conclude that contamination is not a substantive confounder on the overall results.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              657.2,
+              490.5,
+              733.2
+            ],
+            "section": "Page 31",
+            "char_length": 769
+          },
+          "score": 0.142784,
+          "strategy": "tfidf"
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p008_text_02 | page=8 | modality=text | ref=Page 8 | bbox=[106.5, 619.7, 505.7, 695.1]]\nGPT-4 accepts prompts consisting of both images and text, which – parallel to the text-only setting – lets the user specify any vision or language task. Specifically, the model generates text outputs given inputs consisting of arbitrarily interlaced text and images. Over a range of domains – including documents with text and photographs, diagrams, or screenshots – GPT-4 exhibits similar capabilities as it does on text-only inputs. An example of GPT-4’s visual input can be found in Table 3. The standard test-time techniques developed for language models (e.g. few-shot prompting, chain-of- thought, etc) are similarly effective when using both images and text - see Appendix G for examples.",
+      "context_ids": [
+        "gpt4-2023-techreport_p008_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Appendix A.4 (Page 25) on handling images in exam benchmarks, how did the authors evaluate text-only models like GPT-3.5 on multiple-choice questions that contained images, and how did they handle images in free-response questions and the USABO 2020 Semifinal?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_14",
+    "split": "dev",
+    "primary_group": "text",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p025_text_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p025_text_01",
+      "gpt4-2023-techreport_p008_text_02",
+      "gpt4-2023-techreport_p004_text_05",
+      "gpt4-2023-techreport_p025_text_05",
+      "gpt4-2023-techreport_p024_text_02",
+      "gpt4-2023-techreport_p030_text_05",
+      "gpt4-2023-techreport_p007_text_03",
+      "gpt4-2023-techreport_p031_text_05"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p008_text_02"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": false,
+    "missing_tokens": [
+      "image",
+      "filename",
+      "transcribed",
+      "usabo",
+      "free-response"
+    ],
+    "complete_answer_tokens": false,
+    "valid_citation": false,
+    "passed": false,
+    "audit_reason": "Missing gold in packed context: ['gpt4-2023-techreport_p025_text_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+  },
+  "absence_reason": "",
+  "prompt_tokens": 551,
+  "completion_tokens": 45,
+  "total_tokens": 596,
+  "estimated_cost_usd": 0.00011
+}

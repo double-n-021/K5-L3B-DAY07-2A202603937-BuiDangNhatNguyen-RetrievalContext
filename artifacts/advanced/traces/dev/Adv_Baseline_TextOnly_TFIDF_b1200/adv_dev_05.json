@@ -1,0 +1,285 @@
+{
+  "id": "adv_dev_05",
+  "split": "dev",
+  "primary_group": "image_diagram",
+  "question": "In the visual input example in Table 16 (Page 36, 'Extreme Ironing'), what unusual activity is depicted in the photograph?",
+  "answerable": true,
+  "expected_answer": "In Table 16 (Page 36), the photograph shows a man ironing clothes on an ironing board attached to the roof of a moving yellow taxi.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p036_image_diagram_01",
+      "page": 36,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 16",
+      "bbox": [
+        55,
+        55,
+        555,
+        520
+      ],
+      "evidence": "The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.",
+      "unit_and_condition": "Visual scene identification in Table 16."
+    }
+  ],
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "abstained": false,
+  "answer": "The photograph depicts a man ironing clothes on an ironing board that is attached to the roof of a moving taxi [gpt4-2023-techreport_p036_text_01].",
+  "turns": 1,
+  "latency_ms": 2152.55,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p036_text_01",
+    "gpt4-2023-techreport_p009_text_02",
+    "gpt4-2023-techreport_p035_text_02",
+    "gpt4-2023-techreport_p039_text_02",
+    "gpt4-2023-techreport_p038_text_01",
+    "gpt4-2023-techreport_p037_text_04",
+    "gpt4-2023-techreport_p056_text_02",
+    "gpt4-2023-techreport_p034_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p036_text_01",
+    "gpt4-2023-techreport_p009_text_02",
+    "gpt4-2023-techreport_p035_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In the visual input example in Table 16 (Page 36, 'Extreme Ironing'), what unusual activity is depicted in the photograph?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p036_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 36,
+          "text": "GPT-4 visual input example, Extreme Ironing:\nUser What is unusual about this image?\nSource: https://www.barnorama.com/wp-content/uploads/2016/12/03-Confusing-Pictures.jpg\nGPT-4 The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.\nTable 16. Example prompt demonstrating GPT-4’s visual input capability. The prompt requires image understanding.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              258.2,
+              489.1,
+              537.8
+            ],
+            "section": "Page 36",
+            "char_length": 416
+          },
+          "score": 0.501924,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "Table 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              622.5,
+              489.1,
+              641.2
+            ],
+            "section": "Page 9",
+            "char_length": 171
+          },
+          "score": 0.173762,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p035_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 35,
+          "text": "Table 15. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question which requires understanding a physics problem with a diagram written in French and solving it using chain-of-thought prompting.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              642.2,
+              489.1,
+              670.4
+            ],
+            "section": "Page 35",
+            "char_length": 234
+          },
+          "score": 0.147227,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "The humor comes from the contrast between the complexity and speci- ficity of the statistical learning approach and the simplicity and generality of the neural network approach. The \"But unironically\" comment adds to the humor by implying that, despite being simplistic, the \"stack more layers\" approach is often effective in practice.\nTable 19: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              161.6,
+              596.2,
+              487.6,
+              666.3
+            ],
+            "section": "Page 39",
+            "char_length": 407
+          },
+          "score": 0.13975,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "GPT-4 visual input example, Chicken Nugget Map:\nGPT-4 This meme is a joke that combines two unrelated things: pictures of the earth from space and chicken nuggets. The text of the meme suggests that the image below is a beautiful picture of the earth from space. However, the image is actually of chicken nuggets arranged to vaguely resemble a map of the world. The humor in this meme comes from the unexpected juxtaposition of the text and the image. The text sets up an expectation of a majestic image of the earth, but the image is actually something mundane and silly.\nTable 18: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              168.4,
+              485.9,
+              627.5
+            ],
+            "section": "Page 38",
+            "char_length": 644
+          },
+          "score": 0.135524,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "These three steps are iteratively performed to train the InstructGPT model, which aims to generate outputs that align better with human preferences and follow instructions more effectively.\nTable 17: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              161.6,
+              643.2,
+              521.9,
+              691.4
+            ],
+            "section": "Page 37",
+            "char_length": 261
+          },
+          "score": 0.125012,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p056_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 56,
+          "text": "Understanding how GPT-4 interacts with other systems is critical for evaluating what risks might be posed by these models in various real-world contexts. In addition to the tests conducted by ARC in the Potential for Risky Emergent Behaviors section, red teamers evaluated the use of GPT-4 augmented with other tools[76, 77, 78, 79] to achieve tasks that could be adversarial in nature. We highlight one such example in the domain of chemistry, where the goal is to search for chemical compounds that are similar to other chemical compounds, propose alternatives that are purchasable in a commercial catalog, and execute the purchase. The red teamer augmented GPT-4 with a set of tools:",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              209.5,
+              543.0,
+              319.9
+            ],
+            "section": "Page 56",
+            "char_length": 686
+          },
+          "score": 0.115719,
+          "strategy": "tfidf"
+        },
+        {
+          "id": "gpt4-2023-techreport_p034_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 34,
+          "text": "So, the sum of average daily meat consumption for Georgia and Western Asia is 149.46 grams per person per day.\nTable 14. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question which requires reading information from a chart and performing computation.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              572.7,
+              489.1,
+              619.6
+            ],
+            "section": "Page 34",
+            "char_length": 292
+          },
+          "score": 0.110684,
+          "strategy": "tfidf"
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p036_text_01 | page=36 | modality=text | ref=Page 36 | bbox=[114.0, 258.2, 489.1, 537.8]]\nGPT-4 visual input example, Extreme Ironing:\nUser What is unusual about this image?\nSource: https://www.barnorama.com/wp-content/uploads/2016/12/03-Confusing-Pictures.jpg\nGPT-4 The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.\nTable 16. Example prompt demonstrating GPT-4’s visual input capability. The prompt requires image understanding.\n\n[gpt4-2023-techreport_p009_text_02 | page=9 | modality=text | ref=Page 9 | bbox=[122.6, 622.5, 489.1, 641.2]]\nTable 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.\n\n[gpt4-2023-techreport_p035_text_02 | page=35 | modality=text | ref=Page 35 | bbox=[122.6, 642.2, 489.1, 670.4]]\nTable 15. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question which requires understanding a physics problem with a diagram written in French and solving it using chain-of-thought prompting.",
+      "context_ids": [
+        "gpt4-2023-techreport_p036_text_01",
+        "gpt4-2023-techreport_p009_text_02",
+        "gpt4-2023-techreport_p035_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In the visual input example in Table 16 (Page 36, 'Extreme Ironing'), what unusual activity is depicted in the photograph?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The context provides a direct description of the unusual activity in Table 16."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_05",
+    "split": "dev",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p036_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p036_text_01",
+      "gpt4-2023-techreport_p009_text_02",
+      "gpt4-2023-techreport_p035_text_02",
+      "gpt4-2023-techreport_p039_text_02",
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p037_text_04",
+      "gpt4-2023-techreport_p056_text_02",
+      "gpt4-2023-techreport_p034_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p036_text_01",
+      "gpt4-2023-techreport_p009_text_02",
+      "gpt4-2023-techreport_p035_text_02"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p036_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": false,
+    "context_hit": false,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": false,
+    "passed": false,
+    "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p036_image_diagram_01']; Missing gold in packed context: ['gpt4-2023-techreport_p036_image_diagram_01']; Citation check failed (cited=['gpt4-2023-techreport_p036_text_01'], invalid=[])"
+  },
+  "absence_reason": "",
+  "prompt_tokens": 645,
+  "completion_tokens": 83,
+  "total_tokens": 728,
+  "estimated_cost_usd": 0.000147
+}

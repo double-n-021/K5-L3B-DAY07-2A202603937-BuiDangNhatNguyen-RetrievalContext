@@ -1,0 +1,283 @@
+{
+  "id": "adv_dev_02",
+  "split": "dev",
+  "primary_group": "table",
+  "question": "In Table 2 (academic benchmarks), on which benchmark does GPT-4 fail to beat the best external SOTA with benchmark-specific tuning, and what are the respective F1 scores of GPT-4, GPT-3.5, and SOTA (QDGAT) on that benchmark?",
+  "answerable": true,
+  "expected_answer": "In Table 2, DROP (reading comprehension & arithmetic, evaluated 3-shot) is the only benchmark where GPT-4 does not beat benchmark-specific SOTA: GPT-4 achieves an F1 score of 80.9, GPT-3.5 achieves 64.1, and SOTA (QDGAT) achieves 88.4.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p007_table_01",
+      "page": 7,
+      "modality": "table",
+      "figure_or_table_id": "Table 2",
+      "bbox": [
+        50,
+        55,
+        560,
+        480
+      ],
+      "evidence": "DROP (F1 score, reading comprehension & arithmetic): GPT-4 (3-shot) = 80.9; GPT-3.5 (3-shot) = 64.1; LM SOTA (1-shot PaLM) = 70.8; SOTA (QDGAT) = 88.4.",
+      "unit_and_condition": "F1 score under 3-shot evaluation vs QDGAT SOTA."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "GPT‑4 fails to beat the best external SOTA on the **DROP** benchmark. The reported F1 scores are: GPT‑4 = 80.9, GPT‑3.5 = 64.1, and the SOTA system (QDGAT) = 88.4. [gpt4-2023-techreport_p007_table_01]",
+  "turns": 1,
+  "latency_ms": 4985.72,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p007_table_01",
+    "gpt4-2023-techreport_p007_text_03",
+    "gpt4-2023-techreport_p006_text_03",
+    "gpt4-2023-techreport_p029_text_04",
+    "gpt4-2023-techreport_p032_table_01",
+    "gpt4-2023-techreport_p005_table_01",
+    "gpt4-2023-techreport_p032_text_01",
+    "gpt4-2023-techreport_p001_text_04"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p007_table_01",
+    "gpt4-2023-techreport_p007_text_03",
+    "gpt4-2023-techreport_p006_text_03"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Table 2 (academic benchmarks), on which benchmark does GPT-4 fail to beat the best external SOTA with benchmark-specific tuning, and what are the respective F1 scores of GPT-4, GPT-3.5, and SOTA (QDGAT) on that benchmark?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p007_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "[TABLE: Table 2 | Page 7 | BBox (50, 55, 560, 480)]\nTable 2: Performance of GPT-4 on traditional academic benchmarks (Columns: Benchmark | GPT-4 | GPT-3.5 | LM SOTA few-shot | Best external SOTA incl. benchmark-specific tuning):\n- MMLU (57 subjects): GPT-4 (5-shot) = 86.4%; GPT-3.5 (5-shot) = 70.0%; LM SOTA (5-shot U-PaLM) = 70.7%; SOTA (5-shot Flan-PaLM) = 75.2%.\n- HellaSwag: GPT-4 (10-shot) = 95.3%; GPT-3.5 (10-shot) = 85.5%; LM SOTA (LLaMA val) = 84.2%; SOTA (ALUM) = 85.6%.\n- AI2 Reasoning Challenge (ARC Challenge-set): GPT-4 (25-shot) = 96.3%; GPT-3.5 (25-shot) = 85.2%; LM SOTA (8-shot PaLM) = 85.2%; SOTA (ST-MOE) = 86.5%.\n- WinoGrande: GPT-4 (5-shot) = 87.5%; GPT-3.5 (5-shot) = 81.6%; LM SOTA (5-shot PaLM) = 85.1%; SOTA = 85.1%.\n- HumanEval (Python coding): GPT-4 (0-shot) = 67.0%; GPT-3.5 (0-shot) = 48.1%; LM SOTA (0-shot PaLM) = 26.2%; SOTA (CodeT + GPT-3.5) = 65.8%.\n- DROP (F1 score, reading comprehension & arithmetic): GPT-4 (3-shot) = 80.9; GPT-3.5 (3-shot) = 64.1; LM SOTA (1-shot PaLM) = 70.8; SOTA (QDGAT) = 88.4. (DROP is the only dataset in Table 2 where GPT-4 does not beat benchmark-specific SOTA).\n- GSM-8K (grade-school math): GPT-4 (5-shot chain-of-thought, part of training set in pre-training mix) = 92.0%; GPT-3.5 (5-shot) = 57.1%; LM SOTA (8-shot Minerva) = 58.8%; SOTA (Chinchilla + SFT + ORM-RL) = 87.3%.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 2",
+            "bbox": [
+              50,
+              55,
+              560,
+              480
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p007_table_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1343
+          },
+          "score": 0.167581
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "Table 2. Performance of GPT-4 on academic benchmarks. We compare GPT-4 alongside the best SOTA (with benchmark-specific training) and the best SOTA for an LM evaluated few-shot. GPT-4 outperforms existing LMs on all benchmarks, and beats SOTA with benchmark-specific training on all datasets except DROP. For each task we report GPT-4’s performance along with the few-shot method used to evaluate. For GSM-8K, we included part of the training set in the GPT-4 pre-training mix (see Appendix E), and we use chain-of-thought prompting [11] when evaluating. For multiple-choice questions, we present all answers (ABCD) to the model and ask it to choose the letter of the answer, similarly to how a human would solve such a problem.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              373.9,
+              490.2,
+              450.0
+            ],
+            "section": "Page 7",
+            "char_length": 728
+          },
+          "score": 0.095312
+        },
+        {
+          "id": "gpt4-2023-techreport_p006_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 6,
+          "text": "We also evaluated the pre-trained base GPT-4 model on traditional benchmarks designed for evaluating language models. For each benchmark we report, we ran contamination checks for test data appearing in the training set (see Appendix D for full details on per-benchmark contamination).5 We used few-shot prompting [1] for all benchmarks when evaluating GPT-4.6\nGPT-4 considerably outperforms existing language models, as well as previously state-of-the-art (SOTA) systems which often have benchmark-specific crafting or additional training protocols (Table 2).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              579.0,
+              504.0,
+              659.9
+            ],
+            "section": "Page 6",
+            "char_length": 560
+          },
+          "score": 0.093182
+        },
+        {
+          "id": "gpt4-2023-techreport_p029_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 29,
+          "text": "We conducted contamination checking to verify the test set for GSM-8K is not included in the training set (see Appendix D). We recommend interpreting the performance results reported for GPT-4 GSM-8K in Table 2 as something in-between true few-shot transfer and full benchmark-specific tuning.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              406.7,
+              504.0,
+              449.3
+            ],
+            "section": "Page 29",
+            "char_length": 293
+          },
+          "score": 0.085363
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "[TABLE: Table 11 & Table 12 | Page 32 | BBox (50, 55, 560, 700)]\nTable 11: Contamination between GPT-4 pre-training data and academic benchmarks:\n- MMLU: GPT-4 = 86.4%, GPT-3.5 = 70.0%, Contamination = ~0.6%.\n- GSM-8K: GPT-4 = 92.0%, GPT-3.5 = 57.1%, Contamination = ~1% (note in Appendix E: part of GSM-8K training set was included in pre-training mix, 0% test contamination).\n- HellaSwag: GPT-4 = 95.3%, GPT-3.5 = 85.5% (evaluated on private secret holdout; validation set score = 95.6%).\n- AI2 ARC: GPT-4 = 96.3%, GPT-3.5 = 85.2%, Contamination = ~3.4%.\n- WinoGrande: GPT-4 = 87.5%, GPT-3.5 = 81.6%, Contamination = ~0.9%.\n- HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.\n- DROP (F1): GPT-4 = 80.9, GPT-3.5 = 64.1, Contamination = ~21%, GPT-4 (non-contaminated subsample) = 82.8 (entire subsample = 82.5), Degradation = 0.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 11 & Table 12",
+            "bbox": [
+              50,
+              55,
+              560,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p032_table_01.png",
+            "section": "Appendix D Contamination on academic benchmarks",
+            "char_length": 899
+          },
+          "score": 0.079286
+        },
+        {
+          "id": "gpt4-2023-techreport_p005_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "[TABLE: Table 1 | Page 5 | BBox (50, 60, 560, 720)]\nTable 1: GPT performance on academic and professional exams (Columns: Exam | GPT-4 | GPT-4 (no vision) | GPT-3.5):\n- Uniform Bar Exam (MBE+MEE+MPT): GPT-4 = 298 / 400 (~90th percentile); GPT-4 (no vision) = 298 / 400 (~90th); GPT-3.5 = 213 / 400 (~10th).\n- LSAT: GPT-4 = 163 (~88th percentile); GPT-4 (no vision) = 161 (~83rd); GPT-3.5 = 149 (~40th).\n- SAT Evidence-Based Reading & Writing: GPT-4 = 710 / 800 (~93rd); GPT-4 (no vision) = 710 / 800 (~93rd); GPT-3.5 = 670 / 800 (~87th).\n- SAT Math: GPT-4 = 700 / 800 (~89th); GPT-4 (no vision) = 690 / 800 (~89th); GPT-3.5 = 590 / 800 (~70th).\n- GRE Quantitative: GPT-4 = 163 / 170 (~80th); GPT-4 (no vision) = 157 / 170 (~62nd); GPT-3.5 = 147 / 170 (~25th).\n- GRE Verbal: GPT-4 = 169 / 170 (~99th); GPT-4 (no vision) = 165 / 170 (~96th); GPT-3.5 = 154 / 170 (~63rd).\n- GRE Writing: GPT-4 = 4 / 6 (~54th); GPT-4 (no vision) = 4 / 6 (~54th); GPT-3.5 = 4 / 6 (~54th).\n- USABO Semifinal Exam 2020: GPT-4 = 87 / 150 (99th - 100th); GPT-4 (no vision) = 87 / 150 (99th - 100th); GPT-3.5 = 43 / 150 (31st - 33rd).\n- USNCO Local Section Exam 2022: GPT-4 = 36 / 60; GPT-4 (no vision) = 38 / 60; GPT-3.5 = 24 / 60.\n- Medical Knowledge Self-Assessment Program (MKSAP): GPT-4 = 75%; GPT-4 (no vision) = 75%; GPT-3.5 = 53%.\n- Codeforces Rating: GPT-4 = 392 (below 5th); GPT-4 (no vision) = 392 (below 5th); GPT-3.5 = 260 (below 5th).\n- AP Calculus BC: GPT-4 = 4 (43rd-59th); GPT-3.5 = 1 (0th-7th). AP Biology: GPT-4 = 5 (85th-100th); GPT-3.5 = 4 (62nd-85th).\n- Introductory Sommelier (theory knowledge): GPT-4 = 92%; GPT-3.5 = 80%. Certified Sommelier: GPT-4 = 86%; GPT-3.5 = 58%. Advanced Sommelier: GPT-4 = 77%; GPT-3.5 = 46%.\n- LeetCode (Easy / Medium / Hard, out of 41/39/20): GPT-4 (k=1) = 31/41, 21/39, 3/20; GPT-3.5 (k=1) = 12/41, 8/39, 0/20.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 1",
+            "bbox": [
+              50,
+              60,
+              560,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p005_table_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1837
+          },
+          "score": 0.073277
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "Benchmark GPT-4 GPT-3.5 Contamination GPT-4 (non- contaminated) Degradation\nHumanEval 67.0% 48.1% 25% 65.58% -2.12%\nDROP (F1) 80.9 64.1 ~21% 82.8* (subsample) 0",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              125.7,
+              121.7,
+              487.8,
+              270.5
+            ],
+            "section": "Page 32",
+            "char_length": 160
+          },
+          "score": 0.063196
+        },
+        {
+          "id": "gpt4-2023-techreport_p001_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 1,
+          "text": "On a suite of traditional NLP benchmarks, GPT-4 outperforms both previous large language models and most state-of-the-art systems (which often have benchmark-specific training or hand-engineering). On the MMLU benchmark [35, 36], an English-language suite of multiple-choice questions covering 57 subjects, GPT-4 not only outperforms existing models by a considerable margin in English, but also demonstrates strong performance in other languages. On translated variants of MMLU, GPT-4 surpasses the English-language state-of-the-art in 24 of 26 languages considered. We discuss these model capability results, as well as model safety improvements and results, in more detail in later sections.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              532.1,
+              505.7,
+              618.4
+            ],
+            "section": "Page 1",
+            "char_length": 694
+          },
+          "score": 0.060673
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p007_table_01 | page=7 | modality=table | ref=Table 2 | bbox=[50, 55, 560, 480]]\n[TABLE: Table 2 | Page 7 | BBox (50, 55, 560, 480)]\nTable 2: Performance of GPT-4 on traditional academic benchmarks (Columns: Benchmark | GPT-4 | GPT-3.5 | LM SOTA few-shot | Best external SOTA incl. benchmark-specific tuning):\n- MMLU (57 subjects): GPT-4 (5-shot) = 86.4%; GPT-3.5 (5-shot) = 70.0%; LM SOTA (5-shot U-PaLM) = 70.7%; SOTA (5-shot Flan-PaLM) = 75.2%.\n- HellaSwag: GPT-4 (10-shot) = 95.3%; GPT-3.5 (10-shot) = 85.5%; LM SOTA (LLaMA val) = 84.2%; SOTA (ALUM) = 85.6%.\n- AI2 Reasoning Challenge (ARC Challenge-set): GPT-4 (25-shot) = 96.3%; GPT-3.5 (25-shot) = 85.2%; LM SOTA (8-shot PaLM) = 85.2%; SOTA (ST-MOE) = 86.5%.\n- WinoGrande: GPT-4 (5-shot) = 87.5%; GPT-3.5 (5-shot) = 81.6%; LM SOTA (5-shot PaLM) = 85.1%; SOTA = 85.1%.\n- HumanEval (Python coding): GPT-4 (0-shot) = 67.0%; GPT-3.5 (0-shot) = 48.1%; LM SOTA (0-shot PaLM) = 26.2%; SOTA (CodeT + GPT-3.5) = 65.8%.\n- DROP (F1 score, reading comprehension & arithmetic): GPT-4 (3-shot) = 80.9; GPT-3.5 (3-shot) = 64.1; LM SOTA (1-shot PaLM) = 70.8; SOTA (QDGAT) = 88.4. (DROP is the only dataset in Table 2 where GPT-4 does not beat benchmark-specific SOTA).\n- GSM-8K (grade-school math): GPT-4 (5-shot chain-of-thought, part of training set in pre-training mix) = 92.0%; GPT-3.5 (5-shot) = 57.1%; LM SOTA (8-shot Minerva) = 58.8%; SOTA (Chinchilla + SFT + ORM-RL) = 87.3%.\n\n[gpt4-2023-techreport_p007_text_03 | page=7 | modality=text | ref=Page 7 | bbox=[122.6, 373.9, 490.2, 450.0]]\nTable 2. Performance of GPT-4 on academic benchmarks. We compare GPT-4 alongside the best SOTA (with benchmark-specific training) and the best SOTA for an LM evaluated few-shot. GPT-4 outperforms existing LMs on all benchmarks, and beats SOTA with benchmark-specific training on all datasets except DROP. For each task we report GPT-4’s performance along with the few-shot method used to evaluate. For GSM-8K, we included part of the training set in the GPT-4 pre-training mix (see Appendix E), and we use chain-of-thought prompting [11] when evaluating. For multiple-choice questions, we present all answers (ABCD) to the model and ask it to choose the letter of the answer, similarly to how a human would solve such a problem.\n\n[gpt4-2023-techreport_p006_text_03 | page=6 | modality=text | ref=Page 6 | bbox=[107.5, 579.0, 504.0, 659.9]]\nWe also evaluated the pre-trained base GPT-4 model on traditional benchmarks designed for evaluating language models. For each benchmark we report, we ran contamination checks for test data appearing in the training set (see Appendix D for full details on per-benchmark contamination).5 We used few-shot prompting [1] for all benchmarks when evaluating GPT-4.6\nGPT-4 considerably outperforms existing language models, as well as previously state-of-the-art (SOTA) systems which often have benchmark-specific crafting or additional training protocols (Table 2).",
+      "context_ids": [
+        "gpt4-2023-techreport_p007_table_01",
+        "gpt4-2023-techreport_p007_text_03",
+        "gpt4-2023-techreport_p006_text_03"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Table 2 (academic benchmarks), on which benchmark does GPT-4 fail to beat the best external SOTA with benchmark-specific tuning, and what are the respective F1 scores of GPT-4, GPT-3.5, and SOTA (QDGAT) on that benchmark?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The table lists DROP as the only benchmark where GPT‑4 does not surpass the best external SOTA with benchmark‑specific tuning."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_02",
+    "split": "dev",
+    "primary_group": "table",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p007_table_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p007_table_01",
+      "gpt4-2023-techreport_p007_text_03",
+      "gpt4-2023-techreport_p006_text_03",
+      "gpt4-2023-techreport_p029_text_04",
+      "gpt4-2023-techreport_p032_table_01",
+      "gpt4-2023-techreport_p005_table_01",
+      "gpt4-2023-techreport_p032_text_01",
+      "gpt4-2023-techreport_p001_text_04"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p007_table_01",
+      "gpt4-2023-techreport_p007_text_03",
+      "gpt4-2023-techreport_p006_text_03"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p007_table_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1118,
+  "completion_tokens": 97,
+  "total_tokens": 1215,
+  "estimated_cost_usd": 0.000226
+}

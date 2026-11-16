@@ -1,0 +1,296 @@
+{
+  "id": "adv_test_23",
+  "split": "test",
+  "primary_group": "text",
+  "question": "In the GPT-4 System Card (Page 64), what 4-step iterative process using GPT-4 itself was used to generate synthetic comparison data for mitigating closed-domain hallucinations, and how did it affect TruthfulQA accuracy?",
+  "answerable": true,
+  "expected_answer": "On Page 64, the 4-step process is: (1) pass a prompt through GPT-4 to get a response, (2) pass prompt + response through GPT-4 with an instruction to list all hallucinations (continuing if none are found), (3) pass prompt + response + hallucinations through GPT-4 to rewrite the response without hallucinations, and (4) pass prompt + new response through GPT-4 to list any remaining hallucinations, then mix the (original, rewritten) pairs into the RM dataset. This improved TruthfulQA accuracy from around 30% to around 60%.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p064_text_03",
+      "page": 64,
+      "modality": "text",
+      "figure_or_table_id": "Page 64 System Card",
+      "bbox": [
+        72.0,
+        320.0,
+        540.0,
+        440.0
+      ],
+      "evidence": "1. Pass a prompt through GPT-4 model and get a response 2. Pass prompt + response through GPT-4 with an instruction to list all hallucinations... 3. Pass prompt + response + hallucinations through GPT-4 with an instruction to rewrite the response without hallucinations",
+      "unit_and_condition": "4-step hallucination synthetic data pipeline on Page 64."
+    },
+    {
+      "chunk_id": "gpt4-2023-techreport_p064_text_04",
+      "page": 64,
+      "modality": "text",
+      "figure_or_table_id": "Page 64 System Card",
+      "bbox": [
+        72.0,
+        445.0,
+        540.0,
+        530.0
+      ],
+      "evidence": "improve performance on factuality as measured by evaluations such as TruthfulQA[34] and increase accuracy to around 60% as compared to 30% for an earlier version.",
+      "unit_and_condition": "TruthfulQA improvement from ~30% to ~60% on Page 64."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "The 4‑step iterative process using GPT‑4 to generate synthetic comparison data for closed‑domain hallucinations is:\n1. Pass a prompt through GPT‑4 and obtain a response.\n2. Pass the prompt plus the original response to GPT‑4 with an instruction to list all hallucinations; if none are found, continue.\n3. Pass the prompt, original response, and the hallucination list to GPT‑4 with an instruction to rewrite the response without hallucinations.\n4. Pass the prompt plus the new, rewritten response to GPT‑4 with an instruction to list all hallucinations; if none are found, keep the (original response, new response) comparison pair. [gpt4-2023-techreport_p064_text_03]\nThis mitigation approach raised TruthfulQA accuracy from about 30 % in an earlier version to roughly 60 % after applying the synthetic comparison data. [gpt4-2023-techreport_p064_text_04]",
+  "turns": 1,
+  "latency_ms": 9229.0,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p064_text_02",
+    "gpt4-2023-techreport_p064_text_04",
+    "gpt4-2023-techreport_p064_text_03",
+    "gpt4-2023-techreport_p046_text_02",
+    "gpt4-2023-techreport_p046_text_03",
+    "gpt4-2023-techreport_p065_text_01",
+    "gpt4-2023-techreport_p042_text_02",
+    "gpt4-2023-techreport_p010_text_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p064_text_02",
+    "gpt4-2023-techreport_p064_text_04",
+    "gpt4-2023-techreport_p064_text_03",
+    "gpt4-2023-techreport_p064_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In the GPT-4 System Card (Page 64), what 4-step iterative process using GPT-4 itself was used to generate synthetic comparison data for mitigating closed-domain hallucinations, and how did it affect TruthfulQA accuracy?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p064_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 64,
+          "text": "Model-level safety reduces the burden on other safety-relevant infrastructure such as monitoring or integration of classiﬁers in the product. However, model-level refusals and behavior changes can impact all uses of the model, and often what is undesired or safe can depend on the context of model usage (e.g., Typing “I will kill you” in a chatbot designed for children is an undesirable output, while the same phrase in a ﬁctional story may be considered acceptable). Refusals enable the model to refuse “harmful” requests, but the model can still be prone to producing content that could be stereotypical or otherwise discriminatory for non-“harmful” requests. Additionally, many challenges such as disparate performance in language models cannot be eﬀectively mitigated by the current approaches we have explored for refusals in language models and pre-training ﬁltering of harmful data alone. In addition to refusals mitigations, we also intervened to reduce the frequency of model halluci- nations. We pursue two diﬀerent technical approaches. For tackling open-domain hallucinations, we collect real-world ChatGPT data that has been ﬂagged by users as being not factual, and collect additional labeled comparison data that we use to train our reward models. For closed-domain hallucinations, we are able to use GPT-4 itself to generate synthetic data. Speciﬁcally, we design a multi-step process to generate comparison data:",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              137.2,
+              543.5,
+              356.0
+            ],
+            "section": "Page 64",
+            "char_length": 1431
+          },
+          "score": 0.116573
+        },
+        {
+          "id": "gpt4-2023-techreport_p064_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 64,
+          "text": "This process produces comparisons between (original response with hallucinations, new response without hallucinations according to GPT-4), which we also mix into our RM dataset. We ﬁnd that our mitigations on hallucinations improve performance on factuality as measured by evaluations such as TruthfulQA[34] and increase accuracy to around 60% as compared to 30% for an earlier version.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              535.2,
+              541.8,
+              604.9
+            ],
+            "section": "Page 64",
+            "char_length": 386
+          },
+          "score": 0.112291
+        },
+        {
+          "id": "gpt4-2023-techreport_p064_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 64,
+          "text": "1. Pass a prompt through GPT-4 model and get a response\n2. Pass prompt + response through GPT-4 with an instruction to list all hallucinations\n(a) If no hallucinations are found, continue\n3. Pass prompt + response + hallucinations through GPT-4 with an instruction to rewrite the response without hallucinations\n4. Pass prompt + new response through GPT-4 with an instruction to list all hallucinations\n(a) If none are found, keep (original response, new response) comparison pair",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              84.1,
+              366.0,
+              541.4,
+              507.7
+            ],
+            "section": "Page 64",
+            "char_length": 480
+          },
+          "score": 0.103367
+        },
+        {
+          "id": "gpt4-2023-techreport_p046_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 46,
+          "text": "GPT-4 has the tendency to “hallucinate,”9 i.e. “produce content that is nonsensical or untruthful in relation to certain sources.”[31, 32] This tendency can be particularly harmful as models become increasingly convincing and believable, leading to overreliance on them by users. [See further discussion in Overreliance]. Counterintuitively, hallucinations can become more dangerous as models become more truthful, as users build trust in the model when it provides truthful information in areas where they have some familiarity. Additionally, as these models are integrated into society and used to help automate various systems, this tendency to hallucinate is one of the factors that can lead to the degradation of overall information quality and further reduce veracity of and trust in freely available information.[33] We have measured GPT-4’s hallucination potential in both closed domain and open domain contexts10 using a range of methods. We measured close domain hallucinations using automatic evaluations (using GPT-4 as a zero-shot classiﬁer) and human evaluations. For open domain hallucinations, we collected real-world data that had been ﬂagged as not being factual, reviewed it, and created a ’factual’ set for it where it was possible to do so.11 We used this to assess model generations in relation to the ’factual’ set, and facilitate human evaluations. GPT-4 was trained to reduce the model’s tendency to hallucinate by leveraging data from prior models such as ChatGPT. On internal evaluations, GPT-4-launch scores 19 percentage points higher than our latest GPT-3.5 model at avoiding open-domain hallucinations, and 29 percentage points higher at avoiding closed-domain hallucinations.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.8,
+              285.0,
+              541.8,
+              548.4
+            ],
+            "section": "Page 46",
+            "char_length": 1707
+          },
+          "score": 0.071321
+        },
+        {
+          "id": "gpt4-2023-techreport_p046_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 46,
+          "text": "9We use the term “hallucinations,” though we recognize ways this framing may suggest anthropomorphization, which in turn can lead to harms or incorrect mental models of how the model learns. 10Closed domain hallucinations refer to instances in which the model is instructed to use only information provided in a given context, but then makes up extra information that was not in that context. For example, if you ask the model to summarize an article and its summary includes information that was not in the article, then that would be a closed-domain hallucination. Open domain hallucinations, in contrast, are when the model conﬁdently provides false information about the world without reference to any particular input context. 11See related work in this area and discussion of use of words like “factual” and “truthful” in, e.g. [34].",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              554.4,
+              542.6,
+              644.4
+            ],
+            "section": "Page 46",
+            "char_length": 839
+          },
+          "score": 0.065336
+        },
+        {
+          "id": "gpt4-2023-techreport_p065_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 65,
+          "text": "Accuracy Accuracy on adversarial questions (TruthfulQA mc1)\ngpt-3.5-base gpt-3.5-base gpt-3.5-turbo gpt-4-base gpt-4-base gpt-4 0%\nFigure 8: Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF ﬁne-tuning. GPT-4 signiﬁcantly outperforms both GPT-3.5 and Askell et al [101].ﬁxes to plot legend and title",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.2,
+              255.7,
+              543.6,
+              538.5
+            ],
+            "section": "Page 65",
+            "char_length": 415
+          },
+          "score": 0.060065
+        },
+        {
+          "id": "gpt4-2023-techreport_p042_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 42,
+          "text": "In this system card,1 we outline the safety challenges that arise from GPT-4, and explain the interventions we implemented to mitigate potential harms from its deployment. We focus on safety challenges not because they necessarily outweigh the potential beneﬁts,2 but because we wish to motivate further work in safety measurement, mitigation, and assurance. The scope of this system card is narrower than the potential scope of abilities GPT-4 can be used to unlock; notably, both custom ﬁne-tuning and image capabilities are explicitly out of scope. We focus on analyzing two versions of the model: an early version ﬁne-tuned for instruction following (“GPT-4-early”); and a version ﬁne-tuned for increased helpfulness and harmlessness[18] that reﬂects the further mitigations outlined in this system card (“GPT-4-launch”).3 When we discuss the risks of GPT-4 we will often refer to the behavior of GPT-4-early, because it reﬂects the risks of GPT-4 when minimal safety mitigations are applied. In most cases, GPT-4-launch exhibits much safer behavior due to the safety mitigations we applied. Known risks associated with smaller language models are also present with GPT-4. GPT-4 can generate potentially harmful content, such as advice on planning attacks or hate speech. It can represent various societal biases and worldviews that may not be representative of the users intent,4 or of widely shared values. It can also generate code that is compromised or vulnerable. The additional capabilities of GPT-4 also lead to new risk surfaces. To understand the extent of these risks, we engaged more than 50 experts to help us gain a more robust understanding of the GPT-4 model and potential deployment risks. We selected these areas",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              356.5,
+              543.5,
+              619.9
+            ],
+            "section": "Page 42",
+            "char_length": 1734
+          },
+          "score": 0.058266
+        },
+        {
+          "id": "gpt4-2023-techreport_p010_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 10,
+          "text": "Despite its capabilities, GPT-4 has similar limitations as earlier GPT models. Most importantly, it still is not fully reliable (it “hallucinates” facts and makes reasoning errors). Great care should be taken when using language model outputs, particularly in high-stakes contexts, with the exact protocol (such as human review, grounding with additional context, or avoiding high-stakes uses altogether) matching the needs of specific applications. See our System Card for details.\nGPT-4 significantly reduces hallucinations relative to previous GPT-3.5 models (which have them- selves been improving with continued iteration). GPT-4 scores 19 percentage points higher than our latest GPT-3.5 on our internal, adversarially-designed factuality evaluations (Figure 6).\nAccuracy Internal factual eval by category",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              97.9,
+              505.7,
+              230.4
+            ],
+            "section": "Page 10",
+            "char_length": 811
+          },
+          "score": 0.057453
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p064_text_02 | page=64 | modality=text | ref=Page 64 | bbox=[70.4, 137.2, 543.5, 356.0]]\nModel-level safety reduces the burden on other safety-relevant infrastructure such as monitoring or integration of classiﬁers in the product. However, model-level refusals and behavior changes can impact all uses of the model, and often what is undesired or safe can depend on the context of model usage (e.g., Typing “I will kill you” in a chatbot designed for children is an undesirable output, while the same phrase in a ﬁctional story may be considered acceptable). Refusals enable the model to refuse “harmful” requests, but the model can still be prone to producing content that could be stereotypical or otherwise discriminatory for non-“harmful” requests. Additionally, many challenges such as disparate performance in language models cannot be eﬀectively mitigated by the current approaches we have explored for refusals in language models and pre-training ﬁltering of harmful data alone. In addition to refusals mitigations, we also intervened to reduce the frequency of model halluci- nations. We pursue two diﬀerent technical approaches. For tackling open-domain hallucinations, we collect real-world ChatGPT data that has been ﬂagged by users as being not factual, and collect additional labeled comparison data that we use to train our reward models. For closed-domain hallucinations, we are able to use GPT-4 itself to generate synthetic data. Speciﬁcally, we design a multi-step process to generate comparison data:\n\n[gpt4-2023-techreport_p064_text_04 | page=64 | modality=text | ref=Page 64 | bbox=[70.4, 535.2, 541.8, 604.9]]\nThis process produces comparisons between (original response with hallucinations, new response without hallucinations according to GPT-4), which we also mix into our RM dataset. We ﬁnd that our mitigations on hallucinations improve performance on factuality as measured by evaluations such as TruthfulQA[34] and increase accuracy to around 60% as compared to 30% for an earlier version.\n\n[gpt4-2023-techreport_p064_text_03 | page=64 | modality=text | ref=Page 64 | bbox=[84.1, 366.0, 541.4, 507.7]]\n1. Pass a prompt through GPT-4 model and get a response\n2. Pass prompt + response through GPT-4 with an instruction to list all hallucinations\n(a) If no hallucinations are found, continue\n3. Pass prompt + response + hallucinations through GPT-4 with an instruction to rewrite the response without hallucinations\n4. Pass prompt + new response through GPT-4 with an instruction to list all hallucinations\n(a) If none are found, keep (original response, new response) comparison pair\n\n[gpt4-2023-techreport_p064_text_01 | page=64 | modality=text | ref=Page 64 | bbox=[70.8, 69.4, 542.8, 139.1]]\nproduces toxic generation 6.48% of the time. Additionally, GPT-4-launch substantially improves over previous models in the ability to follow user intent [12]. On a dataset of prompts submitted to ChatGPT [103] and the OpenAI API [104], the responses generated by GPT-4-launch were preferred over the responses generated by GPT-3.5 RLHF on 70.2% of prompts and GPT-3.5 Turbo RLHF on 61.1% of prompts.1130",
+      "context_ids": [
+        "gpt4-2023-techreport_p064_text_02",
+        "gpt4-2023-techreport_p064_text_04",
+        "gpt4-2023-techreport_p064_text_03",
+        "gpt4-2023-techreport_p064_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In the GPT-4 System Card (Page 64), what 4-step iterative process using GPT-4 itself was used to generate synthetic comparison data for mitigating closed-domain hallucinations, and how did it affect TruthfulQA accuracy?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The context provides both the 4‑step process and the TruthfulQA accuracy improvement."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_23",
+    "split": "test",
+    "primary_group": "text",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p064_text_03",
+      "gpt4-2023-techreport_p064_text_04"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p064_text_02",
+      "gpt4-2023-techreport_p064_text_04",
+      "gpt4-2023-techreport_p064_text_03",
+      "gpt4-2023-techreport_p046_text_02",
+      "gpt4-2023-techreport_p046_text_03",
+      "gpt4-2023-techreport_p065_text_01",
+      "gpt4-2023-techreport_p042_text_02",
+      "gpt4-2023-techreport_p010_text_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p064_text_02",
+      "gpt4-2023-techreport_p064_text_04",
+      "gpt4-2023-techreport_p064_text_03",
+      "gpt4-2023-techreport_p064_text_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p064_text_03",
+      "gpt4-2023-techreport_p064_text_04"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1168,
+  "completion_tokens": 270,
+  "total_tokens": 1438,
+  "estimated_cost_usd": 0.000337
+}

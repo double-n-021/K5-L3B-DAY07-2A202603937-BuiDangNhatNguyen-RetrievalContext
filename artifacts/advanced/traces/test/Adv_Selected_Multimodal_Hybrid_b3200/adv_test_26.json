@@ -1,0 +1,259 @@
+{
+  "id": "adv_test_26",
+  "split": "test",
+  "primary_group": "unanswerable",
+  "question": "In Section 4.1 (Visual Inputs), what is the exact image patch resolution (e.g., 14x14 or 16x16 pixels), Vision Transformer (ViT) backbone parameter count, and number of cross-attention layers used to fuse image embeddings into GPT-4?",
+  "answerable": false,
+  "expected_answer": "",
+  "gold": [],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 11040.12,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p005_table_01",
+    "gpt4-2023-techreport_p038_text_01",
+    "gpt4-2023-techreport_p008_text_02",
+    "gpt4-2023-techreport_p001_text_01",
+    "gpt4-2023-techreport_p036_text_01",
+    "gpt4-2023-techreport_p001_text_02",
+    "gpt4-2023-techreport_p009_text_02",
+    "gpt4-2023-techreport_p025_text_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p005_table_01",
+    "gpt4-2023-techreport_p038_text_01",
+    "gpt4-2023-techreport_p008_text_03"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Section 4.1 (Visual Inputs), what is the exact image patch resolution (e.g., 14x14 or 16x16 pixels), Vision Transformer (ViT) backbone parameter count, and number of cross-attention layers used to fuse image embeddings into GPT-4?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p005_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "[TABLE: Table 1 | Page 5 | BBox (50, 60, 560, 720)]\nTable 1: GPT performance on academic and professional exams (Columns: Exam | GPT-4 | GPT-4 (no vision) | GPT-3.5):\n- Uniform Bar Exam (MBE+MEE+MPT): GPT-4 = 298 / 400 (~90th percentile); GPT-4 (no vision) = 298 / 400 (~90th); GPT-3.5 = 213 / 400 (~10th).\n- LSAT: GPT-4 = 163 (~88th percentile); GPT-4 (no vision) = 161 (~83rd); GPT-3.5 = 149 (~40th).\n- SAT Evidence-Based Reading & Writing: GPT-4 = 710 / 800 (~93rd); GPT-4 (no vision) = 710 / 800 (~93rd); GPT-3.5 = 670 / 800 (~87th).\n- SAT Math: GPT-4 = 700 / 800 (~89th); GPT-4 (no vision) = 690 / 800 (~89th); GPT-3.5 = 590 / 800 (~70th).\n- GRE Quantitative: GPT-4 = 163 / 170 (~80th); GPT-4 (no vision) = 157 / 170 (~62nd); GPT-3.5 = 147 / 170 (~25th).\n- GRE Verbal: GPT-4 = 169 / 170 (~99th); GPT-4 (no vision) = 165 / 170 (~96th); GPT-3.5 = 154 / 170 (~63rd).\n- GRE Writing: GPT-4 = 4 / 6 (~54th); GPT-4 (no vision) = 4 / 6 (~54th); GPT-3.5 = 4 / 6 (~54th).\n- USABO Semifinal Exam 2020: GPT-4 = 87 / 150 (99th - 100th); GPT-4 (no vision) = 87 / 150 (99th - 100th); GPT-3.5 = 43 / 150 (31st - 33rd).\n- USNCO Local Section Exam 2022: GPT-4 = 36 / 60; GPT-4 (no vision) = 38 / 60; GPT-3.5 = 24 / 60.\n- Medical Knowledge Self-Assessment Program (MKSAP): GPT-4 = 75%; GPT-4 (no vision) = 75%; GPT-3.5 = 53%.\n- Codeforces Rating: GPT-4 = 392 (below 5th); GPT-4 (no vision) = 392 (below 5th); GPT-3.5 = 260 (below 5th).\n- AP Calculus BC: GPT-4 = 4 (43rd-59th); GPT-3.5 = 1 (0th-7th). AP Biology: GPT-4 = 5 (85th-100th); GPT-3.5 = 4 (62nd-85th).\n- Introductory Sommelier (theory knowledge): GPT-4 = 92%; GPT-3.5 = 80%. Certified Sommelier: GPT-4 = 86%; GPT-3.5 = 58%. Advanced Sommelier: GPT-4 = 77%; GPT-3.5 = 46%.\n- LeetCode (Easy / Medium / Hard, out of 41/39/20): GPT-4 (k=1) = 31/41, 21/39, 3/20; GPT-3.5 (k=1) = 12/41, 8/39, 0/20.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 1",
+            "bbox": [
+              50,
+              60,
+              560,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p005_table_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1837
+          },
+          "score": 0.076466
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "GPT-4 visual input example, Chicken Nugget Map:\nGPT-4 This meme is a joke that combines two unrelated things: pictures of the earth from space and chicken nuggets. The text of the meme suggests that the image below is a beautiful picture of the earth from space. However, the image is actually of chicken nuggets arranged to vaguely resemble a map of the world. The humor in this meme comes from the unexpected juxtaposition of the text and the image. The text sets up an expectation of a majestic image of the earth, but the image is actually something mundane and silly.\nTable 18: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              168.4,
+              485.9,
+              627.5
+            ],
+            "section": "Page 38",
+            "char_length": 644
+          },
+          "score": 0.069023
+        },
+        {
+          "id": "gpt4-2023-techreport_p008_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 8,
+          "text": "GPT-4 accepts prompts consisting of both images and text, which – parallel to the text-only setting – lets the user specify any vision or language task. Specifically, the model generates text outputs given inputs consisting of arbitrarily interlaced text and images. Over a range of domains – including documents with text and photographs, diagrams, or screenshots – GPT-4 exhibits similar capabilities as it does on text-only inputs. An example of GPT-4’s visual input can be found in Table 3. The standard test-time techniques developed for language models (e.g. few-shot prompting, chain-of- thought, etc) are similarly effective when using both images and text - see Appendix G for examples.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              106.5,
+              619.7,
+              505.7,
+              695.1
+            ],
+            "section": "Page 8",
+            "char_length": 695
+          },
+          "score": 0.0681
+        },
+        {
+          "id": "gpt4-2023-techreport_p001_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 1,
+          "text": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer- based model pre-trained to predict the next token in a document. The post-training alignment process results in improved performance on measures of factuality and adherence to desired behavior. A core component of this project was developing infrastructure and optimization methods that behave predictably across a wide range of scales. This allowed us to accurately predict some aspects of GPT-4’s performance based on models trained with no more than 1/1,000th the compute of GPT-4.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              143.4,
+              225.5,
+              469.8,
+              355.5
+            ],
+            "section": "Page 1",
+            "char_length": 877
+          },
+          "score": 0.067291
+        },
+        {
+          "id": "gpt4-2023-techreport_p036_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 36,
+          "text": "GPT-4 visual input example, Extreme Ironing:\nUser What is unusual about this image?\nSource: https://www.barnorama.com/wp-content/uploads/2016/12/03-Confusing-Pictures.jpg\nGPT-4 The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.\nTable 16. Example prompt demonstrating GPT-4’s visual input capability. The prompt requires image understanding.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              258.2,
+              489.1,
+              537.8
+            ],
+            "section": "Page 36",
+            "char_length": 416
+          },
+          "score": 0.066964
+        },
+        {
+          "id": "gpt4-2023-techreport_p001_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 1,
+          "text": "This technical report presents GPT-4, a large multimodal model capable of processing image and text inputs and producing text outputs. Such models are an important area of study as they have the potential to be used in a wide range of applications, such as dialogue systems, text summarization, and machine translation. As such, they have been the subject of substantial interest and progress in recent years [1–34].",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              401.1,
+              505.2,
+              454.7
+            ],
+            "section": "Page 1",
+            "char_length": 416
+          },
+          "score": 0.06609
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "Table 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              622.5,
+              489.1,
+              641.2
+            ],
+            "section": "Page 9",
+            "char_length": 171
+          },
+          "score": 0.065025
+        },
+        {
+          "id": "gpt4-2023-techreport_p025_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 25,
+          "text": "Oftentimes, an exam question may include an image. Models like GPT-3.5, which consume text (but not images) as input might not have access to all the information needed to correctly solve a problem. When evaluating text models on multiple-choice questions, we included a text tag stating IMAGE: with a non-meaningful filename wherever an image would be missing. This allows us to lower-bound the text-based models’ performance on multiple-choice exams.12 When evaluating multimodal models on multiple-choice questions, we embedded the images into the prompt. The SAT Reading and Writing, MKSAP, Sommelier, AP Psychology, AP English Language, and AP English Literature exams’ multiple-choice sections did not contain any images. For all free-response questions, plus the USABO 2020 Semifinal, we instead transcribed any images and diagrams as objectively as possible. This reduced the manual grading load required to evaluate free-response answers, because after this transcription process the free-response prompts include no images, so the scores for GPT-4 could be run once and used for both the vision and no-vision conditions.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              96.5,
+              504.0,
+              226.6
+            ],
+            "section": "Page 25",
+            "char_length": 1130
+          },
+          "score": 0.058367
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p005_table_01 | page=5 | modality=table | ref=Table 1 | bbox=[50, 60, 560, 720]]\n[TABLE: Table 1 | Page 5 | BBox (50, 60, 560, 720)]\nTable 1: GPT performance on academic and professional exams (Columns: Exam | GPT-4 | GPT-4 (no vision) | GPT-3.5):\n- Uniform Bar Exam (MBE+MEE+MPT): GPT-4 = 298 / 400 (~90th percentile); GPT-4 (no vision) = 298 / 400 (~90th); GPT-3.5 = 213 / 400 (~10th).\n- LSAT: GPT-4 = 163 (~88th percentile); GPT-4 (no vision) = 161 (~83rd); GPT-3.5 = 149 (~40th).\n- SAT Evidence-Based Reading & Writing: GPT-4 = 710 / 800 (~93rd); GPT-4 (no vision) = 710 / 800 (~93rd); GPT-3.5 = 670 / 800 (~87th).\n- SAT Math: GPT-4 = 700 / 800 (~89th); GPT-4 (no vision) = 690 / 800 (~89th); GPT-3.5 = 590 / 800 (~70th).\n- GRE Quantitative: GPT-4 = 163 / 170 (~80th); GPT-4 (no vision) = 157 / 170 (~62nd); GPT-3.5 = 147 / 170 (~25th).\n- GRE Verbal: GPT-4 = 169 / 170 (~99th); GPT-4 (no vision) = 165 / 170 (~96th); GPT-3.5 = 154 / 170 (~63rd).\n- GRE Writing: GPT-4 = 4 / 6 (~54th); GPT-4 (no vision) = 4 / 6 (~54th); GPT-3.5 = 4 / 6 (~54th).\n- USABO Semifinal Exam 2020: GPT-4 = 87 / 150 (99th - 100th); GPT-4 (no vision) = 87 / 150 (99th - 100th); GPT-3.5 = 43 / 150 (31st - 33rd).\n- USNCO Local Section Exam 2022: GPT-4 = 36 / 60; GPT-4 (no vision) = 38 / 60; GPT-3.5 = 24 / 60.\n- Medical Knowledge Self-Assessment Program (MKSAP): GPT-4 = 75%; GPT-4 (no vision) = 75%; GPT-3.5 = 53%.\n- Codeforces Rating: GPT-4 = 392 (below 5th); GPT-4 (no vision) = 392 (below 5th); GPT-3.5 = 260 (below 5th).\n- AP Calculus BC: GPT-4 = 4 (43rd-59th); GPT-3.5 = 1 (0th-7th). AP Biology: GPT-4 = 5 (85th-100th); GPT-3.5 = 4 (62nd-85th).\n- Introductory Sommelier (theory knowledge): GPT-4 = 92%; GPT-3.5 = 80%. Certified Sommelier: GPT-4 = 86%; GPT-3.5 = 58%. Advanced Sommelier: GPT-4 = 77%; GPT-3.5 = 46%.\n- LeetCode (Easy / Medium / Hard, out of 41/39/20): GPT-4 (k=1) = 31/41, 21/39, 3/20; GPT-3.5 (k=1) = 12/41, 8/39, 0/20.\n\n[gpt4-2023-techreport_p038_text_01 | page=38 | modality=text | ref=Page 38 | bbox=[114.0, 168.4, 485.9, 627.5]]\nGPT-4 visual input example, Chicken Nugget Map:\nGPT-4 This meme is a joke that combines two unrelated things: pictures of the earth from space and chicken nuggets. The text of the meme suggests that the image below is a beautiful picture of the earth from space. However, the image is actually of chicken nuggets arranged to vaguely resemble a map of the world. The humor in this meme comes from the unexpected juxtaposition of the text and the image. The text sets up an expectation of a majestic image of the earth, but the image is actually something mundane and silly.\nTable 18: Example prompt demonstrating GPT-4’s visual input capability.\n\n[gpt4-2023-techreport_p008_text_03 | page=8 | modality=text | ref=Page 8 | bbox=[108.0, 701.5, 505.7, 722.4]]\nPreliminary results on a narrow set of academic vision benchmarks can be found in the GPT-4 blog post [65]. We plan to release more information about GPT-4’s visual capabilities in follow-up work.",
+      "context_ids": [
+        "gpt4-2023-techreport_p005_table_01",
+        "gpt4-2023-techreport_p038_text_01",
+        "gpt4-2023-techreport_p008_text_03"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Section 4.1 (Visual Inputs), what is the exact image patch resolution (e.g., 14x14 or 16x16 pixels), Vision Transformer (ViT) backbone parameter count, and number of cross-attention layers used to fuse image embeddings into GPT-4?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_26",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "answerable": false,
+    "gold_ids": [],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p005_table_01",
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p008_text_02",
+      "gpt4-2023-techreport_p001_text_01",
+      "gpt4-2023-techreport_p036_text_01",
+      "gpt4-2023-techreport_p001_text_02",
+      "gpt4-2023-techreport_p009_text_02",
+      "gpt4-2023-techreport_p025_text_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p005_table_01",
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p008_text_03"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+  },
+  "absence_reason": "The report demonstrates visual input capabilities via examples (Tables 3, 14-19) and exam scores, but omits all vision encoder architectural specifications (patch size, ViT parameters, cross-attention layers).",
+  "prompt_tokens": 1131,
+  "completion_tokens": 45,
+  "total_tokens": 1176,
+  "estimated_cost_usd": 0.000197
+}

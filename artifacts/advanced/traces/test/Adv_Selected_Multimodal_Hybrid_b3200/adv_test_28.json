@@ -1,0 +1,260 @@
+{
+  "id": "adv_test_28",
+  "split": "test",
+  "primary_group": "unanswerable",
+  "question": "In Appendix A (Page 24), what was the exact hourly rate in US dollars paid to the third-party essay-grading contractors who scored the AP, SAT, and GRE free-response essays?",
+  "answerable": false,
+  "expected_answer": "",
+  "gold": [],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 8954.19,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p024_text_06",
+    "gpt4-2023-techreport_p024_text_04",
+    "gpt4-2023-techreport_p024_text_03",
+    "gpt4-2023-techreport_p024_text_01",
+    "gpt4-2023-techreport_p024_text_05",
+    "gpt4-2023-techreport_p027_text_05",
+    "gpt4-2023-techreport_p025_text_01",
+    "gpt4-2023-techreport_p025_text_05"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p024_text_06",
+    "gpt4-2023-techreport_p024_text_04",
+    "gpt4-2023-techreport_p024_text_03",
+    "gpt4-2023-techreport_p024_text_05"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Appendix A (Page 24), what was the exact hourly rate in US dollars paid to the third-party essay-grading contractors who scored the AP, SAT, and GRE free-response essays?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p024_text_06",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 24,
+          "text": "All free-response questions consisting of formal essays which required evaluation of writing quality (AP English Language and Composition, AP English Literature and Composition, AP World History, AP US History, AP US Government and Politics, AP Art History, the GRE, and the SAT) were graded by 1-2 qualified third-party contractors with relevant work experience grading those essays. We sampled these responses using a few-shot prompt containing one high-quality sample GRE essay response (which you can also see in section A.8) in order to encourage the model to produce appropriately sophisticated text, rather than an unnaturally terse reply. We graded all other free- response questions on their technical content, according to the guidelines from the publicly-available official rubrics.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              625.2,
+              505.7,
+              722.4
+            ],
+            "section": "Page 24",
+            "char_length": 793
+          },
+          "score": 0.117581
+        },
+        {
+          "id": "gpt4-2023-techreport_p024_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 24,
+          "text": "For each free-response section, we gave the model the free-response question’s prompt as a simple instruction-following-style request, and we sampled a response using temperature 0.6. For AP exams, we used the most recent 2022 prompts, which are all publicly-available; for the SAT, we used three prompts – Sample Essay Prompt 1 and Sample Essay Prompt 2 from Test Specifications for the Redesigned SAT (CollegeBoard, 2015) plus the official SAT Practice Essay #1 (CollegeBoard, 2016) and took the average score; for the GRE, we used the issue essay and argument essay prompts from a commercially-available prep book.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              494.2,
+              505.2,
+              569.6
+            ],
+            "section": "Page 24",
+            "char_length": 617
+          },
+          "score": 0.115312
+        },
+        {
+          "id": "gpt4-2023-techreport_p024_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 24,
+          "text": "For the AMC 10 and AMC 12 held-out test exams, we discovered a bug that limited response length. We fixed the bug and reran these exams to ensure accurate results. For most exam runs, we extract the model’s letter choice directly from the explanation. For the GPT-4 USABO and SAT reading/writing runs (with and without vision), the GPT-3.5 runs, and the GPT-4 runs of SAT Math, GRE, USNCO, AP Biology, AP Chemistry, and AP Environmental Science without vision, we instead sample a letter choice at temperature 0 using the already-sampled explanation. These methodological differences resulted from code mismatches detected post-evaluation, and we believe their impact on the results to be minimal.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              363.0,
+              505.7,
+              449.3
+            ],
+            "section": "Page 24",
+            "char_length": 697
+          },
+          "score": 0.103277
+        },
+        {
+          "id": "gpt4-2023-techreport_p024_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 24,
+          "text": "We sourced either the most recent publicly-available official past exams, or practice exams in published third-party 2022-2023 study material which we purchased. We cross-checked these materials against the model’s training data to determine the extent to which the training data was not contaminated with any exam questions, which we also report in this paper.\nThe Uniform Bar Exam was run by our collaborators at CaseText and Stanford CodeX.\nFor each multiple-choice section, we used a few-shot prompt with gold standard explanations and answers for a similar exam format. For each question, we sampled an explanation (at temperature 0.3) to extract a multiple-choice answer letter(s).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              160.7,
+              504.0,
+              296.5
+            ],
+            "section": "Page 24",
+            "char_length": 687
+          },
+          "score": 0.097326
+        },
+        {
+          "id": "gpt4-2023-techreport_p024_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 24,
+          "text": "Due to the longer iteration time of human expert grading, we did no methodology iteration on temperature or prompt, instead we simply ran these free response questions each only a single time at our best-guess temperature (0.6) and prompt (a simple instruction-following prompt displayed in section A.8).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              576.0,
+              504.0,
+              618.7
+            ],
+            "section": "Page 24",
+            "char_length": 304
+          },
+          "score": 0.094686
+        },
+        {
+          "id": "gpt4-2023-techreport_p027_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 27,
+          "text": "Problem 6. <PROBLEM TEXT AND ANSWER CHOICES GO HERE>\nExplanation for Problem 4: <MODEL EXPLANATION (t=0.3, n=1, max_tokens=512, stop=’\\nThe answer is therefore’) SAMPLED HERE>\nThe answer is therefore [<MODEL ANSWER CHOICE (t=0.0, n=1, stop=’]’) SAMPLED HERE>]\nExample prompt for a free-response question In the example prompt below, the task prompt would be replaced by a prompt like an official sample GRE essay task, and the essay response with an example of a high-scoring essay [83].\n<|endofreply|>Analytical Writing: Issue Essay\nResponse:<|endofprompt|><TEXT OF SAMPLE ISSUE TASK ESSAY RESPONSE - SCORE 6><|endofreply|>\n<FREE-RESPONSE PROMPT TEXT GOES HERE>",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              518.7,
+              504.0,
+              709.7
+            ],
+            "section": "Page 27",
+            "char_length": 662
+          },
+          "score": 0.068182
+        },
+        {
+          "id": "gpt4-2023-techreport_p025_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 25,
+          "text": "Oftentimes, an exam question may include an image. Models like GPT-3.5, which consume text (but not images) as input might not have access to all the information needed to correctly solve a problem. When evaluating text models on multiple-choice questions, we included a text tag stating IMAGE: with a non-meaningful filename wherever an image would be missing. This allows us to lower-bound the text-based models’ performance on multiple-choice exams.12 When evaluating multimodal models on multiple-choice questions, we embedded the images into the prompt. The SAT Reading and Writing, MKSAP, Sommelier, AP Psychology, AP English Language, and AP English Literature exams’ multiple-choice sections did not contain any images. For all free-response questions, plus the USABO 2020 Semifinal, we instead transcribed any images and diagrams as objectively as possible. This reduced the manual grading load required to evaluate free-response answers, because after this transcription process the free-response prompts include no images, so the scores for GPT-4 could be run once and used for both the vision and no-vision conditions.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              96.5,
+              504.0,
+              226.6
+            ],
+            "section": "Page 25",
+            "char_length": 1130
+          },
+          "score": 0.066176
+        },
+        {
+          "id": "gpt4-2023-techreport_p025_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 25,
+          "text": "We ran GPT-4 multiple-choice questions using a model snapshot from March 1, 2023, whereas the free-response questions were run and scored using a non-final model snapshot from February 23, 2023. GPT-3.5’s multiple-choice questions and free-response questions were all run using a standard ChatGPT snapshot. We ran the USABO semifinal exam using an earlier GPT-4 snapshot from December 16, 2022.\nOur evaluations suggest RLHF does not significantly affect the base GPT-4 model’s capability - see Appendix B for more discussion.\n12For example, on the AP Statistics exam, a common failure response was “Since there is no graph provided, we cannot determine the correct answer for this problem.\"",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              602.5,
+              505.1,
+              722.2
+            ],
+            "section": "Page 25",
+            "char_length": 690
+          },
+          "score": 0.064286
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p024_text_06 | page=24 | modality=text | ref=Page 24 | bbox=[107.5, 625.2, 505.7, 722.4]]\nAll free-response questions consisting of formal essays which required evaluation of writing quality (AP English Language and Composition, AP English Literature and Composition, AP World History, AP US History, AP US Government and Politics, AP Art History, the GRE, and the SAT) were graded by 1-2 qualified third-party contractors with relevant work experience grading those essays. We sampled these responses using a few-shot prompt containing one high-quality sample GRE essay response (which you can also see in section A.8) in order to encourage the model to produce appropriately sophisticated text, rather than an unnaturally terse reply. We graded all other free- response questions on their technical content, according to the guidelines from the publicly-available official rubrics.\n\n[gpt4-2023-techreport_p024_text_04 | page=24 | modality=text | ref=Page 24 | bbox=[107.6, 494.2, 505.2, 569.6]]\nFor each free-response section, we gave the model the free-response question’s prompt as a simple instruction-following-style request, and we sampled a response using temperature 0.6. For AP exams, we used the most recent 2022 prompts, which are all publicly-available; for the SAT, we used three prompts – Sample Essay Prompt 1 and Sample Essay Prompt 2 from Test Specifications for the Redesigned SAT (CollegeBoard, 2015) plus the official SAT Practice Essay #1 (CollegeBoard, 2016) and took the average score; for the GRE, we used the issue essay and argument essay prompts from a commercially-available prep book.\n\n[gpt4-2023-techreport_p024_text_03 | page=24 | modality=text | ref=Page 24 | bbox=[107.5, 363.0, 505.7, 449.3]]\nFor the AMC 10 and AMC 12 held-out test exams, we discovered a bug that limited response length. We fixed the bug and reran these exams to ensure accurate results. For most exam runs, we extract the model’s letter choice directly from the explanation. For the GPT-4 USABO and SAT reading/writing runs (with and without vision), the GPT-3.5 runs, and the GPT-4 runs of SAT Math, GRE, USNCO, AP Biology, AP Chemistry, and AP Environmental Science without vision, we instead sample a letter choice at temperature 0 using the already-sampled explanation. These methodological differences resulted from code mismatches detected post-evaluation, and we believe their impact on the results to be minimal.\n\n[gpt4-2023-techreport_p024_text_05 | page=24 | modality=text | ref=Page 24 | bbox=[108.0, 576.0, 504.0, 618.7]]\nDue to the longer iteration time of human expert grading, we did no methodology iteration on temperature or prompt, instead we simply ran these free response questions each only a single time at our best-guess temperature (0.6) and prompt (a simple instruction-following prompt displayed in section A.8).",
+      "context_ids": [
+        "gpt4-2023-techreport_p024_text_06",
+        "gpt4-2023-techreport_p024_text_04",
+        "gpt4-2023-techreport_p024_text_03",
+        "gpt4-2023-techreport_p024_text_05"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Appendix A (Page 24), what was the exact hourly rate in US dollars paid to the third-party essay-grading contractors who scored the AP, SAT, and GRE free-response essays?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_28",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "answerable": false,
+    "gold_ids": [],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p024_text_06",
+      "gpt4-2023-techreport_p024_text_04",
+      "gpt4-2023-techreport_p024_text_03",
+      "gpt4-2023-techreport_p024_text_01",
+      "gpt4-2023-techreport_p024_text_05",
+      "gpt4-2023-techreport_p027_text_05",
+      "gpt4-2023-techreport_p025_text_01",
+      "gpt4-2023-techreport_p025_text_05"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p024_text_06",
+      "gpt4-2023-techreport_p024_text_04",
+      "gpt4-2023-techreport_p024_text_03",
+      "gpt4-2023-techreport_p024_text_05"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+  },
+  "absence_reason": "Appendix A (Page 24) states that formal essays were graded by 1-2 qualified third-party contractors with relevant work experience, but never discloses their hourly compensation rate.",
+  "prompt_tokens": 1093,
+  "completion_tokens": 45,
+  "total_tokens": 1138,
+  "estimated_cost_usd": 0.000191
+}

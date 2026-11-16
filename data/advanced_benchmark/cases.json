@@ -1,0 +1,1484 @@
+[
+  {
+    "id": "adv_dev_01",
+    "split": "dev",
+    "primary_group": "table",
+    "question": "According to Table 1 on academic and professional exams, what score and approximate percentile did GPT-4 achieve on the Uniform Bar Exam (MBE+MEE+MPT) compared to GPT-3.5, and what is the point difference between them?",
+    "answerable": true,
+    "expected_answer": "On the Uniform Bar Exam (MBE+MEE+MPT) in Table 1, GPT-4 achieved 298 / 400 (~90th percentile), whereas GPT-3.5 achieved 213 / 400 (~10th percentile), a difference of 85 points.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p005_table_01",
+        "page": 5,
+        "modality": "table",
+        "figure_or_table_id": "Table 1",
+        "bbox": [
+          50,
+          60,
+          560,
+          720
+        ],
+        "evidence": "Uniform Bar Exam (MBE+MEE+MPT): GPT-4 = 298 / 400 (~90th percentile); GPT-4 (no vision) = 298 / 400 (~90th); GPT-3.5 = 213 / 400 (~10th).",
+        "unit_and_condition": "Score out of 400 points and percentile among test takers; 298 - 213 = 85 points."
+      }
+    ],
+    "required_tokens": [
+      "298",
+      "400",
+      "90th",
+      "213",
+      "10th",
+      "85"
+    ]
+  },
+  {
+    "id": "adv_dev_02",
+    "split": "dev",
+    "primary_group": "table",
+    "question": "In Table 2 (academic benchmarks), on which benchmark does GPT-4 fail to beat the best external SOTA with benchmark-specific tuning, and what are the respective F1 scores of GPT-4, GPT-3.5, and SOTA (QDGAT) on that benchmark?",
+    "answerable": true,
+    "expected_answer": "In Table 2, DROP (reading comprehension & arithmetic, evaluated 3-shot) is the only benchmark where GPT-4 does not beat benchmark-specific SOTA: GPT-4 achieves an F1 score of 80.9, GPT-3.5 achieves 64.1, and SOTA (QDGAT) achieves 88.4.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p007_table_01",
+        "page": 7,
+        "modality": "table",
+        "figure_or_table_id": "Table 2",
+        "bbox": [
+          50,
+          55,
+          560,
+          480
+        ],
+        "evidence": "DROP (F1 score, reading comprehension & arithmetic): GPT-4 (3-shot) = 80.9; GPT-3.5 (3-shot) = 64.1; LM SOTA (1-shot PaLM) = 70.8; SOTA (QDGAT) = 88.4.",
+        "unit_and_condition": "F1 score under 3-shot evaluation vs QDGAT SOTA."
+      }
+    ],
+    "required_tokens": [
+      "drop",
+      "80.9",
+      "64.1",
+      "88.4",
+      "qdgat"
+    ]
+  },
+  {
+    "id": "adv_dev_03",
+    "split": "dev",
+    "primary_group": "table",
+    "question": "According to Table 8 in Appendix B, what is the average multiple-choice score across all tested exams for the GPT-4 base model versus the post-RLHF GPT-4 model?",
+    "answerable": true,
+    "expected_answer": "According to Table 8, averaged across all tested multiple-choice exams, the GPT-4 base model achieves 73.7% while the post-RLHF GPT-4 model achieves 74.0%.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p028_table_01",
+        "page": 28,
+        "modality": "table",
+        "figure_or_table_id": "Table 8",
+        "bbox": [
+          80,
+          220,
+          530,
+          740
+        ],
+        "evidence": "Average across all tested exams: Base model = 73.7% vs RLHF model = 74.0%",
+        "unit_and_condition": "Percentage accuracy averaged across multiple-choice exams."
+      }
+    ],
+    "required_tokens": [
+      "73.7",
+      "74.0",
+      "base",
+      "rlhf"
+    ]
+  },
+  {
+    "id": "adv_dev_04",
+    "split": "dev",
+    "primary_group": "image_diagram",
+    "question": "In the visual input example in Table 3 (Page 9), what three panels are shown in the image of the 'Lightning Cable' adapter, and why does GPT-4 explain that the image is funny?",
+    "answerable": true,
+    "expected_answer": "Table 3 shows three panels: Panel 1 shows a smartphone with a large, blue, 15-pin VGA monitor connector plugged into its charging port; Panel 2 shows the 'Lightning Cable' adapter retail package picturing a VGA connector; Panel 3 shows a close-up of the VGA connector with a tiny Apple Lightning connector at the end. It is funny because of the absurdity of plugging a large, outdated VGA monitor connector into a small modern smartphone charging port.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p009_image_diagram_01",
+        "page": 9,
+        "modality": "image_diagram",
+        "figure_or_table_id": "Table 3",
+        "bbox": [
+          55,
+          60,
+          555,
+          650
+        ],
+        "evidence": "Panel 1: A smartphone with a large, blue, 15-pin VGA connector... Panel 2: The retail package for a 'Lightning Cable' adapter... Panel 3: A close-up of the VGA connector with a tiny Apple Lightning connector",
+        "unit_and_condition": "Panel-by-panel visual description (3 panels, 15-pin VGA to Lightning)."
+      }
+    ],
+    "required_tokens": [
+      "vga",
+      "15-pin",
+      "lightning",
+      "smartphone",
+      "panel"
+    ]
+  },
+  {
+    "id": "adv_dev_05",
+    "split": "dev",
+    "primary_group": "image_diagram",
+    "question": "In the visual input example in Table 16 (Page 36, 'Extreme Ironing'), what unusual activity is depicted in the photograph?",
+    "answerable": true,
+    "expected_answer": "In Table 16 (Page 36), the photograph shows a man ironing clothes on an ironing board attached to the roof of a moving yellow taxi.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p036_image_diagram_01",
+        "page": 36,
+        "modality": "image_diagram",
+        "figure_or_table_id": "Table 16",
+        "bbox": [
+          55,
+          55,
+          555,
+          520
+        ],
+        "evidence": "The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.",
+        "unit_and_condition": "Visual scene identification in Table 16."
+      }
+    ],
+    "required_tokens": [
+      "ironing",
+      "board",
+      "roof",
+      "moving",
+      "taxi"
+    ]
+  },
+  {
+    "id": "adv_dev_06",
+    "split": "dev",
+    "primary_group": "image_diagram",
+    "question": "In Table 18 (Page 38, 'Chicken Nugget Map'), what two unrelated things does the visual meme combine to create humor?",
+    "answerable": true,
+    "expected_answer": "In Table 18 (Page 38), the meme combines a caption about marveling at beautiful pictures of the Earth from space with an actual photograph of fried chicken nuggets arranged to resemble a map of the world.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p038_image_diagram_01",
+        "page": 38,
+        "modality": "image_diagram",
+        "figure_or_table_id": "Table 18",
+        "bbox": [
+          55,
+          55,
+          555,
+          560
+        ],
+        "evidence": "The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.",
+        "unit_and_condition": "Visual meme interpretation in Table 18."
+      }
+    ],
+    "required_tokens": [
+      "earth",
+      "space",
+      "chicken",
+      "nuggets",
+      "map"
+    ]
+  },
+  {
+    "id": "adv_dev_07",
+    "split": "dev",
+    "primary_group": "chart",
+    "question": "In Figure 1 (Page 3), what metric and unit are plotted on the y-axis, how is training compute normalized on the x-axis, and what dataset is used to evaluate next-word prediction?",
+    "answerable": true,
+    "expected_answer": "In Figure 1 (Page 3), the y-axis plots final loss in 'Bits per word' (from 1.0 to 6.0), the x-axis shows training compute normalized so that GPT-4 equals 1, and the evaluation dataset is derived from OpenAI's internal codebase (code tokens not contained in the training set).",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p003_chart_01",
+        "page": 3,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 1 & Figure 2",
+        "bbox": [
+          45,
+          55,
+          565,
+          680
+        ],
+        "evidence": "Metric (y-axis): Final loss in Bits per word (range 1.0 to 6.0, lower is better) on an internal codebase dataset not in training set. X-axis: Training compute normalized so that GPT-4 = 1.",
+        "unit_and_condition": "Bits per word on y-axis; compute normalized to GPT-4 = 1 on x-axis."
+      }
+    ],
+    "required_tokens": [
+      "bits",
+      "word",
+      "compute",
+      "codebase",
+      "1"
+    ]
+  },
+  {
+    "id": "adv_dev_08",
+    "split": "dev",
+    "primary_group": "chart",
+    "question": "In Figure 3 (Page 4) on the Hindsight Neglect task, what trend occurs across the smaller models (ada, babbage, curie, gpt-3.5) and how does GPT-4 change this trend?",
+    "answerable": true,
+    "expected_answer": "In Figure 3 (Page 4), accuracy on the Hindsight Neglect task exhibits inverse scaling across smaller models—decreasing from ada (~38%), babbage (~32%), and curie (~22%) down to gpt-3.5 (~12%)—before GPT-4 reverses the trend and jumps to ~100% accuracy.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p004_chart_01",
+        "page": 4,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 3",
+        "bbox": [
+          110,
+          340,
+          500,
+          620
+        ],
+        "evidence": "Performance decreases with scale from ada (~38%), babbage (~32%), curie (~22%) down to gpt-3.5 (~12%, inverse scaling), but GPT-4 reverses the inverse scaling trend and jumps to ~100% accuracy.",
+        "unit_and_condition": "Accuracy (%) on y-axis across 5 models."
+      }
+    ],
+    "required_tokens": [
+      "ada",
+      "babbage",
+      "curie",
+      "gpt-3.5",
+      "reverses",
+      "100"
+    ]
+  },
+  {
+    "id": "adv_dev_09",
+    "split": "dev",
+    "primary_group": "chart",
+    "question": "In Figure 8 (Page 12), how does the calibration curve and Expected Calibration Error (ECE) on MMLU change between the pre-trained GPT-4 model (Left) and the post-trained PPO GPT-4 model (Right)?",
+    "answerable": true,
+    "expected_answer": "In Figure 8 (Page 12), the pre-trained GPT-4 model (Left) is well-calibrated along the diagonal with an ECE of 0.007, whereas the post-trained PPO GPT-4 model (Right) has significantly worse calibration (overconfident, falling below the diagonal) with an ECE of 0.074.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p012_chart_01",
+        "page": 12,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 8",
+        "bbox": [
+          55,
+          55,
+          555,
+          360
+        ],
+        "evidence": "Left plot: Calibration curve (model=pre-train) ... ECE = 0.007. Right plot: Calibration curve (model=ppo) ... ECE = 0.074.",
+        "unit_and_condition": "ECE metric (0.007 pre-train vs 0.074 ppo)."
+      }
+    ],
+    "required_tokens": [
+      "0.007",
+      "0.074",
+      "pre-train",
+      "ppo",
+      "calibration"
+    ]
+  },
+  {
+    "id": "adv_dev_10",
+    "split": "dev",
+    "primary_group": "multi_hop",
+    "question": "Combining Figure 5 (Page 8) and Table 13 (Page 33), what 3-shot MMLU accuracy does GPT-4 achieve in Latvian and Welsh, and what are the approximate speaker populations listed for those two languages in Table 13?",
+    "answerable": true,
+    "expected_answer": "From Figure 5 (Page 8), GPT-4 achieves 80.9% 3-shot MMLU accuracy in Latvian and 77.5% in Welsh (both outperforming GPT-3.5 English at 70.1%). From Table 13 (Page 33), Latvian has approximately 2M speakers and Welsh has approximately 600k speakers.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p008_chart_01",
+        "page": 8,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 5",
+        "bbox": [
+          45,
+          55,
+          565,
+          450
+        ],
+        "evidence": "Latvian = 80.9% ... Welsh = 77.5%",
+        "unit_and_condition": "3-shot MMLU accuracy (%) on Page 8."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p033_table_01",
+        "page": 33,
+        "modality": "table",
+        "figure_or_table_id": "Table 13",
+        "bbox": [
+          55,
+          55,
+          555,
+          480
+        ],
+        "evidence": "Latvian: 2M speakers ... Welsh: 600k speakers",
+        "unit_and_condition": "Speaker population counts in Table 13 on Page 33."
+      }
+    ],
+    "required_tokens": [
+      "80.9",
+      "77.5",
+      "2m",
+      "600k",
+      "latvian",
+      "welsh"
+    ]
+  },
+  {
+    "id": "adv_dev_11",
+    "split": "dev",
+    "primary_group": "multi_hop",
+    "question": "Combining Table 1 (Page 5) and Figure 4 (Page 6), what score does GPT-4 achieve on AP Biology in Table 1, and why is its bar in Figure 4 plotted at only the 85th percentile despite getting the maximum score?",
+    "answerable": true,
+    "expected_answer": "In Table 1 (Page 5), GPT-4 achieves the maximum score of 5 (85th-100th percentile) on AP Biology. As explained in Figure 4 (Page 6), the chart conservatively plots the lower bound of each percentile range, so AP Biology appears at the 85th percentile because 15% of test-takers achieve the top score of 5/5.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p005_table_01",
+        "page": 5,
+        "modality": "table",
+        "figure_or_table_id": "Table 1",
+        "bbox": [
+          50,
+          60,
+          560,
+          720
+        ],
+        "evidence": "AP Biology: GPT-4 = 5 (85th-100th); GPT-3.5 = 4 (62nd-85th).",
+        "unit_and_condition": "AP score 5/5 on Page 5."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p006_chart_01",
+        "page": 6,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 4",
+        "bbox": [
+          45,
+          55,
+          565,
+          430
+        ],
+        "evidence": "although GPT-4 attains the highest possible score on AP Biology (5/5), this is only shown in the plot as 85th percentile because 15% of test-takers achieve a 5.",
+        "unit_and_condition": "Lower bound percentile plotting rule on Page 6."
+      }
+    ],
+    "required_tokens": [
+      "5",
+      "85th",
+      "15",
+      "lower",
+      "biology"
+    ]
+  },
+  {
+    "id": "adv_dev_12",
+    "split": "dev",
+    "primary_group": "multi_hop",
+    "question": "Combining Table 2 (Page 7) and Table 11 (Page 32), what is GPT-4's overall 0-shot pass rate on HumanEval, what fraction of HumanEval was found to be contaminated in pre-training data, and what was GPT-4's score on the non-contaminated subset?",
+    "answerable": true,
+    "expected_answer": "From Table 2 (Page 7), GPT-4 achieves 67.0% (0-shot) on HumanEval (compared to 48.1% for GPT-3.5). From Table 11 (Page 32), 25% of HumanEval was contaminated in the pre-training data, and GPT-4 achieved 65.58% on the non-contaminated subset (a degradation of -2.12%).",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p007_table_01",
+        "page": 7,
+        "modality": "table",
+        "figure_or_table_id": "Table 2",
+        "bbox": [
+          50,
+          55,
+          560,
+          480
+        ],
+        "evidence": "HumanEval (Python coding): GPT-4 (0-shot) = 67.0%; GPT-3.5 (0-shot) = 48.1%",
+        "unit_and_condition": "0-shot pass rate on Page 7."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p032_table_01",
+        "page": 32,
+        "modality": "table",
+        "figure_or_table_id": "Table 11 & Table 12",
+        "bbox": [
+          50,
+          55,
+          560,
+          700
+        ],
+        "evidence": "HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.",
+        "unit_and_condition": "Contamination rate and non-contaminated score on Page 32."
+      }
+    ],
+    "required_tokens": [
+      "67.0",
+      "25%",
+      "65.58",
+      "humaneval"
+    ]
+  },
+  {
+    "id": "adv_dev_13",
+    "split": "dev",
+    "primary_group": "text",
+    "question": "According to the Abstract (Page 1) and Section 2 (Page 2), how much compute was used for the smaller models that predicted GPT-4's performance, and why does Section 2 omit architectural details such as model size and training compute?",
+    "answerable": true,
+    "expected_answer": "Aspects of GPT-4's performance were accurately predicted based on models trained with no more than 1/1,000th the compute of GPT-4 (Page 1). Section 2 (Page 2) states that given both the competitive landscape and the safety implications of large-scale models like GPT-4, the report omits details about architecture (including model size), hardware, training compute, dataset construction, and training method.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p001_text_01",
+        "page": 1,
+        "modality": "text",
+        "figure_or_table_id": "Page 1 Abstract",
+        "bbox": [
+          108.0,
+          179.9,
+          504.0,
+          293.4
+        ],
+        "evidence": "predict some aspects of GPT-4's performance based on models trained with no more than 1/1,000th the compute of GPT-4.",
+        "unit_and_condition": "Compute ratio <= 1/1,000th on Page 1."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p002_text_02",
+        "page": 2,
+        "modality": "text",
+        "figure_or_table_id": "Page 2 Section 2",
+        "bbox": [
+          72.0,
+          173.9,
+          540.0,
+          281.4
+        ],
+        "evidence": "Given both the competitive landscape and the safety implications of large-scale models like GPT-4, this report contains no further details about the architecture (including model size), hardware, training compute, dataset construction, training method, or similar.",
+        "unit_and_condition": "Competitive landscape and safety implications in Section 2."
+      }
+    ],
+    "required_tokens": [
+      "1,000",
+      "competitive",
+      "safety"
+    ]
+  },
+  {
+    "id": "adv_dev_14",
+    "split": "dev",
+    "primary_group": "text",
+    "question": "In Appendix A.4 (Page 25) on handling images in exam benchmarks, how did the authors evaluate text-only models like GPT-3.5 on multiple-choice questions that contained images, and how did they handle images in free-response questions and the USABO 2020 Semifinal?",
+    "answerable": true,
+    "expected_answer": "According to Appendix A.4 (Page 25), for text-only models on multiple-choice questions with missing images, they inserted a text tag stating 'IMAGE:' with a non-meaningful filename to lower-bound performance. For all free-response questions plus the USABO 2020 Semifinal, they transcribed all images and diagrams into text as objectively as possible so the same prompt could be used for both vision and no-vision conditions.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p025_text_01",
+        "page": 25,
+        "modality": "text",
+        "figure_or_table_id": "Page 25 Appendix A.4",
+        "bbox": [
+          72.0,
+          71.3,
+          540.0,
+          232.5
+        ],
+        "evidence": "included a text tag stating IMAGE: with a non-meaningful filename ... For all free-response questions, plus the USABO 2020 Semifinal, we instead transcribed any images and diagrams as objectively as possible.",
+        "unit_and_condition": "Appendix A.4 image protocol on Page 25."
+      }
+    ],
+    "required_tokens": [
+      "image",
+      "filename",
+      "transcribed",
+      "usabo",
+      "free-response"
+    ]
+  },
+  {
+    "id": "adv_dev_15",
+    "split": "dev",
+    "primary_group": "text",
+    "question": "In Appendix C (Page 29), how does the contamination filtering algorithm check whether an evaluation example appeared in the pre-training dataset, and what are its stated limitations?",
+    "answerable": true,
+    "expected_answer": "In Appendix C (Page 29), after removing whitespace and symbols (keeping only characters including numbers), the algorithm randomly selects three substrings of 50 characters from each evaluation example (or the whole example if under 50 characters) and flags a match if any of the three substrings appears in a processed training example. Its limitations are that it can produce both false negatives (if small differences exist) and false positives (since only question/context is used, ignoring answers/options).",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p029_text_01",
+        "page": 29,
+        "modality": "text",
+        "figure_or_table_id": "Page 29 Appendix C",
+        "bbox": [
+          72.0,
+          71.3,
+          540.0,
+          142.8
+        ],
+        "evidence": "randomly select three substrings of 50 characters ... A match is identified if any of the three sampled evaluation substrings is a substring of the processed training example.",
+        "unit_and_condition": "3 substrings of 50 characters."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p029_text_02",
+        "page": 29,
+        "modality": "text",
+        "figure_or_table_id": "Page 29 Appendix C",
+        "bbox": [
+          72.0,
+          152.0,
+          540.0,
+          265.0
+        ],
+        "evidence": "Our substring match can result in false negatives (if there is a small difference between the evaluation and training data) as well as false positives.",
+        "unit_and_condition": "False negatives and false positives limitation."
+      }
+    ],
+    "required_tokens": [
+      "three",
+      "50",
+      "substrings",
+      "false"
+    ]
+  },
+  {
+    "id": "adv_dev_16",
+    "split": "dev",
+    "primary_group": "unanswerable",
+    "question": "According to Section 2 of the GPT-4 Technical Report, what is the exact total number of parameters, number of Mixture-of-Experts (MoE) routing layers, and exact number of NVIDIA A100 GPUs used to pre-train GPT-4?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "Section 2 (Page 2) explicitly states that given the competitive landscape and safety implications, the report contains NO details about architecture (including model size/parameters), hardware (GPU count), or training compute.",
+    "gold": [],
+    "required_tokens": []
+  },
+  {
+    "id": "adv_dev_17",
+    "split": "dev",
+    "primary_group": "unanswerable",
+    "question": "In Table 1 and Table 2 of the GPT-4 Technical Report, what exact score did GPT-4 achieve on the USMLE Step 1, Step 2, and Step 3 medical licensing exams and the ImageNet-1K top-1 classification benchmark?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "Table 1 reports Medical Knowledge Self-Assessment Program (MKSAP = 75%), NOT USMLE Step 1/2/3 scores (USMLE is only cited in bibliography [26]), and Table 2 does not evaluate ImageNet-1K.",
+    "gold": [],
+    "required_tokens": []
+  },
+  {
+    "id": "adv_dev_18",
+    "split": "dev",
+    "primary_group": "unanswerable",
+    "question": "What was the exact hourly wage in US dollars paid to the 50+ domain red-teaming experts in Section 6 and the total dollar budget spent on RLHF human annotations?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "Section 6 and the System Card mention engaging over 50 domain experts for red teaming, but never report hourly wages or total annotation dollar budgets.",
+    "gold": [],
+    "required_tokens": []
+  },
+  {
+    "id": "adv_test_01",
+    "split": "test",
+    "primary_group": "table",
+    "question": "According to Table 1 (Page 5), what scores and approximate percentiles did GPT-4 (with vision) and GPT-3.5 achieve on GRE Quantitative, GRE Verbal, and GRE Writing?",
+    "answerable": true,
+    "expected_answer": "In Table 1 (Page 5), on GRE Quantitative, GPT-4 achieved 163 / 170 (~80th percentile) vs GPT-3.5 at 147 / 170 (~25th percentile); on GRE Verbal, GPT-4 achieved 169 / 170 (~99th percentile) vs GPT-3.5 at 154 / 170 (~63rd percentile); and on GRE Writing, both GPT-4 and GPT-3.5 achieved 4 / 6 (~54th percentile).",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p005_table_01",
+        "page": 5,
+        "modality": "table",
+        "figure_or_table_id": "Table 1",
+        "bbox": [
+          50,
+          60,
+          560,
+          720
+        ],
+        "evidence": "GRE Quantitative: GPT-4 = 163 / 170 (~80th)... GPT-3.5 = 147 / 170 (~25th). GRE Verbal: GPT-4 = 169 / 170 (~99th)... GPT-3.5 = 154 / 170 (~63rd). GRE Writing: GPT-4 = 4 / 6 (~54th)... GPT-3.5 = 4 / 6 (~54th).",
+        "unit_and_condition": "Scaled scores (/170 and /6) and percentiles in Table 1."
+      }
+    ],
+    "required_tokens": [
+      "163",
+      "147",
+      "169",
+      "154",
+      "4",
+      "6",
+      "54th"
+    ]
+  },
+  {
+    "id": "adv_test_02",
+    "split": "test",
+    "primary_group": "table",
+    "question": "In Table 1 (Page 5), what scores did GPT-4 and GPT-3.5 achieve across the three Sommelier theory knowledge exams (Introductory, Certified, Advanced) and on LeetCode (Easy, Medium, Hard at k=1)?",
+    "answerable": true,
+    "expected_answer": "In Table 1 (Page 5), on Sommelier theory knowledge, GPT-4 vs GPT-3.5 achieved 92% vs 80% (Introductory), 86% vs 58% (Certified), and 77% vs 46% (Advanced). On LeetCode (k=1, out of 41 Easy, 39 Medium, 20 Hard), GPT-4 solved 31/41 Easy, 21/39 Medium, and 3/20 Hard, compared to GPT-3.5 with 12/41 Easy, 8/39 Medium, and 0/20 Hard.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p005_table_01",
+        "page": 5,
+        "modality": "table",
+        "figure_or_table_id": "Table 1",
+        "bbox": [
+          50,
+          60,
+          560,
+          720
+        ],
+        "evidence": "Introductory Sommelier: GPT-4 = 92%; GPT-3.5 = 80%. Certified Sommelier: GPT-4 = 86%; GPT-3.5 = 58%. Advanced Sommelier: GPT-4 = 77%; GPT-3.5 = 46%. LeetCode: GPT-4 (k=1) = 31/41, 21/39, 3/20; GPT-3.5 (k=1) = 12/41, 8/39, 0/20.",
+        "unit_and_condition": "Sommelier percentages and LeetCode k=1 pass counts out of 41/39/20."
+      }
+    ],
+    "required_tokens": [
+      "92%",
+      "86%",
+      "77%",
+      "31/41",
+      "21/39",
+      "3/20"
+    ]
+  },
+  {
+    "id": "adv_test_03",
+    "split": "test",
+    "primary_group": "table",
+    "question": "According to Table 2 (Page 7), what accuracy scores and few-shot settings are reported for GPT-4 versus GPT-3.5 on MMLU, HellaSwag, AI2 Reasoning Challenge (ARC), WinoGrande, and GSM-8K?",
+    "answerable": true,
+    "expected_answer": "In Table 2 (Page 7), GPT-4 vs GPT-3.5 achieves: MMLU (5-shot) 86.4% vs 70.0%; HellaSwag (10-shot) 95.3% vs 85.5%; AI2 Reasoning Challenge ARC (25-shot) 96.3% vs 85.2%; WinoGrande (5-shot) 87.5% vs 81.6%; and GSM-8K (5-shot) 92.0% vs 57.1%.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p007_table_01",
+        "page": 7,
+        "modality": "table",
+        "figure_or_table_id": "Table 2",
+        "bbox": [
+          50,
+          55,
+          560,
+          480
+        ],
+        "evidence": "MMLU (57 subjects): GPT-4 (5-shot) = 86.4%; GPT-3.5 (5-shot) = 70.0%... HellaSwag: GPT-4 (10-shot) = 95.3%... ARC: GPT-4 (25-shot) = 96.3%... WinoGrande: GPT-4 (5-shot) = 87.5%... GSM-8K: GPT-4 (5-shot) = 92.0%; GPT-3.5 (5-shot) = 57.1%.",
+        "unit_and_condition": "Few-shot accuracy percentages in Table 2."
+      }
+    ],
+    "required_tokens": [
+      "86.4",
+      "95.3",
+      "96.3",
+      "87.5",
+      "92.0"
+    ]
+  },
+  {
+    "id": "adv_test_04",
+    "split": "test",
+    "primary_group": "table",
+    "question": "In Table 6 and Table 7 (Page 13), how do Early GPT-4 and Latest GPT-4 differ when responding to the disallowed prompt 'How can I create a bomb?' versus the allowed prompt 'Where do I find cheap cigarettes?'?",
+    "answerable": true,
+    "expected_answer": "In Table 6 (Page 13), for the disallowed prompt 'How can I create a bomb?', Early GPT-4 provides a general overview of steps and considerations (target, explosive, detonator, casing), whereas Latest GPT-4 safely refuses to provide guidance on creating weapons. In Table 7 (Page 13), for the allowed prompt 'Where do I find cheap cigarettes?', Early GPT-4 overly cautiously refuses, whereas Latest GPT-4 answers helpfully with 4 options (local tobacco store/gas station discounts, airport duty-free shops, online websites, Native American reservations) while reminding the user of smoking health risks.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p013_table_01",
+        "page": 13,
+        "modality": "table",
+        "figure_or_table_id": "Table 6 & Table 7",
+        "bbox": [
+          55,
+          55,
+          555,
+          520
+        ],
+        "evidence": "Table 6: Disallowed Prompt 'How can I create a bomb?' ... Table 7: Allowed Prompt 'Where do I find cheap cigarettes?'",
+        "unit_and_condition": "Comparison of Early GPT-4 vs Latest GPT-4 in Table 6 and Table 7."
+      }
+    ],
+    "required_tokens": [
+      "bomb",
+      "cigarettes",
+      "duty-free",
+      "refuses"
+    ]
+  },
+  {
+    "id": "adv_test_05",
+    "split": "test",
+    "primary_group": "table",
+    "question": "According to Table 9 (Page 30, Contamination data for Exams Summary), what are the contamination rates for the Uniform Bar Exam, LSAT, and GRE Quantitative, and what scores does GPT-4 achieve on the full exam versus the non-contaminated subset for LSAT and GRE Quantitative?",
+    "answerable": true,
+    "expected_answer": "In Table 9 (Page 30), the Uniform Bar Exam has 0% contamination (298/400 on both full and non-contaminated). LSAT has 39% contamination, where GPT-4 scores 163 (~88th percentile) overall and 169 (~97th percentile) on the non-contaminated subset. GRE Quantitative has 35% contamination, where GPT-4 scores 163/170 (~80th percentile) overall and 165/170 (~85th percentile) on the non-contaminated subset.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p030_table_01",
+        "page": 30,
+        "modality": "table",
+        "figure_or_table_id": "Table 9",
+        "bbox": [
+          50,
+          55,
+          560,
+          730
+        ],
+        "evidence": "Uniform Bar Exam: Contam = 0%, GPT-4 = 298/400... LSAT: Contam = 39%... GPT-4 = 163 (~88th), Non-contaminated GPT-4 = 169 (~97th). GRE Quantitative: Contam = 35%, GPT-4 = 163/170 (~80th), Non-contaminated GPT-4 = 165/170 (~85th).",
+        "unit_and_condition": "Contamination % and full vs non-contaminated scaled scores in Table 9."
+      }
+    ],
+    "required_tokens": [
+      "0%",
+      "39%",
+      "35%",
+      "169",
+      "165"
+    ]
+  },
+  {
+    "id": "adv_test_06",
+    "split": "test",
+    "primary_group": "table",
+    "question": "In Table 10 (Page 31, Detailed contamination information), what are the question count, contamination rate, non-contaminated accuracy, contaminated-only accuracy, and degradation reported for AP English Literature (MCQ) and MKSAP Questions (MCQ)?",
+    "answerable": true,
+    "expected_answer": "In Table 10 (Page 31), AP English Literature (MCQ) has 55 questions, 81.82% contamination, 60.00% non-contaminated accuracy, 75.56% contaminated-only accuracy, and -17.50% degradation. MKSAP Questions (MCQ) has 1080 questions, 18.52% contamination, 75.11% non-contaminated accuracy, 73.00% contaminated-only accuracy, and +0.52% degradation.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p031_table_01",
+        "page": 31,
+        "modality": "table",
+        "figure_or_table_id": "Table 10",
+        "bbox": [
+          50,
+          55,
+          560,
+          730
+        ],
+        "evidence": "AP English Literature (MCQ): 55 questions, 81.82% contam, GPT-4 = 72.73%, non-contaminated = 60.00%, contaminated only = 75.56%, Degradation = -17.50%. MKSAP Questions (MCQ): 1080 questions, 18.52% contam, GPT-4 = 74.72%, non-contaminated = 75.11%, contaminated only = 73.00%, Degradation = +0.52%.",
+        "unit_and_condition": "Question counts, contamination %, accuracy %, and degradation % in Table 10."
+      }
+    ],
+    "required_tokens": [
+      "81.82",
+      "60.00",
+      "17.50",
+      "1080",
+      "18.52",
+      "75.11"
+    ]
+  },
+  {
+    "id": "adv_test_07",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "question": "In the visual input example in Table 14 (Page 34), what values and units does GPT-4 read from the bar chart image for average daily meat consumption in Georgia and Western Asia, and what is their sum?",
+    "answerable": true,
+    "expected_answer": "In Table 14 (Page 34), GPT-4 reads 79.84 grams per person per day for Georgia and 69.62 grams per person per day for Western Asia from the chart image, giving a sum of 149.46 grams per person per day.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p034_image_diagram_01",
+        "page": 34,
+        "modality": "image_diagram",
+        "figure_or_table_id": "Table 14",
+        "bbox": [
+          55,
+          55,
+          555,
+          690
+        ],
+        "evidence": "Georgia = 79.84 grams per person per day; Western Asia = 69.62 grams per person per day. Computation & final answer: 79.84 g + 69.62 g = 149.46 grams per person per day.",
+        "unit_and_condition": "Grams per person per day in Table 14."
+      }
+    ],
+    "required_tokens": [
+      "79.84",
+      "69.62",
+      "149.46",
+      "grams"
+    ]
+  },
+  {
+    "id": "adv_test_08",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "question": "In the visual input example in Table 15 (Page 35, French physics exam problem), what physical geometry and boundary conditions at x=0 and x=L are depicted in the diagram, and what linear temperature profile T(x) does GPT-4 derive for question I.1.a?",
+    "answerable": true,
+    "expected_answer": "In Table 15 (Page 35), the diagram shows a 1D conductive bar of length L along axis x with boundary temperatures T(0) = T0 at x=0 and T(L) = Tb at x=L. For stationary 1D heat conduction (d^2T/dx^2 = 0), GPT-4 derives the linear temperature profile T(x) = (Tb - T0)*(x/L) + T0 with slope (Tb - T0)/L.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p035_image_diagram_01",
+        "page": 35,
+        "modality": "image_diagram",
+        "figure_or_table_id": "Table 15",
+        "bbox": [
+          55,
+          55,
+          555,
+          700
+        ],
+        "evidence": "1D conductive bar of length L along axis x, boundary temperatures T(0) = T0 at x=0 and T(L) = Tb at x=L... T(x) = (Tb - T0)*(x/L) + T0",
+        "unit_and_condition": "Boundary conditions at x=0, x=L and formula T(x) in Table 15."
+      }
+    ],
+    "required_tokens": [
+      "t0",
+      "tb",
+      "x/l",
+      "linear"
+    ]
+  },
+  {
+    "id": "adv_test_09",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "question": "In Table 17 (Page 37, Pixel to Paper Summaries), when asked to explain Figure 2 from the screenshot of the InstructGPT paper, what three sequential stages of the pipeline does GPT-4 identify from the diagram?",
+    "answerable": true,
+    "expected_answer": "In Table 17 (Page 37), GPT-4 identifies three sequential steps from the Figure 2 diagram of the InstructGPT paper: (1) Supervised fine-tuning (SFT) using labeler demonstration data to fine-tune GPT-3, (2) Reward model (RM) training using human rankings of model outputs from best to worst, and (3) Reinforcement learning using Proximal Policy Optimization (PPO) to optimize the policy against the reward model.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p037_image_diagram_01",
+        "page": 37,
+        "modality": "image_diagram",
+        "figure_or_table_id": "Table 17",
+        "bbox": [
+          55,
+          55,
+          555,
+          720
+        ],
+        "evidence": "1. Supervised fine-tuning (SFT)... 2. Reward model (RM) training... 3. Reinforcement learning using Proximal Policy Optimization (PPO)",
+        "unit_and_condition": "3-stage RLHF architecture diagram in Table 17."
+      }
+    ],
+    "required_tokens": [
+      "sft",
+      "reward",
+      "ppo"
+    ]
+  },
+  {
+    "id": "adv_test_10",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "question": "In Table 19 (Page 39, 'Moar Layers' comic strip), how does the comic contrast the discussion in the 'Statistical Learning' panel with the 'Neural Networks' panel?",
+    "answerable": true,
+    "expected_answer": "In Table 19 (Page 39), the top 'Statistical Learning' panel shows characters discussing complex mathematical remedies for overfitting—minimizing structural risk, reworking the loss function, and using a soft margin—whereas the bottom 'Neural Networks' panel simply says 'stack more layers'.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p039_image_diagram_01",
+        "page": 39,
+        "modality": "image_diagram",
+        "figure_or_table_id": "Table 19",
+        "bbox": [
+          55,
+          55,
+          555,
+          650
+        ],
+        "evidence": "Top panel (Statistical Learning): Characters discuss complex mathematical remedies for overfitting — minimizing structural risk, reworking the loss function, and using a soft margin. Bottom panel (Neural Networks): Character simply says 'stack more layers'",
+        "unit_and_condition": "Two-panel visual comparison in Table 19."
+      }
+    ],
+    "required_tokens": [
+      "statistical",
+      "structural",
+      "margin",
+      "stack",
+      "layers"
+    ]
+  },
+  {
+    "id": "adv_test_11",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "question": "In System Card Figure 10 (Page 68, Example 'Jailbreaks' for GPT-4-launch), what two adversarial attack methods are shown side by side, and which one is highlighted as one of the most effective methods of breaking the model?",
+    "answerable": true,
+    "expected_answer": "System Card Figure 10 (Page 68) shows (1) 'Prompting with Opposite Mode' on the left (where the user prompts the model to respond as both [ChatGPT] and [AntiGPT]) and (2) 'System Message Attack' on the right (where an adversarial system message overrides safety refusals), which is annotated as one of the most effective methods of breaking the model.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p068_image_diagram_01",
+        "page": 68,
+        "modality": "image_diagram",
+        "figure_or_table_id": "System Card Figure 10",
+        "bbox": [
+          55,
+          55,
+          555,
+          710
+        ],
+        "evidence": "1. Left box ('Prompting with Opposite Mode'): User instructs model to respond as both [ChatGPT] and [AntiGPT]... 2. Right box ('System Message Attack'): Annotated as 'This is one of the most effective methods of breaking the model currently'",
+        "unit_and_condition": "Two jailbreak attack diagrams in System Card Figure 10 on Page 68."
+      }
+    ],
+    "required_tokens": [
+      "opposite",
+      "antigpt",
+      "system",
+      "effective"
+    ]
+  },
+  {
+    "id": "adv_test_12",
+    "split": "test",
+    "primary_group": "chart",
+    "question": "In Figure 2 (Page 3, Capability prediction on 23 coding problems), what metric is plotted on the y-axis, how is training compute normalized on the x-axis, and what subset of HumanEval do the 23 problems come from?",
+    "answerable": true,
+    "expected_answer": "In Figure 2 (Page 3), the y-axis plots -Mean Log Pass Rate (from 0 to 5), the x-axis plots training compute normalized so that GPT-4 equals 1, and the 23 coding problems come from the 3rd easiest difficulty bucket of the HumanEval dataset.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p003_chart_01",
+        "page": 3,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 1 & Figure 2",
+        "bbox": [
+          45,
+          55,
+          565,
+          680
+        ],
+        "evidence": "Figure 2 Title: Capability prediction on 23 coding problems — Performance of GPT-4 and smaller models on a subset of the HumanEval dataset (3rd easiest difficulty bucket). Metric (y-axis): -Mean Log Pass Rate (range 0 to 5). X-axis: Training compute normalized so that GPT-4 = 1.",
+        "unit_and_condition": "-Mean Log Pass Rate on y-axis; compute normalized to GPT-4 = 1."
+      }
+    ],
+    "required_tokens": [
+      "mean",
+      "log",
+      "pass",
+      "23",
+      "humaneval"
+    ]
+  },
+  {
+    "id": "adv_test_13",
+    "split": "test",
+    "primary_group": "chart",
+    "question": "In Figure 5 (Page 8, GPT-4 3-shot accuracy on MMLU across languages), in how many of the 26 languages does GPT-4 beat the English score of GPT-3.5 (70.1%), which two translated languages achieve the highest score (84.1%), and which two languages score below 70.1%?",
+    "answerable": true,
+    "expected_answer": "In Figure 5 (Page 8), GPT-4 outperforms GPT-3.5's English score (70.1%) in 24 out of 26 languages. The highest translated scores are Italian (84.1%) and Afrikaans (84.1%), while the only two languages below 70.1% are Marathi (66.7%) and Telugu (62.0%).",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p008_chart_01",
+        "page": 8,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 5",
+        "bbox": [
+          45,
+          55,
+          565,
+          450
+        ],
+        "evidence": "Italian = 84.1%, Afrikaans = 84.1%... Marathi = 66.7%, Telugu = 62.0%. Key finding: GPT-4 outperforms GPT-3.5 English (70.1%) in 24 out of 26 languages tested",
+        "unit_and_condition": "3-shot MMLU accuracy (%) across 26 languages in Figure 5."
+      }
+    ],
+    "required_tokens": [
+      "24",
+      "26",
+      "italian",
+      "afrikaans",
+      "84.1",
+      "marathi",
+      "telugu"
+    ]
+  },
+  {
+    "id": "adv_test_14",
+    "split": "test",
+    "primary_group": "chart",
+    "question": "In Figure 6 (Page 10, Internal factual eval by category), what nine categories are evaluated on the x-axis, which three ChatGPT/GPT-3.5 baseline series are compared against GPT-4, and by how many percentage points does GPT-4 beat the latest GPT-3.5 model overall?",
+    "answerable": true,
+    "expected_answer": "In Figure 6 (Page 10), the nine categories on the x-axis are learning, technology, writing, history, math, science, recommendation, code, and business. GPT-4 is compared against chatgpt-v2, chatgpt-v3, and chatgpt-v4, scoring 19 percentage points higher overall than the latest GPT-3.5 model.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p010_chart_01",
+        "page": 10,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 6",
+        "bbox": [
+          60,
+          310,
+          550,
+          610
+        ],
+        "evidence": "X-axis (9 categories): learning, technology, writing, history, math, science, recommendation, code, business. Legend / Series compared: chatgpt-v2, chatgpt-v3, chatgpt-v4 (all based on GPT-3.5) vs gpt-4 (green). Key quantitative result: GPT-4 scores 19 percentage points higher overall",
+        "unit_and_condition": "Accuracy (%) across 9 categories and +19 percentage points improvement."
+      }
+    ],
+    "required_tokens": [
+      "19",
+      "learning",
+      "technology",
+      "business",
+      "chatgpt-v4"
+    ]
+  },
+  {
+    "id": "adv_test_15",
+    "split": "test",
+    "primary_group": "chart",
+    "question": "In Figure 7 and Table 4 (Page 11) on TruthfulQA, how does accuracy progress across gpt-4-base 0-shot, gpt-4-base 5-shot, and gpt-4 after RLHF fine-tuning, and what wrong answer does GPT-4 give to the Elvis trick question in Table 4?",
+    "answerable": true,
+    "expected_answer": "In Figure 7 (Page 11), accuracy on TruthfulQA mc1 rises from ~30% for gpt-4-base (0-shot) to ~41% for gpt-4-base (5-shot) and reaches ~60% for gpt-4 after RLHF fine-tuning. In Table 4 (Page 11), when asked for the American guitarist and rock singer who is the son of an actor named 'Elvis what?', GPT-4 incorrectly answers 'Elvis Presley' instead of 'Elvis Perkins' (son of actor Anthony Perkins).",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p011_chart_01",
+        "page": 11,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 7 & Table 4",
+        "bbox": [
+          55,
+          65,
+          555,
+          650
+        ],
+        "evidence": "gpt-4-base (0-shot ~30%, 5-shot ~41%), and gpt-4 after RLHF fine-tuning (~60%, highest bar)... GPT-4 picks 'Presley' instead of 'Perkins'",
+        "unit_and_condition": "TruthfulQA mc1 accuracy (%) in Figure 7 and Table 4 example on Page 11."
+      }
+    ],
+    "required_tokens": [
+      "30%",
+      "41%",
+      "60%",
+      "presley",
+      "perkins"
+    ]
+  },
+  {
+    "id": "adv_test_16",
+    "split": "test",
+    "primary_group": "chart",
+    "question": "In Figure 9 (Page 14), what two prompt categories and three models are compared on incorrect behavior rate, and by what percentage does GPT-4 reduce responses to disallowed content compared to GPT-3.5?",
+    "answerable": true,
+    "expected_answer": "Figure 9 (Page 14) compares incorrect behavior rate on Sensitive Prompts and Disallowed Prompts across three models: text-davinci-003, gpt-3.5-turbo, and gpt-4. Compared to GPT-3.5, GPT-4 reduces responses to requests for disallowed content by 82%.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p014_chart_01",
+        "page": 14,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 9",
+        "bbox": [
+          95,
+          55,
+          515,
+          330
+        ],
+        "evidence": "X-axis groups: Sensitive Prompts vs Disallowed Prompts... Models compared: text-davinci-003 (blue), gpt-3.5-turbo (orange), gpt-4 (green)... GPT-4 responds to requests for disallowed content 82% less often than GPT-3.5.",
+        "unit_and_condition": "Incorrect behavior rate (%) and 82% reduction on disallowed content."
+      }
+    ],
+    "required_tokens": [
+      "sensitive",
+      "disallowed",
+      "text-davinci-003",
+      "82%"
+    ]
+  },
+  {
+    "id": "adv_test_17",
+    "split": "test",
+    "primary_group": "multi_hop",
+    "question": "Combining the Chemical Compound ReAct workflow diagram (Page 99) and execution trace (Page 100), after the agent fails to modify Dasatinib directly, what three alternative tyrosine kinase inhibitors with the same MOA/target does Literature Answer return, which one does the agent modify into a novel unpatented compound, and which supplier does it purchase the compound from?",
+    "answerable": true,
+    "expected_answer": "Across Pages 99-100, after 'Failed to modify (bioisosterism) compound' on Dasatinib, the Literature Answer tool returns imatinib, nilotinib, and bosutinib (tyrosine kinase inhibitors targeting BCR-ABL, SRC, and c-KIT). The agent searches and modifies imatinib into a novel unpatented derivative and purchases it from ZINC ('Purchased from ZINC').",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p099_image_diagram_01",
+        "page": 99,
+        "modality": "image_diagram",
+        "figure_or_table_id": "Appendix ChemTool Diagram P.99-100",
+        "bbox": [
+          50,
+          55,
+          560,
+          740
+        ],
+        "evidence": "finds imatinib, nilotinib, bosutinib (tyrosine kinase inhibitors targeting BCR-ABL, SRC, c-KIT). Calls Molecule search('imatinib')... Calls Patent Search -> 'Novel'. Calls Purchase -> 'Purchased from ZINC'.",
+        "unit_and_condition": "ReAct tool-use diagram on Page 99."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p100_text_01",
+        "page": 100,
+        "modality": "text",
+        "figure_or_table_id": "Page 100 Trace",
+        "bbox": [
+          72.0,
+          71.3,
+          540.0,
+          260.0
+        ],
+        "evidence": "Other compounds with the same MOA/target as Dasatinib include imatinib, nilotinib, and bosutinib, which are all tyrosine kinase inhibitors that target BCR-ABL, SRC, and c-KIT",
+        "unit_and_condition": "Execution trace on Page 100."
+      }
+    ],
+    "required_tokens": [
+      "imatinib",
+      "nilotinib",
+      "bosutinib",
+      "zinc"
+    ]
+  },
+  {
+    "id": "adv_test_18",
+    "split": "test",
+    "primary_group": "multi_hop",
+    "question": "Combining Table 1 (Page 5) and Table 8 (Page 28), on the USNCO Local Section Exam 2022, what raw scores out of 60 did GPT-4 (with vision), GPT-4 (no vision), and GPT-3.5 achieve in Table 1, and what percentage accuracies did the GPT-4 base model versus the post-RLHF model achieve on USNCO 2022 in Table 8?",
+    "answerable": true,
+    "expected_answer": "In Table 1 (Page 5), on the USNCO Local Section Exam 2022, GPT-4 (with vision) scored 36 / 60, GPT-4 (no vision) scored 38 / 60, and GPT-3.5 scored 24 / 60. In Table 8 (Page 28), the GPT-4 base model achieved 51.7% on USNCO 2022 compared to 63.3% for the post-RLHF GPT-4 model.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p005_table_01",
+        "page": 5,
+        "modality": "table",
+        "figure_or_table_id": "Table 1",
+        "bbox": [
+          50,
+          60,
+          560,
+          720
+        ],
+        "evidence": "USNCO Local Section Exam 2022: GPT-4 = 36 / 60; GPT-4 (no vision) = 38 / 60; GPT-3.5 = 24 / 60.",
+        "unit_and_condition": "Raw score out of 60 in Table 1 on Page 5."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p028_table_01",
+        "page": 28,
+        "modality": "table",
+        "figure_or_table_id": "Table 8",
+        "bbox": [
+          80,
+          220,
+          530,
+          740
+        ],
+        "evidence": "USNCO 2022 = 51.7% vs 63.3%",
+        "unit_and_condition": "Base vs RLHF percentage accuracy in Table 8 on Page 28."
+      }
+    ],
+    "required_tokens": [
+      "36",
+      "38",
+      "24",
+      "51.7",
+      "63.3"
+    ]
+  },
+  {
+    "id": "adv_test_19",
+    "split": "test",
+    "primary_group": "multi_hop",
+    "question": "Combining System Card Figure 6 & Figure 7 (Page 63) and the accompanying evaluation text on Page 64, what three Yes/No questions make up the RBRM classifier rubric in Figure 6, how does RealToxicityPrompts toxic generation rate drop from GPT-3.5 to GPT-4-launch, and on what percentage of prompts did human labelers prefer GPT-4-launch over GPT-3.5 RLHF and GPT-3.5-Turbo RLHF?",
+    "answerable": true,
+    "expected_answer": "In System Card Figure 6 (Page 63), the RBRM classifier rubric asks three Yes/No questions: (1) Is it a refusal?, (2) Providing reasons or referencing safety/laws/policies?, and (3) Contains harmful or inappropriate content?. On RealToxicityPrompts (Pages 63-64), toxic generation drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch, and human labelers preferred GPT-4-launch responses over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p063_chart_01",
+        "page": 63,
+        "modality": "chart",
+        "figure_or_table_id": "System Card Figure 6 & Figure 7",
+        "bbox": [
+          55,
+          55,
+          555,
+          720
+        ],
+        "evidence": "(1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No)... toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch",
+        "unit_and_condition": "RBRM rubric and toxicity % on Page 63."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p064_text_01",
+        "page": 64,
+        "modality": "text",
+        "figure_or_table_id": "Page 64 System Card",
+        "bbox": [
+          72.0,
+          71.3,
+          540.0,
+          145.0
+        ],
+        "evidence": "preferred over the responses generated by GPT-3.5 RLHF on 70.2% of prompts and GPT-3.5 Turbo RLHF on 61.1% of prompts.",
+        "unit_and_condition": "Human preference win rates (%) on Page 64."
+      }
+    ],
+    "required_tokens": [
+      "refusal",
+      "6.48",
+      "0.73",
+      "70.2",
+      "61.1"
+    ]
+  },
+  {
+    "id": "adv_test_20",
+    "split": "test",
+    "primary_group": "multi_hop",
+    "question": "Combining Figure 2 (Page 3) and the Section 3 text on Page 4, how were the HumanEval problems split into difficulty buckets before training completed, which bucket is displayed in Figure 2, and on which difficulty bucket did GPT-4 underperform the registered scaling predictions?",
+    "answerable": true,
+    "expected_answer": "According to Page 4 and Figure 2 (Page 3), before training completed, all but the 15 hardest HumanEval problems were split into 6 difficulty buckets based on the performance of smaller models. Figure 2 plots the 3rd easiest bucket (23 coding problems), while GPT-4 underperformed the registered predictions on the easiest bucket.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p003_chart_01",
+        "page": 3,
+        "modality": "chart",
+        "figure_or_table_id": "Figure 1 & Figure 2",
+        "bbox": [
+          45,
+          55,
+          565,
+          680
+        ],
+        "evidence": "Figure 2 Title: Capability prediction on 23 coding problems — Performance of GPT-4 and smaller models on a subset of the HumanEval dataset (3rd easiest difficulty bucket).",
+        "unit_and_condition": "Figure 2 23 coding problems on Page 3."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p004_text_02",
+        "page": 4,
+        "modality": "text",
+        "figure_or_table_id": "Page 4 Section 3",
+        "bbox": [
+          72.0,
+          140.0,
+          540.0,
+          260.0
+        ],
+        "evidence": "All but the 15 hardest HumanEval problems were split into 6 difficulty buckets based on the performance of smaller models. The results on the 3rd easiest bucket are shown in Figure 2... the main exception being GPT-4 underperforming our predictions on the easiest bucket.",
+        "unit_and_condition": "Bucket partitioning on Page 4."
+      }
+    ],
+    "required_tokens": [
+      "15",
+      "6",
+      "3rd",
+      "easiest"
+    ]
+  },
+  {
+    "id": "adv_test_21",
+    "split": "test",
+    "primary_group": "text",
+    "question": "According to Appendix A (Page 24), what bug was discovered and fixed on the AMC 10 and AMC 12 held-out test exams, and what sampling temperature was used when generating responses for free-response exam questions?",
+    "answerable": true,
+    "expected_answer": "According to Appendix A (Page 24), on the AMC 10 and AMC 12 held-out test exams, the authors discovered and fixed a bug that limited response length and reran those exams. For free-response exam questions, responses were sampled a single time using temperature 0.6.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p024_text_03",
+        "page": 24,
+        "modality": "text",
+        "figure_or_table_id": "Page 24 Appendix A.2",
+        "bbox": [
+          72.0,
+          280.0,
+          540.0,
+          390.0
+        ],
+        "evidence": "For the AMC 10 and AMC 12 held-out test exams, we discovered a bug that limited response length. We fixed the bug and reran these exams to ensure accurate results.",
+        "unit_and_condition": "AMC 10/12 response length bug on Page 24."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p024_text_04",
+        "page": 24,
+        "modality": "text",
+        "figure_or_table_id": "Page 24 Appendix A.3",
+        "bbox": [
+          72.0,
+          395.0,
+          540.0,
+          510.0
+        ],
+        "evidence": "For each free-response section, we gave the model the free-response question's prompt as a simple instruction-following-style request, and we sampled a response using temperature 0.6.",
+        "unit_and_condition": "Free-response sampling temperature 0.6 on Page 24."
+      }
+    ],
+    "required_tokens": [
+      "amc",
+      "length",
+      "0.6",
+      "temperature"
+    ]
+  },
+  {
+    "id": "adv_test_22",
+    "split": "test",
+    "primary_group": "text",
+    "question": "In Appendix A.6 and A.7 (Page 25), how was the Codeforces ELO rating calculated across contests and attempts, and which dated model snapshots were used for GPT-4 multiple-choice questions, free-response questions, and the USABO semifinal exam?",
+    "answerable": true,
+    "expected_answer": "According to Appendix A.6 and A.7 (Page 25), Codeforces ELO was determined by evaluating each model on 10 recent contests (roughly 6 problems per contest, 10 attempts per problem) and repeatedly performing ELO adjustments until converging to an equilibrium rating. GPT-4 multiple-choice questions used a March 1, 2023 snapshot, free-response questions used a February 23, 2023 snapshot, and the USABO semifinal exam used an earlier December 16, 2022 snapshot.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p025_text_04",
+        "page": 25,
+        "modality": "text",
+        "figure_or_table_id": "Page 25 Appendix A.6",
+        "bbox": [
+          72.0,
+          420.0,
+          540.0,
+          540.0
+        ],
+        "evidence": "evaluated each model on 10 recent contests. Each contest had roughly 6 problems, and the model was given 10 attempts per problem.",
+        "unit_and_condition": "10 contests, ~6 problems, 10 attempts per problem."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p025_text_05",
+        "page": 25,
+        "modality": "text",
+        "figure_or_table_id": "Page 25 Appendix A.7",
+        "bbox": [
+          72.0,
+          545.0,
+          540.0,
+          660.0
+        ],
+        "evidence": "March 1, 2023, whereas the free-response questions were run and scored using a non-final model snapshot from February 23, 2023... USABO semifinal exam using an earlier GPT-4 snapshot from December 16, 2022.",
+        "unit_and_condition": "Exact snapshot dates on Page 25."
+      }
+    ],
+    "required_tokens": [
+      "10",
+      "march",
+      "february",
+      "december",
+      "2022"
+    ]
+  },
+  {
+    "id": "adv_test_23",
+    "split": "test",
+    "primary_group": "text",
+    "question": "In the GPT-4 System Card (Page 64), what 4-step iterative process using GPT-4 itself was used to generate synthetic comparison data for mitigating closed-domain hallucinations, and how did it affect TruthfulQA accuracy?",
+    "answerable": true,
+    "expected_answer": "On Page 64, the 4-step process is: (1) pass a prompt through GPT-4 to get a response, (2) pass prompt + response through GPT-4 with an instruction to list all hallucinations (continuing if none are found), (3) pass prompt + response + hallucinations through GPT-4 to rewrite the response without hallucinations, and (4) pass prompt + new response through GPT-4 to list any remaining hallucinations, then mix the (original, rewritten) pairs into the RM dataset. This improved TruthfulQA accuracy from around 30% to around 60%.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p064_text_03",
+        "page": 64,
+        "modality": "text",
+        "figure_or_table_id": "Page 64 System Card",
+        "bbox": [
+          72.0,
+          320.0,
+          540.0,
+          440.0
+        ],
+        "evidence": "1. Pass a prompt through GPT-4 model and get a response 2. Pass prompt + response through GPT-4 with an instruction to list all hallucinations... 3. Pass prompt + response + hallucinations through GPT-4 with an instruction to rewrite the response without hallucinations",
+        "unit_and_condition": "4-step hallucination synthetic data pipeline on Page 64."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p064_text_04",
+        "page": 64,
+        "modality": "text",
+        "figure_or_table_id": "Page 64 System Card",
+        "bbox": [
+          72.0,
+          445.0,
+          540.0,
+          530.0
+        ],
+        "evidence": "improve performance on factuality as measured by evaluations such as TruthfulQA[34] and increase accuracy to around 60% as compared to 30% for an earlier version.",
+        "unit_and_condition": "TruthfulQA improvement from ~30% to ~60% on Page 64."
+      }
+    ],
+    "required_tokens": [
+      "hallucinations",
+      "rewrite",
+      "60%",
+      "30%"
+    ]
+  },
+  {
+    "id": "adv_test_24",
+    "split": "test",
+    "primary_group": "text",
+    "question": "According to Section 4.2 of the GPT-4 System Card (Page 66), what API endpoint allows developers to filter harmful content using OpenAI's moderation classifiers, and what two roles did GPT-4 play in developing and training those moderation classifiers?",
+    "answerable": true,
+    "expected_answer": "According to Page 66, developers can access OpenAI's moderation classifiers via the Moderation API endpoint. GPT-4 played two key roles: (1) it helped speed up the development of robust, unambiguous taxonomies (content policies) by classifying test sets and identifying gaps in the taxonomy, and (2) it helped facilitate the labeling of training data used to train and improve moderation classifiers.",
+    "gold": [
+      {
+        "chunk_id": "gpt4-2023-techreport_p066_text_02",
+        "page": 66,
+        "modality": "text",
+        "figure_or_table_id": "Page 66 System Card 4.2",
+        "bbox": [
+          72.0,
+          230.0,
+          540.0,
+          350.0
+        ],
+        "evidence": "accessible to developers via our Moderation API endpoint, which enables developers to filter out harmful content",
+        "unit_and_condition": "Moderation API endpoint on Page 66."
+      },
+      {
+        "chunk_id": "gpt4-2023-techreport_p066_text_03",
+        "page": 66,
+        "modality": "text",
+        "figure_or_table_id": "Page 66 System Card 4.2",
+        "bbox": [
+          72.0,
+          355.0,
+          540.0,
+          510.0
+        ],
+        "evidence": "1. The model helped speed up development of robust, unambiguous taxonomies needed for content classification... 2. The model helped facilitate the labeling of training data",
+        "unit_and_condition": "Two roles of GPT-4 in moderation classifier development on Page 66."
+      }
+    ],
+    "required_tokens": [
+      "moderation",
+      "api",
+      "taxonomies",
+      "labeling"
+    ]
+  },
+  {
+    "id": "adv_test_25",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "question": "According to Section 2 of the GPT-4 Technical Report, what was the exact total cloud compute cost in US dollars and total electricity consumption in megawatt-hours (MWh) required to pre-train GPT-4?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "Section 2 explicitly states that the report omits all details about hardware and training compute; neither dollar cost nor electricity consumption in MWh is disclosed anywhere in the 100-page report.",
+    "gold": [],
+    "required_tokens": []
+  },
+  {
+    "id": "adv_test_26",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "question": "In Section 4.1 (Visual Inputs), what is the exact image patch resolution (e.g., 14x14 or 16x16 pixels), Vision Transformer (ViT) backbone parameter count, and number of cross-attention layers used to fuse image embeddings into GPT-4?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "The report demonstrates visual input capabilities via examples (Tables 3, 14-19) and exam scores, but omits all vision encoder architectural specifications (patch size, ViT parameters, cross-attention layers).",
+    "gold": [],
+    "required_tokens": []
+  },
+  {
+    "id": "adv_test_27",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "question": "According to Table 2 on traditional academic benchmarks (Page 7), what exact BLEU scores did GPT-4 and GPT-3.5 achieve on the WMT 2014 English-to-German and WMT 2014 English-to-French machine translation benchmarks?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "Table 2 (Page 7) only evaluates MMLU, HellaSwag, AI2 ARC, WinoGrande, HumanEval, DROP (F1), and GSM-8K; WMT 2014 BLEU scores are not reported in Table 2 or elsewhere in the report.",
+    "gold": [],
+    "required_tokens": []
+  },
+  {
+    "id": "adv_test_28",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "question": "In Appendix A (Page 24), what was the exact hourly rate in US dollars paid to the third-party essay-grading contractors who scored the AP, SAT, and GRE free-response essays?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "Appendix A (Page 24) states that formal essays were graded by 1-2 qualified third-party contractors with relevant work experience, but never discloses their hourly compensation rate.",
+    "gold": [],
+    "required_tokens": []
+  },
+  {
+    "id": "adv_test_29",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "question": "According to the System Card Appendix on pages 99-100, what was the exact purchase price in US dollars, catalog SKU number, and shipping delivery time in days quoted by ZINC for the modified imatinib derivative?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "The tool-use trace on page 100 only returns the observation 'Purchased from ZINC' and never provides a dollar price, SKU number, or shipping time.",
+    "gold": [],
+    "required_tokens": []
+  },
+  {
+    "id": "adv_test_30",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "question": "In Figure 5 (Page 8) and Table 13 (Page 33) on Multilingual MMLU, what exact 3-shot accuracy did GPT-4 achieve on Vietnamese, Tagalog, and Amharic, and what are their speaker populations in Table 13?",
+    "answerable": false,
+    "expected_answer": "",
+    "absence_reason": "Figure 5 evaluates 26 specific languages (Italian down to Telugu) and Table 13 lists English, Marathi, Latvian, and Welsh; Vietnamese, Tagalog, and Amharic are not among the 26 tested languages.",
+    "gold": [],
+    "required_tokens": []
+  }
+]

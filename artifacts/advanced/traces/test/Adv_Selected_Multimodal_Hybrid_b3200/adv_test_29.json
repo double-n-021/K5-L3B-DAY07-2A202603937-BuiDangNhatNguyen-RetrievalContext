@@ -1,0 +1,259 @@
+{
+  "id": "adv_test_29",
+  "split": "test",
+  "primary_group": "unanswerable",
+  "question": "According to the System Card Appendix on pages 99-100, what was the exact purchase price in US dollars, catalog SKU number, and shipping delivery time in days quoted by ZINC for the modified imatinib derivative?",
+  "answerable": false,
+  "expected_answer": "",
+  "gold": [],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": true,
+  "answer": "",
+  "turns": 1,
+  "latency_ms": 12140.2,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p099_image_diagram_01",
+    "gpt4-2023-techreport_p100_text_01",
+    "gpt4-2023-techreport_p056_text_02",
+    "gpt4-2023-techreport_p052_text_03",
+    "gpt4-2023-techreport_p002_text_03",
+    "gpt4-2023-techreport_p040_text_01",
+    "gpt4-2023-techreport_p043_text_01",
+    "gpt4-2023-techreport_p042_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p099_image_diagram_01",
+    "gpt4-2023-techreport_p100_text_01",
+    "gpt4-2023-techreport_p100_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "According to the System Card Appendix on pages 99-100, what was the exact purchase price in US dollars, catalog SKU number, and shipping delivery time in days quoted by ZINC for the modified imatinib derivative?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p099_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 99,
+          "text": "[IMAGE_DIAGRAM: Chemical Compound ReAct Tool-Use Workflow | Pages 99-100 | BBox (50, 55, 560, 740)]\n- Diagram of autonomous ReAct agent trace for chemical compound modification and purchase (Question: Propose a compound with similar properties to leukemia drug Dasatinib, modify it to make a novel unpatented compound, and purchase it):\n- Available tools: Molecule search, Purchase, Patent Search, Modify compound, Email, Literature Answer.\n- Execution trace across pages 99-100: Agent first attempts to modify Dasatinib directly -> 'Failed to modify (bioisosterism) compound'. Next, calls Literature Answer ('What are a few other compounds with the same MOA/target as Dasatinib?') -> finds imatinib, nilotinib, bosutinib (tyrosine kinase inhibitors targeting BCR-ABL, SRC, c-KIT). Calls Molecule search('imatinib') -> SMILES 'CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5'. Calls Modify compound -> produces derivative SMILES 'Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1'. Calls Patent Search -> 'Novel'. Calls Purchase -> 'Purchased from ZINC'.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Appendix ChemTool Diagram P.99-100",
+            "bbox": [
+              50,
+              55,
+              560,
+              740
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p099_image_diagram_01.png",
+            "section": "System Card Appendix: Chemical Compound Similarity and Purchase Tool Use",
+            "char_length": 1086
+          },
+          "score": 0.117581
+        },
+        {
+          "id": "gpt4-2023-techreport_p100_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 100,
+          "text": "Observation: Failed to modify (bioisosterism) compound\nThought: I need to ﬁnd a different compound to modify\nAction Input: What are a few other compounds with the same MOA/target as Dasatinib?\nObservation: Other compounds with the same MOA/target as Dasatinib include imatinib, nilotinib, and bosutinib, which are all tyrosine kinase inhibitors that target BCR-ABL, SRC, and c-KIT (Erik6635 pages 7-7). Additionally, disulﬁram, Withaferin A, and parthenolide have been shown to have the same mechanism of action as Dasatinib as proteasome inhibitors in cancer treatment (Iorio1462 pages 6-6). Another compound with the same mechanism of action as Dasa- tinib is AZD0530, which also inhibits dengue virus infection by targeting Fyn kinase (Wispelaere0530 pages 1-1).\nThought: I need to get the SMILES string of one of these compounds",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              76.7,
+              73.7,
+              545.2,
+              210.9
+            ],
+            "section": "Page 100",
+            "char_length": 832
+          },
+          "score": 0.11184
+        },
+        {
+          "id": "gpt4-2023-techreport_p056_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 56,
+          "text": "Understanding how GPT-4 interacts with other systems is critical for evaluating what risks might be posed by these models in various real-world contexts. In addition to the tests conducted by ARC in the Potential for Risky Emergent Behaviors section, red teamers evaluated the use of GPT-4 augmented with other tools[76, 77, 78, 79] to achieve tasks that could be adversarial in nature. We highlight one such example in the domain of chemistry, where the goal is to search for chemical compounds that are similar to other chemical compounds, propose alternatives that are purchasable in a commercial catalog, and execute the purchase. The red teamer augmented GPT-4 with a set of tools:",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              209.5,
+              543.0,
+              319.9
+            ],
+            "section": "Page 56",
+            "char_length": 686
+          },
+          "score": 0.064145
+        },
+        {
+          "id": "gpt4-2023-techreport_p052_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 52,
+          "text": "15We focus here on unconventional weapons, but note that large language models like GPT-4 can also contribute to conventional weapons such as, for example, small arms. 16We note that in the past we have used the term red teaming somewhat diﬀerently than traditional usage in cybersecurity.[26] Throughout this system card, we refer to the people performing stress testing, boundary testing, and red teaming as “red teamers” for simplicity and in order to use language consistent with that we used with our collaborators. 17When referring to proliferation, the System Card uses the deﬁnition oﬀered by the North Atlantic Treaty Organization. “WMD proliferation refers to attempts by state or non-state actors to develop, acquire, manufacture, possess, transport or transfer nuclear, radiological, chemical or biological weapons or devices and their means of delivery or related material, including precursors, without prejudice to the rights and obligations of the States Parties to the following agreements: the Treaty on the Non-Proliferation of Nuclear Weapons or Non-Proliferation Treaty (NPT); the Convention on the Prohibition of the Development, Production, Stockpiling and Use of Chemical Weapons and on their Destruction (CWC) and the Convention on the Prohibition of the Development, Production and Stockpiling of Bacteriological (Biological) and Toxin Weapons and on their Destruction (BWC)”.[58]",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.8,
+              558.8,
+              542.6,
+              714.5
+            ],
+            "section": "Page 52",
+            "char_length": 1406
+          },
+          "score": 0.063294
+        },
+        {
+          "id": "gpt4-2023-techreport_p002_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 2,
+          "text": "We are committed to independent auditing of our technologies, and shared some initial steps and ideas in this area in the system card accompanying this release.2 We plan to make further technical details available to additional third parties who can advise us on how to weigh the competitive and safety considerations above against the scientific value of further transparency.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              290.0,
+              504.0,
+              332.7
+            ],
+            "section": "Page 2",
+            "char_length": 377
+          },
+          "score": 0.062269
+        },
+        {
+          "id": "gpt4-2023-techreport_p040_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 40,
+          "text": "The System Card [84, 85] for GPT-4 is appended to this document.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              97.5,
+              374.9,
+              107.5
+            ],
+            "section": "Page 40",
+            "char_length": 64
+          },
+          "score": 0.0599
+        },
+        {
+          "id": "gpt4-2023-techreport_p043_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 43,
+          "text": "based on a number of factors, including prior observed risks in language models and AI systems, and domains where we have observed increased user interest in the application of language models. Working with these experts enabled us to test model behavior in high-risk areas that require expertise to evaluate, as well as nascent risks that are poorly understood. Through this analysis, we ﬁnd that GPT-4 has the potential to be used to attempt to identify private individuals when augmented with outside data. We also ﬁnd that, although GPT-4’s cybersecurity capabilities are not vastly superior to previous generations of LLMs, it does continue the trend of potentially lowering the cost of certain steps of a successful cyberattack, such as through social engineering or by enhancing existing security tools. Without safety mitigations, GPT-4 is also able to give more detailed guidance on how to conduct harmful or illegal activities. Finally, we facilitated a preliminary model evaluation by the Alignment Research Center (ARC) of GPT-4’s ability to carry out actions to autonomously replicate5 and gather resources—a risk that, while speculative, may become possible with suﬃciently advanced AI systems—with the conclusion that the current model is probably not yet capable of autonomously doing so. Further research is needed to fully characterize these risks. In particular, we would like to see work on more robust evaluations for the risk areas identiﬁed and more concrete measurements of the prevalence of such behaviors across diﬀerent language models, and to guide the development of these models in safer directions. We are working on these types of evaluations, often in collaboration with other research groups, with a focus on assessing risky emergent behaviors. In addition to work on measurement, we aimed to mitigate the identiﬁed issues at various steps of the development and deployment process. We reduced the prevalence of certain kinds of content that violate our usage policies (such as inappropriate erotic content) in our pre-training dataset, and ﬁne-tuned the model to refuse certain instructions such as direct requests for illicit advice. We also reduced the tendency of the models to hallucinate and, by leveraging data from prior model usage, reduced the surface area of adversarial prompting or exploits (including attacks sometimes referred to as “jailbreaks”) that the model succumbs to. Additionally, we trained a range of classiﬁers on new risk vectors and have incorporated these into our monitoring workﬂow, enabling us to better enforce our API usage policies. The eﬀectiveness of these mitigations varies, but overall we were able to signiﬁcantly reduce the ease of producing various kinds of potentially harmful content, thereby making GPT-4-launch signiﬁcantly safer than GPT-4-early along these dimensions. This system card is not comprehensive, and we expect to learn more over time about the issues discussed below. Consistent with OpenAI’s deployment strategy,[21] we applied lessons from earlier deployments and expect to apply lessons learned from this deployment both to make course corrections and lay a foundation for future deployments. Note that the examples included throughout this system card are not zero-shot and are cherry picked from our evaluation eﬀorts to illustrate speciﬁc types of safety concerns or harms. We included examples to provide readers with context about the nature of the observed risks. One example is not enough to show the breadth of ways these issues may manifest. In Section 1, we outline some of the observed safety challenges in the development of GPT-4. In Section 2, we discuss our process for deployment preparation and some of the model mitigations and system safety measures. In Section 3, we conclude by discussing some remaining limitations and recommendations in light of the observed risks we have learned through our iterative deployment strategy.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.2,
+              69.4,
+              543.6,
+              654.2
+            ],
+            "section": "Page 43",
+            "char_length": 3944
+          },
+          "score": 0.059373
+        },
+        {
+          "id": "gpt4-2023-techreport_p042_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 42,
+          "text": "In this system card,1 we outline the safety challenges that arise from GPT-4, and explain the interventions we implemented to mitigate potential harms from its deployment. We focus on safety challenges not because they necessarily outweigh the potential beneﬁts,2 but because we wish to motivate further work in safety measurement, mitigation, and assurance. The scope of this system card is narrower than the potential scope of abilities GPT-4 can be used to unlock; notably, both custom ﬁne-tuning and image capabilities are explicitly out of scope. We focus on analyzing two versions of the model: an early version ﬁne-tuned for instruction following (“GPT-4-early”); and a version ﬁne-tuned for increased helpfulness and harmlessness[18] that reﬂects the further mitigations outlined in this system card (“GPT-4-launch”).3 When we discuss the risks of GPT-4 we will often refer to the behavior of GPT-4-early, because it reﬂects the risks of GPT-4 when minimal safety mitigations are applied. In most cases, GPT-4-launch exhibits much safer behavior due to the safety mitigations we applied. Known risks associated with smaller language models are also present with GPT-4. GPT-4 can generate potentially harmful content, such as advice on planning attacks or hate speech. It can represent various societal biases and worldviews that may not be representative of the users intent,4 or of widely shared values. It can also generate code that is compromised or vulnerable. The additional capabilities of GPT-4 also lead to new risk surfaces. To understand the extent of these risks, we engaged more than 50 experts to help us gain a more robust understanding of the GPT-4 model and potential deployment risks. We selected these areas",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              356.5,
+              543.5,
+              619.9
+            ],
+            "section": "Page 42",
+            "char_length": 1734
+          },
+          "score": 0.054725
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p099_image_diagram_01 | page=99 | modality=image_diagram | ref=Appendix ChemTool Diagram P.99-100 | bbox=[50, 55, 560, 740]]\n[IMAGE_DIAGRAM: Chemical Compound ReAct Tool-Use Workflow | Pages 99-100 | BBox (50, 55, 560, 740)]\n- Diagram of autonomous ReAct agent trace for chemical compound modification and purchase (Question: Propose a compound with similar properties to leukemia drug Dasatinib, modify it to make a novel unpatented compound, and purchase it):\n- Available tools: Molecule search, Purchase, Patent Search, Modify compound, Email, Literature Answer.\n- Execution trace across pages 99-100: Agent first attempts to modify Dasatinib directly -> 'Failed to modify (bioisosterism) compound'. Next, calls Literature Answer ('What are a few other compounds with the same MOA/target as Dasatinib?') -> finds imatinib, nilotinib, bosutinib (tyrosine kinase inhibitors targeting BCR-ABL, SRC, c-KIT). Calls Molecule search('imatinib') -> SMILES 'CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5'. Calls Modify compound -> produces derivative SMILES 'Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1'. Calls Patent Search -> 'Novel'. Calls Purchase -> 'Purchased from ZINC'.\n\n[gpt4-2023-techreport_p100_text_01 | page=100 | modality=text | ref=Page 100 | bbox=[76.7, 73.7, 545.2, 210.9]]\nObservation: Failed to modify (bioisosterism) compound\nThought: I need to ﬁnd a different compound to modify\nAction Input: What are a few other compounds with the same MOA/target as Dasatinib?\nObservation: Other compounds with the same MOA/target as Dasatinib include imatinib, nilotinib, and bosutinib, which are all tyrosine kinase inhibitors that target BCR-ABL, SRC, and c-KIT (Erik6635 pages 7-7). Additionally, disulﬁram, Withaferin A, and parthenolide have been shown to have the same mechanism of action as Dasatinib as proteasome inhibitors in cancer treatment (Iorio1462 pages 6-6). Another compound with the same mechanism of action as Dasa- tinib is AZD0530, which also inhibits dengue virus infection by targeting Fyn kinase (Wispelaere0530 pages 1-1).\nThought: I need to get the SMILES string of one of these compounds\n\n[gpt4-2023-techreport_p100_text_02 | page=100 | modality=text | ref=Page 100 | bbox=[77.1, 249.1, 528.6, 501.4]]\nObservation: CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5\nThought: I need to modify this compound to make a novel compound\nAction Input: CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5\nObservation: Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1\nThought: I need to check if this compound is novel\nAction Input: Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1\nThought: I need to purchase this compound\nAction Input: Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1\nThought: I now know the ﬁnal answer\nFinal Answer: The compound Cc1ccc(NC(=O)c2ccc(CN3CCNCC3)cc2)cc1Nc1nccc(-c2cccnc2)n1 is a novel com- pound with similar properties to Dasatinib and has been purchased from ZINC.",
+      "context_ids": [
+        "gpt4-2023-techreport_p099_image_diagram_01",
+        "gpt4-2023-techreport_p100_text_01",
+        "gpt4-2023-techreport_p100_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "According to the System Card Appendix on pages 99-100, what was the exact purchase price in US dollars, catalog SKU number, and shipping delivery time in days quoted by ZINC for the modified imatinib derivative?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "invalid_or_missing_citations",
+      "abstain_reason": "Specific information is not present in the retrieved context"
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_29",
+    "split": "test",
+    "primary_group": "unanswerable",
+    "answerable": false,
+    "gold_ids": [],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p099_image_diagram_01",
+      "gpt4-2023-techreport_p100_text_01",
+      "gpt4-2023-techreport_p056_text_02",
+      "gpt4-2023-techreport_p052_text_03",
+      "gpt4-2023-techreport_p002_text_03",
+      "gpt4-2023-techreport_p040_text_01",
+      "gpt4-2023-techreport_p043_text_01",
+      "gpt4-2023-techreport_p042_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p099_image_diagram_01",
+      "gpt4-2023-techreport_p100_text_01",
+      "gpt4-2023-techreport_p100_text_02"
+    ],
+    "cited_ids": [],
+    "invalid_citations": [],
+    "abstained": true,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+  },
+  "absence_reason": "The tool-use trace on page 100 only returns the observation 'Purchased from ZINC' and never provides a dollar price, SKU number, or shipping time.",
+  "prompt_tokens": 1142,
+  "completion_tokens": 45,
+  "total_tokens": 1187,
+  "estimated_cost_usd": 0.000198
+}

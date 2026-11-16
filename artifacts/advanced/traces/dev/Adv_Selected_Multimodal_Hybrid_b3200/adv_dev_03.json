@@ -1,0 +1,283 @@
+{
+  "id": "adv_dev_03",
+  "split": "dev",
+  "primary_group": "table",
+  "question": "According to Table 8 in Appendix B, what is the average multiple-choice score across all tested exams for the GPT-4 base model versus the post-RLHF GPT-4 model?",
+  "answerable": true,
+  "expected_answer": "According to Table 8, averaged across all tested multiple-choice exams, the GPT-4 base model achieves 73.7% while the post-RLHF GPT-4 model achieves 74.0%.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p028_table_01",
+      "page": 28,
+      "modality": "table",
+      "figure_or_table_id": "Table 8",
+      "bbox": [
+        80,
+        220,
+        530,
+        740
+      ],
+      "evidence": "Average across all tested exams: Base model = 73.7% vs RLHF model = 74.0%",
+      "unit_and_condition": "Percentage accuracy averaged across multiple-choice exams."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "The average multiple‑choice score across all tested exams is 73.7% for the GPT‑4 base model and 74.0% for the post‑RLHF GPT‑4 model. [gpt4-2023-techreport_p028_table_01] [gpt4-2023-techreport_p028_text_01]",
+  "turns": 1,
+  "latency_ms": 2521.39,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p028_table_01",
+    "gpt4-2023-techreport_p028_text_01",
+    "gpt4-2023-techreport_p028_text_03",
+    "gpt4-2023-techreport_p006_text_02",
+    "gpt4-2023-techreport_p025_text_05",
+    "gpt4-2023-techreport_p005_text_04",
+    "gpt4-2023-techreport_p030_text_05",
+    "gpt4-2023-techreport_p007_text_03"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p028_table_01",
+    "gpt4-2023-techreport_p028_text_01",
+    "gpt4-2023-techreport_p028_text_03",
+    "gpt4-2023-techreport_p028_text_04"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "According to Table 8 in Appendix B, what is the average multiple-choice score across all tested exams for the GPT-4 base model versus the post-RLHF GPT-4 model?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p028_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 28,
+          "text": "[TABLE: Table 8 | Page 28 | BBox (80, 220, 530, 740)]\nTable 8: Comparison between GPT-4 base and GPT-4 post-RLHF on multiple-choice exam benchmarks:\n- Average across all tested exams: Base model = 73.7% vs RLHF model = 74.0% (showing RLHF does not substantially alter base MCQ capability).\n- Specific exam rows (Base model vs RLHF model): LSAT (MCQ) = 67.0% vs 72.0%; SAT EBRW Reading = 92.3% vs 90.4%; SAT EBRW Writing = 90.9% vs 84.1%; SAT Math (MCQ) = 91.4% vs 86.2%; GRE Quantitative = 57.5% vs 67.5%; GRE Verbal = 87.5% vs 90.0%; USNCO 2022 = 51.7% vs 63.3%; AP Biology = 98.3% vs 96.7%; AP Calculus BC = 66.7% vs 57.8%; AP Chemistry = 58.3% vs 71.7%; AP Macroeconomics = 83.3% vs 76.7%; AP Microeconomics = 90.0% vs 76.7%; AMC 10 = 28.0% vs 24.0%; AMC 12 = 20.0% vs 32.0%; Introductory Sommelier = 90.5% vs 92.9%; Certified Sommelier = 79.5% vs 88.2%; Advanced Sommelier = 69.5% vs 77.2%.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 8",
+            "bbox": [
+              80,
+              220,
+              530,
+              740
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p028_table_01.png",
+            "section": "Appendix B Impact of RLHF on capability",
+            "char_length": 894
+          },
+          "score": 0.132879
+        },
+        {
+          "id": "gpt4-2023-techreport_p028_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 28,
+          "text": "(<MODEL ANSWER TEXT (t=0.6, n=1, stop=’<|endofreply|>’) SAMPLED HERE>\nTo test the impact of RLHF on the capability of our base model, we ran the multiple-choice question portions of our exam benchmark on the GPT-4 base model and the post RLHF GPT-4 model. The results are shown in Table 8. Averaged across all exams, the base model achieves a score of 73.7% while the RLHF model achieves a score of 74.0%, suggesting that post-training does not substantially alter base model capability.\nFor free-response questions, it is difficult to compare the base and RLHF models on an even footing, as our methodology for sampling free-response answers likely benefits from the model’s ability to do instruction following.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.6,
+              90.8,
+              505.2,
+              241.8
+            ],
+            "section": "Page 28",
+            "char_length": 712
+          },
+          "score": 0.096321
+        },
+        {
+          "id": "gpt4-2023-techreport_p028_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 28,
+          "text": "AP Environmental Science (MCQ) 72.5 % 67.5 % AP Macroeconomics (MCQ) 83.3 % 76.7 % AP Microeconomics (MCQ) 90.0 % 76.7 % AP Physics 2 (MCQ) 62.2 % 71.1 % AP Psychology (MCQ) 98.0 % 96.0 % AP Statistics (MCQ) 60.0 % 62.5 % AP US Government (MCQ) 85.5 % 83.6 % AP US History (MCQ) 89.1 % 87.3 % AP World History (MCQ) 94.5 % 98.2 % MKSAP Questions (MCQ) 77.9 % 74.7 % AMC 10 28.0 % 24.0 % AMC 12 20.0 % 32.0 % Introductory Sommelier (theory knowledge)\nCertified Sommelier (theory knowledge)\nAdvanced Sommelier (theory knowledge)\nTable 8. Comparison between GPT-4 base and GPT-4 post-RLHF on exam benchmarks. Averaged across all exams, the base model achieves an average score of 73.7% while the RLHF model achieves an average score of 74.0%, which suggests that post-training does not substantially alter base model capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              425.5,
+              489.1,
+              650.5
+            ],
+            "section": "Page 28",
+            "char_length": 825
+          },
+          "score": 0.084492
+        },
+        {
+          "id": "gpt4-2023-techreport_p006_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 6,
+          "text": "GPT-4 exhibits human-level performance on the majority of these professional and academic exams. Notably, it passes a simulated version of the Uniform Bar Examination with a score in the top 10% of test takers (Table 1, Figure 4).\nThe model’s capabilities on exams appear to stem primarily from the pre-training process and are not significantly affected by RLHF. On multiple choice questions, both the base GPT-4 model and the RLHF model perform equally well on average across the exams we tested (see Appendix B).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.7,
+              502.6,
+              505.7,
+              572.5
+            ],
+            "section": "Page 6",
+            "char_length": 515
+          },
+          "score": 0.071573
+        },
+        {
+          "id": "gpt4-2023-techreport_p025_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 25,
+          "text": "We ran GPT-4 multiple-choice questions using a model snapshot from March 1, 2023, whereas the free-response questions were run and scored using a non-final model snapshot from February 23, 2023. GPT-3.5’s multiple-choice questions and free-response questions were all run using a standard ChatGPT snapshot. We ran the USABO semifinal exam using an earlier GPT-4 snapshot from December 16, 2022.\nOur evaluations suggest RLHF does not significantly affect the base GPT-4 model’s capability - see Appendix B for more discussion.\n12For example, on the AP Statistics exam, a common failure response was “Since there is no graph provided, we cannot determine the correct answer for this problem.\"",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              107.5,
+              602.5,
+              505.1,
+              722.2
+            ],
+            "section": "Page 25",
+            "char_length": 690
+          },
+          "score": 0.06203
+        },
+        {
+          "id": "gpt4-2023-techreport_p005_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "Table 1. GPT performance on academic and professional exams. In each case, we simulate the conditions and scoring of the real exam. We report GPT-4’s final score graded according to exam- specific rubrics, as well as the percentile of test-takers achieving GPT-4’s score.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              656.9,
+              490.5,
+              685.2
+            ],
+            "section": "Page 5",
+            "char_length": 271
+          },
+          "score": 0.061553
+        },
+        {
+          "id": "gpt4-2023-techreport_p030_text_05",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 30,
+          "text": "Table 9. Contamination data for Exams (Summary). For each of the exams tested, we show the fraction of questions in the exam which are contaminated (i.e. present in the training dataset). We show the final scores and corresponding percentile of human test takers for GPT-4 (with and without vision) on the full test, and if we extrapolate performance from only the uncontaminated subset of the questions on the test. For the AP exams, a range is reported because many student receive the same final score (e.g. on AP Art History, 14% of students receive a 5/5, so the percentile range for that score is 86%-100%). Note that some exams (e.g. codeforces, Unified Bar Exam) contain no images nor contamination, so the score in all cases is identical. Overall across most exams, both contamination and vision have relatively little effect.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              565.2,
+              490.6,
+              650.7
+            ],
+            "section": "Page 30",
+            "char_length": 835
+          },
+          "score": 0.061463
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "Table 2. Performance of GPT-4 on academic benchmarks. We compare GPT-4 alongside the best SOTA (with benchmark-specific training) and the best SOTA for an LM evaluated few-shot. GPT-4 outperforms existing LMs on all benchmarks, and beats SOTA with benchmark-specific training on all datasets except DROP. For each task we report GPT-4’s performance along with the few-shot method used to evaluate. For GSM-8K, we included part of the training set in the GPT-4 pre-training mix (see Appendix E), and we use chain-of-thought prompting [11] when evaluating. For multiple-choice questions, we present all answers (ABCD) to the model and ask it to choose the letter of the answer, similarly to how a human would solve such a problem.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              373.9,
+              490.2,
+              450.0
+            ],
+            "section": "Page 7",
+            "char_length": 728
+          },
+          "score": 0.057515
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p028_table_01 | page=28 | modality=table | ref=Table 8 | bbox=[80, 220, 530, 740]]\n[TABLE: Table 8 | Page 28 | BBox (80, 220, 530, 740)]\nTable 8: Comparison between GPT-4 base and GPT-4 post-RLHF on multiple-choice exam benchmarks:\n- Average across all tested exams: Base model = 73.7% vs RLHF model = 74.0% (showing RLHF does not substantially alter base MCQ capability).\n- Specific exam rows (Base model vs RLHF model): LSAT (MCQ) = 67.0% vs 72.0%; SAT EBRW Reading = 92.3% vs 90.4%; SAT EBRW Writing = 90.9% vs 84.1%; SAT Math (MCQ) = 91.4% vs 86.2%; GRE Quantitative = 57.5% vs 67.5%; GRE Verbal = 87.5% vs 90.0%; USNCO 2022 = 51.7% vs 63.3%; AP Biology = 98.3% vs 96.7%; AP Calculus BC = 66.7% vs 57.8%; AP Chemistry = 58.3% vs 71.7%; AP Macroeconomics = 83.3% vs 76.7%; AP Microeconomics = 90.0% vs 76.7%; AMC 10 = 28.0% vs 24.0%; AMC 12 = 20.0% vs 32.0%; Introductory Sommelier = 90.5% vs 92.9%; Certified Sommelier = 79.5% vs 88.2%; Advanced Sommelier = 69.5% vs 77.2%.\n\n[gpt4-2023-techreport_p028_text_01 | page=28 | modality=text | ref=Page 28 | bbox=[107.6, 90.8, 505.2, 241.8]]\n(<MODEL ANSWER TEXT (t=0.6, n=1, stop=’<|endofreply|>’) SAMPLED HERE>\nTo test the impact of RLHF on the capability of our base model, we ran the multiple-choice question portions of our exam benchmark on the GPT-4 base model and the post RLHF GPT-4 model. The results are shown in Table 8. Averaged across all exams, the base model achieves a score of 73.7% while the RLHF model achieves a score of 74.0%, suggesting that post-training does not substantially alter base model capability.\nFor free-response questions, it is difficult to compare the base and RLHF models on an even footing, as our methodology for sampling free-response answers likely benefits from the model’s ability to do instruction following.\n\n[gpt4-2023-techreport_p028_text_03 | page=28 | modality=text | ref=Page 28 | bbox=[122.6, 425.5, 489.1, 650.5]]\nAP Environmental Science (MCQ) 72.5 % 67.5 % AP Macroeconomics (MCQ) 83.3 % 76.7 % AP Microeconomics (MCQ) 90.0 % 76.7 % AP Physics 2 (MCQ) 62.2 % 71.1 % AP Psychology (MCQ) 98.0 % 96.0 % AP Statistics (MCQ) 60.0 % 62.5 % AP US Government (MCQ) 85.5 % 83.6 % AP US History (MCQ) 89.1 % 87.3 % AP World History (MCQ) 94.5 % 98.2 % MKSAP Questions (MCQ) 77.9 % 74.7 % AMC 10 28.0 % 24.0 % AMC 12 20.0 % 32.0 % Introductory Sommelier (theory knowledge)\nCertified Sommelier (theory knowledge)\nAdvanced Sommelier (theory knowledge)\nTable 8. Comparison between GPT-4 base and GPT-4 post-RLHF on exam benchmarks. Averaged across all exams, the base model achieves an average score of 73.7% while the RLHF model achieves an average score of 74.0%, which suggests that post-training does not substantially alter base model capability.\n\n[gpt4-2023-techreport_p028_text_04 | page=28 | modality=text | ref=Page 28 | bbox=[107.5, 676.1, 505.2, 722.4]]\nC Contamination on professional and academic exams\nWe measure cross-contamination between our evaluation dataset and the pre-training data using substring match. Both evaluation and training data are processed by removing all spaces and symbols,",
+      "context_ids": [
+        "gpt4-2023-techreport_p028_table_01",
+        "gpt4-2023-techreport_p028_text_01",
+        "gpt4-2023-techreport_p028_text_03",
+        "gpt4-2023-techreport_p028_text_04"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "According to Table 8 in Appendix B, what is the average multiple-choice score across all tested exams for the GPT-4 base model versus the post-RLHF GPT-4 model?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The table and accompanying text provide the average MCQ scores for both models."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_dev_03",
+    "split": "dev",
+    "primary_group": "table",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p028_table_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p028_table_01",
+      "gpt4-2023-techreport_p028_text_01",
+      "gpt4-2023-techreport_p028_text_03",
+      "gpt4-2023-techreport_p006_text_02",
+      "gpt4-2023-techreport_p025_text_05",
+      "gpt4-2023-techreport_p005_text_04",
+      "gpt4-2023-techreport_p030_text_05",
+      "gpt4-2023-techreport_p007_text_03"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p028_table_01",
+      "gpt4-2023-techreport_p028_text_01",
+      "gpt4-2023-techreport_p028_text_03",
+      "gpt4-2023-techreport_p028_text_04"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p028_table_01",
+      "gpt4-2023-techreport_p028_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1161,
+  "completion_tokens": 98,
+  "total_tokens": 1259,
+  "estimated_cost_usd": 0.000233
+}

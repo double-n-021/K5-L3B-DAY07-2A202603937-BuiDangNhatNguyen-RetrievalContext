@@ -1,0 +1,291 @@
+{
+  "id": "adv_test_07",
+  "split": "test",
+  "primary_group": "image_diagram",
+  "question": "In the visual input example in Table 14 (Page 34), what values and units does GPT-4 read from the bar chart image for average daily meat consumption in Georgia and Western Asia, and what is their sum?",
+  "answerable": true,
+  "expected_answer": "In Table 14 (Page 34), GPT-4 reads 79.84 grams per person per day for Georgia and 69.62 grams per person per day for Western Asia from the chart image, giving a sum of 149.46 grams per person per day.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p034_image_diagram_01",
+      "page": 34,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 14",
+      "bbox": [
+        55,
+        55,
+        555,
+        690
+      ],
+      "evidence": "Georgia = 79.84 grams per person per day; Western Asia = 69.62 grams per person per day. Computation & final answer: 79.84 g + 69.62 g = 149.46 grams per person per day.",
+      "unit_and_condition": "Grams per person per day in Table 14."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "In the visual input example in Table 14 (Page 34), GPT-4 reads the following values from the bar chart image for average daily meat consumption: Georgia = 79.84 grams per person per day, and Western Asia = 69.62 grams per person per day [gpt4-2023-techreport_p034_image_diagram_01, gpt4-2023-techreport_p034_text_01]. The sum of these values is 149.46 grams per person per day [gpt4-2023-techreport_p034_image_diagram_01, gpt4-2023-techreport_p034_text_01, gpt4-2023-techreport_p034_text_02]. [gpt4-2023-techreport_p034_image_diagram_01] [gpt4-2023-techreport_p034_text_01] [gpt4-2023-techreport_p034_text_02]",
+  "turns": 1,
+  "latency_ms": 21180.5,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p034_image_diagram_01",
+    "gpt4-2023-techreport_p034_text_02",
+    "gpt4-2023-techreport_p034_text_01",
+    "gpt4-2023-techreport_p038_image_diagram_01",
+    "gpt4-2023-techreport_p036_text_01",
+    "gpt4-2023-techreport_p038_text_01",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p009_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p034_image_diagram_01",
+    "gpt4-2023-techreport_p034_text_02",
+    "gpt4-2023-techreport_p034_text_01",
+    "gpt4-2023-techreport_p038_image_diagram_01",
+    "gpt4-2023-techreport_p009_text_02"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In the visual input example in Table 14 (Page 34), what values and units does GPT-4 read from the bar chart image for average daily meat consumption in Georgia and Western Asia, and what is their sum?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p034_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 34,
+          "text": "[IMAGE_DIAGRAM: Table 14 | Page 34 | BBox (55, 55, 555, 690)]\n- Visual Input Example (Table 14 — Chart Reasoning): Image of a horizontal bar chart showing average daily meat consumption (grams per person per day) across countries/regions.\n- User prompt: 'What is the sum of average daily meat consumption for Georgia and Western Asia? Provide a step-by-step reasoning before providing your answer.'\n- Visual chart values read by GPT-4: Georgia = 79.84 grams per person per day; Western Asia = 69.62 grams per person per day.\n- Computation & final answer: 79.84 g + 69.62 g = 149.46 grams per person per day.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 14",
+            "bbox": [
+              55,
+              55,
+              555,
+              690
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p034_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 607
+          },
+          "score": 0.240626
+        },
+        {
+          "id": "gpt4-2023-techreport_p034_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 34,
+          "text": "So, the sum of average daily meat consumption for Georgia and Western Asia is 149.46 grams per person per day.\nTable 14. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question which requires reading information from a chart and performing computation.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              572.7,
+              489.1,
+              619.6
+            ],
+            "section": "Page 34",
+            "char_length": 292
+          },
+          "score": 0.139129
+        },
+        {
+          "id": "gpt4-2023-techreport_p034_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 34,
+          "text": "GPT-4 visual input example, Chart Reasoning:\nUser What is the sum of average daily meat consumption for Georgia and Western Asia? Provide a step-by-step reasoning before providing your answer.\nGPT-4 To find the sum of average daily meat consumption for Georgia and Western Asia, we will follow these steps:\n1. Identify the average daily meat consumption for Georgia. 2. Identify the average daily meat consumption for Western Asia. 3. Add the values from steps 1 and 2.\nStep 1: From the provided chart, we see that the average daily meat con- sumption for Georgia is 79.84 grams per person per day. Step 2: From the chart, we see that the average daily meat consumption for Western Asia is 69.62 grams per person per day. Step 3: Add the values from steps 1 and 2. 79.84 g (Georgia) + 69.62 g (Western Asia) = 149.46 g",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              176.3,
+              487.6,
+              561.0
+            ],
+            "section": "Page 34",
+            "char_length": 818
+          },
+          "score": 0.116321
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "[IMAGE_DIAGRAM: Table 18 | Page 38 | BBox (55, 55, 555, 560)]\n- Visual Input Example (Table 18 — Chicken Nugget Map Meme): Image with caption 'Sometimes I just look at pictures of the earth from space and I marvel at how beautiful it all is' above a photo of fried chicken nuggets arranged on a dark surface in the shape of the world map (continents).\n- User prompt: 'Can you explain this meme?'\n- GPT-4 explanation: The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 18",
+            "bbox": [
+              55,
+              55,
+              555,
+              560
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p038_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 560
+          },
+          "score": 0.069171
+        },
+        {
+          "id": "gpt4-2023-techreport_p036_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 36,
+          "text": "GPT-4 visual input example, Extreme Ironing:\nUser What is unusual about this image?\nSource: https://www.barnorama.com/wp-content/uploads/2016/12/03-Confusing-Pictures.jpg\nGPT-4 The unusual thing about this image is that a man is ironing clothes on an ironing board attached to the roof of a moving taxi.\nTable 16. Example prompt demonstrating GPT-4’s visual input capability. The prompt requires image understanding.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              258.2,
+              489.1,
+              537.8
+            ],
+            "section": "Page 36",
+            "char_length": 416
+          },
+          "score": 0.065336
+        },
+        {
+          "id": "gpt4-2023-techreport_p038_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 38,
+          "text": "GPT-4 visual input example, Chicken Nugget Map:\nGPT-4 This meme is a joke that combines two unrelated things: pictures of the earth from space and chicken nuggets. The text of the meme suggests that the image below is a beautiful picture of the earth from space. However, the image is actually of chicken nuggets arranged to vaguely resemble a map of the world. The humor in this meme comes from the unexpected juxtaposition of the text and the image. The text sets up an expectation of a majestic image of the earth, but the image is actually something mundane and silly.\nTable 18: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              168.4,
+              485.9,
+              627.5
+            ],
+            "section": "Page 38",
+            "char_length": 644
+          },
+          "score": 0.065126
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.064762
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "Table 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              622.5,
+              489.1,
+              641.2
+            ],
+            "section": "Page 9",
+            "char_length": 171
+          },
+          "score": 0.061562
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p034_image_diagram_01 | page=34 | modality=image_diagram | ref=Table 14 | bbox=[55, 55, 555, 690]]\n[IMAGE_DIAGRAM: Table 14 | Page 34 | BBox (55, 55, 555, 690)]\n- Visual Input Example (Table 14 — Chart Reasoning): Image of a horizontal bar chart showing average daily meat consumption (grams per person per day) across countries/regions.\n- User prompt: 'What is the sum of average daily meat consumption for Georgia and Western Asia? Provide a step-by-step reasoning before providing your answer.'\n- Visual chart values read by GPT-4: Georgia = 79.84 grams per person per day; Western Asia = 69.62 grams per person per day.\n- Computation & final answer: 79.84 g + 69.62 g = 149.46 grams per person per day.\n\n[gpt4-2023-techreport_p034_text_02 | page=34 | modality=text | ref=Page 34 | bbox=[122.6, 572.7, 489.1, 619.6]]\nSo, the sum of average daily meat consumption for Georgia and Western Asia is 149.46 grams per person per day.\nTable 14. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question which requires reading information from a chart and performing computation.\n\n[gpt4-2023-techreport_p034_text_01 | page=34 | modality=text | ref=Page 34 | bbox=[114.0, 176.3, 487.6, 561.0]]\nGPT-4 visual input example, Chart Reasoning:\nUser What is the sum of average daily meat consumption for Georgia and Western Asia? Provide a step-by-step reasoning before providing your answer.\nGPT-4 To find the sum of average daily meat consumption for Georgia and Western Asia, we will follow these steps:\n1. Identify the average daily meat consumption for Georgia. 2. Identify the average daily meat consumption for Western Asia. 3. Add the values from steps 1 and 2.\nStep 1: From the provided chart, we see that the average daily meat con- sumption for Georgia is 79.84 grams per person per day. Step 2: From the chart, we see that the average daily meat consumption for Western Asia is 69.62 grams per person per day. Step 3: Add the values from steps 1 and 2. 79.84 g (Georgia) + 69.62 g (Western Asia) = 149.46 g\n\n[gpt4-2023-techreport_p038_image_diagram_01 | page=38 | modality=image_diagram | ref=Table 18 | bbox=[55, 55, 555, 560]]\n[IMAGE_DIAGRAM: Table 18 | Page 38 | BBox (55, 55, 555, 560)]\n- Visual Input Example (Table 18 — Chicken Nugget Map Meme): Image with caption 'Sometimes I just look at pictures of the earth from space and I marvel at how beautiful it all is' above a photo of fried chicken nuggets arranged on a dark surface in the shape of the world map (continents).\n- User prompt: 'Can you explain this meme?'\n- GPT-4 explanation: The meme juxtaposes a caption about marveling at the Earth from space with an image of chicken nuggets arranged to resemble a map of the world.\n\n[gpt4-2023-techreport_p009_text_02 | page=9 | modality=text | ref=Page 9 | bbox=[122.6, 622.5, 489.1, 641.2]]\nTable 3. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question about an image with multiple panels which GPT-4 is able to answer.",
+      "context_ids": [
+        "gpt4-2023-techreport_p034_image_diagram_01",
+        "gpt4-2023-techreport_p034_text_02",
+        "gpt4-2023-techreport_p034_text_01",
+        "gpt4-2023-techreport_p038_image_diagram_01",
+        "gpt4-2023-techreport_p009_text_02"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In the visual input example in Table 14 (Page 34), what values and units does GPT-4 read from the bar chart image for average daily meat consumption in Georgia and Western Asia, and what is their sum?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The context provides the exact values and units read by GPT-4 from the bar chart in Table 14 on page 34. The values are 79.84 grams per person per day for Georgia and 69.62 grams per person per day for Western Asia. The sum is explicitly stated as 149.46 grams per person per day."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_07",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p034_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p034_image_diagram_01",
+      "gpt4-2023-techreport_p034_text_02",
+      "gpt4-2023-techreport_p034_text_01",
+      "gpt4-2023-techreport_p038_image_diagram_01",
+      "gpt4-2023-techreport_p036_text_01",
+      "gpt4-2023-techreport_p038_text_01",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p009_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p034_image_diagram_01",
+      "gpt4-2023-techreport_p034_text_02",
+      "gpt4-2023-techreport_p034_text_01",
+      "gpt4-2023-techreport_p038_image_diagram_01",
+      "gpt4-2023-techreport_p009_text_02"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p034_image_diagram_01",
+      "gpt4-2023-techreport_p034_text_01",
+      "gpt4-2023-techreport_p034_text_02"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1137,
+  "completion_tokens": 205,
+  "total_tokens": 1342,
+  "estimated_cost_usd": 0.000294
+}

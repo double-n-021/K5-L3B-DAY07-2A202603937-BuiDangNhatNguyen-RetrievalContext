@@ -1,0 +1,288 @@
+{
+  "id": "adv_test_10",
+  "split": "test",
+  "primary_group": "image_diagram",
+  "question": "In Table 19 (Page 39, 'Moar Layers' comic strip), how does the comic contrast the discussion in the 'Statistical Learning' panel with the 'Neural Networks' panel?",
+  "answerable": true,
+  "expected_answer": "In Table 19 (Page 39), the top 'Statistical Learning' panel shows characters discussing complex mathematical remedies for overfitting—minimizing structural risk, reworking the loss function, and using a soft margin—whereas the bottom 'Neural Networks' panel simply says 'stack more layers'.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p039_image_diagram_01",
+      "page": 39,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 19",
+      "bbox": [
+        55,
+        55,
+        555,
+        650
+      ],
+      "evidence": "Top panel (Statistical Learning): Characters discuss complex mathematical remedies for overfitting — minimizing structural risk, reworking the loss function, and using a soft margin. Bottom panel (Neural Networks): Character simply says 'stack more layers'",
+      "unit_and_condition": "Two-panel visual comparison in Table 19."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "The comic juxtaposes a mathematically‑heavy, theory‑driven approach in the top panel with a brute‑force, heuristic approach in the bottom panel. In the Statistical Learning panel the character talks about over‑fitting and proposes sophisticated fixes such as minimizing structural risk, re‑working the loss function, and using a soft margin. In contrast, the Neural Networks panel’s character simply says “stack more layers” (with the user comment “But unironically”), highlighting the contrast between rigorous theory and the simplistic “add layers” trick that still works in practice.[gpt4-2023-techreport_p039_image_diagram_01][gpt4-2023-techreport_p039_text_02][gpt4-2023-techreport_p039_text_01]",
+  "turns": 1,
+  "latency_ms": 2352.96,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p039_image_diagram_01",
+    "gpt4-2023-techreport_p039_text_02",
+    "gpt4-2023-techreport_p039_text_01",
+    "gpt4-2023-techreport_p009_image_diagram_01",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p009_text_01",
+    "gpt4-2023-techreport_p046_text_03",
+    "gpt4-2023-techreport_p010_text_02"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p039_image_diagram_01",
+    "gpt4-2023-techreport_p039_text_02",
+    "gpt4-2023-techreport_p039_text_01",
+    "gpt4-2023-techreport_p009_image_diagram_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Table 19 (Page 39, 'Moar Layers' comic strip), how does the comic contrast the discussion in the 'Statistical Learning' panel with the 'Neural Networks' panel?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p039_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "[IMAGE_DIAGRAM: Table 19 | Page 39 | BBox (55, 55, 555, 650)]\n- Visual Input Example (Table 19 — 'Moar Layers' Comic Strip): Two-part comic comparing 'Statistical Learning' vs 'Neural Networks'.\n- Top panel (Statistical Learning): Characters discuss complex mathematical remedies for overfitting — minimizing structural risk, reworking the loss function, and using a soft margin.\n- Bottom panel (Neural Networks): Character simply says 'stack more layers' (with user comment 'But unironically').\n- Humor explained: Satirizes the contrast between rigorous mathematical theory in statistical learning and the brute-force 'stack more layers' heuristic in deep neural networks that nonetheless works in practice.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 19",
+            "bbox": [
+              55,
+              55,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p039_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 708
+          },
+          "score": 0.242581
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "The humor comes from the contrast between the complexity and speci- ficity of the statistical learning approach and the simplicity and generality of the neural network approach. The \"But unironically\" comment adds to the humor by implying that, despite being simplistic, the \"stack more layers\" approach is often effective in practice.\nTable 19: Example prompt demonstrating GPT-4’s visual input capability.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              161.6,
+              596.2,
+              487.6,
+              666.3
+            ],
+            "section": "Page 39",
+            "char_length": 407
+          },
+          "score": 0.137291
+        },
+        {
+          "id": "gpt4-2023-techreport_p039_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 39,
+          "text": "GPT-4 visual input example, Moar Layers:\nUser Can you explain why this is funny. Think about it step-by-step.\nGPT-4 The comic is satirizing the difference in approaches to improving model performance between statistical learning and neural networks.\nIn statistical learning, the character is shown to be concerned with overfit- ting and suggests a series of complex and technical solutions, such as minimizing structural risk, reworking the loss function, and using a soft margin.\nIn contrast, the neural networks character simply suggests adding more layers to the model. This is often seen as a common solution to improving performance in neural networks, but it’s also considered a simplistic and brute-force approach.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              129.7,
+              487.6,
+              584.4
+            ],
+            "section": "Page 39",
+            "char_length": 721
+          },
+          "score": 0.115312
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "[IMAGE_DIAGRAM: Table 3 | Page 9 | BBox (55, 60, 555, 650)]\n- Visual Input Example (Table 3): A three-panel photograph/meme of a smartphone 'Lightning Cable' adapter.\n- User prompt: 'What is funny about this image? Describe it panel by panel.'\n- Visual content & GPT-4 panel-by-panel description:\n  * Panel 1: A smartphone with a large, blue, 15-pin VGA connector (typically used for computer monitors) plugged into its charging port.\n  * Panel 2: The retail package for a 'Lightning Cable' adapter displaying a picture of a VGA connector on the packaging.\n  * Panel 3: A close-up of the VGA connector head with a tiny Apple Lightning connector protruding from the end.\n- Explanation of humor: The absurdity of plugging a bulky, outdated 15-pin VGA monitor connector into a small modern smartphone charging port.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 3",
+            "bbox": [
+              55,
+              60,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p009_image_diagram_01.png",
+            "section": "4.1 Visual Inputs",
+            "char_length": 812
+          },
+          "score": 0.082068
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.072449
+        },
+        {
+          "id": "gpt4-2023-techreport_p009_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 9,
+          "text": "User What is funny about this image? Describe it panel by panel.\nSource: https://www.reddit.com/r/hmmm/comments/ubab5v/hmmm/\nGPT-4 The image shows a package for a \"Lightning Cable\" adapter with three panels.\nPanel 1: A smartphone with a VGA connector (a large, blue, 15-pin con- nector typically used for computer monitors) plugged into its charging port.\nPanel 2: The package for the \"Lightning Cable\" adapter with a picture of a VGA connector on it.\nPanel 3: A close-up of the VGA connector with a small Lightning con- nector (used for charging iPhones and other Apple devices) at the end.\nThe humor in this image comes from the absurdity of plugging a large, outdated VGA connector into a small, modern smartphone charging port.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              170.9,
+              487.6,
+              615.3
+            ],
+            "section": "Page 9",
+            "char_length": 731
+          },
+          "score": 0.064286
+        },
+        {
+          "id": "gpt4-2023-techreport_p046_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 46,
+          "text": "9We use the term “hallucinations,” though we recognize ways this framing may suggest anthropomorphization, which in turn can lead to harms or incorrect mental models of how the model learns. 10Closed domain hallucinations refer to instances in which the model is instructed to use only information provided in a given context, but then makes up extra information that was not in that context. For example, if you ask the model to summarize an article and its summary includes information that was not in the article, then that would be a closed-domain hallucination. Open domain hallucinations, in contrast, are when the model conﬁdently provides false information about the world without reference to any particular input context. 11See related work in this area and discussion of use of words like “factual” and “truthful” in, e.g. [34].",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.4,
+              554.4,
+              542.6,
+              644.4
+            ],
+            "section": "Page 46",
+            "char_length": 839
+          },
+          "score": 0.059829
+        },
+        {
+          "id": "gpt4-2023-techreport_p010_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 10,
+          "text": "learning technology writing history math science recommendation code business 0%\nFigure 6. Performance of GPT-4 on nine internal adversarially-designed factuality evaluations. Accuracy is shown on the y-axis, higher is better. An accuracy of 1.0 means the model’s answers are judged to be in agreement with human ideal responses for all questions in the eval. We compare GPT-4 to three earlier versions of ChatGPT [64] based on GPT-3.5; GPT-4 improves on the latest GPT-3.5 model by 19 percentage points, with significant gains across all topics.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              112.5,
+              433.4,
+              489.4,
+              515.5
+            ],
+            "section": "Page 10",
+            "char_length": 546
+          },
+          "score": 0.053018
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p039_image_diagram_01 | page=39 | modality=image_diagram | ref=Table 19 | bbox=[55, 55, 555, 650]]\n[IMAGE_DIAGRAM: Table 19 | Page 39 | BBox (55, 55, 555, 650)]\n- Visual Input Example (Table 19 — 'Moar Layers' Comic Strip): Two-part comic comparing 'Statistical Learning' vs 'Neural Networks'.\n- Top panel (Statistical Learning): Characters discuss complex mathematical remedies for overfitting — minimizing structural risk, reworking the loss function, and using a soft margin.\n- Bottom panel (Neural Networks): Character simply says 'stack more layers' (with user comment 'But unironically').\n- Humor explained: Satirizes the contrast between rigorous mathematical theory in statistical learning and the brute-force 'stack more layers' heuristic in deep neural networks that nonetheless works in practice.\n\n[gpt4-2023-techreport_p039_text_02 | page=39 | modality=text | ref=Page 39 | bbox=[161.6, 596.2, 487.6, 666.3]]\nThe humor comes from the contrast between the complexity and speci- ficity of the statistical learning approach and the simplicity and generality of the neural network approach. The \"But unironically\" comment adds to the humor by implying that, despite being simplistic, the \"stack more layers\" approach is often effective in practice.\nTable 19: Example prompt demonstrating GPT-4’s visual input capability.\n\n[gpt4-2023-techreport_p039_text_01 | page=39 | modality=text | ref=Page 39 | bbox=[114.0, 129.7, 487.6, 584.4]]\nGPT-4 visual input example, Moar Layers:\nUser Can you explain why this is funny. Think about it step-by-step.\nGPT-4 The comic is satirizing the difference in approaches to improving model performance between statistical learning and neural networks.\nIn statistical learning, the character is shown to be concerned with overfit- ting and suggests a series of complex and technical solutions, such as minimizing structural risk, reworking the loss function, and using a soft margin.\nIn contrast, the neural networks character simply suggests adding more layers to the model. This is often seen as a common solution to improving performance in neural networks, but it’s also considered a simplistic and brute-force approach.\n\n[gpt4-2023-techreport_p009_image_diagram_01 | page=9 | modality=image_diagram | ref=Table 3 | bbox=[55, 60, 555, 650]]\n[IMAGE_DIAGRAM: Table 3 | Page 9 | BBox (55, 60, 555, 650)]\n- Visual Input Example (Table 3): A three-panel photograph/meme of a smartphone 'Lightning Cable' adapter.\n- User prompt: 'What is funny about this image? Describe it panel by panel.'\n- Visual content & GPT-4 panel-by-panel description:\n  * Panel 1: A smartphone with a large, blue, 15-pin VGA connector (typically used for computer monitors) plugged into its charging port.\n  * Panel 2: The retail package for a 'Lightning Cable' adapter displaying a picture of a VGA connector on the packaging.\n  * Panel 3: A close-up of the VGA connector head with a tiny Apple Lightning connector protruding from the end.\n- Explanation of humor: The absurdity of plugging a bulky, outdated 15-pin VGA monitor connector into a small modern smartphone charging port.",
+      "context_ids": [
+        "gpt4-2023-techreport_p039_image_diagram_01",
+        "gpt4-2023-techreport_p039_text_02",
+        "gpt4-2023-techreport_p039_text_01",
+        "gpt4-2023-techreport_p009_image_diagram_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Table 19 (Page 39, 'Moar Layers' comic strip), how does the comic contrast the discussion in the 'Statistical Learning' panel with the 'Neural Networks' panel?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "Verified that all required details are present in the context."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_10",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p039_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p039_image_diagram_01",
+      "gpt4-2023-techreport_p039_text_02",
+      "gpt4-2023-techreport_p039_text_01",
+      "gpt4-2023-techreport_p009_image_diagram_01",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p009_text_01",
+      "gpt4-2023-techreport_p046_text_03",
+      "gpt4-2023-techreport_p010_text_02"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p039_image_diagram_01",
+      "gpt4-2023-techreport_p039_text_02",
+      "gpt4-2023-techreport_p039_text_01",
+      "gpt4-2023-techreport_p009_image_diagram_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p039_image_diagram_01",
+      "gpt4-2023-techreport_p039_text_02",
+      "gpt4-2023-techreport_p039_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1160,
+  "completion_tokens": 229,
+  "total_tokens": 1389,
+  "estimated_cost_usd": 0.000311
+}

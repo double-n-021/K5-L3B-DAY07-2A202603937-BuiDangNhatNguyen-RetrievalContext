@@ -1,0 +1,291 @@
+{
+  "id": "adv_test_08",
+  "split": "test",
+  "primary_group": "image_diagram",
+  "question": "In the visual input example in Table 15 (Page 35, French physics exam problem), what physical geometry and boundary conditions at x=0 and x=L are depicted in the diagram, and what linear temperature profile T(x) does GPT-4 derive for question I.1.a?",
+  "answerable": true,
+  "expected_answer": "In Table 15 (Page 35), the diagram shows a 1D conductive bar of length L along axis x with boundary temperatures T(0) = T0 at x=0 and T(L) = Tb at x=L. For stationary 1D heat conduction (d^2T/dx^2 = 0), GPT-4 derives the linear temperature profile T(x) = (Tb - T0)*(x/L) + T0 with slope (Tb - T0)/L.",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p035_image_diagram_01",
+      "page": 35,
+      "modality": "image_diagram",
+      "figure_or_table_id": "Table 15",
+      "bbox": [
+        55,
+        55,
+        555,
+        700
+      ],
+      "evidence": "1D conductive bar of length L along axis x, boundary temperatures T(0) = T0 at x=0 and T(L) = Tb at x=L... T(x) = (Tb - T0)*(x/L) + T0",
+      "unit_and_condition": "Boundary conditions at x=0, x=L and formula T(x) in Table 15."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "The diagram depicts a 1D conductive bar of length L along the x-axis [gpt4-2023-techreport_p035_image_diagram_01]. The boundary conditions are T(0) = T0 at x=0 and T(L) = Tb at x=L [gpt4-2023-techreport_p035_image_diagram_01]. For question I.1.a, GPT-4 derives the linear temperature profile T(x) = (Tb − T0) * (x/L) + T0, which has a slope of (Tb − T0)/L [gpt4-2023-techreport_p035_text_01].",
+  "turns": 1,
+  "latency_ms": 1898.5,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p035_image_diagram_01",
+    "gpt4-2023-techreport_p035_text_02",
+    "gpt4-2023-techreport_p035_text_01",
+    "gpt4-2023-techreport_p011_chart_01",
+    "gpt4-2023-techreport_p037_image_diagram_01",
+    "gpt4-2023-techreport_p003_chart_01",
+    "gpt4-2023-techreport_p006_chart_01",
+    "gpt4-2023-techreport_p005_text_04"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p035_image_diagram_01",
+    "gpt4-2023-techreport_p035_text_02",
+    "gpt4-2023-techreport_p035_text_01",
+    "gpt4-2023-techreport_p011_chart_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In the visual input example in Table 15 (Page 35, French physics exam problem), what physical geometry and boundary conditions at x=0 and x=L are depicted in the diagram, and what linear temperature profile T(x) does GPT-4 derive for question I.1.a?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p035_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 35,
+          "text": "[IMAGE_DIAGRAM: Table 15 | Page 35 | BBox (55, 55, 555, 700)]\n- Visual Input Example (Table 15 — Ecole Polytechnique Physics Exam Question in French): Image of a French physics exam problem with a schematic diagram of a 1D conductive bar of length L along axis x, boundary temperatures T(0) = T0 at x=0 and T(L) = Tb at x=L.\n- User prompt: 'Answer question I.1.a. Think step-by-step.'\n- Solution derived from diagram & French text: Stationary 1D heat conduction equation d^2T/dx^2 = 0 -> T(x) = C1*x + C2. Applying boundary conditions T(0)=T0 and T(L)=Tb yields C2 = T0 and C1 = (Tb - T0)/L, so T(x) = (Tb - T0)*(x/L) + T0 (linear temperature profile with slope (Tb - T0)/L).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 15",
+            "bbox": [
+              55,
+              55,
+              555,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p035_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 675
+          },
+          "score": 0.242581
+        },
+        {
+          "id": "gpt4-2023-techreport_p035_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 35,
+          "text": "Table 15. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question which requires understanding a physics problem with a diagram written in French and solving it using chain-of-thought prompting.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              642.2,
+              489.1,
+              670.4
+            ],
+            "section": "Page 35",
+            "char_length": 234
+          },
+          "score": 0.138182
+        },
+        {
+          "id": "gpt4-2023-techreport_p035_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 35,
+          "text": "GPT-4 visual input example, École Polytechnique Exam Question:\nUser Answer question I.1.a. Think step-by-step.\nGPT-4 To answer question I.1.a, we need to express the temperature T(x) in every point of the conductive bar, which is characterized by the abscissa x. We are given that T(0) = T0 and T(L) = Tb.\nFor a stationary regime, the heat equation for the one-dimensional heat conduction in the bar is: d2T/dx2 = 0\nIntegrating once, we get: dT/dx = C1\nIntegrating a second time: T(x) = C1x + C2\nTo determine the constants C1 and C2, we use the boundary conditions: T(0) = T0, which gives C2 = T0 T(L) = Tb, which gives C1 = (Tb −T0)/L\nFinally, the expression for T(x) is: T(x) = (Tb −T0) ∗(x/L) + T0 This represents a linear temperature profile along the conductive bar, with a slope of (Tb −T0)/L.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              114.0,
+              127.2,
+              485.9,
+              642.1
+            ],
+            "section": "Page 35",
+            "char_length": 799
+          },
+          "score": 0.115312
+        },
+        {
+          "id": "gpt4-2023-techreport_p011_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "[CHART & TABLE: Table 4 & Figure 7 | Page 11 | BBox (55, 65, 555, 650)]\n- Table 4 (TruthfulQA Examples): Left column shows GPT-4 answering correctly ('Can you teach an old dog new tricks?' -> 'Yes, you can teach an old dog new tricks'); Right column shows GPT-4 answering incorrectly to an adversarial trick question ('Son of an actor, this American guitarist and rock singer... His name is Elvis what?' -> GPT-4 picks 'Presley' instead of 'Perkins', i.e., Elvis Perkins, son of actor Anthony Perkins).\n- Figure 7 Title: Accuracy on adversarial questions (TruthfulQA mc1). Y-axis: Accuracy (0% to 70%, higher is better).\n- Models & conditions on X-axis: Anthropic-LM (0-shot ~30%, RLHF ~35%), gpt-3.5-base (0-shot ~28%, 5-shot ~29%), gpt-3.5-turbo (RLHF ~48%), gpt-4-base (0-shot ~30%, 5-shot ~41%), and gpt-4 after RLHF fine-tuning (~60%, highest bar).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 7 & Table 4",
+            "bbox": [
+              55,
+              65,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p011_chart_01.png",
+            "section": "5 Limitations",
+            "char_length": 853
+          },
+          "score": 0.080336
+        },
+        {
+          "id": "gpt4-2023-techreport_p037_image_diagram_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 37,
+          "text": "[IMAGE_DIAGRAM: Table 17 | Page 37 | BBox (55, 55, 555, 720)]\n- Visual Input Example (Table 17 — Pixel to Paper Summaries): Three page-screenshot images of the InstructGPT paper (including Figure 2 architecture diagram of the 3-step RLHF pipeline).\n- User follow-up prompt on diagram: 'Could you explain the process described in Figure 2?'\n- Three steps read from Figure 2 diagram in the screenshot:\n  1. Supervised fine-tuning (SFT): Collect labeler demonstration data of prompts and desired output behavior to fine-tune GPT-3.\n  2. Reward model (RM) training: Collect human labeler rankings of several model outputs from best to worst to train the reward model.\n  3. Reinforcement learning using Proximal Policy Optimization (PPO): Optimize the SFT policy against the reward model using PPO.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "image_diagram",
+            "figure_or_table_id": "Table 17",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p037_image_diagram_01.png",
+            "section": "Appendix G Visual Input Examples",
+            "char_length": 793
+          },
+          "score": 0.07703
+        },
+        {
+          "id": "gpt4-2023-techreport_p003_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 3,
+          "text": "[CHART: Figure 1 & Figure 2 | Page 3 | BBox (45, 55, 565, 680)]\n- Figure 1 Title: OpenAI codebase next word prediction — Performance of GPT-4 and smaller models.\n  Metric (y-axis): Final loss in Bits per word (range 1.0 to 6.0, lower is better) on an internal codebase dataset not in training set.\n  X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 100p, 10n, 1u, 100u, 0.01, 1). Series: Observed (dots) vs Prediction (dotted power-law fit to smaller models excluding GPT-4). GPT-4 final loss (~1.8 bits per word at compute=1) matches the power-law prediction.\n- Figure 2 Title: Capability prediction on 23 coding problems — Performance of GPT-4 and smaller models on a subset of the HumanEval dataset (3rd easiest difficulty bucket).\n  Metric (y-axis): -Mean Log Pass Rate (range 0 to 5). X-axis: Training compute normalized so that GPT-4 = 1 (ticks: 1u, 10u, 100u, 0.001, 0.01, 0.1, 1). Power-law fit to smaller models accurately predicts GPT-4 pass rate.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 1 & Figure 2",
+            "bbox": [
+              45,
+              55,
+              565,
+              680
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p003_chart_01.png",
+            "section": "3 Predictable Scaling",
+            "char_length": 970
+          },
+          "score": 0.071187
+        },
+        {
+          "id": "gpt4-2023-techreport_p006_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 6,
+          "text": "[CHART: Figure 4 | Page 6 | BBox (45, 55, 565, 430)]\n- Figure 4 Title: Exam results (ordered by GPT-3.5 performance) — GPT performance on academic and professional exams.\n- X-axis: Exams ordered from low to high based on GPT-3.5 performance (from AP Calculus BC, AMC 12, Codeforces Rating up to SAT EBRW, AP Environmental Science).\n- Y-axis: Estimated percentile lower bound among test takers (0% to 100%). Legend: gpt-4 (dark green), gpt-4 no vision (light green), gpt3.5 (blue).\n- Artifact explanation in caption: Reporting the conservative lower bound of percentile bins creates artifacts on AP exams with wide scoring bins — for example, although GPT-4 attains the highest possible score on AP Biology (5/5), it is shown in the plot as 85th percentile because 15% of test-takers achieve a 5.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 4",
+            "bbox": [
+              45,
+              55,
+              565,
+              430
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p006_chart_01.png",
+            "section": "4 Capabilities",
+            "char_length": 795
+          },
+          "score": 0.068215
+        },
+        {
+          "id": "gpt4-2023-techreport_p005_text_04",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 5,
+          "text": "Table 1. GPT performance on academic and professional exams. In each case, we simulate the conditions and scoring of the real exam. We report GPT-4’s final score graded according to exam- specific rubrics, as well as the percentile of test-takers achieving GPT-4’s score.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              122.6,
+              656.9,
+              490.5,
+              685.2
+            ],
+            "section": "Page 5",
+            "char_length": 271
+          },
+          "score": 0.062307
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p035_image_diagram_01 | page=35 | modality=image_diagram | ref=Table 15 | bbox=[55, 55, 555, 700]]\n[IMAGE_DIAGRAM: Table 15 | Page 35 | BBox (55, 55, 555, 700)]\n- Visual Input Example (Table 15 — Ecole Polytechnique Physics Exam Question in French): Image of a French physics exam problem with a schematic diagram of a 1D conductive bar of length L along axis x, boundary temperatures T(0) = T0 at x=0 and T(L) = Tb at x=L.\n- User prompt: 'Answer question I.1.a. Think step-by-step.'\n- Solution derived from diagram & French text: Stationary 1D heat conduction equation d^2T/dx^2 = 0 -> T(x) = C1*x + C2. Applying boundary conditions T(0)=T0 and T(L)=Tb yields C2 = T0 and C1 = (Tb - T0)/L, so T(x) = (Tb - T0)*(x/L) + T0 (linear temperature profile with slope (Tb - T0)/L).\n\n[gpt4-2023-techreport_p035_text_02 | page=35 | modality=text | ref=Page 35 | bbox=[122.6, 642.2, 489.1, 670.4]]\nTable 15. Example prompt demonstrating GPT-4’s visual input capability. The prompt consists of a question which requires understanding a physics problem with a diagram written in French and solving it using chain-of-thought prompting.\n\n[gpt4-2023-techreport_p035_text_01 | page=35 | modality=text | ref=Page 35 | bbox=[114.0, 127.2, 485.9, 642.1]]\nGPT-4 visual input example, École Polytechnique Exam Question:\nUser Answer question I.1.a. Think step-by-step.\nGPT-4 To answer question I.1.a, we need to express the temperature T(x) in every point of the conductive bar, which is characterized by the abscissa x. We are given that T(0) = T0 and T(L) = Tb.\nFor a stationary regime, the heat equation for the one-dimensional heat conduction in the bar is: d2T/dx2 = 0\nIntegrating once, we get: dT/dx = C1\nIntegrating a second time: T(x) = C1x + C2\nTo determine the constants C1 and C2, we use the boundary conditions: T(0) = T0, which gives C2 = T0 T(L) = Tb, which gives C1 = (Tb −T0)/L\nFinally, the expression for T(x) is: T(x) = (Tb −T0) ∗(x/L) + T0 This represents a linear temperature profile along the conductive bar, with a slope of (Tb −T0)/L.\n\n[gpt4-2023-techreport_p011_chart_01 | page=11 | modality=chart | ref=Figure 7 & Table 4 | bbox=[55, 65, 555, 650]]\n[CHART & TABLE: Table 4 & Figure 7 | Page 11 | BBox (55, 65, 555, 650)]\n- Table 4 (TruthfulQA Examples): Left column shows GPT-4 answering correctly ('Can you teach an old dog new tricks?' -> 'Yes, you can teach an old dog new tricks'); Right column shows GPT-4 answering incorrectly to an adversarial trick question ('Son of an actor, this American guitarist and rock singer... His name is Elvis what?' -> GPT-4 picks 'Presley' instead of 'Perkins', i.e., Elvis Perkins, son of actor Anthony Perkins).\n- Figure 7 Title: Accuracy on adversarial questions (TruthfulQA mc1). Y-axis: Accuracy (0% to 70%, higher is better).\n- Models & conditions on X-axis: Anthropic-LM (0-shot ~30%, RLHF ~35%), gpt-3.5-base (0-shot ~28%, 5-shot ~29%), gpt-3.5-turbo (RLHF ~48%), gpt-4-base (0-shot ~30%, 5-shot ~41%), and gpt-4 after RLHF fine-tuning (~60%, highest bar).",
+      "context_ids": [
+        "gpt4-2023-techreport_p035_image_diagram_01",
+        "gpt4-2023-techreport_p035_text_02",
+        "gpt4-2023-techreport_p035_text_01",
+        "gpt4-2023-techreport_p011_chart_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In the visual input example in Table 15 (Page 35, French physics exam problem), what physical geometry and boundary conditions at x=0 and x=L are depicted in the diagram, and what linear temperature profile T(x) does GPT-4 derive for question I.1.a?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The context provides the exact details from Table 15 on page 35. The image diagram chunk describes the physical geometry (1D conductive bar of length L along axis x) and boundary conditions (T(0) = T0 at x=0 and T(L) = Tb at x=L). The text chunk provides the step-by-step derivation by GPT-4, leading to the linear temperature profile T(x) = (Tb - T0) * (x/L) + T0."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_08",
+    "split": "test",
+    "primary_group": "image_diagram",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p035_image_diagram_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p035_image_diagram_01",
+      "gpt4-2023-techreport_p035_text_02",
+      "gpt4-2023-techreport_p035_text_01",
+      "gpt4-2023-techreport_p011_chart_01",
+      "gpt4-2023-techreport_p037_image_diagram_01",
+      "gpt4-2023-techreport_p003_chart_01",
+      "gpt4-2023-techreport_p006_chart_01",
+      "gpt4-2023-techreport_p005_text_04"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p035_image_diagram_01",
+      "gpt4-2023-techreport_p035_text_02",
+      "gpt4-2023-techreport_p035_text_01",
+      "gpt4-2023-techreport_p011_chart_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p035_image_diagram_01",
+      "gpt4-2023-techreport_p035_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1136,
+  "completion_tokens": 148,
+  "total_tokens": 1284,
+  "estimated_cost_usd": 0.000259
+}

@@ -1,0 +1,297 @@
+{
+  "config_name": "Adv_Baseline_TextOnly_TFIDF_b1200",
+  "split": "dev",
+  "total_cases": 18,
+  "passed_cases": 3,
+  "failed_cases": 15,
+  "provider_errors": 0,
+  "overall_pass_rate": 0.1667,
+  "overall_pass_rate_pct": "16.7%",
+  "meets_90_percent_bar": false,
+  "total_tokens": 14070,
+  "avg_tokens_per_case": 781.7,
+  "total_cost_usd": 0.003025,
+  "avg_cost_per_case_usd": 0.000168,
+  "avg_latency_ms": 5199.67,
+  "by_group": {
+    "table": {
+      "label": "Bảng",
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "pass_rate": 0.0,
+      "pass_rate_pct": "0.0%"
+    },
+    "image_diagram": {
+      "label": "Ảnh, sơ đồ",
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "pass_rate": 0.0,
+      "pass_rate_pct": "0.0%"
+    },
+    "chart": {
+      "label": "Biểu đồ",
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "pass_rate": 0.0,
+      "pass_rate_pct": "0.0%"
+    },
+    "multi_hop": {
+      "label": "Multi-hop",
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "pass_rate": 0.0,
+      "pass_rate_pct": "0.0%"
+    },
+    "text": {
+      "label": "Text",
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "pass_rate": 0.0,
+      "pass_rate_pct": "0.0%"
+    },
+    "unanswerable": {
+      "label": "Thiếu bằng chứng",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "pass_rate": 1.0,
+      "pass_rate_pct": "100.0%"
+    }
+  },
+  "cases": [
+    {
+      "id": "adv_dev_01",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 1258.98,
+      "total_tokens": 1384,
+      "estimated_cost_usd": 0.000317,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p005_table_01']; Missing gold in packed context: ['gpt4-2023-techreport_p005_table_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_02",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 1701.88,
+      "total_tokens": 1737,
+      "estimated_cost_usd": 0.000491,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p007_table_01']; Missing gold in packed context: ['gpt4-2023-techreport_p007_table_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_03",
+      "primary_group": "table",
+      "answerable": true,
+      "passed": false,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p028_text_01"
+      ],
+      "latency_ms": 2211.27,
+      "total_tokens": 656,
+      "estimated_cost_usd": 0.000143,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p028_table_01']; Missing gold in packed context: ['gpt4-2023-techreport_p028_table_01']; Citation check failed (cited=['gpt4-2023-techreport_p028_text_01'], invalid=[])"
+    },
+    {
+      "id": "adv_dev_04",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "passed": false,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p009_text_01",
+        "gpt4-2023-techreport_p009_text_02"
+      ],
+      "latency_ms": 2173.82,
+      "total_tokens": 901,
+      "estimated_cost_usd": 0.000255,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p009_image_diagram_01']; Missing gold in packed context: ['gpt4-2023-techreport_p009_image_diagram_01']; Citation check failed (cited=['gpt4-2023-techreport_p009_text_01', 'gpt4-2023-techreport_p009_text_02'], invalid=[])"
+    },
+    {
+      "id": "adv_dev_05",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "passed": false,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p036_text_01"
+      ],
+      "latency_ms": 2152.55,
+      "total_tokens": 728,
+      "estimated_cost_usd": 0.000147,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p036_image_diagram_01']; Missing gold in packed context: ['gpt4-2023-techreport_p036_image_diagram_01']; Citation check failed (cited=['gpt4-2023-techreport_p036_text_01'], invalid=[])"
+    },
+    {
+      "id": "adv_dev_06",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "passed": false,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p038_text_01"
+      ],
+      "latency_ms": 3463.16,
+      "total_tokens": 708,
+      "estimated_cost_usd": 0.000149,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p038_image_diagram_01']; Missing gold in packed context: ['gpt4-2023-techreport_p038_image_diagram_01']; Missing required tokens/units: ['map']; Citation check failed (cited=['gpt4-2023-techreport_p038_text_01'], invalid=[])"
+    },
+    {
+      "id": "adv_dev_07",
+      "primary_group": "chart",
+      "answerable": true,
+      "passed": false,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p003_text_01"
+      ],
+      "latency_ms": 2785.9,
+      "total_tokens": 808,
+      "estimated_cost_usd": 0.00019,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p003_chart_01']; Missing gold in packed context: ['gpt4-2023-techreport_p003_chart_01']; Missing required tokens/units: ['bits', 'word']; Citation check failed (cited=['gpt4-2023-techreport_p003_text_01'], invalid=[])"
+    },
+    {
+      "id": "adv_dev_08",
+      "primary_group": "chart",
+      "answerable": true,
+      "passed": false,
+      "abstained": false,
+      "cited_ids": [
+        "gpt4-2023-techreport_p004_text_03"
+      ],
+      "latency_ms": 8758.94,
+      "total_tokens": 776,
+      "estimated_cost_usd": 0.000175,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p004_chart_01']; Missing gold in packed context: ['gpt4-2023-techreport_p004_chart_01']; Missing required tokens/units: ['100']; Citation check failed (cited=['gpt4-2023-techreport_p004_text_03'], invalid=[])"
+    },
+    {
+      "id": "adv_dev_09",
+      "primary_group": "chart",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 2183.98,
+      "total_tokens": 631,
+      "estimated_cost_usd": 0.000115,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p012_chart_01']; Missing gold in packed context: ['gpt4-2023-techreport_p012_chart_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_10",
+      "primary_group": "multi_hop",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 23234.68,
+      "total_tokens": 687,
+      "estimated_cost_usd": 0.000123,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p008_chart_01', 'gpt4-2023-techreport_p033_table_01']; Missing gold in packed context: ['gpt4-2023-techreport_p008_chart_01', 'gpt4-2023-techreport_p033_table_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_11",
+      "primary_group": "multi_hop",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 5309.98,
+      "total_tokens": 600,
+      "estimated_cost_usd": 0.00011,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p005_table_01', 'gpt4-2023-techreport_p006_chart_01']; Missing gold in packed context: ['gpt4-2023-techreport_p005_table_01', 'gpt4-2023-techreport_p006_chart_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_12",
+      "primary_group": "multi_hop",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 9829.13,
+      "total_tokens": 688,
+      "estimated_cost_usd": 0.000123,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p007_table_01', 'gpt4-2023-techreport_p032_table_01']; Missing gold in packed context: ['gpt4-2023-techreport_p007_table_01', 'gpt4-2023-techreport_p032_table_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_13",
+      "primary_group": "text",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 1922.74,
+      "total_tokens": 700,
+      "estimated_cost_usd": 0.000125,
+      "audit_reason": "Missing gold in packed context: ['gpt4-2023-techreport_p001_text_01', 'gpt4-2023-techreport_p002_text_02']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_14",
+      "primary_group": "text",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 1658.03,
+      "total_tokens": 596,
+      "estimated_cost_usd": 0.00011,
+      "audit_reason": "Missing gold in packed context: ['gpt4-2023-techreport_p025_text_01']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_15",
+      "primary_group": "text",
+      "answerable": true,
+      "passed": false,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 3012.59,
+      "total_tokens": 669,
+      "estimated_cost_usd": 0.000121,
+      "audit_reason": "Missing gold in retrieval: ['gpt4-2023-techreport_p029_text_01']; Missing gold in packed context: ['gpt4-2023-techreport_p029_text_01', 'gpt4-2023-techreport_p029_text_02']; False Abstention on answerable question; Citation check failed (cited=[], invalid=[])"
+    },
+    {
+      "id": "adv_dev_16",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 16926.61,
+      "total_tokens": 615,
+      "estimated_cost_usd": 0.000112,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    },
+    {
+      "id": "adv_dev_17",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 2243.5,
+      "total_tokens": 624,
+      "estimated_cost_usd": 0.000114,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    },
+    {
+      "id": "adv_dev_18",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "passed": true,
+      "abstained": true,
+      "cited_ids": [],
+      "latency_ms": 2766.24,
+      "total_tokens": 562,
+      "estimated_cost_usd": 0.000105,
+      "audit_reason": "True Abstention: Agent correctly abstained on unanswerable question."
+    }
+  ]
+}

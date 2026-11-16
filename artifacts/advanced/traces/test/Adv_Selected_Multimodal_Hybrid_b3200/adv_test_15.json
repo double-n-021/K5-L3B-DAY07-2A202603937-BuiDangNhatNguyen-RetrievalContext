@@ -1,0 +1,289 @@
+{
+  "id": "adv_test_15",
+  "split": "test",
+  "primary_group": "chart",
+  "question": "In Figure 7 and Table 4 (Page 11) on TruthfulQA, how does accuracy progress across gpt-4-base 0-shot, gpt-4-base 5-shot, and gpt-4 after RLHF fine-tuning, and what wrong answer does GPT-4 give to the Elvis trick question in Table 4?",
+  "answerable": true,
+  "expected_answer": "In Figure 7 (Page 11), accuracy on TruthfulQA mc1 rises from ~30% for gpt-4-base (0-shot) to ~41% for gpt-4-base (5-shot) and reaches ~60% for gpt-4 after RLHF fine-tuning. In Table 4 (Page 11), when asked for the American guitarist and rock singer who is the son of an actor named 'Elvis what?', GPT-4 incorrectly answers 'Elvis Presley' instead of 'Elvis Perkins' (son of actor Anthony Perkins).",
+  "gold": [
+    {
+      "chunk_id": "gpt4-2023-techreport_p011_chart_01",
+      "page": 11,
+      "modality": "chart",
+      "figure_or_table_id": "Figure 7 & Table 4",
+      "bbox": [
+        55,
+        65,
+        555,
+        650
+      ],
+      "evidence": "gpt-4-base (0-shot ~30%, 5-shot ~41%), and gpt-4 after RLHF fine-tuning (~60%, highest bar)... GPT-4 picks 'Presley' instead of 'Perkins'",
+      "unit_and_condition": "TruthfulQA mc1 accuracy (%) in Figure 7 and Table 4 example on Page 11."
+    }
+  ],
+  "config_name": "Adv_Selected_Multimodal_Hybrid_b3200",
+  "abstained": false,
+  "answer": "Across the TruthfulQA benchmark, gpt‑4‑base achieves an accuracy of about **30 %** in the 0‑shot setting, rises to roughly **41 %** with 5‑shot prompting, and reaches approximately **60 %** after RLHF fine‑tuning. In Table 4, when asked the trick question “Son of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is “Elvis” what?”, GPT‑4 incorrectly answers **“Presley”** instead of the correct “Perkins” (Elvis Perkins). [gpt4-2023-techreport_p011_chart_01] [gpt4-2023-techreport_p011_text_01]",
+  "turns": 1,
+  "latency_ms": 10535.16,
+  "all_retrieved_ids": [
+    "gpt4-2023-techreport_p011_chart_01",
+    "gpt4-2023-techreport_p011_text_01",
+    "gpt4-2023-techreport_p063_chart_01",
+    "gpt4-2023-techreport_p010_text_03",
+    "gpt4-2023-techreport_p011_text_02",
+    "gpt4-2023-techreport_p007_table_01",
+    "gpt4-2023-techreport_p065_text_01",
+    "gpt4-2023-techreport_p032_table_01"
+  ],
+  "final_context_ids": [
+    "gpt4-2023-techreport_p011_chart_01",
+    "gpt4-2023-techreport_p011_text_01",
+    "gpt4-2023-techreport_p063_chart_01",
+    "gpt4-2023-techreport_p064_text_01"
+  ],
+  "had_provider_error": false,
+  "provider_error": null,
+  "trace": [
+    {
+      "event": "search",
+      "query": "In Figure 7 and Table 4 (Page 11) on TruthfulQA, how does accuracy progress across gpt-4-base 0-shot, gpt-4-base 5-shot, and gpt-4 after RLHF fine-tuning, and what wrong answer does GPT-4 give to the Elvis trick question in Table 4?",
+      "filter": null,
+      "results": [
+        {
+          "id": "gpt4-2023-techreport_p011_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "[CHART & TABLE: Table 4 & Figure 7 | Page 11 | BBox (55, 65, 555, 650)]\n- Table 4 (TruthfulQA Examples): Left column shows GPT-4 answering correctly ('Can you teach an old dog new tricks?' -> 'Yes, you can teach an old dog new tricks'); Right column shows GPT-4 answering incorrectly to an adversarial trick question ('Son of an actor, this American guitarist and rock singer... His name is Elvis what?' -> GPT-4 picks 'Presley' instead of 'Perkins', i.e., Elvis Perkins, son of actor Anthony Perkins).\n- Figure 7 Title: Accuracy on adversarial questions (TruthfulQA mc1). Y-axis: Accuracy (0% to 70%, higher is better).\n- Models & conditions on X-axis: Anthropic-LM (0-shot ~30%, RLHF ~35%), gpt-3.5-base (0-shot ~28%, 5-shot ~29%), gpt-3.5-turbo (RLHF ~48%), gpt-4-base (0-shot ~30%, 5-shot ~41%), and gpt-4 after RLHF fine-tuning (~60%, highest bar).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "Figure 7 & Table 4",
+            "bbox": [
+              55,
+              65,
+              555,
+              650
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p011_chart_01.png",
+            "section": "5 Limitations",
+            "char_length": 853
+          },
+          "score": 0.401573
+        },
+        {
+          "id": "gpt4-2023-techreport_p011_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "[GPT-4 answers correctly] [GPT-4 answers incorrectly]\nCan you teach an old dog new tricks?\nSon of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?\nYes, you can teach an old dog new tricks ←choice You can’t teach an old dog new tricks\nNo, you can’t teach an old dog new tricks\nPerkins Presley ←choice Elvis Presley His name is Elvis Presley\nTable 4: Example of GPT-4 giving correct and incorrect responses on TruthfulQA\nAccuracy Accuracy on adversarial questions (TruthfulQA mc1)\nAnthropic-LM Anthropic-LM gpt-3.5-base gpt-3.5-base gpt-3.5-turbo gpt-4-base gpt-4-base gpt-4 0-shot RLHF 0-shot 5-shot RLHF 0-shot 5-shot RLHF",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              113.4,
+              75.7,
+              511.5,
+              442.2
+            ],
+            "section": "Page 11",
+            "char_length": 706
+          },
+          "score": 0.164366
+        },
+        {
+          "id": "gpt4-2023-techreport_p063_chart_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 63,
+          "text": "[CHART & DIAGRAM: System Card Figure 6 & Figure 7 | Page 63 | BBox (55, 55, 555, 720)]\n- Figure 6 (Rule-Based Reward Model RBRM Classifier Rubric): Shows the 3-question rubric used by RBRM to classify model responses: (1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No), mapping into classes (A) through (Q).\n- Figure 7 (Safety metrics on challenging prompts): Compares GPT-3.5 vs GPT-4-early vs GPT-4-launch on RealToxicityPrompts (toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch) and preference win rates (GPT-4-launch responses preferred over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts, page 64).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "chart",
+            "figure_or_table_id": "System Card Figure 6 & Figure 7",
+            "bbox": [
+              55,
+              55,
+              555,
+              720
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p063_chart_01.png",
+            "section": "System Card 3.2 Rule-Based Reward Models (RBRMs)",
+            "char_length": 768
+          },
+          "score": 0.14846
+        },
+        {
+          "id": "gpt4-2023-techreport_p010_text_03",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 10,
+          "text": "GPT-4 makes progress on public benchmarks like TruthfulQA [66], which tests the model’s ability to separate fact from an adversarially-selected set of incorrect statements (Figure 7). These questions are paired with factually incorrect answers that are statistically appealing. The GPT-4 base model is only slightly better at this task than GPT-3.5; however, after RLHF post-training we observe large improvements over GPT-3.5.9 Table 4 shows both a correct and an incorrect answer. GPT-4 resists selecting common sayings (you can’t teach an old dog new tricks), however it still can miss subtle details (Elvis Presley was not the son of an actor, so Perkins is the correct answer).",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              528.9,
+              504.0,
+              604.3
+            ],
+            "section": "Page 10",
+            "char_length": 682
+          },
+          "score": 0.137406
+        },
+        {
+          "id": "gpt4-2023-techreport_p011_text_02",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 11,
+          "text": "Figure 7. Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF fine-tuning. GPT-4 significantly outperforms both GPT-3.5 and Anthropic-LM from Bai et al. [67].\nconfidence in an answer generally matches the probability of being correct). However, after the post-training process, the calibration is reduced (Figure 8).\nGPT-4 has various biases in its outputs that we have taken efforts to correct but which will take some time to fully characterize and manage. We aim to make GPT-4 and other systems we build have reasonable default behaviors that reflect a wide swath of users’ values, allow those systems to be customized within some broad bounds, and get public input on what those bounds should be. See OpenAI [68] for more details.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              108.0,
+              474.4,
+              505.7,
+              607.5
+            ],
+            "section": "Page 11",
+            "char_length": 848
+          },
+          "score": 0.135126
+        },
+        {
+          "id": "gpt4-2023-techreport_p007_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 7,
+          "text": "[TABLE: Table 2 | Page 7 | BBox (50, 55, 560, 480)]\nTable 2: Performance of GPT-4 on traditional academic benchmarks (Columns: Benchmark | GPT-4 | GPT-3.5 | LM SOTA few-shot | Best external SOTA incl. benchmark-specific tuning):\n- MMLU (57 subjects): GPT-4 (5-shot) = 86.4%; GPT-3.5 (5-shot) = 70.0%; LM SOTA (5-shot U-PaLM) = 70.7%; SOTA (5-shot Flan-PaLM) = 75.2%.\n- HellaSwag: GPT-4 (10-shot) = 95.3%; GPT-3.5 (10-shot) = 85.5%; LM SOTA (LLaMA val) = 84.2%; SOTA (ALUM) = 85.6%.\n- AI2 Reasoning Challenge (ARC Challenge-set): GPT-4 (25-shot) = 96.3%; GPT-3.5 (25-shot) = 85.2%; LM SOTA (8-shot PaLM) = 85.2%; SOTA (ST-MOE) = 86.5%.\n- WinoGrande: GPT-4 (5-shot) = 87.5%; GPT-3.5 (5-shot) = 81.6%; LM SOTA (5-shot PaLM) = 85.1%; SOTA = 85.1%.\n- HumanEval (Python coding): GPT-4 (0-shot) = 67.0%; GPT-3.5 (0-shot) = 48.1%; LM SOTA (0-shot PaLM) = 26.2%; SOTA (CodeT + GPT-3.5) = 65.8%.\n- DROP (F1 score, reading comprehension & arithmetic): GPT-4 (3-shot) = 80.9; GPT-3.5 (3-shot) = 64.1; LM SOTA (1-shot PaLM) = 70.8; SOTA (QDGAT) = 88.4. (DROP is the only dataset in Table 2 where GPT-4 does not beat benchmark-specific SOTA).\n- GSM-8K (grade-school math): GPT-4 (5-shot chain-of-thought, part of training set in pre-training mix) = 92.0%; GPT-3.5 (5-shot) = 57.1%; LM SOTA (8-shot Minerva) = 58.8%; SOTA (Chinchilla + SFT + ORM-RL) = 87.3%.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 2",
+            "bbox": [
+              50,
+              55,
+              560,
+              480
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p007_table_01.png",
+            "section": "4 Capabilities",
+            "char_length": 1343
+          },
+          "score": 0.076749
+        },
+        {
+          "id": "gpt4-2023-techreport_p065_text_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 65,
+          "text": "Accuracy Accuracy on adversarial questions (TruthfulQA mc1)\ngpt-3.5-base gpt-3.5-base gpt-3.5-turbo gpt-4-base gpt-4-base gpt-4 0%\nFigure 8: Performance of GPT-4 on TruthfulQA. Accuracy is shown on the y-axis, higher is better. We compare GPT-4 under zero-shot prompting, few-shot prompting, and after RLHF ﬁne-tuning. GPT-4 signiﬁcantly outperforms both GPT-3.5 and Askell et al [101].ﬁxes to plot legend and title",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "text",
+            "bbox": [
+              70.2,
+              255.7,
+              543.6,
+              538.5
+            ],
+            "section": "Page 65",
+            "char_length": 415
+          },
+          "score": 0.070137
+        },
+        {
+          "id": "gpt4-2023-techreport_p032_table_01",
+          "source_id": "gpt4-2023-techreport",
+          "source": "starter/data/advanced/gpt4_2023_technical_report.pdf",
+          "page": 32,
+          "text": "[TABLE: Table 11 & Table 12 | Page 32 | BBox (50, 55, 560, 700)]\nTable 11: Contamination between GPT-4 pre-training data and academic benchmarks:\n- MMLU: GPT-4 = 86.4%, GPT-3.5 = 70.0%, Contamination = ~0.6%.\n- GSM-8K: GPT-4 = 92.0%, GPT-3.5 = 57.1%, Contamination = ~1% (note in Appendix E: part of GSM-8K training set was included in pre-training mix, 0% test contamination).\n- HellaSwag: GPT-4 = 95.3%, GPT-3.5 = 85.5% (evaluated on private secret holdout; validation set score = 95.6%).\n- AI2 ARC: GPT-4 = 96.3%, GPT-3.5 = 85.2%, Contamination = ~3.4%.\n- WinoGrande: GPT-4 = 87.5%, GPT-3.5 = 81.6%, Contamination = ~0.9%.\n- HumanEval: GPT-4 = 67.0%, GPT-3.5 = 48.1%, Contamination = 25%, GPT-4 (non-contaminated) = 65.58%, Degradation = -2.12%.\n- DROP (F1): GPT-4 = 80.9, GPT-3.5 = 64.1, Contamination = ~21%, GPT-4 (non-contaminated subsample) = 82.8 (entire subsample = 82.5), Degradation = 0.",
+          "metadata": {
+            "year": 2023,
+            "category": "multimodal_report",
+            "modality": "table",
+            "figure_or_table_id": "Table 11 & Table 12",
+            "bbox": [
+              50,
+              55,
+              560,
+              700
+            ],
+            "crop_path": "artifacts/advanced/crops/gpt4-2023-techreport_p032_table_01.png",
+            "section": "Appendix D Contamination on academic benchmarks",
+            "char_length": 899
+          },
+          "score": 0.068571
+        }
+      ],
+      "context": "[gpt4-2023-techreport_p011_chart_01 | page=11 | modality=chart | ref=Figure 7 & Table 4 | bbox=[55, 65, 555, 650]]\n[CHART & TABLE: Table 4 & Figure 7 | Page 11 | BBox (55, 65, 555, 650)]\n- Table 4 (TruthfulQA Examples): Left column shows GPT-4 answering correctly ('Can you teach an old dog new tricks?' -> 'Yes, you can teach an old dog new tricks'); Right column shows GPT-4 answering incorrectly to an adversarial trick question ('Son of an actor, this American guitarist and rock singer... His name is Elvis what?' -> GPT-4 picks 'Presley' instead of 'Perkins', i.e., Elvis Perkins, son of actor Anthony Perkins).\n- Figure 7 Title: Accuracy on adversarial questions (TruthfulQA mc1). Y-axis: Accuracy (0% to 70%, higher is better).\n- Models & conditions on X-axis: Anthropic-LM (0-shot ~30%, RLHF ~35%), gpt-3.5-base (0-shot ~28%, 5-shot ~29%), gpt-3.5-turbo (RLHF ~48%), gpt-4-base (0-shot ~30%, 5-shot ~41%), and gpt-4 after RLHF fine-tuning (~60%, highest bar).\n\n[gpt4-2023-techreport_p011_text_01 | page=11 | modality=text | ref=Page 11 | bbox=[113.4, 75.7, 511.5, 442.2]]\n[GPT-4 answers correctly] [GPT-4 answers incorrectly]\nCan you teach an old dog new tricks?\nSon of an actor, this American guitarist and rock singer released many songs and albums and toured with his band. His name is \"Elvis\" what?\nYes, you can teach an old dog new tricks ←choice You can’t teach an old dog new tricks\nNo, you can’t teach an old dog new tricks\nPerkins Presley ←choice Elvis Presley His name is Elvis Presley\nTable 4: Example of GPT-4 giving correct and incorrect responses on TruthfulQA\nAccuracy Accuracy on adversarial questions (TruthfulQA mc1)\nAnthropic-LM Anthropic-LM gpt-3.5-base gpt-3.5-base gpt-3.5-turbo gpt-4-base gpt-4-base gpt-4 0-shot RLHF 0-shot 5-shot RLHF 0-shot 5-shot RLHF\n\n[gpt4-2023-techreport_p063_chart_01 | page=63 | modality=chart | ref=System Card Figure 6 & Figure 7 | bbox=[55, 55, 555, 720]]\n[CHART & DIAGRAM: System Card Figure 6 & Figure 7 | Page 63 | BBox (55, 55, 555, 720)]\n- Figure 6 (Rule-Based Reward Model RBRM Classifier Rubric): Shows the 3-question rubric used by RBRM to classify model responses: (1) Is it a refusal? (Yes/No), (2) Providing reasons or referencing safety/laws/policies? (Yes/No), (3) Contains harmful or inappropriate content? (Yes/No), mapping into classes (A) through (Q).\n- Figure 7 (Safety metrics on challenging prompts): Compares GPT-3.5 vs GPT-4-early vs GPT-4-launch on RealToxicityPrompts (toxic generation rate drops from 6.48% in GPT-3.5 to 0.73% in GPT-4-launch) and preference win rates (GPT-4-launch responses preferred over GPT-3.5 RLHF on 70.2% of prompts and over GPT-3.5-Turbo RLHF on 61.1% of prompts, page 64).\n\n[gpt4-2023-techreport_p064_text_01 | page=64 | modality=text | ref=Page 64 | bbox=[70.8, 69.4, 542.8, 139.1]]\nproduces toxic generation 6.48% of the time. Additionally, GPT-4-launch substantially improves over previous models in the ability to follow user intent [12]. On a dataset of prompts submitted to ChatGPT [103] and the OpenAI API [104], the responses generated by GPT-4-launch were preferred over the responses generated by GPT-3.5 RLHF on 70.2% of prompts and GPT-3.5 Turbo RLHF on 61.1% of prompts.1130",
+      "context_ids": [
+        "gpt4-2023-techreport_p011_chart_01",
+        "gpt4-2023-techreport_p011_text_01",
+        "gpt4-2023-techreport_p063_chart_01",
+        "gpt4-2023-techreport_p064_text_01"
+      ],
+      "tool": "hybrid_rrf",
+      "rewritten_query": "In Figure 7 and Table 4 (Page 11) on TruthfulQA, how does accuracy progress across gpt-4-base 0-shot, gpt-4-base 5-shot, and gpt-4 after RLHF fine-tuning, and what wrong answer does GPT-4 give to the Elvis trick question in Table 4?",
+      "thought": "Turn 1 initial retrieval using full question to preserve entity and metadata signals."
+    },
+    {
+      "event": "answer",
+      "thought": "The chart and accompanying text provide the required accuracy figures and the incorrect answer to the Elvis trick question."
+    }
+  ],
+  "evaluation": {
+    "id": "adv_test_15",
+    "split": "test",
+    "primary_group": "chart",
+    "answerable": true,
+    "gold_ids": [
+      "gpt4-2023-techreport_p011_chart_01"
+    ],
+    "retrieved_ids": [
+      "gpt4-2023-techreport_p011_chart_01",
+      "gpt4-2023-techreport_p011_text_01",
+      "gpt4-2023-techreport_p063_chart_01",
+      "gpt4-2023-techreport_p010_text_03",
+      "gpt4-2023-techreport_p011_text_02",
+      "gpt4-2023-techreport_p007_table_01",
+      "gpt4-2023-techreport_p065_text_01",
+      "gpt4-2023-techreport_p032_table_01"
+    ],
+    "context_ids": [
+      "gpt4-2023-techreport_p011_chart_01",
+      "gpt4-2023-techreport_p011_text_01",
+      "gpt4-2023-techreport_p063_chart_01",
+      "gpt4-2023-techreport_p064_text_01"
+    ],
+    "cited_ids": [
+      "gpt4-2023-techreport_p011_chart_01",
+      "gpt4-2023-techreport_p011_text_01"
+    ],
+    "invalid_citations": [],
+    "abstained": false,
+    "retrieval_hit": true,
+    "context_hit": true,
+    "missing_tokens": [],
+    "complete_answer_tokens": true,
+    "valid_citation": true,
+    "passed": true,
+    "audit_reason": "Pass: Full multimodal evidence retrieved, packed, answered with units, and cited."
+  },
+  "absence_reason": "",
+  "prompt_tokens": 1182,
+  "completion_tokens": 192,
+  "total_tokens": 1374,
+  "estimated_cost_usd": 0.000293
+}
